@@ -1,0 +1,200 @@
+[
+  {
+    "title": "Heart‑Healthy Cake",
+    "image": "https://images.unsplash.com/photo-1617196036326-8d4cfe42e9e7?auto=format&fit=crop&w=800&q=80",
+    "ingredients": "Flour, Oats, Banana, Cocoa, Skim Milk",
+    "method": "Mix ingredients, bake at 180°C for 25 min."
+  },
+  {
+    "title": "Banana Chocolate Cake with Oats",
+    "image": "https://images.unsplash.com/photo-1605475046517-32ff21fa1d90?auto=format&fit=crop&w=800&q=80",
+    "ingredients": "Oats, Banana, Cocoa, Eggs, Whey Protein",
+    "method": "Mix dry and wet ingredients, bake 180°C 25–30 min."
+  },
+  {
+    "title": "Veggie Burger (Broccoli, Peas, Carrot)",
+    "image": "https://images.unsplash.com/photo-1617196036200-7aa9f1f12e57?auto=format&fit=crop&w=800&q=80",
+    "ingredients": "Broccoli, Peas, Carrot, Oats, Spices",
+    "method": "Blend veggies, mix with oats and spices, form patties, cook."
+  },
+  {
+    "title": "Mushroom‑Only Veggie Burger",
+    "image": "https://images.unsplash.com/photo-1617196036263-6b89efecb7c2?auto=format&fit=crop&w=800&q=80",
+    "ingredients": "Button Mushrooms, Onion, Garlic, Oats, Spices",
+    "method": "Chop mushrooms, sauté, mix with oats and spices, form patties, cook."
+  },
+  {
+    "title": "Red Lentil Curry",
+    "image": "https://images.unsplash.com/photo-1605475046418-cddc3f074b02?auto=format&fit=crop&w=800&q=80",
+    "ingredients": "Red Lentils, Tomatoes, Onion, Garlic, Spices",
+    "method": "Cook onions and spices, add lentils and tomatoes, simmer until cooked."
+  },
+  {
+    "title": "Turkey Burgers",
+    "image": "https://images.unsplash.com/photo-1601050693081-8266a0a8d7a8?auto=format&fit=crop&w=800&q=80",
+    "ingredients": "Turkey Mince, Egg, Psyllium Husk, Soy Sauce, Spices",
+    "method": "Mix ingredients, form patties, air fry at 190°C 11–13 min."
+  },
+  {
+    "title": "Individual Wellington(s)",
+    "image": "https://images.unsplash.com/photo-1601050693164-3781c4b9cf0b?auto=format&fit=crop&w=800&q=80",
+    "ingredients": "Beef, Puff Pastry, Mushrooms, Mustard, Egg",
+    "method": "Wrap beef in pastry with mushroom duxelles, bake 200°C 20–25 min."
+  },
+  {
+    "title": "Oats Pancakes / High‑Protein Pancakes",
+    "image": "https://images.unsplash.com/photo-1601050693052-13f657d0d91f?auto=format&fit=crop&w=800&q=80",
+    "ingredients": "Oats, Eggs, Whey, Milk",
+    "method": "Blend ingredients, cook on pan until golden."
+  },
+  {
+    "title": "Chili Con Carne",
+    "image": "https://images.unsplash.com/photo-1601050693210-1ec7d61b4f34?auto=format&fit=crop&w=800&q=80",
+    "ingredients": "Beef, Beans, Tomato, Onion, Chili Spices",
+    "method": "Cook beef and onions, add beans, tomatoes, spices, simmer 20 min."
+  },
+  {
+    "title": "Protein Muffins",
+    "image": "https://images.unsplash.com/photo-1601050693175-3d13d1e229a4?auto=format&fit=crop&w=800&q=80",
+    "ingredients": "Oats, Whey, Eggs, Banana, Baking Powder",
+    "method": "Mix ingredients, pour into muffin tins, bake 180°C 20 min."
+  },
+  {
+    "title": "Chicken Stir‑Fry",
+    "image": "https://images.unsplash.com/photo-1601050693182-4c2f4148e4bc?auto=format&fit=crop&w=800&q=80",
+    "ingredients": "Chicken Breast, Veggies, Soy Sauce, Garlic",
+    "method": "Sauté chicken, add veggies and sauce, cook 5–7 min."
+  },
+  {
+    "title": "Greek Chicken Bowl",
+    "image": "https://images.unsplash.com/photo-1601050693200-4c5c9e9f1c60?auto=format&fit=crop&w=800&q=80",
+    "ingredients": "Chicken, Rice, Tomatoes, Olives, Feta",
+    "method": "Cook chicken, assemble with rice and toppings."
+  },
+  {
+    "title": "Salmon with Veggies & Rice",
+    "image": "https://images.unsplash.com/photo-1601050693220-7a2e1e8e74d5?auto=format&fit=crop&w=800&q=80",
+    "ingredients": "Salmon, Broccoli, Carrots, Rice, Olive Oil",
+    "method": "Bake salmon 180°C 12 min, steam veggies, serve with rice."
+  },
+  {
+    "title": "Protein Oat Bars",
+    "image": "https://images.unsplash.com/photo-1601050693240-9b0d86e3c2d0?auto=format&fit=crop&w=800&q=80",
+    "ingredients": "Oats, Whey, Honey, Peanut Butter",
+    "method": "Mix ingredients, press into pan, refrigerate 1 hr, cut into bars."
+  },
+  {
+    "title": "Turkey Meatballs",
+    "image": "https://images.unsplash.com/photo-1601050693260-6f1e0b8d1c92?auto=format&fit=crop&w=800&q=80",
+    "ingredients": "Turkey Mince, Egg, Breadcrumbs, Spices",
+    "method": "Mix, form balls, bake 180°C 20 min."
+  },
+  {
+    "title": "Homemade Granola",
+    "image": "https://images.unsplash.com/photo-1601050693280-2a7f1e6f2a4b?auto=format&fit=crop&w=800&q=80",
+    "ingredients": "Oats, Nuts, Honey, Coconut Oil",
+    "method": "Mix, bake 160°C 20 min, cool."
+  },
+  {
+    "title": "Quiche (Low-Fat / Protein Version)",
+    "image": "https://images.unsplash.com/photo-1601050693300-0b6e8f5c1c2f?auto=format&fit=crop&w=800&q=80",
+    "ingredients": "Eggs, Skim Milk, Veggies, Protein Powder, Cheese",
+    "method": "Mix, pour into crust, bake 180°C 25 min."
+  },
+  {
+    "title": "Banana Bread (Protein-Enhanced)",
+    "image": "https://images.unsplash.com/photo-1601050693320-9f3b1c8a0f7e?auto=format&fit=crop&w=800&q=80",
+    "ingredients": "Banana, Oats, Whey, Eggs, Baking Powder",
+    "method": "Mix, bake 180°C 30–35 min."
+  },
+  {
+    "title": "Vegetable Soup",
+    "image": "https://images.unsplash.com/photo-1601050693340-4c1b0d9e2f7b?auto=format&fit=crop&w=800&q=80",
+    "ingredients": "Carrots, Onion, Celery, Tomatoes, Broth",
+    "method": "Sauté veggies, add broth, simmer 20 min."
+  },
+  {
+    "title": "Stir-Fried Tofu Bowl",
+    "image": "https://images.unsplash.com/photo-1601050693360-8e2c4f9d4a0a?auto=format&fit=crop&w=800&q=80",
+    "ingredients": "Tofu, Veggies, Soy Sauce, Garlic",
+    "method": "Sauté tofu, add veggies, stir-fry 5 min."
+  },
+  {
+    "title": "Baked Sweet Potato Fries",
+    "image": "https://images.unsplash.com/photo-1601050693380-3d8f2c1a9e6f?auto=format&fit=crop&w=800&q=80",
+    "ingredients": "Sweet Potatoes, Olive Oil, Spices",
+    "method": "Slice, toss with oil/spices, bake 200°C 20 min."
+  },
+  {
+    "title": "Homemade Pizza Dough / Healthy Pizza",
+    "image": "https://images.unsplash.com/photo-1601050693400-5f8d0b2e1b3d?auto=format&fit=crop&w=800&q=80",
+    "ingredients": "Flour, Yeast, Water, Toppings",
+    "method": "Mix dough, rise 1 hr, bake 220°C 12 min with toppings."
+  },
+  {
+    "title": "Chicken Curry",
+    "image": "https://images.unsplash.com/photo-1601050693420-7b6e1f0a1b4f?auto=format&fit=crop&w=800&q=80",
+    "ingredients": "Chicken, Curry Powder, Onion, Tomato, Garlic",
+    "method": "Cook onions/spices, add chicken, tomatoes, simmer 20 min."
+  },
+  {
+    "title": "Classic Beef Wellington",
+    "image": "https://images.unsplash.com/photo-1601050693440-4e3b1d7e2f1a?auto=format&fit=crop&w=800&q=80",
+    "ingredients": "Beef, Puff Pastry, Mushrooms, Mustard, Egg",
+    "method": "Wrap beef in pastry with mushroom duxelles, bake 200°C 25 min."
+  },
+  {
+    "title": "Shepherd’s Pie",
+    "image": "https://images.unsplash.com/photo-1601050693460-9b1d2c3f4a0b?auto=format&fit=crop&w=800&q=80",
+    "ingredients": "Minced Lamb, Mashed Potato, Veggies, Broth",
+    "method": "Cook lamb/veggies, top with potato, bake 180°C 25 min."
+  },
+  {
+    "title": "Pancakes (Standard / Sweet Version)",
+    "image": "https://images.unsplash.com/photo-1601050693480-3f6d1b2c1f9b?auto=format&fit=crop&w=800&q=80",
+    "ingredients": "Flour, Milk, Eggs, Sugar",
+    "method": "Mix, cook on pan until golden."
+  },
+  {
+    "title": "Chocolate Mug Cake",
+    "image": "https://images.unsplash.com/photo-1601050693500-4c8d1b7e2a5f?auto=format&fit=crop&w=800&q=80",
+    "ingredients": "Flour, Cocoa, Sugar, Milk, Egg",
+    "method": "Mix in mug, microwave 1–2 min."
+  },
+  {
+    "title": "Bolognese Sauce",
+    "image": "https://images.unsplash.com/photo-1601050693520-5e7b2c1d3a6e?auto=format&fit=crop&w=800&q=80",
+    "ingredients": "Beef, Onion, Garlic, Tomatoes, Herbs",
+    "method": "Cook beef/onions, add tomato/herbs, simmer 20 min."
+  },
+  {
+    "title": "Homemade Burgers (Beef / Classic)",
+    "image": "https://images.unsplash.com/photo-1601050693540-6c1f1b7a4e8d?auto=format&fit=crop&w=800&q=80",
+    "ingredients": "Beef, Egg, Breadcrumbs, Spices",
+    "method": "Mix, form patties, grill/bake 10–12 min."
+  },
+  {
+    "title": "Roast Chicken with Vegetables",
+    "image": "https://images.unsplash.com/photo-1601050693560-7a1c2b3f4e0d?auto=format&fit=crop&w=800&q=80",
+    "ingredients": "Whole Chicken, Carrots, Potato, Herbs, Olive Oil",
+    "method": "Roast chicken 190°C 60–70 min with veggies."
+  },
+  {
+    "title": "Smoothie Bowls",
+    "image": "https://images.unsplash.com/photo-1601050693580-8b1d3f2a4c1e?auto=format&fit=crop&w=800&q=80",
+    "ingredients": "Frozen Fruit, Yogurt, Toppings",
+    "method": "Blend fruit/yogurt, pour into bowl, top with extras."
+  },
+  {
+    "title": "Frittata / Egg Bake",
+    "image": "https://images.unsplash.com/photo-1601050693600-9a1f2c3e4b0f?auto=format&fit=crop&w=800&q=80",
+    "ingredients": "Eggs, Veggies, Cheese, Milk",
+    "method": "Mix, pour in pan, bake 180°C 20–25 min."
+  },
+  {
+    "title": "Lasagna (Vegetarian / Meat)",
+    "image": "https://images.unsplash.com/photo-1601050693620-1a2f3c4e5b0d?auto=format&fit=crop&w=800&q=80",
+    "ingredients": "Lasagna Sheets, Cheese, Sauce, Meat/Vegetables",
+    "method": "Layer sheets, sauce, fillings, bake 180°C 40 min."
+  }
+]
