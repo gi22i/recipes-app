@@ -4,50 +4,182 @@
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>My Recipes</title>
+
 <style>
-  body { font-family: Arial, sans-serif; padding: 20px; background: #f7f7f7; }
-  h1 { text-align: center; }
-  .recipe { background: #fff; border-radius: 8px; padding: 15px; margin-bottom: 15px; box-shadow: 0 2px 5px rgba(0,0,0,0.1);}
-  .recipe h2 { margin-top: 0; color: #333; }
-  .ingredients, .instructions, .notes { margin: 5px 0; }
-  .ingredients li { margin-bottom: 3px; }
+:root {
+  --black: #111;
+  --white: #fff;
+  --gray-bg: #222;
+  --gray-text: #ccc;
+  --card-bg: #333;
+  --accent: #f5f5f5;
+}
+
+body {
+  margin: 0;
+  font-family: 'Helvetica Neue', sans-serif;
+  background: var(--gray-bg);
+  color: var(--gray-text);
+}
+
+header {
+  background: var(--black);
+  color: var(--white);
+  padding: 20px;
+  text-align: center;
+}
+
+h1 {
+  margin: 0;
+  font-size: 2rem;
+}
+
+.grid {
+  display: grid;
+  gap: 15px;
+  padding: 20px;
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+}
+
+.card {
+  background: var(--card-bg);
+  border-radius: 10px;
+  padding: 15px;
+  cursor: pointer;
+  transition: transform 0.15s ease, box-shadow 0.2s ease;
+}
+
+.card:hover {
+  transform: translateY(-3px);
+  box-shadow: 0 5px 15px rgba(0,0,0,0.5);
+}
+
+.card h3 {
+  margin: 0;
+  color: var(--accent);
+  font-size: 1.2rem;
+  text-align: center;
+}
+
+/* Modal */
+.modal-bg {
+  position: fixed;
+  top: 0; left: 0;
+  width: 100vw; height: 100vh;
+  display: none;
+  background: rgba(0,0,0,0.8);
+  justify-content: center;
+  align-items: center;
+  z-index: 10;
+}
+
+.modal {
+  background: var(--card-bg);
+  color: var(--gray-text);
+  padding: 25px;
+  border-radius: 12px;
+  width: 90%;
+  max-width: 600px;
+  max-height: 90vh;
+  overflow-y: auto;
+  position: relative;
+}
+
+.modal h2 {
+  margin-top: 0;
+  border-bottom: 1px solid var(--accent);
+  padding-bottom: 8px;
+  color: var(--accent);
+}
+
+.modal .section-title {
+  font-weight: bold;
+  margin-top: 12px;
+  color: var(--accent);
+}
+
+.modal p, .modal li {
+  color: var(--gray-text);
+  line-height: 1.5;
+}
+
+.close-btn {
+  position: absolute;
+  top: 12px;
+  right: 12px;
+  background: var(--accent);
+  color: var(--black);
+  border: none;
+  padding: 6px 10px;
+  font-size: 1rem;
+  cursor: pointer;
+  border-radius: 6px;
+}
 </style>
 </head>
 <body>
-<h1>My Recipes</h1>
-<div id="recipe-list">Loading recipes...</div>
+
+<header>
+  <h1>My Recipes</h1>
+</header>
+
+<div class="grid" id="recipe-grid">
+  Loading recipes...
+</div>
+
+<div class="modal-bg" id="modal-bg">
+  <div class="modal">
+    <button class="close-btn" id="close-btn">X</button>
+    <div id="modal-content"></div>
+  </div>
+</div>
 
 <script>
-const jsonUrl = 'https://raw.githubusercontent.com/gi22i/recipes-app/refs/heads/main/Recipes.json';
+const jsonURL = 'https://raw.githubusercontent.com/gi22i/recipes-app/refs/heads/main/Recipes.json';
 
-async function loadRecipes() {
-  try {
-    const response = await fetch(jsonUrl + '?cache-bust=' + new Date().getTime());
-    const data = await response.json();
-
-    const list = document.getElementById('recipe-list');
-    list.innerHTML = ''; // clear loading text
-
-    data.forEach(recipe => {
-      const div = document.createElement('div');
-      div.className = 'recipe';
-      div.innerHTML = `
-        <h2>${recipe.title}</h2>
-        <div class="ingredients"><strong>Ingredients:</strong>
-          <ul>${recipe.ingredients.map(i => `<li>${i}</li>`).join('')}</ul>
-        </div>
-        <div class="instructions"><strong>Instructions:</strong> ${recipe.instructions}</div>
-        ${recipe.notes ? `<div class="notes"><strong>Notes:</strong> ${recipe.notes}</div>` : ''}
-      `;
-      list.appendChild(div);
-    });
-  } catch (err) {
-    document.getElementById('recipe-list').innerHTML = 'Failed to load recipes.';
-    console.error(err);
-  }
+// Load recipes from JSON
+async function fetchRecipes() {
+  const response = await fetch(jsonURL + '?cb=' + new Date().getTime());
+  return await response.json();
 }
 
-loadRecipes();
+// Show modal with detailed recipe
+function showModal(recipe) {
+  const html = `
+    <h2>${recipe.title}</h2>
+    <div class="section-title">Ingredients</div>
+    <ul>${recipe.ingredients.map(i => `<li>${i}</li>`).join('')}</ul>
+    <div class="section-title">Method</div>
+    <p>${recipe.instructions}</p>
+    <div class="section-title">Macros</div>
+    <p>${recipe.macros || 'N/A'}</p>
+    ${recipe.notes ? `<div class="section-title">Notes</div><p>${recipe.notes}</p>` : ''}
+  `;
+  document.getElementById('modal-content').innerHTML = html;
+  document.getElementById('modal-bg').style.display = 'flex';
+}
+
+// Initialize grid view
+function initGrid(recipes) {
+  const grid = document.getElementById('recipe-grid');
+  grid.innerHTML = '';
+  recipes.forEach(recipe => {
+    const card = document.createElement('div');
+    card.className = 'card';
+    card.innerHTML = `<h3>${recipe.title}</h3>`;
+    card.addEventListener('click', () => showModal(recipe));
+    grid.appendChild(card);
+  });
+}
+
+// Close modal
+document.getElementById('close-btn').addEventListener('click', () => {
+  document.getElementById('modal-bg').style.display = 'none';
+});
+
+// Load everything
+fetchRecipes().then(initGrid);
 </script>
+
 </body>
 </html>
