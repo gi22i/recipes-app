@@ -1,70 +1,93 @@
 [
   {
     "title": "Turkey Burgers",
-    "ingredients": [
-      "400g turkey mince",
-      "1 egg",
-      "1½ tsp psyllium husk",
-      "1 tsp soy sauce",
-      "garlic powder",
-      "smoked paprika",
-      "salt",
-      "pepper"
-    ],
-    "instructions": "Mix all ingredients for 5 minutes, form 2 wide patties, air fry at 190°C for 11–13 min, flipping halfway.",
-    "notes": "Add lettuce, tomato, and onion as a bun alternative if desired."
+    "ingredients": ["400g turkey mince", "1 egg", "1½ tsp psyllium husk", "1 tsp soy sauce", "garlic powder", "smoked paprika", "salt", "pepper"],
+    "instructions": "Mix all ingredients together, let rest 5 min, form 2 wide patties, air fry at 190°C for 11–13 min flipping halfway.",
+    "macros": "≈ 45g protein / 20g fat / 10g carbs",
+    "notes": "Optional: use lettuce, tomato, and onion as a bun substitute."
   },
   {
-    "title": "Veggie Burger (Mushrooms Only)",
-    "ingredients": [
-      "200g button mushrooms",
-      "1 egg",
-      "2 tbsp breadcrumbs or optional binder",
-      "salt",
-      "pepper",
-      "garlic powder"
-    ],
-    "instructions": "Chop mushrooms finely, mix with egg, breadcrumbs, and spices. Form patties and cook on a pan until golden.",
-    "notes": "Can add other vegetables or seasonings as preferred."
+    "title": "Veggie Burger",
+    "ingredients": ["100g mushrooms", "50g broccoli", "50g peas", "50g carrot", "1 egg", "breadcrumbs", "salt", "pepper"],
+    "instructions": "Steam vegetables until soft, mash, mix with egg and breadcrumbs, form patties, bake or air fry at 180°C for 12–15 min.",
+    "macros": "≈ 12g protein / 8g fat / 25g carbs",
+    "notes": "Optional: top with tomato or lettuce."
   },
   {
-    "title": "Oats Protein Breakfast",
-    "ingredients": [
-      "100g oats",
-      "1 scoop whey protein",
-      "Water"
-    ],
-    "instructions": "Mix oats with water, cook or soak, then stir in protein powder.",
-    "notes": "Approx. 45g protein / 60g carbs / 5g fat (~450 kcal)."
+    "title": "Heart-Healthy Banana Cocoa Cake",
+    "ingredients": ["2 ripe bananas", "2 eggs", "50g oats", "15g cocoa powder", "1 tsp baking powder", "10g olive oil"],
+    "instructions": "Mash bananas, mix with eggs and oil, add oats, cocoa, and baking powder, bake at 180°C for 25-30 min.",
+    "macros": "≈ 6g protein / 10g fat / 35g carbs",
+    "notes": "Slice and enjoy with cocoa or banana topping."
   },
   {
-    "title": "Chicken & Rice Lunch",
-    "ingredients": [
-      "250g chicken breast",
-      "100g rice",
-      "10g olive oil"
-    ],
-    "instructions": "Cook chicken and rice separately, combine and drizzle olive oil.",
-    "notes": "Approx. 65g protein / 80g carbs / 15g fat (~775 kcal)."
+    "title": "Banana Chocolate Oat Cake",
+    "ingredients": ["2 ripe bananas", "50g oats", "1 egg", "15g cocoa powder", "10g olive oil"],
+    "instructions": "Mix all ingredients, pour into baking tray, bake at 180°C for 25 min, cool and serve.",
+    "macros": "≈ 5g protein / 8g fat / 30g carbs",
+    "notes": ""
   },
   {
-    "title": "Post-Workout Chicken & Potato",
-    "ingredients": [
-      "250g chicken breast",
-      "500g potatoes",
-      "10g olive oil"
-    ],
-    "instructions": "Cook chicken and potatoes separately, combine and drizzle olive oil.",
-    "notes": "Approx. 73g protein / 110g carbs / 15g fat (~855 kcal)."
+    "title": "Fillet Steak with Potatoes",
+    "ingredients": ["286g fillet steak", "500g potatoes", "10g olive oil"],
+    "instructions": "Grill or pan-fry steak to preferred doneness. Boil or roast potatoes, serve together with olive oil.",
+    "macros": "≈ 60g protein / 25g fat / 55g carbs",
+    "notes": ""
   },
   {
-    "title": "Evening Skyr & Eggs",
-    "ingredients": [
-      "400g skyr",
-      "3 whole eggs",
-      "10g olive oil"
-    ],
-    "instructions": "Mix skyr with cooked eggs and drizzle olive oil.",
-    "notes": "Approx. 110g protein / 20g carbs / 35g fat (~900 kcal)."
+    "title": "Fillet Steak with Mushrooms",
+    "ingredients": ["240g fillet steak", "451g potatoes", "100g grilled mushrooms", "10g olive oil"],
+    "instructions": "Cook steak and mushrooms, serve with potatoes and drizzle olive oil on top.",
+    "macros": "≈ 55g protein / 20g fat / 60g carbs",
+    "notes": ""
+  },
+  {
+    "title": "Turkey Burger Wrap",
+    "ingredients": ["400g turkey mince", "1 egg", "1½ tsp psyllium husk", "1 tsp soy sauce", "garlic powder", "smoked paprika", "salt", "pepper", "lettuce leaves", "tomato", "onion"],
+    "instructions": "Prepare turkey patties as above, serve wrapped in lettuce leaves with tomato and onion.",
+    "macros": "≈ 45g protein / 20g fat / 10g carbs",
+    "notes": ""
+  },
+  {
+    "title": "Veggie Burger Wrap",
+    "ingredients": ["100g mushrooms", "50g broccoli", "50g peas", "50g carrot", "1 egg", "breadcrumbs", "salt", "pepper", "lettuce", "tomato", "onion"],
+    "instructions": "Prepare veggie patty as above, serve wrapped in lettuce leaves with tomato and onion.",
+    "macros": "≈ 12g protein / 8g fat / 25g carbs",
+    "notes": ""
+  },
+  {
+    "title": "Heart-Healthy Cake with Banana & Cocoa",
+    "ingredients": ["2 bananas", "2 eggs", "50g oats", "15g cocoa powder", "1 tsp baking powder", "10g olive oil"],
+    "instructions": "Mash bananas, mix with eggs and oil, add oats, cocoa, baking powder. Bake at 180°C for 25–30 min.",
+    "macros": "≈ 6g protein / 10g fat / 35g carbs",
+    "notes": "Serve with a thin banana slice or cocoa sprinkle."
+  },
+  {
+    "title": "Banana Chocolate Oats Cake",
+    "ingredients": ["2 bananas", "50g oats", "1 egg", "15g cocoa powder", "10g olive oil"],
+    "instructions": "Mix all ingredients, pour into tray, bake at 180°C for 25 min, cool before slicing.",
+    "macros": "≈ 5g protein / 8g fat / 30g carbs",
+    "notes": ""
+  },
+  {
+    "title": "Skyr & Eggs",
+    "ingredients": ["400g skyr", "3 whole eggs", "10g olive oil"],
+    "instructions": "Serve skyr cold. Fry eggs separately and drizzle with olive oil.",
+    "macros": "≈ 110g protein / 35g fat / 20g carbs",
+    "notes": ""
+  },
+  {
+    "title": "Chicken & Rice",
+    "ingredients": ["250g chicken breast", "100g rice", "10g olive oil"],
+    "instructions": "Cook chicken and rice separately. Serve together with olive oil.",
+    "macros": "≈ 65g protein / 15g fat / 80g carbs",
+    "notes": ""
+  },
+  {
+    "title": "Protein Shake",
+    "ingredients": ["1 scoop protein powder", "1 banana", "250ml water"],
+    "instructions": "Blend all ingredients until smooth.",
+    "macros": "≈ 30g protein / 2g fat / 30g carbs",
+    "notes": ""
   }
 ]
