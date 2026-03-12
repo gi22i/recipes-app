@@ -3,327 +3,243 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>My Recipes</title>
-
+<title>My Recipe App</title>
+<link href="https://fonts.googleapis.com/css2?family=Great+Vibes&family=Roboto:wght@400;700&display=swap" rel="stylesheet">
 <style>
-@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@400;600&display=swap');
+  body {
+    margin: 0;
+    font-family: 'Roboto', sans-serif;
+    color: #222;
+    background: linear-gradient(135deg, #e0e0e0, #b0b0b0, #808080);
+    background-size: 600% 600%;
+    animation: gradientSweep 25s ease infinite;
+    scroll-behavior: smooth;
+  }
 
-:root {
-  --bg-dark: #0d0d0d;
-  --card-dark: #1a1a1a;
-  --text-light: #e0e0e0;
-  --accent-light: #f5f5f5;
-  --shadow: rgba(255, 255, 255, 0.08);
-  --hover-shadow: rgba(255, 255, 255, 0.15);
-}
+  @keyframes gradientSweep {
+    0% { background-position: 0% 50%; }
+    50% { background-position: 100% 50%; }
+    100% { background-position: 0% 50%; }
+  }
 
-* {
-  box-sizing: border-box;
-}
+  header {
+    position: sticky;
+    top: 0;
+    text-align: center;
+    padding: 2rem;
+    font-family: 'Great Vibes', cursive;
+    font-size: 3rem;
+    font-weight: bold;
+    color: #111;
+    text-shadow: 1px 1px 2px rgba(0,0,0,0.2);
+    background: rgba(255, 255, 255, 0.85);
+    z-index: 1000;
+  }
 
-body {
-  margin: 0;
-  font-family: 'Montserrat', sans-serif;
-  background: var(--bg-dark);
-  color: var(--text-light);
-}
+  #filter-bar {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 0.5rem;
+    margin-bottom: 1rem;
+  }
 
-header {
-  background: #000;
-  color: var(--accent-light);
-  padding: 30px 15px;
-  text-align: center;
-  letter-spacing: 1px;
-}
+  .filter-btn {
+    padding: 0.5rem 1rem;
+    border-radius: 20px;
+    border: 2px solid #555;
+    background: rgba(255,255,255,0.9);
+    cursor: pointer;
+    font-weight: bold;
+    transition: 0.3s;
+  }
 
-header h1 {
-  margin: 0;
-  font-weight: 600;
-  font-size: 2.4rem;
-}
+  .filter-btn.active {
+    background: #555;
+    color: #fff;
+  }
 
-.search-box{
-margin-top:18px;
-}
+  #search-bar {
+    display: block;
+    margin: 1rem auto 2rem auto;
+    padding: 0.6rem 1rem;
+    width: 90%;
+    max-width: 400px;
+    border-radius: 10px;
+    border: 2px solid #888;
+    font-size: 1rem;
+    outline: none;
+    transition: border 0.3s;
+  }
 
-.search-box input{
-padding:10px;
-width:260px;
-border-radius:8px;
-border:none;
-font-size:14px;
-}
+  #search-bar:focus {
+    border-color: #555;
+  }
 
-.grid {
-  display: grid;
-  gap: 25px;
-  padding: 25px;
-  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
-}
+  .recipe {
+    background-color: rgba(255, 255, 255, 0.9);
+    margin: 2rem auto;
+    padding: 2rem;
+    border-radius: 15px;
+    max-width: 800px;
+    box-shadow: 0 4px 12px rgba(0,0,0,0.2);
+    opacity: 0;
+    transform: translateY(30px) scale(0.95);
+    transition: all 0.8s ease;
+  }
 
-.card {
-  background: linear-gradient(145deg, #1c1c1c, #141414);
-  border-radius: 16px;
-  padding: 25px;
-  cursor: pointer;
-  transition: transform 0.3s ease, box-shadow 0.3s ease;
-  box-shadow: 0 6px 18px var(--shadow);
-  position: relative;
-  overflow: hidden;
-}
+  .recipe.visible {
+    opacity: 1;
+    transform: translateY(0) scale(1);
+  }
 
-.card::before {
-  content: "";
-  position: absolute;
-  top: -50%;
-  left: -50%;
-  width: 200%;
-  height: 200%;
-  background: radial-gradient(circle at center, rgba(255,255,255,0.02), transparent 60%);
-  transform: rotate(45deg);
-}
+  .recipe:hover {
+    transform: translateY(-5px) scale(1.02);
+    box-shadow: 0 10px 20px rgba(0,0,0,0.3);
+  }
 
-.card:hover {
-  transform: translateY(-6px);
-  box-shadow: 0 14px 28px var(--hover-shadow);
-}
+  h2 {
+    font-family: 'Roboto', sans-serif;
+    font-weight: 700;
+    font-size: 2rem;
+    margin-bottom: 1rem;
+    border-bottom: 2px solid #444;
+    padding-bottom: 0.3rem;
+  }
 
-.card h3 {
-  margin: 0;
-  font-size: 1.4rem;
-  font-weight: 600;
-  text-align: center;
-  color: var(--accent-light);
-  position: relative;
-  padding-top: 10px;
-}
+  h3 {
+    font-weight: 700;
+    margin-top: 1rem;
+    margin-bottom: 0.5rem;
+  }
 
-.card h3::after {
-  content: "";
-  display: block;
-  width: 50px;
-  height: 3px;
-  background: var(--accent-light);
-  margin: 8px auto 0;
-  border-radius: 2px;
-}
+  .tags {
+    margin-bottom: 1rem;
+  }
 
-.card::after {
-  content: "🍽️";
-  position: absolute;
-  top: 15px;
-  right: 15px;
-  font-size: 1.2rem;
-  opacity: 0.15;
-  pointer-events: none;
-}
+  .tag {
+    display: inline-block;
+    padding: 0.3rem 0.7rem;
+    border-radius: 10px;
+    font-size: 0.85rem;
+    margin-right: 0.3rem;
+    margin-bottom: 0.3rem;
+    color: #fff;
+    font-weight: bold;
+    background: #888;
+    transition: background 0.3s;
+  }
 
-.modal-bg {
-  position: fixed;
-  top: 0; left: 0;
-  width: 100vw; height: 100vh;
-  display: none;
-  background: rgba(0,0,0,0.92);
-  justify-content: center;
-  align-items: center;
-  z-index: 10;
-}
+  .tag.Keto { background: #6c5ce7; }
+  .tag.Vegetarian { background: #00b894; }
+  .tag.Dessert { background: #fd79a8; }
+  .tag.Meat { background: #d63031; }
 
-.modal {
-  background: var(--card-dark);
-  color: var(--text-light);
-  padding: 35px;
-  border-radius: 20px;
-  width: 90%;
-  max-width: 700px;
-  max-height: 90vh;
-  overflow-y: auto;
-  position: relative;
-  box-shadow: 0 12px 35px rgba(0,0,0,0.8);
-}
+  .recipe ul li, .recipe ol li {
+    margin-bottom: 0.5rem;
+    padding: 0.2rem;
+    border-radius: 5px;
+    transition: background 0.3s, transform 0.2s;
+  }
 
-.modal h2 {
-  margin-top: 0;
-  color: var(--accent-light);
-  border-bottom: 1px solid var(--accent-light);
-  padding-bottom: 12px;
-  font-size: 2rem;
-}
+  .recipe ul li:hover, .recipe ol li:hover {
+    background: rgba(200,200,200,0.3);
+    transform: scale(1.02);
+  }
 
-.modal .section-title {
-  font-weight: 600;
-  margin-top: 22px;
-  margin-bottom: 8px;
-  color: var(--accent-light);
-  font-size: 1.1rem;
-  letter-spacing: 0.5px;
-}
+  .recipe .macros {
+    font-weight: bold;
+    margin-top: 1rem;
+  }
 
-.modal p, .modal li {
-  color: var(--text-light);
-  line-height: 1.6;
-  font-size: 0.95rem;
-}
-
-.modal ul, .modal ol {
-  padding-left: 20px;
-  margin: 0;
-}
-
-.close-btn {
-  position: absolute;
-  top: 18px;
-  right: 18px;
-  background: var(--accent-light);
-  color: #000;
-  border: none;
-  padding: 8px 14px;
-  font-size: 1.1rem;
-  cursor: pointer;
-  border-radius: 10px;
-  font-weight: 600;
-}
-
+  .recipe .notes {
+    font-style: italic;
+    margin-top: 0.5rem;
+    color: #555;
+  }
 </style>
 </head>
-
 <body>
+<header>My Recipe Collection</header>
 
-<header>
-<h1>My Recipes</h1>
-
-<div class="search-box">
-<input id="search" placeholder="Search recipes...">
+<div id="filter-bar">
+  <div class="filter-btn active" data-category="All">All</div>
+  <div class="filter-btn" data-category="Keto">Keto</div>
+  <div class="filter-btn" data-category="Vegetarian">Vegetarian</div>
+  <div class="filter-btn" data-category="Dessert">Dessert</div>
+  <div class="filter-btn" data-category="Meat">Meat</div>
 </div>
 
-</header>
+<input type="text" id="search-bar" placeholder="Search recipes by name or ingredient...">
 
-<div class="grid" id="recipe-grid">
-Loading recipes...
-</div>
-
-<div class="modal-bg" id="modal-bg">
-<div class="modal">
-<button class="close-btn" id="close-btn">X</button>
-<div id="modal-content"></div>
-</div>
-</div>
+<div id="recipes-container"></div>
 
 <script>
+const recipes = /* PASTE YOUR FULL JSON HERE WITH CATEGORY FIELD */;
 
-const jsonURL = 'https://raw.githubusercontent.com/gi22i/recipes-app/refs/heads/main/Recipes.json';
+const container = document.getElementById('recipes-container');
+const searchBar = document.getElementById('search-bar');
+const filterButtons = document.querySelectorAll('.filter-btn');
 
-let allRecipes = [];
+let activeCategory = "All";
 
-async function fetchRecipes() {
-const response = await fetch(jsonURL + '?cb=' + new Date().getTime());
-return await response.json();
+function renderRecipes(filter="") {
+  container.innerHTML = "";
+  const query = filter.toLowerCase();
+
+  recipes.forEach(recipe => {
+    const titleMatch = recipe.title.toLowerCase().includes(query);
+    const ingredientMatch = recipe.ingredients.some(i => i.toLowerCase().includes(query));
+    const categoryMatch = activeCategory === "All" || recipe.category === activeCategory;
+
+    if((query === "" || titleMatch || ingredientMatch) && categoryMatch){
+      const div = document.createElement('div');
+      div.classList.add('recipe');
+
+      div.innerHTML = `
+        <h2>${recipe.title}</h2>
+        <div class="tags">${recipe.category ? `<span class="tag ${recipe.category.replace(/\s/g,'')}">${recipe.category}</span>` : ""}</div>
+        <h3>Ingredients:</h3>
+        <ul>${recipe.ingredients.map(i => `<li>${i}</li>`).join('')}</ul>
+        <h3>Instructions:</h3>
+        <ol>${recipe.instructions.map(i => `<li>${i}</li>`).join('')}</ol>
+        <div class="macros">
+          Macros: Calories ${recipe.macros.calories}, Protein ${recipe.macros.protein}g, Carbs ${recipe.macros.carbs}g, Fat ${recipe.macros.fat}g
+        </div>
+        ${recipe.notes ? `<div class="notes">Notes: ${recipe.notes}</div>` : ''}
+      `;
+
+      container.appendChild(div);
+    }
+  });
+
+  const observer = new IntersectionObserver(entries => {
+    entries.forEach(entry => {
+      if(entry.isIntersecting){
+        entry.target.classList.add('visible');
+        observer.unobserve(entry.target);
+      }
+    });
+  }, { threshold: 0.1 });
+
+  document.querySelectorAll('.recipe').forEach(r => observer.observe(r));
 }
 
-function renderInstructions(instructions){
+// Initial render
+renderRecipes();
 
-if(!instructions) return "<p>N/A</p>";
+// Filter as user types
+searchBar.addEventListener('input', e => renderRecipes(e.target.value));
 
-if(Array.isArray(instructions)){
-return `<ol>${instructions.map(step=>`<li>${step}</li>`).join('')}</ol>`;
-}
-
-return `<p>${instructions}</p>`;
-}
-
-function renderMacros(macros){
-
-if(!macros) return "<p>N/A</p>";
-
-if(typeof macros === "string"){
-return `<p>${macros}</p>`;
-}
-
-return `
-<ul>
-<li>Calories: ${macros.calories ?? 'N/A'}</li>
-<li>Protein: ${macros.protein ?? 'N/A'} g</li>
-<li>Carbs: ${macros.carbs ?? 'N/A'} g</li>
-<li>Fat: ${macros.fat ?? 'N/A'} g</li>
-<li>Fibre: ${macros.fibre ?? 'N/A'} g</li>
-<li>Saturated Fat: ${macros.saturated ?? 'N/A'} g</li>
-<li>Monounsaturated Fat: ${macros.mono ?? 'N/A'} g</li>
-<li>Polyunsaturated Fat: ${macros.poly ?? 'N/A'} g</li>
-</ul>
-`;
-}
-
-function showModal(recipe){
-
-const html = `
-<h2>${recipe.title}</h2>
-
-<div class="section-title">Ingredients</div>
-<ul>${recipe.ingredients.map(i=>`<li>${i}</li>`).join('')}</ul>
-
-<div class="section-title">Method</div>
-${renderInstructions(recipe.instructions)}
-
-<div class="section-title">Macros</div>
-${renderMacros(recipe.macros)}
-
-${recipe.notes ? `<div class="section-title">Notes</div><p>${recipe.notes}</p>` : ''}
-`;
-
-document.getElementById('modal-content').innerHTML = html;
-document.getElementById('modal-bg').style.display='flex';
-
-}
-
-function renderGrid(recipes){
-
-const grid=document.getElementById('recipe-grid');
-
-grid.innerHTML='';
-
-recipes.forEach(recipe=>{
-
-const card=document.createElement('div');
-
-card.className='card';
-
-card.innerHTML=`<h3>${recipe.title}</h3>`;
-
-card.addEventListener('click',()=>showModal(recipe));
-
-grid.appendChild(card);
-
+// Category filter buttons
+filterButtons.forEach(btn => {
+  btn.addEventListener('click', () => {
+    filterButtons.forEach(b => b.classList.remove('active'));
+    btn.classList.add('active');
+    activeCategory = btn.dataset.category;
+    renderRecipes(searchBar.value);
+  });
 });
-
-}
-
-function initGrid(data){
-
-const recipes=data.recipes || data;
-
-allRecipes=recipes;
-
-renderGrid(recipes);
-
-}
-
-document.getElementById('search').addEventListener('input',e=>{
-
-const term=e.target.value.toLowerCase();
-
-const filtered=allRecipes.filter(r=>r.title.toLowerCase().includes(term));
-
-renderGrid(filtered);
-
-});
-
-document.getElementById('close-btn').addEventListener('click',()=>{
-document.getElementById('modal-bg').style.display='none';
-});
-
-fetchRecipes().then(initGrid);
-
 </script>
-
 </body>
 </html>
