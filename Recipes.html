@@ -42,6 +42,18 @@ header h1 {
   font-size: 2.4rem;
 }
 
+.search-box{
+margin-top:18px;
+}
+
+.search-box input{
+padding:10px;
+width:260px;
+border-radius:8px;
+border:none;
+font-size:14px;
+}
+
 .grid {
   display: grid;
   gap: 25px;
@@ -170,12 +182,8 @@ header h1 {
   cursor: pointer;
   border-radius: 10px;
   font-weight: 600;
-  transition: background 0.2s ease;
 }
 
-.close-btn:hover {
-  background: #fff;
-}
 </style>
 </head>
 
@@ -183,6 +191,11 @@ header h1 {
 
 <header>
 <h1>My Recipes</h1>
+
+<div class="search-box">
+<input id="search" placeholder="Search recipes...">
+</div>
+
 </header>
 
 <div class="grid" id="recipe-grid">
@@ -200,86 +213,112 @@ Loading recipes...
 
 const jsonURL = 'https://raw.githubusercontent.com/gi22i/recipes-app/refs/heads/main/Recipes.json';
 
+let allRecipes = [];
+
 async function fetchRecipes() {
-  const response = await fetch(jsonURL + '?cb=' + new Date().getTime());
-  return await response.json();
+const response = await fetch(jsonURL + '?cb=' + new Date().getTime());
+return await response.json();
 }
 
 function renderInstructions(instructions){
 
-  if(!instructions) return "<p>N/A</p>";
+if(!instructions) return "<p>N/A</p>";
 
-  if(Array.isArray(instructions)){
-    return `<ol>${instructions.map(step => `<li>${step}</li>`).join('')}</ol>`;
-  }
+if(Array.isArray(instructions)){
+return `<ol>${instructions.map(step=>`<li>${step}</li>`).join('')}</ol>`;
+}
 
-  return `<p>${instructions}</p>`;
+return `<p>${instructions}</p>`;
 }
 
 function renderMacros(macros){
 
-  if(!macros) return "<p>N/A</p>";
+if(!macros) return "<p>N/A</p>";
 
-  if(typeof macros === "string"){
-    return `<p>${macros}</p>`;
-  }
-
-  return `
-  <ul>
-    <li>Calories: ${macros.calories ?? 'N/A'}</li>
-    <li>Protein: ${macros.protein ?? 'N/A'} g</li>
-    <li>Carbs: ${macros.carbs ?? 'N/A'} g</li>
-    <li>Fat: ${macros.fat ?? 'N/A'} g</li>
-    <li>Fibre: ${macros.fibre ?? 'N/A'} g</li>
-    <li>Saturated Fat: ${macros.saturated ?? 'N/A'} g</li>
-    <li>Monounsaturated Fat: ${macros.mono ?? 'N/A'} g</li>
-    <li>Polyunsaturated Fat: ${macros.poly ?? 'N/A'} g</li>
-  </ul>
-  `;
+if(typeof macros === "string"){
+return `<p>${macros}</p>`;
 }
 
-function showModal(recipe) {
-
-  const html = `
-  <h2>${recipe.title}</h2>
-
-  <div class="section-title">Ingredients</div>
-  <ul>${recipe.ingredients.map(i => `<li>${i}</li>`).join('')}</ul>
-
-  <div class="section-title">Method</div>
-  ${renderInstructions(recipe.instructions)}
-
-  <div class="section-title">Macros</div>
-  ${renderMacros(recipe.macros)}
-
-  ${recipe.notes ? `<div class="section-title">Notes</div><p>${recipe.notes}</p>` : ''}
-  `;
-
-  document.getElementById('modal-content').innerHTML = html;
-  document.getElementById('modal-bg').style.display = 'flex';
+return `
+<ul>
+<li>Calories: ${macros.calories ?? 'N/A'}</li>
+<li>Protein: ${macros.protein ?? 'N/A'} g</li>
+<li>Carbs: ${macros.carbs ?? 'N/A'} g</li>
+<li>Fat: ${macros.fat ?? 'N/A'} g</li>
+<li>Fibre: ${macros.fibre ?? 'N/A'} g</li>
+<li>Saturated Fat: ${macros.saturated ?? 'N/A'} g</li>
+<li>Monounsaturated Fat: ${macros.mono ?? 'N/A'} g</li>
+<li>Polyunsaturated Fat: ${macros.poly ?? 'N/A'} g</li>
+</ul>
+`;
 }
 
-function initGrid(recipes) {
+function showModal(recipe){
 
-  const grid = document.getElementById('recipe-grid');
-  grid.innerHTML = '';
+const html = `
+<h2>${recipe.title}</h2>
 
-  recipes.forEach(recipe => {
+<div class="section-title">Ingredients</div>
+<ul>${recipe.ingredients.map(i=>`<li>${i}</li>`).join('')}</ul>
 
-    const card = document.createElement('div');
-    card.className = 'card';
+<div class="section-title">Method</div>
+${renderInstructions(recipe.instructions)}
 
-    card.innerHTML = `<h3>${recipe.title}</h3>`;
+<div class="section-title">Macros</div>
+${renderMacros(recipe.macros)}
 
-    card.addEventListener('click', () => showModal(recipe));
+${recipe.notes ? `<div class="section-title">Notes</div><p>${recipe.notes}</p>` : ''}
+`;
 
-    grid.appendChild(card);
+document.getElementById('modal-content').innerHTML = html;
+document.getElementById('modal-bg').style.display='flex';
 
-  });
 }
 
-document.getElementById('close-btn').addEventListener('click', () => {
-  document.getElementById('modal-bg').style.display = 'none';
+function renderGrid(recipes){
+
+const grid=document.getElementById('recipe-grid');
+
+grid.innerHTML='';
+
+recipes.forEach(recipe=>{
+
+const card=document.createElement('div');
+
+card.className='card';
+
+card.innerHTML=`<h3>${recipe.title}</h3>`;
+
+card.addEventListener('click',()=>showModal(recipe));
+
+grid.appendChild(card);
+
+});
+
+}
+
+function initGrid(data){
+
+const recipes=data.recipes || data;
+
+allRecipes=recipes;
+
+renderGrid(recipes);
+
+}
+
+document.getElementById('search').addEventListener('input',e=>{
+
+const term=e.target.value.toLowerCase();
+
+const filtered=allRecipes.filter(r=>r.title.toLowerCase().includes(term));
+
+renderGrid(filtered);
+
+});
+
+document.getElementById('close-btn').addEventListener('click',()=>{
+document.getElementById('modal-bg').style.display='none';
 });
 
 fetchRecipes().then(initGrid);
