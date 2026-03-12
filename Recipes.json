@@ -2,264 +2,313 @@
   {
     "title": "Turkey Burgers",
     "ingredients": [
-      "400g turkey mince",
+      "400 g turkey mince",
       "1 egg",
       "1½ tsp psyllium husk",
       "1 tsp soy sauce",
       "garlic powder",
       "smoked paprika",
-      "salt",
       "pepper",
-      "2 burger buns"
-    ],
-    "instructions": [
-      "Add turkey mince to a bowl.",
-      "Mix in egg, psyllium husk, soy sauce and seasonings until combined.",
-      "Let mixture rest 5 minutes.",
-      "Form into two wide patties.",
-      "Air fry at 190°C for 11–13 minutes, flipping halfway through.",
-      "Toast burger buns lightly if desired.",
-      "Place cooked patties on buns and serve."
-    ],
-    "macros": {
-      "calories": 620,
-      "protein": 60,
-      "carbs": 30,
-      "fat": 24,
-      "fibre": 3,
-      "saturated": 6,
-      "mono": 10,
-      "poly": 6
-    },
-    "notes": ""
-  },
-  {
-    "title": "Veggie Burger",
-    "ingredients": [
-      "100g mushrooms",
-      "50g broccoli",
-      "50g peas",
-      "50g carrot",
-      "1 egg",
-      "breadcrumbs",
       "salt",
-      "pepper",
-      "2 burger buns"
+      "Whole grain wraps or burger buns as appropriate",
+      "Lettuce, tomato, onion for serving"
     ],
     "instructions": [
-      "Steam vegetables until soft.",
-      "Mash vegetables in a bowl.",
-      "Add egg and breadcrumbs, season with salt and pepper.",
-      "Mix until a firm mixture forms.",
-      "Shape into patties.",
-      "Bake or air fry at 180°C for 12–15 minutes.",
-      "Toast burger buns lightly if desired.",
-      "Place patties on buns and serve."
+      "Mix turkey, egg, psyllium husk, soy sauce, and spices.",
+      "Form into 2 wide patties.",
+      "Air fry at 190°C for 11–13 minutes, flipping halfway.",
+      "Serve with wraps/buns and salad toppings."
     ],
-    "macros": {
-      "calories": 290,
-      "protein": 12,
-      "carbs": 30,
-      "fat": 8,
-      "fibre": 6,
-      "saturated": 2,
-      "mono": 3,
-      "poly": 2
-    },
-    "notes": ""
+    "macros_per_serving": {
+      "calories": 420,
+      "protein": 45,
+      "carbs": 25,
+      "fat": 18,
+      "fiber": 5,
+      "saturated_fat": 4,
+      "mono_fat": 10,
+      "poly_fat": 4
+    }
   },
   {
-    "title": "Turkey Burger Wrap",
+    "title": "Homemade Lasagna",
     "ingredients": [
-      "400g turkey mince",
-      "1 egg",
-      "1½ tsp psyllium husk",
-      "1 tsp soy sauce",
-      "garlic powder",
-      "smoked paprika",
-      "salt",
-      "pepper",
-      "2 whole grain wraps",
-      "lettuce leaves",
-      "tomato",
-      "onion"
-    ],
-    "instructions": [
-      "Prepare turkey burger patties as above.",
-      "Air fry at 190°C for 11–13 minutes.",
-      "Warm whole grain wraps slightly if desired.",
-      "Place cooked patties on wraps.",
-      "Add lettuce, tomato and onion.",
-      "Wrap tightly and serve."
-    ],
-    "macros": {
-      "calories": 540,
-      "protein": 60,
-      "carbs": 40,
-      "fat": 24,
-      "fibre": 6,
-      "saturated": 6,
-      "mono": 10,
-      "poly": 6
-    },
-    "notes": ""
-  },
-  {
-    "title": "Veggie Burger Wrap",
-    "ingredients": [
-      "100g mushrooms",
-      "50g broccoli",
-      "50g peas",
-      "50g carrot",
-      "1 egg",
-      "breadcrumbs",
-      "salt",
-      "pepper",
-      "2 whole grain wraps",
-      "lettuce",
-      "tomato",
-      "onion"
-    ],
-    "instructions": [
-      "Prepare veggie burger mixture as above.",
-      "Shape into patties and bake or air fry until cooked.",
-      "Warm whole grain wraps slightly if desired.",
-      "Place patties on wraps.",
-      "Add lettuce, tomato and onion.",
-      "Wrap tightly and serve."
-    ],
-    "macros": {
-      "calories": 230,
-      "protein": 12,
-      "carbs": 35,
-      "fat": 8,
-      "fibre": 6,
-      "saturated": 2,
-      "mono": 3,
-      "poly": 2
-    },
-    "notes": ""
-  },
-  {
-    "title": "Creamy Mushroom & Spinach Whole Wheat Pasta",
-    "ingredients": [
-      "200 g whole wheat pasta",
-      "250 g mushrooms",
-      "2 handfuls spinach",
-      "1 small onion",
-      "2 cloves garlic",
-      "150 g skyr or low-fat yogurt",
-      "1 tbsp olive oil",
-      "salt",
-      "pepper",
-      "optional lemon juice"
-    ],
-    "instructions": [
-      "Bring a pot of salted water to a boil.",
-      "Cook pasta according to package instructions.",
-      "Chop onion and garlic.",
-      "Slice mushrooms.",
-      "Heat olive oil in a pan over medium heat.",
-      "Cook onion until soft, about 3–4 minutes.",
-      "Add garlic and cook for 30 seconds until fragrant.",
-      "Add mushrooms and cook until browned.",
-      "Add spinach and cook until wilted.",
-      "Reduce heat and stir in skyr or yogurt.",
-      "Add a splash of reserved pasta water to loosen sauce if needed.",
-      "Drain pasta and combine with sauce.",
-      "Season with salt, pepper, and optional lemon juice to taste.",
-      "Serve immediately."
-    ],
-    "macros": {
-      "calories": 480,
-      "protein": 26,
-      "carbs": 70,
-      "fat": 12,
-      "fibre": 11,
-      "saturated": 1.8,
-      "mono": 7.2,
-      "poly": 1.9
-    },
-    "notes": "A cheap, heart-friendly, vegetarian option perfect for a date night."
-  },
-  {
-    "title": "Heart-Healthy Banana Cocoa Cake",
-    "ingredients": ["2 ripe bananas","2 eggs","50g oats","15g cocoa powder","1 tsp baking powder","10g olive oil"],
-    "instructions": [
-      "Preheat oven to 180°C.",
-      "Mash bananas in a bowl.",
-      "Mix in eggs and olive oil.",
-      "Add oats, cocoa powder and baking powder.",
-      "Stir until smooth batter forms.",
-      "Pour into small baking tray.",
-      "Bake for 25–30 minutes."
-    ],
-    "macros": {"calories": 420,"protein": 14,"carbs": 55,"fat": 16,"fibre": 9,"saturated": 3,"mono": 9,"poly": 2},
-    "notes": "Slice and enjoy with banana or cocoa topping."
-  },
-  {
-    "title": "Banana Chocolate Oat Cake",
-    "ingredients": ["2 ripe bananas","50g oats","1 egg","15g cocoa powder","10g olive oil"],
-    "instructions": [
-      "Preheat oven to 180°C.",
-      "Mash bananas in a bowl.",
-      "Add egg and mix well.",
-      "Stir in oats, cocoa and olive oil.",
-      "Pour batter into baking tray.",
-      "Bake for 25 minutes.",
-      "Allow to cool before slicing."
-    ],
-    "macros": {"calories": 360,"protein": 12,"carbs": 50,"fat": 12,"fibre": 7,"saturated": 2,"mono": 7,"poly": 2},
-    "notes": ""
-  },
-  {
-    "title": "Fillet Steak with Potatoes",
-    "ingredients": ["286g fillet steak","500g potatoes","10g olive oil"],
-    "instructions": [
-      "Season steak with salt and pepper.",
-      "Pan-fry or grill steak to preferred doneness.",
-      "Boil or roast potatoes until cooked.",
-      "Serve steak with potatoes.",
-      "Drizzle olive oil over potatoes."
-    ],
-    "macros": {"calories": 720,"protein": 62,"carbs": 55,"fat": 25,"fibre": 6,"saturated": 8,"mono": 12,"poly": 5},
-    "notes": ""
-  },
-  {
-    "title": "Fillet Steak with Mushrooms",
-    "ingredients": ["240g fillet steak","451g potatoes","100g grilled mushrooms","10g olive oil"],
-    "instructions": [
-      "Cook steak and mushrooms to preferred doneness.",
-      "Boil or roast potatoes until cooked.",
-      "Serve steak and mushrooms with potatoes.",
-      "Drizzle olive oil on top."
-    ],
-    "macros": {"calories": 710,"protein": 55,"carbs": 60,"fat": 20,"fibre": 7,"saturated": 6,"mono": 11,"poly": 3},
-    "notes": ""
-  },
-  {
-    "title": "Individual Beef Wellingtons",
-    "ingredients": [
-      "2 individual beef fillets (approx. 200g each)",
-      "200g mushrooms",
-      "1 small shallot",
-      "1 clove garlic",
       "2 tbsp olive oil",
-      "2 sheets puff pastry",
-      "1 egg (for egg wash)",
+      "1 onion, chopped",
+      "2-3 garlic cloves, minced",
+      "500 g ground beef",
+      "2 tbsp tomato paste",
+      "800 g crushed tomatoes",
+      "1 tsp oregano",
+      "1 tsp basil",
+      "Salt & pepper",
+      "50 g butter",
+      "50 g flour",
+      "600 ml milk",
+      "Pinch nutmeg",
+      "50 g Parmesan (optional)",
+      "9-12 lasagna noodles",
+      "200 g mozzarella",
+      "50 g Parmesan",
+      "Fresh basil for garnish"
+    ],
+    "instructions": [
+      "Cook onion and garlic in olive oil until soft.",
+      "Brown meat, add tomato paste, tomatoes, herbs, salt, pepper; simmer 25 min.",
+      "Make béchamel: melt butter, whisk in flour, gradually add milk, season.",
+      "Layer sauce, noodles, béchamel, meat, and cheese. Repeat.",
+      "Bake 180°C for 35-40 min. Rest 10 min. Garnish with basil."
+    ],
+    "macros_per_serving": {
+      "calories": 550,
+      "protein": 35,
+      "carbs": 45,
+      "fat": 28,
+      "fiber": 5,
+      "saturated_fat": 12,
+      "mono_fat": 10,
+      "poly_fat": 6
+    }
+  },
+  {
+    "title": "Keto Cheesecake",
+    "ingredients": [
+      "192 g almond flour",
+      "76 g unsalted butter",
+      "45 g monk fruit blend",
+      "5 ml vanilla extract",
+      "907 g cream cheese",
+      "156 g powdered monk fruit blend",
+      "3 eggs",
+      "15 ml lemon juice",
+      "5 ml vanilla extract"
+    ],
+    "instructions": [
+      "Preheat oven 177°C. Mix crust ingredients, press into pan, bake 10-12 min.",
+      "Beat cream cheese with sweetener, add eggs one at a time, then lemon & vanilla.",
+      "Pour filling on crust, bake 40-55 min until center jiggly. Chill 4+ hours."
+    ],
+    "macros_per_serving": {
+      "calories": 325,
+      "protein": 7,
+      "carbs": 6,
+      "fat": 31,
+      "fiber": 1,
+      "saturated_fat": 20,
+      "mono_fat": 8,
+      "poly_fat": 3
+    }
+  },
+  {
+    "title": "Gluten Free Keto Bread with Yeast",
+    "ingredients": [
+      "2 tsp active dry yeast",
+      "2 tsp inulin or maple syrup",
+      "120 ml warm water",
+      "168 g almond flour",
+      "83 g flaxseed meal",
+      "15 g whey protein isolate",
+      "18 g psyllium husk",
+      "2 tsp xanthan gum",
+      "2 tsp baking powder",
+      "1 tsp salt",
+      "1/4 tsp cream of tartar",
+      "1/8 tsp ginger",
+      "1 egg",
+      "110 g egg whites",
+      "56 g melted butter",
+      "1 tbsp apple cider vinegar",
+      "58 g sour cream + 2 tsp vinegar"
+    ],
+    "instructions": [
+      "Proof yeast in warm water and sweetener 7 min.",
+      "Mix dry ingredients in separate bowl.",
+      "Add eggs, butter, vinegar to yeast, then combine with dry ingredients and sour cream.",
+      "Transfer to loaf pan, let rise 50-60 min.",
+      "Bake 180°C for 45-55 min until golden. Cool completely."
+    ],
+    "macros_per_serving": {
+      "calories": 174,
+      "protein": 5,
+      "carbs": 6,
+      "fat": 14,
+      "fiber": 4,
+      "saturated_fat": 3,
+      "mono_fat": 8,
+      "poly_fat": 3
+    }
+  },
+  {
+    "title": "Fluffy Keto Buns",
+    "ingredients": [
+      "3 egg whites",
+      "1 egg",
+      "60 ml hot water",
+      "25 g almond flour",
+      "30 g coconut flour",
+      "1 tbsp psyllium husk powder",
+      "1 tsp baking powder",
+      "Pinch of salt",
+      "Sesame seeds (optional)"
+    ],
+    "instructions": [
+      "Preheat oven 180°C. Mix all ingredients until smooth.",
+      "Let dough rest 2 min. Divide into 4 buns, place on baking tray.",
+      "Sprinkle seeds, score tops, bake 25 min until golden."
+    ],
+    "macros_per_serving": {
+      "calories": 109,
+      "protein": 7.3,
+      "carbs": 8.3,
+      "fat": 5.5,
+      "fiber": 5,
+      "saturated_fat": 0.7,
+      "mono_fat": 3,
+      "poly_fat": 2
+    }
+  },
+  {
+    "title": "Keto Bread Rolls",
+    "ingredients": [
+      "2 cups shredded cheese",
+      "1/4 cup cream cheese",
+      "1½ cups almond flour",
+      "3 large eggs",
+      "1 tsp baking powder (optional)"
+    ],
+    "instructions": [
+      "Preheat oven 180°C. Melt cheeses together.",
+      "Mix with almond flour and 2 eggs to form dough.",
+      "Shape into 10 balls, brush with remaining egg.",
+      "Bake 25 min until golden."
+    ],
+    "macros_per_serving": {
+      "calories": 203,
+      "protein": 11,
+      "carbs": 5,
+      "fat": 17,
+      "fiber": 2,
+      "saturated_fat": 5,
+      "mono_fat": 9,
+      "poly_fat": 3
+    }
+  },
+  {
+    "title": "Creamy Chicken and Broccoli Pasta",
+    "ingredients": [
+      "8 oz high fiber pasta",
+      "1 lb chicken breast, cubed",
+      "4 garlic cloves",
+      "1 onion, diced",
+      "4 cups broccoli florets",
+      "1/2 cup 2% milk",
+      "2½ cups chicken broth",
+      "1/2 cup Parmesan",
+      "1/2 tsp red pepper flakes",
+      "1/2 tsp dried basil",
+      "1 tbsp lemon juice",
       "Salt and pepper"
     ],
     "instructions": [
-      "Preheat oven to 200°C.",
-      "Finely chop mushrooms, shallot, and garlic; sauté in olive oil until moisture evaporates and mixture is paste-like.",
-      "Season beef fillets with salt and pepper and sear in hot pan for 1–2 minutes per side.",
-      "Roll out puff pastry sheets; place mushroom mixture on pastry.",
-      "Place seared beef fillet on top and wrap pastry around to enclose completely.",
-      "Brush pastry with beaten egg.",
-      "Bake for 15–20 minutes until pastry is golden and beef is cooked to preferred doneness.",
-      "Rest 5 minutes before serving."
+      "Season chicken and sauté until just cooked, set aside.",
+      "Cook onion and garlic until translucent.",
+      "Add pasta, 2 cups broth, spices; simmer 8 min until almost cooked.",
+      "Add broccoli, remaining broth; simmer 4 min.",
+      "Add chicken, milk, cheese, lemon; simmer 5 min. Let sit 2-3 min."
     ],
-    "macros": {"calories": 650,"protein": 50,"carbs": 40,"fat": 35,"fibre": 3,"saturated": 12,"mono": 15,"poly": 5},
-    "notes": "Perfect individual Beef Wellingtons for a special occasion."
+    "macros_per_serving": {
+      "calories": 438,
+      "protein": 42,
+      "carbs": 55,
+      "fat": 13,
+      "fiber": 9,
+      "saturated_fat": 3,
+      "mono_fat": 0,
+      "poly_fat": 0
+    }
+  },
+  {
+    "title": "Bread and Butter Pudding",
+    "ingredients": [
+      "8 slices bread, buttered",
+      "1/4 cup brown sugar",
+      "500 ml milk",
+      "2 eggs",
+      "1 tsp vanilla",
+      "1/2 cup raisins",
+      "1/2 tsp cinnamon"
+    ],
+    "instructions": [
+      "Preheat oven 170°C. Layer bread and raisins in greased dish.",
+      "Beat milk, eggs, sugar, vanilla; pour over bread.",
+      "Press bread down to soak, sprinkle cinnamon.",
+      "Bake 35-45 min until set."
+    ],
+    "macros_per_serving": {
+      "calories": 290,
+      "protein": 8,
+      "carbs": 45,
+      "fat": 9,
+      "fiber": 2,
+      "saturated_fat": 4,
+      "mono_fat": 3,
+      "poly_fat": 2
+    }
+  },
+  {
+    "title": "Basic Muffins",
+    "ingredients": [
+      "2 cups flour",
+      "1/2 cup sugar",
+      "2 tsp baking powder",
+      "1/2 tsp salt",
+      "3/4 cup milk",
+      "1/2 cup butter, melted",
+      "2 eggs"
+    ],
+    "instructions": [
+      "Preheat oven 175°C. Mix dry ingredients in bowl.",
+      "Whisk milk, butter, eggs; combine with dry ingredients.",
+      "Divide into muffin tins, bake 20-25 min until toothpick clean."
+    ],
+    "macros_per_serving": {
+      "calories": 204,
+      "protein": 4,
+      "carbs": 27,
+      "fat": 9,
+      "fiber": 1,
+      "saturated_fat": 5,
+      "mono_fat": 3,
+      "poly_fat": 1
+    }
+  },
+  {
+    "title": "Sandwich Bread",
+    "ingredients": [
+      "1 cup water",
+      "1/4 cup milk",
+      "2 1/4 tsp instant yeast",
+      "2 tbsp sugar",
+      "4 tbsp butter",
+      "1 1/2 tsp salt",
+      "3 1/3 cups flour"
+    ],
+    "instructions": [
+      "Mix water, milk, yeast, sugar; rest 5 min.",
+      "Add butter, salt, flour gradually; knead 3 min.",
+      "First rise 1-2 hours until doubled.",
+      "Shape loaf, second rise 1 hour.",
+      "Bake 177°C for 32 min until golden. Cool before slicing."
+    ],
+    "macros_per_serving": {
+      "calories": 150,
+      "protein": 5,
+      "carbs": 28,
+      "fat": 3,
+      "fiber": 1,
+      "saturated_fat": 2,
+      "mono_fat": 1,
+      "poly_fat": 0
+    }
   }
 ]
