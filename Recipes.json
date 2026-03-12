@@ -1,339 +1,265 @@
 [
-{
-"title":"Turkey Burgers",
-"ingredients":[
-"400g turkey mince",
-"1 egg",
-"1½ tsp psyllium husk",
-"1 tsp soy sauce",
-"garlic powder",
-"smoked paprika",
-"salt",
-"pepper"
-],
-"instructions":[
-"Add turkey mince to a bowl.",
-"Mix in egg, psyllium husk, soy sauce and seasonings.",
-"Mix thoroughly until evenly combined.",
-"Let mixture rest for 5 minutes so the psyllium absorbs moisture.",
-"Form into two wide burger patties.",
-"Air fry at 190°C for 11–13 minutes.",
-"Flip halfway through cooking."
-],
-"macros":{
-"calories":520,
-"protein":60,
-"carbs":8,
-"fat":24,
-"fibre":3,
-"saturated":6,
-"mono":10,
-"poly":6
-},
-"notes":"Optional: use lettuce, tomato and onion as a bun substitute."
-},
-
-{
-"title":"Veggie Burger",
-"ingredients":[
-"100g mushrooms",
-"50g broccoli",
-"50g peas",
-"50g carrot",
-"1 egg",
-"breadcrumbs",
-"salt",
-"pepper"
-],
-"instructions":[
-"Steam vegetables until soft.",
-"Mash vegetables in a bowl.",
-"Add egg and breadcrumbs.",
-"Season with salt and pepper.",
-"Mix until a firm mixture forms.",
-"Shape into patties.",
-"Bake or air fry at 180°C for 12–15 minutes."
-],
-"macros":{
-"calories":220,
-"protein":12,
-"carbs":25,
-"fat":8,
-"fibre":6,
-"saturated":2,
-"mono":3,
-"poly":2
-},
-"notes":"Optional: top with tomato or lettuce."
-},
-
-{
-"title":"Heart-Healthy Banana Cocoa Cake",
-"ingredients":[
-"2 ripe bananas",
-"2 eggs",
-"50g oats",
-"15g cocoa powder",
-"1 tsp baking powder",
-"10g olive oil"
-],
-"instructions":[
-"Preheat oven to 180°C.",
-"Mash bananas in a bowl.",
-"Mix in eggs and olive oil.",
-"Add oats, cocoa powder and baking powder.",
-"Stir until smooth batter forms.",
-"Pour into small baking tray.",
-"Bake for 25–30 minutes."
-],
-"macros":{
-"calories":420,
-"protein":14,
-"carbs":55,
-"fat":16,
-"fibre":9,
-"saturated":3,
-"mono":9,
-"poly":2
-},
-"notes":"Slice and enjoy with banana or cocoa topping."
-},
-
-{
-"title":"Banana Chocolate Oat Cake",
-"ingredients":[
-"2 ripe bananas",
-"50g oats",
-"1 egg",
-"15g cocoa powder",
-"10g olive oil"
-],
-"instructions":[
-"Preheat oven to 180°C.",
-"Mash bananas in bowl.",
-"Add egg and mix well.",
-"Stir in oats, cocoa and olive oil.",
-"Pour batter into baking tray.",
-"Bake for 25 minutes.",
-"Allow to cool before slicing."
-],
-"macros":{
-"calories":360,
-"protein":12,
-"carbs":50,
-"fat":12,
-"fibre":7,
-"saturated":2,
-"mono":7,
-"poly":2
-},
-"notes":""
-},
-
-{
-"title":"Fillet Steak with Potatoes",
-"ingredients":[
-"286g fillet steak",
-"500g potatoes",
-"10g olive oil"
-],
-"instructions":[
-"Season steak with salt and pepper.",
-"Pan-fry or grill steak to preferred doneness.",
-"Boil or roast potatoes until cooked.",
-"Serve steak with potatoes.",
-"Drizzle olive oil over potatoes."
-],
-"macros":{
-"calories":720,
-"protein":62,
-"carbs":55,
-"fat":25,
-"fibre":6,
-"saturated":8,
-"mono":11,
-"poly":2
-},
-"notes":""
-},
-
-{
-"title":"Fillet Steak with Mushrooms",
-"ingredients":[
-"240g fillet steak",
-"451g potatoes",
-"100g grilled mushrooms",
-"10g olive oil"
-],
-"instructions":[
-"Season steak and cook to desired doneness.",
-"Boil or roast potatoes.",
-"Grill mushrooms until tender.",
-"Serve steak with potatoes and mushrooms.",
-"Drizzle olive oil over vegetables."
-],
-"macros":{
-"calories":690,
-"protein":58,
-"carbs":60,
-"fat":20,
-"fibre":7,
-"saturated":7,
-"mono":9,
-"poly":2
-},
-"notes":""
-},
-
-{
-"title":"Turkey Burger Wrap",
-"ingredients":[
-"400g turkey mince",
-"1 egg",
-"1½ tsp psyllium husk",
-"1 tsp soy sauce",
-"garlic powder",
-"smoked paprika",
-"salt",
-"pepper",
-"lettuce leaves",
-"tomato",
-"onion"
-],
-"instructions":[
-"Prepare turkey burger mixture.",
-"Form patties.",
-"Air fry at 190°C for 11–13 minutes.",
-"Place cooked burger in large lettuce leaves.",
-"Top with tomato and onion.",
-"Wrap and serve."
-],
-"macros":{
-"calories":540,
-"protein":60,
-"carbs":10,
-"fat":24,
-"fibre":4,
-"saturated":6,
-"mono":10,
-"poly":6
-},
-"notes":""
-},
-
-{
-"title":"Veggie Burger Wrap",
-"ingredients":[
-"100g mushrooms",
-"50g broccoli",
-"50g peas",
-"50g carrot",
-"1 egg",
-"breadcrumbs",
-"salt",
-"pepper",
-"lettuce",
-"tomato",
-"onion"
-],
-"instructions":[
-"Prepare veggie burger mixture.",
-"Shape into patties.",
-"Air fry or bake until cooked.",
-"Place patty in lettuce leaves.",
-"Add tomato and onion.",
-"Wrap and serve."
-],
-"macros":{
-"calories":230,
-"protein":12,
-"carbs":25,
-"fat":8,
-"fibre":6,
-"saturated":2,
-"mono":3,
-"poly":2
-},
-"notes":""
-},
-
-{
-"title":"Skyr & Eggs",
-"ingredients":[
-"400g skyr",
-"3 whole eggs",
-"10g olive oil"
-],
-"instructions":[
-"Spoon skyr into bowl.",
-"Fry eggs in pan.",
-"Place eggs beside skyr.",
-"Drizzle olive oil over eggs."
-],
-"macros":{
-"calories":520,
-"protein":110,
-"carbs":20,
-"fat":35,
-"fibre":0,
-"saturated":9,
-"mono":16,
-"poly":4
-},
-"notes":""
-},
-
-{
-"title":"Chicken & Rice",
-"ingredients":[
-"250g chicken breast",
-"100g rice",
-"10g olive oil"
-],
-"instructions":[
-"Cook rice according to package instructions.",
-"Season chicken breast.",
-"Grill or pan cook chicken.",
-"Slice chicken.",
-"Serve chicken over rice.",
-"Drizzle olive oil."
-],
-"macros":{
-"calories":775,
-"protein":65,
-"carbs":80,
-"fat":15,
-"fibre":2,
-"saturated":3,
-"mono":7,
-"poly":3
-},
-"notes":""
-},
-
-{
-"title":"Protein Shake",
-"ingredients":[
-"1 scoop protein powder",
-"1 banana",
-"250ml water"
-],
-"instructions":[
-"Add all ingredients to blender.",
-"Blend until smooth.",
-"Serve immediately."
-],
-"macros":{
-"calories":285,
-"protein":30,
-"carbs":30,
-"fat":2,
-"fibre":3,
-"saturated":0.5,
-"mono":0.3,
-"poly":0.2
-},
-"notes":""
-}
-
+  {
+    "title": "Turkey Burgers",
+    "ingredients": [
+      "400g turkey mince",
+      "1 egg",
+      "1½ tsp psyllium husk",
+      "1 tsp soy sauce",
+      "garlic powder",
+      "smoked paprika",
+      "salt",
+      "pepper",
+      "2 burger buns"
+    ],
+    "instructions": [
+      "Add turkey mince to a bowl.",
+      "Mix in egg, psyllium husk, soy sauce and seasonings until combined.",
+      "Let mixture rest 5 minutes.",
+      "Form into two wide patties.",
+      "Air fry at 190°C for 11–13 minutes, flipping halfway through.",
+      "Toast burger buns lightly if desired.",
+      "Place cooked patties on buns and serve."
+    ],
+    "macros": {
+      "calories": 620,
+      "protein": 60,
+      "carbs": 30,
+      "fat": 24,
+      "fibre": 3,
+      "saturated": 6,
+      "mono": 10,
+      "poly": 6
+    },
+    "notes": ""
+  },
+  {
+    "title": "Veggie Burger",
+    "ingredients": [
+      "100g mushrooms",
+      "50g broccoli",
+      "50g peas",
+      "50g carrot",
+      "1 egg",
+      "breadcrumbs",
+      "salt",
+      "pepper",
+      "2 burger buns"
+    ],
+    "instructions": [
+      "Steam vegetables until soft.",
+      "Mash vegetables in a bowl.",
+      "Add egg and breadcrumbs, season with salt and pepper.",
+      "Mix until a firm mixture forms.",
+      "Shape into patties.",
+      "Bake or air fry at 180°C for 12–15 minutes.",
+      "Toast burger buns lightly if desired.",
+      "Place patties on buns and serve."
+    ],
+    "macros": {
+      "calories": 290,
+      "protein": 12,
+      "carbs": 30,
+      "fat": 8,
+      "fibre": 6,
+      "saturated": 2,
+      "mono": 3,
+      "poly": 2
+    },
+    "notes": ""
+  },
+  {
+    "title": "Turkey Burger Wrap",
+    "ingredients": [
+      "400g turkey mince",
+      "1 egg",
+      "1½ tsp psyllium husk",
+      "1 tsp soy sauce",
+      "garlic powder",
+      "smoked paprika",
+      "salt",
+      "pepper",
+      "2 whole grain wraps",
+      "lettuce leaves",
+      "tomato",
+      "onion"
+    ],
+    "instructions": [
+      "Prepare turkey burger patties as above.",
+      "Air fry at 190°C for 11–13 minutes.",
+      "Warm whole grain wraps slightly if desired.",
+      "Place cooked patties on wraps.",
+      "Add lettuce, tomato and onion.",
+      "Wrap tightly and serve."
+    ],
+    "macros": {
+      "calories": 540,
+      "protein": 60,
+      "carbs": 40,
+      "fat": 24,
+      "fibre": 6,
+      "saturated": 6,
+      "mono": 10,
+      "poly": 6
+    },
+    "notes": ""
+  },
+  {
+    "title": "Veggie Burger Wrap",
+    "ingredients": [
+      "100g mushrooms",
+      "50g broccoli",
+      "50g peas",
+      "50g carrot",
+      "1 egg",
+      "breadcrumbs",
+      "salt",
+      "pepper",
+      "2 whole grain wraps",
+      "lettuce",
+      "tomato",
+      "onion"
+    ],
+    "instructions": [
+      "Prepare veggie burger mixture as above.",
+      "Shape into patties and bake or air fry until cooked.",
+      "Warm whole grain wraps slightly if desired.",
+      "Place patties on wraps.",
+      "Add lettuce, tomato and onion.",
+      "Wrap tightly and serve."
+    ],
+    "macros": {
+      "calories": 230,
+      "protein": 12,
+      "carbs": 35,
+      "fat": 8,
+      "fibre": 6,
+      "saturated": 2,
+      "mono": 3,
+      "poly": 2
+    },
+    "notes": ""
+  },
+  {
+    "title": "Creamy Mushroom & Spinach Whole Wheat Pasta",
+    "ingredients": [
+      "200 g whole wheat pasta",
+      "250 g mushrooms",
+      "2 handfuls spinach",
+      "1 small onion",
+      "2 cloves garlic",
+      "150 g skyr or low-fat yogurt",
+      "1 tbsp olive oil",
+      "salt",
+      "pepper",
+      "optional lemon juice"
+    ],
+    "instructions": [
+      "Bring a pot of salted water to a boil.",
+      "Cook pasta according to package instructions.",
+      "Chop onion and garlic.",
+      "Slice mushrooms.",
+      "Heat olive oil in a pan over medium heat.",
+      "Cook onion until soft, about 3–4 minutes.",
+      "Add garlic and cook for 30 seconds until fragrant.",
+      "Add mushrooms and cook until browned.",
+      "Add spinach and cook until wilted.",
+      "Reduce heat and stir in skyr or yogurt.",
+      "Add a splash of reserved pasta water to loosen sauce if needed.",
+      "Drain pasta and combine with sauce.",
+      "Season with salt, pepper, and optional lemon juice to taste.",
+      "Serve immediately."
+    ],
+    "macros": {
+      "calories": 480,
+      "protein": 26,
+      "carbs": 70,
+      "fat": 12,
+      "fibre": 11,
+      "saturated": 1.8,
+      "mono": 7.2,
+      "poly": 1.9
+    },
+    "notes": "A cheap, heart-friendly, vegetarian option perfect for a date night."
+  },
+  {
+    "title": "Heart-Healthy Banana Cocoa Cake",
+    "ingredients": ["2 ripe bananas","2 eggs","50g oats","15g cocoa powder","1 tsp baking powder","10g olive oil"],
+    "instructions": [
+      "Preheat oven to 180°C.",
+      "Mash bananas in a bowl.",
+      "Mix in eggs and olive oil.",
+      "Add oats, cocoa powder and baking powder.",
+      "Stir until smooth batter forms.",
+      "Pour into small baking tray.",
+      "Bake for 25–30 minutes."
+    ],
+    "macros": {"calories": 420,"protein": 14,"carbs": 55,"fat": 16,"fibre": 9,"saturated": 3,"mono": 9,"poly": 2},
+    "notes": "Slice and enjoy with banana or cocoa topping."
+  },
+  {
+    "title": "Banana Chocolate Oat Cake",
+    "ingredients": ["2 ripe bananas","50g oats","1 egg","15g cocoa powder","10g olive oil"],
+    "instructions": [
+      "Preheat oven to 180°C.",
+      "Mash bananas in a bowl.",
+      "Add egg and mix well.",
+      "Stir in oats, cocoa and olive oil.",
+      "Pour batter into baking tray.",
+      "Bake for 25 minutes.",
+      "Allow to cool before slicing."
+    ],
+    "macros": {"calories": 360,"protein": 12,"carbs": 50,"fat": 12,"fibre": 7,"saturated": 2,"mono": 7,"poly": 2},
+    "notes": ""
+  },
+  {
+    "title": "Fillet Steak with Potatoes",
+    "ingredients": ["286g fillet steak","500g potatoes","10g olive oil"],
+    "instructions": [
+      "Season steak with salt and pepper.",
+      "Pan-fry or grill steak to preferred doneness.",
+      "Boil or roast potatoes until cooked.",
+      "Serve steak with potatoes.",
+      "Drizzle olive oil over potatoes."
+    ],
+    "macros": {"calories": 720,"protein": 62,"carbs": 55,"fat": 25,"fibre": 6,"saturated": 8,"mono": 12,"poly": 5},
+    "notes": ""
+  },
+  {
+    "title": "Fillet Steak with Mushrooms",
+    "ingredients": ["240g fillet steak","451g potatoes","100g grilled mushrooms","10g olive oil"],
+    "instructions": [
+      "Cook steak and mushrooms to preferred doneness.",
+      "Boil or roast potatoes until cooked.",
+      "Serve steak and mushrooms with potatoes.",
+      "Drizzle olive oil on top."
+    ],
+    "macros": {"calories": 710,"protein": 55,"carbs": 60,"fat": 20,"fibre": 7,"saturated": 6,"mono": 11,"poly": 3},
+    "notes": ""
+  },
+  {
+    "title": "Individual Beef Wellingtons (Valentine's Day)",
+    "ingredients": [
+      "2 individual beef fillets (approx. 200g each)",
+      "200g mushrooms",
+      "1 small shallot",
+      "1 clove garlic",
+      "2 tbsp olive oil",
+      "2 sheets puff pastry",
+      "1 egg (for egg wash)",
+      "Salt and pepper"
+    ],
+    "instructions": [
+      "Preheat oven to 200°C.",
+      "Finely chop mushrooms, shallot, and garlic; sauté in olive oil until moisture evaporates and mixture is paste-like.",
+      "Season beef fillets with salt and pepper and sear in hot pan for 1–2 minutes per side.",
+      "Roll out puff pastry sheets; place mushroom mixture on pastry.",
+      "Place seared beef fillet on top and wrap pastry around to enclose completely.",
+      "Brush pastry with beaten egg.",
+      "Bake for 15–20 minutes until pastry is golden and beef is cooked to preferred doneness.",
+      "Rest 5 minutes before serving."
+    ],
+    "macros": {"calories": 650,"protein": 50,"carbs": 40,"fat": 35,"fibre": 3,"saturated": 12,"mono": 15,"poly": 5},
+    "notes": "Perfect individual Beef Wellingtons for a special occasion."
+  }
 ]
