@@ -5,6 +5,7 @@
 <title>Recipes</title>
 
 <style>
+
 body{
   font-family:-apple-system,BlinkMacSystemFont,"SF Pro Display","Segoe UI",Roboto,Helvetica,Arial,sans-serif;
   margin:0;
@@ -30,29 +31,6 @@ header{
   font-size:18px;
   border-radius:10px;
   border:none;
-}
-
-#filters{
-  width:90%;
-  margin:0 auto 20px auto;
-  display:flex;
-  gap:10px;
-  justify-content:center;
-}
-
-#filters button{
-  padding:10px 14px;
-  border:none;
-  border-radius:8px;
-  background:#333;
-  color:white;
-  cursor:pointer;
-  font-size:14px;
-  transition:all 0.2s ease;
-}
-
-#filters button:hover{
-  background:#555;
 }
 
 #recipes{
@@ -82,6 +60,7 @@ header{
 }
 
 /* watermark */
+
 .recipe::before{
   content:"🍽️";
   position:absolute;
@@ -93,6 +72,7 @@ header{
 }
 
 /* title */
+
 .recipe strong{
   display:block;
   text-align:center;
@@ -103,6 +83,7 @@ header{
 }
 
 /* macros */
+
 .macros{
   text-align:center;
   font-size:16px;
@@ -111,6 +92,7 @@ header{
 }
 
 /* divider */
+
 .recipe::after{
   content:"";
   display:block;
@@ -122,6 +104,7 @@ header{
 }
 
 /* popup */
+
 .popup{
   position:fixed;
   top:0;
@@ -150,6 +133,7 @@ header{
   font-size:20px;
   cursor:pointer;
 }
+
 </style>
 </head>
 
@@ -159,23 +143,20 @@ header{
 
 <input id="search" placeholder="Search recipes">
 
-<div id="filters">
-  <button onclick="applyFilter('lowSat')">Low Sat Fat (&lt;5g)</button>
-  <button onclick="applyFilter('highProtein')">High Protein (&gt;20g)</button>
-  <button onclick="applyFilter('under590')">Under 590 kcal</button>
-  <button onclick="applyFilter('all')">Show All</button>
-</div>
-
 <div id="recipes"></div>
 
 <div class="popup" id="popup">
   <div class="popup-content">
+
     <span class="close" onclick="closePopup()">✕</span>
+
     <div id="recipeDetail"></div>
+
   </div>
 </div>
 
 <script>
+
 const url="https://raw.githubusercontent.com/gi22i/recipes-app/main/recipes.json";
 
 let recipes=[];
@@ -184,7 +165,7 @@ fetch(url)
 .then(res=>res.json())
 .then(data=>{
   recipes=data;
-  renderRecipes(recipes); // display all recipes initially
+  renderRecipes(data);
 })
 .catch(err=>{
   console.error("Error loading recipes",err);
@@ -251,22 +232,12 @@ function closePopup(){
   document.getElementById("popup").style.display="none";
 }
 
-// Search
 document.getElementById("search").addEventListener("input",function(){
   const term=this.value.toLowerCase();
   const filtered=recipes.filter(r=>r.title.toLowerCase().includes(term));
   renderRecipes(filtered);
 });
 
-// Filters
-function applyFilter(type){
-  let filtered = recipes.slice();
-  if(type==='lowSat') filtered = filtered.filter(r=>r.macrosPerPortion?.saturated < 5);
-  if(type==='highProtein') filtered = filtered.filter(r=>r.macrosPerPortion?.protein > 20);
-  if(type==='under590') filtered = filtered.filter(r=>r.macrosPerPortion?.calories < 590);
-  if(type==='all') filtered = recipes.slice();
-  renderRecipes(filtered);
-}
 </script>
 
 </body>
