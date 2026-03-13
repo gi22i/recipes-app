@@ -7,137 +7,130 @@
 <style>
 
 body{
-  font-family:-apple-system,BlinkMacSystemFont,"SF Pro Display","Segoe UI",Roboto,Helvetica,Arial,sans-serif;
-  margin:0;
-  background:#111;
-  color:white;
+font-family:-apple-system,BlinkMacSystemFont,"SF Pro Display","Segoe UI",Roboto,Helvetica,Arial,sans-serif;
+margin:0;
+background:#111;
+color:white;
 }
 
 header{
-  background:#222;
-  color:white;
-  padding:16px;
-  text-align:center;
-  font-size:30px;
-  font-weight:600;
-  letter-spacing:0.5px;
+background:#222;
+color:white;
+padding:16px;
+text-align:center;
+font-size:30px;
+font-weight:600;
+letter-spacing:0.5px;
 }
 
 #search{
-  width:90%;
-  margin:20px auto;
-  display:block;
-  padding:12px;
-  font-size:18px;
-  border-radius:10px;
-  border:none;
+width:90%;
+margin:20px auto;
+display:block;
+padding:12px;
+font-size:18px;
+border-radius:10px;
+border:none;
 }
 
 #recipes{
-  display:grid;
-  grid-template-columns:repeat(2,1fr);
-  gap:20px;
-  padding:15px;
+display:grid;
+grid-template-columns:repeat(2,1fr);
+gap:20px;
+padding:15px;
 }
 
 .recipe{
-  background:linear-gradient(145deg,#3a3a3a,#2f2f2f);
-  padding:22px;
-  border-radius:16px;
-  cursor:pointer;
-  position:relative;
-  transition:all 0.15s ease;
-  box-shadow:
-    0 4px 12px rgba(0,0,0,0.4),
-    inset 0 1px 0 rgba(255,255,255,0.05);
+background:linear-gradient(145deg,#3a3a3a,#2f2f2f);
+padding:22px;
+border-radius:16px;
+cursor:pointer;
+position:relative;
+transition:all 0.15s ease;
+box-shadow:
+0 4px 12px rgba(0,0,0,0.4),
+inset 0 1px 0 rgba(255,255,255,0.05);
 }
 
 .recipe:hover{
-  transform:translateY(-3px);
-  box-shadow:
-    0 8px 20px rgba(0,0,0,0.6),
-    inset 0 1px 0 rgba(255,255,255,0.08);
+transform:translateY(-3px);
+box-shadow:
+0 8px 20px rgba(0,0,0,0.6),
+inset 0 1px 0 rgba(255,255,255,0.08);
 }
 
 /* watermark */
+
 .recipe::before{
-  content:"🍽️";
-  position:absolute;
-  top:10px;
-  right:12px;
-  font-size:32px;
-  opacity:0.1;
-  pointer-events:none;
+content:"🍽️";
+position:absolute;
+top:10px;
+right:12px;
+font-size:32px;
+opacity:0.1;
+pointer-events:none;
 }
 
 /* title */
+
 .recipe strong{
-  display:block;
-  text-align:center;
-  font-size:22px;
-  font-weight:700;
-  margin-bottom:8px;
-  padding-right:40px;
+display:block;
+text-align:center;
+font-size:22px;
+font-weight:700;
+margin-bottom:8px;
+padding-right:40px;
 }
 
 /* macros */
+
 .macros{
-  text-align:center;
-  font-size:16px;
-  color:#d0d0d0;
-  margin-bottom:12px;
+text-align:center;
+font-size:16px;
+color:#d0d0d0;
+margin-bottom:12px;
 }
 
 /* divider */
+
 .recipe::after{
-  content:"";
-  display:block;
-  width:60%;
-  height:4px;
-  background:white;
-  margin:10px auto 0 auto;
-  border-radius:3px;
+content:"";
+display:block;
+width:60%;
+height:4px;
+background:white;
+margin:10px auto 0 auto;
+border-radius:3px;
 }
 
 /* popup */
+
 .popup{
-  position:fixed;
-  top:0;
-  left:0;
-  right:0;
-  bottom:0;
-  background:rgba(0,0,0,0.7);
-  display:none;
-  align-items:center;
-  justify-content:center;
-  color:white;
+position:fixed;
+top:0;
+left:0;
+right:0;
+bottom:0;
+background:rgba(0,0,0,0.7);
+display:none;
+align-items:center;
+justify-content:center;
+color:black;
 }
 
 .popup-content{
-  background:#333;
-  color:white;
-  width:90%;
-  max-height:80%;
-  overflow:auto;
-  padding:20px;
-  border-radius:10px;
+background:white;
+width:90%;
+max-height:80%;
+overflow:auto;
+padding:20px;
+border-radius:10px;
 }
 
 .close{
-  float:right;
-  font-size:20px;
-  cursor:pointer;
-}
-
-.macros-side{
-  display:flex;
-  justify-content:space-between;
-  margin-bottom:12px;
-}
-
-.macros-side div{
-  flex:1;
-  text-align:center;
+float:right;
+font-size:20px;
+cursor:pointer;
 }
 
 </style>
@@ -152,182 +145,111 @@ header{
 <div id="recipes"></div>
 
 <div class="popup" id="popup">
-  <div class="popup-content">
-    <span class="close" onclick="closePopup()">✕</span>
-    <div id="recipeDetail"></div>
-  </div>
+<div class="popup-content">
+
+<span class="close" onclick="closePopup()">✕</span>
+
+<div id="recipeDetail"></div>
+
+</div>
 </div>
 
 <script>
 
-// Embedded recipes directly from your JSON
-let recipes = [
-  {
-    "title": "Turkey Burgers",
-    "ingredients": ["400g turkey mince","1 egg","1½ tsp psyllium husk","1 tsp soy sauce","garlic powder","smoked paprika","salt","pepper","2 burger buns"],
-    "instructions": ["Add turkey mince to a bowl.","Mix in egg, psyllium husk, soy sauce and seasonings until combined.","Let mixture rest 5 minutes.","Form into two wide patties.","Air fry at 190°C for 11–13 minutes, flipping halfway through.","Toast burger buns lightly if desired.","Place cooked patties on buns and serve."],
-    "macros": {"calories":620,"protein":60,"carbs":30,"fat":24,"fibre":3,"saturated":6,"mono":10,"poly":6},
-    "servings":2
-  },
-  {
-    "title": "Mediterranean Chicken Bake",
-    "ingredients": ["400g chicken breast","200g courgette","200g bell peppers","120g onion","60g light mozzarella ball","8 olives","10g olive oil","2 cloves garlic","1 tsp oregano","1 tsp smoked paprika","salt","pepper"],
-    "instructions": ["Preheat oven to 190°C.","Dice chicken and slice vegetables.","Add chicken, courgette, peppers, onion and garlic to baking dish.","Drizzle with olive oil and add oregano, paprika, salt and pepper.","Mix everything well.","Bake for 25 minutes.","Add mozzarella pieces and olives.","Bake another 5–7 minutes until cheese melts.","Serve. Recipe makes 2 portions."],
-    "macros": {"calories":742,"protein":101,"carbs":20,"fat":21,"fibre":6,"saturated":5.9,"mono":11,"poly":2},
-    "servings":2
-  },
-  {
-    "title": "Veggie Burger",
-    "ingredients": ["100g mushrooms","50g broccoli","50g peas","50g carrot","1 egg","breadcrumbs","salt","pepper","2 burger buns"],
-    "instructions": ["Steam vegetables until soft.","Mash vegetables in a bowl.","Add egg and breadcrumbs, season with salt and pepper.","Mix until a firm mixture forms.","Shape into patties.","Bake or air fry at 180°C for 12–15 minutes.","Toast burger buns lightly if desired.","Place patties on buns and serve."],
-    "macros": {"calories":290,"protein":12,"carbs":30,"fat":8,"fibre":6,"saturated":2,"mono":3,"poly":2},
-    "servings":2
-  },
-  {
-    "title": "Turkey Burger Wrap",
-    "ingredients": ["400g turkey mince","1 egg","1½ tsp psyllium husk","1 tsp soy sauce","garlic powder","smoked paprika","salt","pepper","2 whole grain wraps","lettuce leaves","tomato","onion"],
-    "instructions": ["Prepare turkey burger patties as above.","Air fry at 190°C for 11–13 minutes.","Warm whole grain wraps slightly if desired.","Place cooked patties on wraps.","Add lettuce, tomato and onion.","Wrap tightly and serve."],
-    "macros": {"calories":540,"protein":60,"carbs":40,"fat":24,"fibre":6,"saturated":6,"mono":10,"poly":6},
-    "servings":2
-  },
-  {
-    "title": "Veggie Burger Wrap",
-    "ingredients": ["100g mushrooms","50g broccoli","50g peas","50g carrot","1 egg","breadcrumbs","salt","pepper","2 whole grain wraps","lettuce","tomato","onion"],
-    "instructions": ["Prepare veggie burger mixture as above.","Shape into patties and bake or air fry until cooked.","Warm whole grain wraps slightly if desired.","Place patties on wraps.","Add lettuce, tomato, and onion.","Wrap tightly and serve."],
-    "macros": {"calories":230,"protein":12,"carbs":35,"fat":8,"fibre":6,"saturated":2,"mono":3,"poly":2},
-    "servings":2
-  },
-  {
-    "title": "Creamy Mushroom & Spinach Whole Wheat Pasta",
-    "ingredients": ["200 g whole wheat pasta","250 g mushrooms","2 handfuls spinach","1 small onion","2 cloves garlic","150 g skyr or low-fat yogurt","1 tbsp olive oil","salt","pepper","optional lemon juice"],
-    "instructions": ["Cook pasta in salted water until al dente.","Sauté onion, garlic, and mushrooms in olive oil.","Add spinach and cook until wilted.","Lower heat, stir in skyr or yogurt.","Add pasta and combine with sauce.","Season with salt, pepper, and optional lemon juice.","Serve immediately."],
-    "macros": {"calories":480,"protein":26,"carbs":70,"fat":12,"fibre":11,"saturated":1.8,"mono":7.2,"poly":1.9},
-    "servings":2
-  },
-  {
-    "title": "Heart-Healthy Banana Cocoa Cake",
-    "ingredients": ["2 ripe bananas","2 eggs","50g oats","15g cocoa powder","1 tsp baking powder","10g olive oil"],
-    "instructions": ["Preheat oven to 180°C.","Mash bananas, add eggs and olive oil.","Mix in oats, cocoa powder, and baking powder.","Pour into tray and bake 25–30 minutes."],
-    "macros": {"calories":420,"protein":14,"carbs":55,"fat":16,"fibre":9,"saturated":3,"mono":9,"poly":2},
-    "servings":2
-  },
-  {
-    "title": "Banana Chocolate Oat Cake",
-    "ingredients": ["2 ripe bananas","50g oats","1 egg","15g cocoa powder","10g olive oil"],
-    "instructions": ["Preheat oven to 180°C.","Mash bananas and mix with egg.","Stir in oats, cocoa, and olive oil.","Pour into tray and bake 25 minutes.","Cool before slicing."],
-    "macros": {"calories":360,"protein":12,"carbs":50,"fat":12,"fibre":7,"saturated":2,"mono":7,"poly":2},
-    "servings":2
-  },
-  {
-    "title": "Fillet Steak with Potatoes",
-    "ingredients": ["286g fillet steak","500g potatoes","10g olive oil"],
-    "instructions": ["Season steak and cook to preference.","Boil or roast potatoes.","Serve steak with potatoes and drizzle with olive oil."],
-    "macros": {"calories":720,"protein":62,"carbs":55,"fat":25,"fibre":6,"saturated":8,"mono":12,"poly":5},
-    "servings":1
-  },
-  {
-    "title": "Fillet Steak with Mushrooms",
-    "ingredients": ["240g fillet steak","451g potatoes","100g grilled mushrooms","10g olive oil"],
-    "instructions": ["Cook steak and mushrooms to preference.","Boil or roast potatoes.","Serve together with olive oil."],
-    "macros": {"calories":710,"protein":55,"carbs":60,"fat":20,"fibre":7,"saturated":6,"mono":11,"poly":3},
-    "servings":1
-  },
-  {
-    "title": "Individual Beef Wellingtons",
-    "ingredients": ["2 individual beef fillets (~200g each)","200g mushrooms","1 small shallot","1 clove garlic","2 tbsp olive oil","2 sheets puff pastry","1 egg (for egg wash)","salt and pepper"],
-    "instructions": ["Preheat oven to 200°C.","Chop mushrooms, shallot, garlic; sauté in olive oil until paste-like.","Season and sear beef 1–2 minutes per side.","Place mushroom mixture on puff pastry, top with beef, wrap and seal.","Brush with egg and bake 15–20 minutes.","Rest 5 minutes before serving."],
-    "macros": {"calories":650,"protein":50,"carbs":40,"fat":35,"fibre":3,"saturated":12,"mono":15,"poly":5},
-    "servings":2
-  },
-  {
-    "title": "Fluffy Keto Buns",
-    "ingredients": ["3 egg whites","1 egg","60ml hot water","25g almond flour","30g coconut flour","1 tbsp psyllium husk powder","1 tsp baking powder","pinch of sea salt","sesame seeds (optional)"],
-    "instructions": ["Preheat oven to 180°C.","Mix all ingredients until smooth.","Let dough rest 2 minutes.","Divide into 4 portions, form buns.","Place on tray, sprinkle seeds, bake 25 min until browned."],
-    "macros": {"calories":109,"protein":7.3,"carbs":8.3,"fat":5.5,"fibre":5,"saturated":0.7,"mono":0,"poly":0},
-    "servings":4
-  },
-  {
-    "title": "Keto Bread Rolls",
-    "ingredients": ["2 cups shredded cheese","1/4 cup cream cheese","1½ cups almond flour","3 large eggs","1 tsp baking powder (optional)"],
-    "instructions": ["Preheat oven to 180°C.","Melt cheeses, mix with 2 eggs and almond flour.","Form 10 balls, brush with 1 egg.","Bake 25 minutes until golden."],
-    "macros": {"calories":203,"protein":11,"carbs":5,"fat":17,"fibre":2,"saturated":5,"mono":0,"poly":0},
-    "servings":10
-  },
-  {
-    "title": "Creamy Chicken and Broccoli Pasta",
-    "ingredients": ["8 oz high fiber pasta","1 lb chicken breast","4 garlic cloves","1 onion","4 cups broccoli florets","1/2 cup 2% milk","2 1/2 cup low sodium chicken broth","1/2 cup Parmesan cheese","1/2 tsp red pepper flake","1/2 tsp dried basil","1 tbsp lemon juice","salt and pepper"],
-    "instructions": ["Cook chicken in oil until lightly browned; set aside.","Cook onion and garlic until fragrant.","Add pasta, 2 cups broth, spices; simmer 8 min.","Add broccoli and remaining broth; cover 4 min.","Add chicken, milk, cheese, lemon; simmer 5 min.","Let sit 2–3 min, serve."],
-    "macros": {"calories":438,"protein":42,"carbs":55,"fat":13,"fibre":9,"saturated":3,"mono":0,"poly":0},
-    "servings":2
-  },
-  {
-    "title": "Bread and Butter Pudding",
-    "ingredients": ["8 slices of bread, buttered","1/4 cup brown sugar","500ml milk","2 eggs","1 tsp vanilla essence","1/2 cup raisins or dried cranberries","1/2 tsp cinnamon"],
-    "instructions": ["Preheat oven to 170°C.","Layer bread and raisins in greased dish.","Whisk milk, eggs, sugar, vanilla; pour over bread.","Push bread to absorb egg mixture, sprinkle cinnamon.","Bake 35–45 minutes until set."],
-    "macros": {"calories":310,"protein":9,"carbs":45,"fat":10,"fibre":2,"saturated":4,"mono":3,"poly":1},
-    "servings":2
-  },
-  {
-    "title": "Sandwich Bread",
-    "ingredients": ["1 cup water, warm","1/4 cup milk, warm","2 1/4 tsp instant yeast","2 tbsp sugar","4 tbsp butter, softened","1 1/2 tsp salt","3 1/3 cups flour"],
-    "instructions": ["Mix water, milk, yeast, sugar; let sit 5 min.","Add butter, salt, and flour gradually; knead 3 min.","Let dough rise 1–2 hours until doubled.","Shape loaf, second rise 1 hour.","Bake at 350°F 30–34 min; cool before slicing."],
-    "macros": {"calories":160,"protein":5,"carbs":28,"fat":4,"fibre":1,"saturated":2,"mono":1,"poly":0.5},
-    "servings":2
-  }
-];
+const url="https://raw.githubusercontent.com/gi22i/recipes-app/main/recipes.json";
+
+let recipes=[];
+
+fetch(url)
+.then(res=>res.json())
+.then(data=>{
+recipes=data;
+renderRecipes(data);
+})
+.catch(err=>{
+console.error("Error loading recipes",err);
+});
 
 function renderRecipes(list){
-  const container = document.getElementById("recipes");
-  container.innerHTML = "";
-  list.forEach(r => {
-    let div = document.createElement("div");
-    div.className = "recipe";
-    div.innerHTML = `
-      <strong>${r.title}</strong>
-      <div class="macros">
-        Calories: ${r.macros?.calories ?? "-"} |
-        Protein: ${r.macros?.protein ?? "-"}g |
-        Sat fat: ${r.macros?.saturated ?? "-"}g
-      </div>
-    `;
-    div.onclick = () => openRecipe(r);
-    container.appendChild(div);
-  });
+
+const container=document.getElementById("recipes");
+container.innerHTML="";
+
+list.forEach(r=>{
+
+let div=document.createElement("div");
+div.className="recipe";
+
+div.innerHTML=`
+<strong>${r.title}</strong>
+
+<div class="macros">
+Calories: ${r.macros?.calories ?? "-"} |
+Protein: ${r.macros?.protein ?? "-"}g |
+Sat fat: ${r.macros?.saturated ?? "-"}g
+</div>
+`;
+
+div.onclick=()=>openRecipe(r);
+
+container.appendChild(div);
+
+});
+
 }
 
 function openRecipe(r){
-  const detail = document.getElementById("recipeDetail");
-  detail.innerHTML = `
-    <h2>${r.title}</h2>
 
-    <h3>Ingredients</h3>
-    <ul>
-      ${r.ingredients.map(i=>`<li>${i}</li>`).join("")}
-    </ul>
+const detail=document.getElementById("recipeDetail");
 
-    <h3>Instructions</h3>
-    <ol>
-      ${r.instructions.map(i=>`<li>${i}</li>`).join("")}
-    </ol>
+detail.innerHTML=`
 
-    <h3>Macros per portion</h3>
-    <div class="macros-side">
-      <div><strong>Calories</strong><br>${r.macros?.calories ?? "-"}</div>
-      <div><strong>Protein</strong><br>${r.macros?.protein ?? "-"} g</div>
-      <div><strong>Carbs</strong><br>${r.macros?.carbs ?? "-"} g</div>
-      <div><strong>Fat</strong><br>${r.macros?.fat ?? "-"} g</div>
-    </div>
-    <div class="macros-side">
-      <div><strong>Saturated</strong><br>${r.macros?.saturated ?? "-"} g</div>
-      <div><strong>Mono</strong><br>${r.macros?.mono ?? "-"} g</div>
-      <div><strong>Poly</strong><br>${r.macros?.poly ?? "-"} g</div>
-      <div><strong>Fibre</strong><br>${r.macros?.fibre ?? "-"} g</div>
-    </div>
+<h2>${r.title}</h2>
 
-    <p>Servings: ${r.servings ?? "-"}</p>
-  `;
-  document.getElementById("popup").style.display = "flex";
+<h3>Ingredients</h3>
+<ul>
+${r.ingredients.map(i=>`<li>${i}</li>`).join("")}
+</ul>
+
+<h3>Instructions</h3>
+<ol>
+${r.instructions.map(i=>`<li>${i}</li>`).join("")}
+</ol>
+
+<h3>Macros</h3>
+
+<ul>
+<li>Calories: ${r.macros?.calories ?? "-"}</li>
+<li>Protein: ${r.macros?.protein ?? "-"} g</li>
+<li>Carbs: ${r.macros?.carbs ?? "-"} g</li>
+<li>Fat: ${r.macros?.fat ?? "-"} g</li>
+<li>Saturated fat: ${r.macros?.saturated ?? "-"} g</li>
+<li>Fibre: ${r.macros?.fibre ?? "-"} g</li>
+</ul>
+
+`;
+
+document.getElementById("popup").style.display="flex";
+
 }
 
 function closePopup(){
-  document.getElementById("popup").style.display = "
+document.getElementById("popup").style.display="none";
+}
+
+document.getElementById("search").addEventListener("input",function(){
+
+const term=this.value.toLowerCase();
+
+const filtered=recipes.filter(r=>
+r.title.toLowerCase().includes(term)
+);
+
+renderRecipes(filtered);
+
+});
+
+</script>
+
+</body>
+</html>
