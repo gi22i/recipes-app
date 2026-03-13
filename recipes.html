@@ -7,150 +7,130 @@
 <style>
 
 body{
-  font-family:-apple-system,BlinkMacSystemFont,"SF Pro Display","Segoe UI",Roboto,Helvetica,Arial,sans-serif;
-  margin:0;
-  background:#111;
-  color:white;
+font-family:-apple-system,BlinkMacSystemFont,"SF Pro Display","Segoe UI",Roboto,Helvetica,Arial,sans-serif;
+margin:0;
+background:#111;
+color:white;
 }
 
 header{
-  background:#222;
-  color:white;
-  padding:16px;
-  text-align:center;
-  font-size:30px;
-  font-weight:600;
-  letter-spacing:0.5px;
+background:#222;
+color:white;
+padding:16px;
+text-align:center;
+font-size:30px;
+font-weight:600;
+letter-spacing:0.5px;
 }
 
 #search{
-  width:90%;
-  margin:20px auto;
-  display:block;
-  padding:12px;
-  font-size:18px;
-  border-radius:10px;
-  border:none;
+width:90%;
+margin:20px auto;
+display:block;
+padding:12px;
+font-size:18px;
+border-radius:10px;
+border:none;
 }
 
 #recipes{
-  display:grid;
-  grid-template-columns:repeat(2,1fr);
-  gap:20px;
-  padding:15px;
+display:grid;
+grid-template-columns:repeat(2,1fr);
+gap:20px;
+padding:15px;
 }
 
 .recipe{
-  background:linear-gradient(145deg,#3a3a3a,#2f2f2f);
-  padding:22px;
-  border-radius:16px;
-  cursor:pointer;
-  position:relative;
-  transition:all 0.15s ease;
-  box-shadow:
-    0 4px 12px rgba(0,0,0,0.4),
-    inset 0 1px 0 rgba(255,255,255,0.05);
+background:linear-gradient(145deg,#3a3a3a,#2f2f2f);
+padding:22px;
+border-radius:16px;
+cursor:pointer;
+position:relative;
+transition:all 0.15s ease;
+box-shadow:
+0 4px 12px rgba(0,0,0,0.4),
+inset 0 1px 0 rgba(255,255,255,0.05);
 }
 
 .recipe:hover{
-  transform:translateY(-3px);
-  box-shadow:
-    0 8px 20px rgba(0,0,0,0.6),
-    inset 0 1px 0 rgba(255,255,255,0.08);
+transform:translateY(-3px);
+box-shadow:
+0 8px 20px rgba(0,0,0,0.6),
+inset 0 1px 0 rgba(255,255,255,0.08);
 }
 
 /* watermark */
 
 .recipe::before{
-  content:"🍽️";
-  position:absolute;
-  top:10px;
-  right:12px;
-  font-size:32px;
-  opacity:0.1;
-  pointer-events:none;
+content:"🍽️";
+position:absolute;
+top:10px;
+right:12px;
+font-size:32px;
+opacity:0.1;
+pointer-events:none;
 }
 
 /* title */
 
 .recipe strong{
-  display:block;
-  text-align:center;
-  font-size:22px;
-  font-weight:700;
-  margin-bottom:8px;
-  padding-right:40px;
+display:block;
+text-align:center;
+font-size:22px;
+font-weight:700;
+margin-bottom:8px;
+padding-right:40px;
 }
 
 /* macros */
 
 .macros{
-  text-align:center;
-  font-size:16px;
-  color:#d0d0d0;
-  margin-bottom:12px;
+text-align:center;
+font-size:16px;
+color:#d0d0d0;
+margin-bottom:12px;
 }
 
 /* divider */
 
 .recipe::after{
-  content:"";
-  display:block;
-  width:60%;
-  height:4px;
-  background:white;
-  margin:10px auto 0 auto;
-  border-radius:3px;
+content:"";
+display:block;
+width:60%;
+height:4px;
+background:white;
+margin:10px auto 0 auto;
+border-radius:3px;
 }
 
 /* popup */
 
 .popup{
-  position:fixed;
-  top:0;
-  left:0;
-  right:0;
-  bottom:0;
-  background:rgba(0,0,0,0.7);
-  display:none;
-  align-items:center;
-  justify-content:center;
-  color:white;
-  z-index:1000;
+position:fixed;
+top:0;
+left:0;
+right:0;
+bottom:0;
+background:rgba(0,0,0,0.7);
+display:none;
+align-items:center;
+justify-content:center;
+color:black;
 }
 
 .popup-content{
-  background:#2a2a2a;
-  width:90%;
-  max-height:80%;
-  overflow:auto;
-  padding:20px;
-  border-radius:10px;
-  color:white;
+background:white;
+width:90%;
+max-height:80%;
+overflow:auto;
+padding:20px;
+border-radius:10px;
 }
 
 .close{
-  float:right;
-  font-size:20px;
-  cursor:pointer;
-}
-
-/* macros table */
-
-.macros-table{
-  display:flex;
-  justify-content:space-between;
-  margin-top:10px;
-  margin-bottom:12px;
-}
-
-.macros-table div{
-  width:48%;
-}
-
-.macros-table h4{
-  margin:5px 0;
-  text-align:center;
+float:right;
+font-size:20px;
+cursor:pointer;
 }
 
 </style>
@@ -165,18 +145,17 @@ header{
 <div id="recipes"></div>
 
 <div class="popup" id="popup">
-  <div class="popup-content">
+<div class="popup-content">
 
-    <span class="close" onclick="closePopup()">✕</span>
+<span class="close" onclick="closePopup()">✕</span>
 
-    <div id="recipeDetail"></div>
+<div id="recipeDetail"></div>
 
-  </div>
+</div>
 </div>
 
 <script>
 
-// Use your JSON Master
 const url="https://raw.githubusercontent.com/gi22i/recipes-app/main/recipes.json";
 
 let recipes=[];
@@ -184,88 +163,90 @@ let recipes=[];
 fetch(url)
 .then(res=>res.json())
 .then(data=>{
-  recipes=data;
-  renderRecipes(data);
+recipes=data;
+renderRecipes(data);
 })
 .catch(err=>{
-  console.error("Error loading recipes",err);
+console.error("Error loading recipes",err);
 });
 
 function renderRecipes(list){
-  const container=document.getElementById("recipes");
-  container.innerHTML="";
 
-  list.forEach(r=>{
-    let div=document.createElement("div");
-    div.className="recipe";
+const container=document.getElementById("recipes");
+container.innerHTML="";
 
-    div.innerHTML=`
-      <strong>${r.title}</strong>
-      <div class="macros">
-        Calories: ${r.macros?.calories ?? "-"} |
-        Protein: ${r.macros?.protein ?? "-"}g |
-        Sat fat: ${r.macros?.saturated ?? "-"}g
-      </div>
-    `;
+list.forEach(r=>{
 
-    div.onclick=()=>openRecipe(r);
-    container.appendChild(div);
-  });
+let div=document.createElement("div");
+div.className="recipe";
+
+div.innerHTML=`
+<strong>${r.title}</strong>
+
+<div class="macros">
+Calories: ${r.macros?.calories ?? "-"} |
+Protein: ${r.macros?.protein ?? "-"}g |
+Sat fat: ${r.macros?.saturated ?? "-"}g
+</div>
+`;
+
+div.onclick=()=>openRecipe(r);
+
+container.appendChild(div);
+
+});
+
 }
 
 function openRecipe(r){
-  const detail=document.getElementById("recipeDetail");
 
-  detail.innerHTML=`
-    <h2>${r.title}</h2>
+const detail=document.getElementById("recipeDetail");
 
-    <h3>Ingredients</h3>
-    <ul>${r.ingredients.map(i=>`<li>${i}</li>`).join("")}</ul>
+detail.innerHTML=`
 
-    <h3>Instructions</h3>
-    <ol>${r.instructions.map(i=>`<li>${i}</li>`).join("")}</ol>
+<h2>${r.title}</h2>
 
-    <h3>Portions</h3>
-    <p>${r.portions}</p>
+<h3>Ingredients</h3>
+<ul>
+${r.ingredients.map(i=>`<li>${i}</li>`).join("")}
+</ul>
 
-    <h3>Macros</h3>
-    <div class="macros-table">
-      <div>
-        <h4>Total</h4>
-        <ul>
-          <li>Calories: ${r.macros?.calories ?? "-"}</li>
-          <li>Protein: ${r.macros?.protein ?? "-"} g</li>
-          <li>Carbs: ${r.macros?.carbs ?? "-"} g</li>
-          <li>Fat: ${r.macros?.fat ?? "-"} g</li>
-          <li>Saturated fat: ${r.macros?.saturated ?? "-"} g</li>
-          <li>Fibre: ${r.macros?.fibre ?? "-"} g</li>
-        </ul>
-      </div>
-      <div>
-        <h4>Per Portion</h4>
-        <ul>
-          <li>Calories: ${r.macrosPerPortion?.calories ?? "-"}</li>
-          <li>Protein: ${r.macrosPerPortion?.protein ?? "-"} g</li>
-          <li>Carbs: ${r.macrosPerPortion?.carbs ?? "-"} g</li>
-          <li>Fat: ${r.macrosPerPortion?.fat ?? "-"} g</li>
-          <li>Saturated fat: ${r.macrosPerPortion?.saturated ?? "-"} g</li>
-          <li>Fibre: ${r.macrosPerPortion?.fibre ?? "-"} g</li>
-        </ul>
-      </div>
-    </div>
-  `;
+<h3>Instructions</h3>
+<ol>
+${r.instructions.map(i=>`<li>${i}</li>`).join("")}
+</ol>
 
-  document.getElementById("popup").style.display="flex";
+<h3>Macros</h3>
+
+<ul>
+<li>Calories: ${r.macros?.calories ?? "-"}</li>
+<li>Protein: ${r.macros?.protein ?? "-"} g</li>
+<li>Carbs: ${r.macros?.carbs ?? "-"} g</li>
+<li>Fat: ${r.macros?.fat ?? "-"} g</li>
+<li>Saturated fat: ${r.macros?.saturated ?? "-"} g</li>
+<li>Fibre: ${r.macros?.fibre ?? "-"} g</li>
+</ul>
+
+`;
+
+document.getElementById("popup").style.display="flex";
+
 }
 
 function closePopup(){
-  document.getElementById("popup").style.display="none";
+document.getElementById("popup").style.display="none";
 }
 
 document.getElementById("search").addEventListener("input",function(){
-  const term=this.value.toLowerCase();
-  const filtered=recipes.filter(r=> r.title.toLowerCase().includes(term) );
-  renderRecipes(filtered);
+
+const term=this.value.toLowerCase();
+
+const filtered=recipes.filter(r=>
+r.title.toLowerCase().includes(term)
+);
+
+renderRecipes(filtered);
+
 });
 
 </script>
