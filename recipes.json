@@ -1,7 +1,6 @@
 [
   {
     "title": "Turkey Burgers",
-    "servings": 2,
     "ingredients": [
       "400g turkey mince",
       "1 egg",
@@ -32,12 +31,10 @@
       "mono": 10,
       "poly": 6
     },
-    "notes": "",
-    "per_portion": true
+    "notes": ""
   },
   {
     "title": "Mediterranean Chicken Bake",
-    "servings": 2,
     "ingredients": [
       "400g chicken breast",
       "200g courgette",
@@ -73,12 +70,10 @@
       "mono": 11,
       "poly": 2
     },
-    "notes": "Mediterranean-style high-protein tray bake. Serves 2.",
-    "per_portion": true
+    "notes": "Mediterranean-style high-protein tray bake. Serves 2."
   },
   {
     "title": "Veggie Burger",
-    "servings": 2,
     "ingredients": [
       "100g mushrooms",
       "50g broccoli",
@@ -110,12 +105,10 @@
       "mono": 3,
       "poly": 2
     },
-    "notes": "",
-    "per_portion": true
+    "notes": ""
   },
   {
     "title": "Turkey Burger Wrap",
-    "servings": 2,
     "ingredients": [
       "400g turkey mince",
       "1 egg",
@@ -148,12 +141,10 @@
       "mono": 10,
       "poly": 6
     },
-    "notes": "",
-    "per_portion": true
+    "notes": ""
   },
   {
     "title": "Veggie Burger Wrap",
-    "servings": 2,
     "ingredients": [
       "100g mushrooms",
       "50g broccoli",
@@ -186,75 +177,6 @@
       "mono": 3,
       "poly": 2
     },
-    "notes": "",
-    "per_portion": true
-  },
-  {
-    "title": "Creamy Mushroom & Spinach Whole Wheat Pasta",
-    "servings": 2,
-    "ingredients": [
-      "200 g whole wheat pasta",
-      "250 g mushrooms",
-      "2 handfuls spinach",
-      "1 small onion",
-      "2 cloves garlic",
-      "150 g skyr or low-fat yogurt",
-      "1 tbsp olive oil",
-      "salt",
-      "pepper",
-      "optional lemon juice"
-    ],
-    "instructions": [
-      "Cook pasta in salted water until al dente.",
-      "Sauté onion, garlic, and mushrooms in olive oil.",
-      "Add spinach and cook until wilted.",
-      "Lower heat, stir in skyr or yogurt.",
-      "Add pasta and combine with sauce.",
-      "Season with salt, pepper, and optional lemon juice.",
-      "Serve immediately."
-    ],
-    "macros": {
-      "calories": 480,
-      "protein": 26,
-      "carbs": 70,
-      "fat": 12,
-      "fibre": 11,
-      "saturated": 1.8,
-      "mono": 7.2,
-      "poly": 1.9
-    },
-    "notes": "Vegetarian, heart-friendly option.",
-    "per_portion": true
-  },
-  {
-    "title": "Heart-Healthy Banana Cocoa Cake",
-    "servings": 4,
-    "ingredients": [
-      "2 ripe bananas",
-      "2 eggs",
-      "50g oats",
-      "15g cocoa powder",
-      "1 tsp baking powder",
-      "10g olive oil"
-    ],
-    "instructions": [
-      "Preheat oven to 180°C.",
-      "Mash bananas, add eggs and olive oil.",
-      "Mix in oats, cocoa powder, and baking powder.",
-      "Pour into tray and bake 25–30 minutes."
-    ],
-    "macros": {
-      "calories": 420,
-      "protein": 14,
-      "carbs": 55,
-      "fat": 16,
-      "fibre": 9,
-      "saturated": 3,
-      "mono": 9,
-      "poly": 2
-    },
-    "notes": "Serve with banana or cocoa topping.",
-    "per_portion": true
+    "notes": ""
   }
-  /* The rest of the recipes would follow the same pattern with "servings" added and "per_portion": true */
 ]
