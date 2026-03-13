@@ -1,191 +1,225 @@
 <!DOCTYPE html>
-<html lang="en">
+<html>
 <head>
-<meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>My Recipes</title>
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Recipes</title>
+
 <style>
-  /* Page background with sweeping greyscale gradient */
-  body {
-    margin: 0;
-    font-family: 'Georgia', serif; /* calligraphy-style headings */
-    background: linear-gradient(135deg, #e0e0e0, #c0c0c0, #a0a0a0);
-    color: #222;
-  }
 
-  h1, h2 {
-    font-family: 'Palatino Linotype', 'Book Antiqua', Palatino, serif;
-    font-weight: bold;
-    text-align: center;
-  }
+body{
+font-family:-apple-system,BlinkMacSystemFont,"Segoe UI",Roboto;
+background:#121212;
+color:white;
+margin:0;
+padding:0;
+}
 
-  .container {
-    max-width: 1200px;
-    margin: 0 auto;
-    padding: 20px;
-  }
+header{
+padding:20px;
+text-align:center;
+font-size:26px;
+font-weight:600;
+background:#1e1e1e;
+}
 
-  /* Search bar */
-  #searchBar {
-    display: block;
-    width: 100%;
-    padding: 12px;
-    margin-bottom: 20px;
-    font-size: 18px;
-    border-radius: 8px;
-    border: 1px solid #888;
-  }
+#search{
+width:90%;
+margin:15px auto;
+display:block;
+padding:12px;
+border-radius:10px;
+border:none;
+font-size:16px;
+}
 
-  /* Recipe card pop-up styles */
-  .recipe-card {
-    background: #f8f8f8;
-    border-radius: 12px;
-    padding: 20px;
-    margin: 15px;
-    cursor: pointer;
-    box-shadow: 0 4px 12px rgba(0,0,0,0.15);
-    transition: transform 0.2s, box-shadow 0.2s;
-  }
+.container{
+display:grid;
+grid-template-columns:1fr;
+gap:15px;
+padding:15px;
+}
 
-  .recipe-card:hover {
-    transform: translateY(-5px);
-    box-shadow: 0 8px 20px rgba(0,0,0,0.25);
-  }
+.card{
+background:#1e1e1e;
+border-radius:14px;
+padding:16px;
+cursor:pointer;
+transition:0.2s;
+}
 
-  .recipe-title {
-    font-weight: bold;
-    font-size: 1.5em;
-    margin-bottom: 10px;
-  }
+.card:hover{
+background:#2a2a2a;
+}
 
-  .tags {
-    font-size: 0.9em;
-    color: #555;
-    margin-bottom: 10px;
-  }
+.title{
+font-size:18px;
+font-weight:600;
+margin-bottom:10px;
+}
 
-  /* Modal popup for recipe details */
-  .modal {
-    display: none;
-    position: fixed;
-    z-index: 10;
-    padding-top: 80px;
-    left: 0;
-    top: 0;
-    width: 100%;
-    height: 100%;
-    overflow-y: auto;
-    background-color: rgba(0,0,0,0.6);
-  }
+.macros{
+display:flex;
+gap:8px;
+flex-wrap:wrap;
+}
 
-  .modal-content {
-    background-color: #f8f8f8;
-    margin: auto;
-    padding: 30px;
-    border-radius: 12px;
-    width: 90%;
-    max-width: 800px;
-    font-size: 16px;
-    line-height: 1.6;
-    position: relative;
-  }
+.badge{
+background:#333;
+padding:6px 10px;
+border-radius:8px;
+font-size:13px;
+}
 
-  .close-btn {
-    color: #333;
-    position: absolute;
-    top: 10px;
-    right: 20px;
-    font-size: 28px;
-    font-weight: bold;
-    cursor: pointer;
-  }
+.popup{
+position:fixed;
+top:0;
+left:0;
+right:0;
+bottom:0;
+background:rgba(0,0,0,0.8);
+display:none;
+align-items:center;
+justify-content:center;
+}
 
-  ul {
-    padding-left: 20px;
-  }
+.popup-content{
+background:#1e1e1e;
+padding:20px;
+border-radius:14px;
+width:90%;
+max-height:80%;
+overflow:auto;
+}
 
-  strong {
-    font-weight: bold;
-  }
+.close{
+float:right;
+font-size:20px;
+cursor:pointer;
+}
+
+h3{
+margin-top:20px;
+}
+
+ul,ol{
+padding-left:18px;
+}
+
 </style>
 </head>
-<body>
-<div class="container">
-  <h1>My Recipes</h1>
-  <input type="text" id="searchBar" placeholder="Search recipes...">
-  <div id="recipesContainer"></div>
-</div>
 
-<!-- Modal for recipe details -->
-<div id="recipeModal" class="modal">
-  <div class="modal-content">
-    <span class="close-btn">&times;</span>
-    <div id="modalContent"></div>
-  </div>
+<body>
+
+<header>My Recipes</header>
+
+<input id="search" placeholder="Search recipes...">
+
+<div class="container" id="recipes"></div>
+
+<div class="popup" id="popup">
+<div class="popup-content">
+<span class="close" onclick="closePopup()">✕</span>
+<div id="recipeDetail"></div>
+</div>
 </div>
 
 <script>
-// Fetch recipes JSON from GitHub raw link
-const jsonUrl = 'https://raw.githubusercontent.com/gi22i/recipes-app/main/recipes.json'; // replace with your actual raw URL
 
-let recipes = [];
-const container = document.getElementById('recipesContainer');
-const modal = document.getElementById('recipeModal');
-const modalContent = document.getElementById('modalContent');
-const closeBtn = document.querySelector('.close-btn');
+const url="https://raw.githubusercontent.com/gi22i/recipes-app/main/recipes.json";
 
-fetch(jsonUrl)
-  .then(response => response.json())
-  .then(data => {
-    recipes = data;
-    displayRecipes(recipes);
-  });
+let recipes=[];
 
-// Display recipe cards
-function displayRecipes(list) {
-  container.innerHTML = '';
-  list.forEach((recipe, index) => {
-    const card = document.createElement('div');
-    card.className = 'recipe-card';
-    card.innerHTML = `<div class="recipe-title">${recipe.title}</div>`;
-    card.addEventListener('click', () => openModal(index));
-    container.appendChild(card);
-  });
-}
-
-// Open modal with recipe details
-function openModal(index) {
-  const recipe = recipes[index];
-  modalContent.innerHTML = `
-    <h2>${recipe.title}</h2>
-    <h3>Ingredients</h3>
-    <ul>${recipe.ingredients.map(i => `<li>${i}</li>`).join('')}</ul>
-    <h3>Instructions</h3>
-    <ol>${recipe.instructions.map(i => `<li>${i}</li>`).join('')}</ol>
-    ${recipe.macros ? `
-    <h3>Macros</h3>
-    <ul>
-      <li>Calories: ${recipe.macros.calories}</li>
-      <li>Protein: ${recipe.macros.protein}g</li>
-      <li>Carbs: ${recipe.macros.carbs}g</li>
-      <li>Fat: ${recipe.macros.fat}g</li>
-      <li>Fibre: ${recipe.macros.fibre}g</li>
-    </ul>` : ''}
-    ${recipe.notes ? `<p><strong>Notes:</strong> ${recipe.notes}</p>` : ''}
-  `;
-  modal.style.display = 'block';
-}
-
-// Close modal
-closeBtn.onclick = () => modal.style.display = 'none';
-window.onclick = (e) => { if(e.target == modal) modal.style.display = 'none'; }
-
-// Search filter
-document.getElementById('searchBar').addEventListener('input', (e) => {
-  const term = e.target.value.toLowerCase();
-  const filtered = recipes.filter(r => r.title.toLowerCase().includes(term));
-  displayRecipes(filtered);
+fetch(url)
+.then(r=>r.json())
+.then(data=>{
+recipes=data;
+renderRecipes(data);
 });
+
+function renderRecipes(data){
+
+const container=document.getElementById("recipes");
+container.innerHTML="";
+
+data.forEach(r=>{
+
+let card=document.createElement("div");
+card.className="card";
+
+card.innerHTML=`
+
+<div class="title">${r.title}</div>
+
+<div class="macros">
+
+<span class="badge">🔥 ${r.macros.calories || "-"} kcal</span>
+<span class="badge">💪 ${r.macros.protein || "-"} g protein</span>
+<span class="badge">🧈 ${r.macros.saturated || "-"} g sat fat</span>
+
+</div>
+
+`;
+
+card.onclick=()=>openRecipe(r);
+
+container.appendChild(card);
+
+});
+
+}
+
+function openRecipe(r){
+
+const detail=document.getElementById("recipeDetail");
+
+detail.innerHTML=`
+
+<h2>${r.title}</h2>
+
+<h3>Ingredients</h3>
+<ul>
+${r.ingredients.map(i=>`<li>${i}</li>`).join("")}
+</ul>
+
+<h3>Instructions</h3>
+<ol>
+${r.instructions.map(i=>`<li>${i}</li>`).join("")}
+</ol>
+
+<h3>Macros</h3>
+
+<ul>
+<li>Calories: ${r.macros.calories || "-"}</li>
+<li>Protein: ${r.macros.protein || "-"} g</li>
+<li>Carbs: ${r.macros.carbs || "-"} g</li>
+<li>Fat: ${r.macros.fat || "-"} g</li>
+<li>Saturated fat: ${r.macros.saturated || "-"} g</li>
+<li>Fibre: ${r.macros.fibre || "-"} g</li>
+</ul>
+
+`;
+
+document.getElementById("popup").style.display="flex";
+
+}
+
+function closePopup(){
+document.getElementById("popup").style.display="none";
+}
+
+document.getElementById("search").addEventListener("input",function(){
+
+const term=this.value.toLowerCase();
+
+const filtered=recipes.filter(r=>
+r.title.toLowerCase().includes(term)
+);
+
+renderRecipes(filtered);
+
+});
+
 </script>
+
 </body>
 </html>
