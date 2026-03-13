@@ -60,7 +60,6 @@ inset 0 1px 0 rgba(255,255,255,0.08);
 }
 
 /* watermark */
-
 .recipe::before{
 content:"🍽️";
 position:absolute;
@@ -72,7 +71,6 @@ pointer-events:none;
 }
 
 /* title */
-
 .recipe strong{
 display:block;
 text-align:center;
@@ -83,7 +81,6 @@ padding-right:40px;
 }
 
 /* macros */
-
 .macros{
 text-align:center;
 font-size:16px;
@@ -92,7 +89,6 @@ margin-bottom:12px;
 }
 
 /* divider */
-
 .recipe::after{
 content:"";
 display:block;
@@ -104,7 +100,6 @@ border-radius:3px;
 }
 
 /* popup */
-
 .popup{
 position:fixed;
 top:0;
@@ -115,11 +110,12 @@ background:rgba(0,0,0,0.7);
 display:none;
 align-items:center;
 justify-content:center;
-color:black;
+color:white;
 }
 
 .popup-content{
-background:white;
+background:#2e2e2e; /* dark grey */
+color:white;       /* white text */
 width:90%;
 max-height:80%;
 overflow:auto;
@@ -131,6 +127,18 @@ border-radius:10px;
 float:right;
 font-size:20px;
 cursor:pointer;
+}
+
+/* Servings + macros side by side */
+.popup-info{
+display:flex;
+justify-content:space-between;
+margin-bottom:16px;
+font-size:16px;
+}
+
+.popup-info div{
+flex:1;
 }
 
 </style>
@@ -202,9 +210,18 @@ function openRecipe(r){
 
 const detail=document.getElementById("recipeDetail");
 
+// Add servings + macros side by side at top
+const servings=r.servings || 1;
+const macros=r.macros || {};
+
 detail.innerHTML=`
 
 <h2>${r.title}</h2>
+
+<div class="popup-info">
+  <div><strong>Servings:</strong> ${servings}</div>
+  <div><strong>Macros per portion:</strong> ${macros.calories ?? "-"} kcal | ${macros.protein ?? "-"}g P | ${macros.carbs ?? "-"}g C | ${macros.fat ?? "-"}g F</div>
+</div>
 
 <h3>Ingredients</h3>
 <ul>
@@ -216,15 +233,14 @@ ${r.ingredients.map(i=>`<li>${i}</li>`).join("")}
 ${r.instructions.map(i=>`<li>${i}</li>`).join("")}
 </ol>
 
-<h3>Macros</h3>
-
+<h3>Full Macros</h3>
 <ul>
-<li>Calories: ${r.macros?.calories ?? "-"}</li>
-<li>Protein: ${r.macros?.protein ?? "-"} g</li>
-<li>Carbs: ${r.macros?.carbs ?? "-"} g</li>
-<li>Fat: ${r.macros?.fat ?? "-"} g</li>
-<li>Saturated fat: ${r.macros?.saturated ?? "-"} g</li>
-<li>Fibre: ${r.macros?.fibre ?? "-"} g</li>
+<li>Calories: ${macros.calories ?? "-"}</li>
+<li>Protein: ${macros.protein ?? "-"} g</li>
+<li>Carbs: ${macros.carbs ?? "-"} g</li>
+<li>Fat: ${macros.fat ?? "-"} g</li>
+<li>Saturated fat: ${macros.saturated ?? "-"} g</li>
+<li>Fibre: ${macros.fibre ?? "-"} g</li>
 </ul>
 
 `;
