@@ -34,6 +34,45 @@
     "notes": ""
   },
   {
+    "title": "Mediterranean Chicken Bake",
+    "ingredients": [
+      "400g chicken breast",
+      "200g courgette",
+      "200g bell peppers",
+      "120g onion",
+      "60g light mozzarella ball",
+      "8 olives",
+      "10g olive oil",
+      "2 cloves garlic",
+      "1 tsp oregano",
+      "1 tsp smoked paprika",
+      "salt",
+      "pepper"
+    ],
+    "instructions": [
+      "Preheat oven to 190°C.",
+      "Dice chicken and slice vegetables.",
+      "Add chicken, courgette, peppers, onion and garlic to baking dish.",
+      "Drizzle with olive oil and add oregano, paprika, salt and pepper.",
+      "Mix everything well.",
+      "Bake for 25 minutes.",
+      "Add mozzarella pieces and olives.",
+      "Bake another 5–7 minutes until cheese melts.",
+      "Serve. Recipe makes 2 portions."
+    ],
+    "macros": {
+      "calories": 742,
+      "protein": 101,
+      "carbs": 20,
+      "fat": 21,
+      "fibre": 6,
+      "saturated": 5.9,
+      "mono": 11,
+      "poly": 2
+    },
+    "notes": "Mediterranean-style high-protein tray bake. Serves 2."
+  },
+  {
     "title": "Veggie Burger",
     "ingredients": [
       "100g mushrooms",
@@ -140,258 +179,7 @@
     },
     "notes": ""
   },
-  {
-    "title": "Creamy Mushroom & Spinach Whole Wheat Pasta",
-    "ingredients": [
-      "200 g whole wheat pasta",
-      "250 g mushrooms",
-      "2 handfuls spinach",
-      "1 small onion",
-      "2 cloves garlic",
-      "150 g skyr or low-fat yogurt",
-      "1 tbsp olive oil",
-      "salt",
-      "pepper",
-      "optional lemon juice"
-    ],
-    "instructions": [
-      "Cook pasta in salted water until al dente.",
-      "Sauté onion, garlic, and mushrooms in olive oil.",
-      "Add spinach and cook until wilted.",
-      "Lower heat, stir in skyr or yogurt.",
-      "Add pasta and combine with sauce.",
-      "Season with salt, pepper, and optional lemon juice.",
-      "Serve immediately."
-    ],
-    "macros": {
-      "calories": 480,
-      "protein": 26,
-      "carbs": 70,
-      "fat": 12,
-      "fibre": 11,
-      "saturated": 1.8,
-      "mono": 7.2,
-      "poly": 1.9
-    },
-    "notes": "Vegetarian, heart-friendly option."
-  },
-  {
-    "title": "Heart-Healthy Banana Cocoa Cake",
-    "ingredients": [
-      "2 ripe bananas",
-      "2 eggs",
-      "50g oats",
-      "15g cocoa powder",
-      "1 tsp baking powder",
-      "10g olive oil"
-    ],
-    "instructions": [
-      "Preheat oven to 180°C.",
-      "Mash bananas, add eggs and olive oil.",
-      "Mix in oats, cocoa powder, and baking powder.",
-      "Pour into tray and bake 25–30 minutes."
-    ],
-    "macros": {
-      "calories": 420,
-      "protein": 14,
-      "carbs": 55,
-      "fat": 16,
-      "fibre": 9,
-      "saturated": 3,
-      "mono": 9,
-      "poly": 2
-    },
-    "notes": "Serve with banana or cocoa topping."
-  },
-  {
-    "title": "Banana Chocolate Oat Cake",
-    "ingredients": ["2 ripe bananas","50g oats","1 egg","15g cocoa powder","10g olive oil"],
-    "instructions": [
-      "Preheat oven to 180°C.",
-      "Mash bananas and mix with egg.",
-      "Stir in oats, cocoa, and olive oil.",
-      "Pour into tray and bake 25 minutes.",
-      "Cool before slicing."
-    ],
-    "macros": {
-      "calories": 360,
-      "protein": 12,
-      "carbs": 50,
-      "fat": 12,
-      "fibre": 7,
-      "saturated": 2,
-      "mono": 7,
-      "poly": 2
-    },
-    "notes": ""
-  },
-  {
-    "title": "Fillet Steak with Potatoes",
-    "ingredients": ["286g fillet steak","500g potatoes","10g olive oil"],
-    "instructions": [
-      "Season steak and cook to preference.",
-      "Boil or roast potatoes.",
-      "Serve steak with potatoes and drizzle with olive oil."
-    ],
-    "macros": {
-      "calories": 720,
-      "protein": 62,
-      "carbs": 55,
-      "fat": 25,
-      "fibre": 6,
-      "saturated": 8,
-      "mono": 12,
-      "poly": 5
-    },
-    "notes": ""
-  },
-  {
-    "title": "Fillet Steak with Mushrooms",
-    "ingredients": ["240g fillet steak","451g potatoes","100g grilled mushrooms","10g olive oil"],
-    "instructions": [
-      "Cook steak and mushrooms to preference.",
-      "Boil or roast potatoes.",
-      "Serve together with olive oil."
-    ],
-    "macros": {
-      "calories": 710,
-      "protein": 55,
-      "carbs": 60,
-      "fat": 20,
-      "fibre": 7,
-      "saturated": 6,
-      "mono": 11,
-      "poly": 3
-    },
-    "notes": ""
-  },
-  {
-    "title": "Individual Beef Wellingtons",
-    "ingredients": [
-      "2 individual beef fillets (~200g each)",
-      "200g mushrooms",
-      "1 small shallot",
-      "1 clove garlic",
-      "2 tbsp olive oil",
-      "2 sheets puff pastry",
-      "1 egg (for egg wash)",
-      "salt and pepper"
-    ],
-    "instructions": [
-      "Preheat oven to 200°C.",
-      "Chop mushrooms, shallot, garlic; sauté in olive oil until paste-like.",
-      "Season and sear beef 1–2 minutes per side.",
-      "Place mushroom mixture on puff pastry, top with beef, wrap and seal.",
-      "Brush with egg and bake 15–20 minutes.",
-      "Rest 5 minutes before serving."
-    ],
-    "macros": {
-      "calories": 650,
-      "protein": 50,
-      "carbs": 40,
-      "fat": 35,
-      "fibre": 3,
-      "saturated": 12,
-      "mono": 15,
-      "poly": 5
-    },
-    "notes": "Perfect for a special occasion."
-  },
-  {
-    "title": "Fluffy Keto Buns",
-    "ingredients": [
-      "3 egg whites",
-      "1 egg",
-      "60ml hot water",
-      "25g almond flour",
-      "30g coconut flour",
-      "1 tbsp psyllium husk powder",
-      "1 tsp baking powder",
-      "pinch of sea salt",
-      "sesame seeds (optional)"
-    ],
-    "instructions": [
-      "Preheat oven to 180°C.",
-      "Mix all ingredients until smooth.",
-      "Let dough rest 2 minutes.",
-      "Divide into 4 portions, form buns.",
-      "Place on tray, sprinkle seeds, bake 25 min until browned."
-    ],
-    "macros": {
-      "calories": 109,
-      "protein": 7.3,
-      "carbs": 8.3,
-      "fat": 5.5,
-      "fibre": 5,
-      "saturated": 0.7,
-      "mono": 0,
-      "poly": 0
-    },
-    "notes": "Gluten-free, dairy-free."
-  },
-  {
-    "title": "Keto Bread Rolls",
-    "ingredients": [
-      "2 cups shredded cheese",
-      "1/4 cup cream cheese",
-      "1½ cups almond flour",
-      "3 large eggs",
-      "1 tsp baking powder (optional)"
-    ],
-    "instructions": [
-      "Preheat oven to 180°C.",
-      "Melt cheeses, mix with 2 eggs and almond flour.",
-      "Form 10 balls, brush with 1 egg.",
-      "Bake 25 minutes until golden."
-    ],
-    "macros": {
-      "calories": 203,
-      "protein": 11,
-      "carbs": 5,
-      "fat": 17,
-      "fibre": 2,
-      "saturated": 0,
-      "mono": 0,
-      "poly": 0
-    },
-    "notes": "Serve warm; refrigerate or freeze leftovers."
-  },
-  {
-    "title": "Creamy Chicken and Broccoli Pasta",
-    "ingredients": [
-      "8 oz high fiber pasta",
-      "1 lb chicken breast",
-      "4 garlic cloves",
-      "1 onion",
-      "4 cups broccoli florets",
-      "1/2 cup 2% milk",
-      "2 1/2 cup low sodium chicken broth",
-      "1/2 cup Parmesan cheese",
-      "1/2 tsp red pepper flake",
-      "1/2 tsp dried basil",
-      "1 tbsp lemon juice",
-      "salt and pepper"
-    ],
-    "instructions": [
-      "Cook chicken in oil until lightly browned; set aside.",
-      "Cook onion and garlic until fragrant.",
-      "Add pasta, 2 cups broth, spices; simmer 8 min.",
-      "Add broccoli and remaining broth; cover 4 min.",
-      "Add chicken, milk, cheese, lemon; simmer 5 min.",
-      "Let sit 2–3 min, serve."
-    ],
-    "macros": {
-      "calories": 438,
-      "protein": 42,
-      "carbs": 55,
-      "fat": 13,
-      "fibre": 9,
-      "saturated": 3,
-      "mono": 0,
-      "poly": 0
-    },
-    "notes": ""
-  },
+
   {
     "title": "Bread and Butter Pudding",
     "ingredients": [
@@ -410,40 +198,19 @@
       "Push bread to absorb egg mixture, sprinkle cinnamon.",
       "Bake 35–45 minutes until set."
     ],
-    "macros": {},
+    "macros": {
+      "calories": 310,
+      "protein": 9,
+      "carbs": 45,
+      "fat": 10,
+      "fibre": 2,
+      "saturated": 4,
+      "mono": 3,
+      "poly": 1
+    },
     "notes": "Older bread works better; can swap dried fruit or add jam."
   },
-  {
-    "title": "Basic Muffins",
-    "ingredients": [
-      "2 cups flour",
-      "1/2 cup sugar",
-      "2 tsp baking powder",
-      "1/2 tsp salt",
-      "3/4 cup milk",
-      "1/2 cup butter, melted",
-      "2 eggs",
-      "2 tbsp coarse sugar (optional)"
-    ],
-    "instructions": [
-      "Preheat oven to 350°F.",
-      "Mix dry ingredients; whisk wet ingredients.",
-      "Combine gently and pour into muffin tin.",
-      "Bake 20–25 min until toothpick comes out mostly clean.",
-      "Cool before serving."
-    ],
-    "macros": {
-      "calories": 204,
-      "protein": 4,
-      "carbs": 27,
-      "fat": 9,
-      "fibre": 1,
-      "saturated": 5,
-      "mono": 3,
-      "poly": 0
-    },
-    "notes": "Can add fruit, chocolate, or spices as desired."
-  },
+
   {
     "title": "Sandwich Bread",
     "ingredients": [
@@ -462,7 +229,16 @@
       "Shape loaf, second rise 1 hour.",
       "Bake at 350°F 30–34 min; cool before slicing."
     ],
-    "macros": {},
-    "notes": "Can freeze before or after baking; see detailed instructions above."
+    "macros": {
+      "calories": 160,
+      "protein": 5,
+      "carbs": 28,
+      "fat": 4,
+      "fibre": 1,
+      "saturated": 2,
+      "mono": 1,
+      "poly": 0.5
+    },
+    "notes": "Can freeze before or after baking."
   }
 ]
