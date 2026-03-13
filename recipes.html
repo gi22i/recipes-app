@@ -1,4 +1,4 @@
-<!DOCTYPE html>
+<!<!DOCTYPE html>
 <html>
 <head>
 <meta name="viewport" content="width=device-width, initial-scale=1">
@@ -20,6 +20,7 @@ header{
   text-align:center;
   font-size:30px;
   font-weight:600;
+  letter-spacing:0.5px;
 }
 
 #search{
@@ -45,9 +46,20 @@ header{
   border-radius:16px;
   cursor:pointer;
   position:relative;
-  box-shadow:0 4px 12px rgba(0,0,0,0.4);
+  transition:all 0.15s ease;
+  box-shadow:
+    0 4px 12px rgba(0,0,0,0.4),
+    inset 0 1px 0 rgba(255,255,255,0.05);
 }
 
+.recipe:hover{
+  transform:translateY(-3px);
+  box-shadow:
+    0 8px 20px rgba(0,0,0,0.6),
+    inset 0 1px 0 rgba(255,255,255,0.08);
+}
+
+/* watermark */
 .recipe::before{
   content:"🍽️";
   position:absolute;
@@ -55,15 +67,28 @@ header{
   right:12px;
   font-size:32px;
   opacity:0.1;
+  pointer-events:none;
 }
 
+/* title */
 .recipe strong{
   display:block;
   text-align:center;
   font-size:22px;
+  font-weight:700;
   margin-bottom:8px;
+  padding-right:40px;
 }
 
+/* macros */
+.macros{
+  text-align:center;
+  font-size:16px;
+  color:#d0d0d0;
+  margin-bottom:12px;
+}
+
+/* divider */
 .recipe::after{
   content:"";
   display:block;
@@ -74,6 +99,7 @@ header{
   border-radius:3px;
 }
 
+/* popup */
 .popup{
   position:fixed;
   top:0;
@@ -84,22 +110,43 @@ header{
   display:none;
   align-items:center;
   justify-content:center;
+  color:white;
 }
 
 .popup-content{
-  background:#333;
-  color:white;
+  background:#2f2f2f;
   width:90%;
   max-height:80%;
   overflow:auto;
   padding:20px;
   border-radius:10px;
+  color:white;
 }
 
 .close{
   float:right;
   font-size:20px;
   cursor:pointer;
+}
+
+h3{
+  margin-top:20px;
+  margin-bottom:8px;
+}
+
+ul, ol{
+  padding-left:20px;
+}
+
+.macros-section{
+  display:flex;
+  flex-wrap:wrap;
+  justify-content:space-between;
+}
+
+.macros-section ul{
+  width:48%;
+  margin-bottom:10px;
 }
 
 </style>
@@ -115,14 +162,17 @@ header{
 
 <div class="popup" id="popup">
   <div class="popup-content">
+
     <span class="close" onclick="closePopup()">✕</span>
+
     <div id="recipeDetail"></div>
+
   </div>
 </div>
 
 <script>
 
-const url="https://raw.githubusercontent.com/gi22i/recipes-app/main/recipes.json";
+const url="recipes.json"; // assumes recipes.json is in same folder
 
 let recipes=[];
 
@@ -130,7 +180,10 @@ fetch(url)
 .then(res=>res.json())
 .then(data=>{
   recipes=data;
-  renderRecipes(recipes);
+  renderRecipes(data);
+})
+.catch(err=>{
+  console.error("Error loading recipes",err);
 });
 
 function renderRecipes(list){
@@ -138,49 +191,72 @@ function renderRecipes(list){
   container.innerHTML="";
 
   list.forEach(r=>{
-    const card=document.createElement("div");
-    card.className="recipe";
+    let div=document.createElement("div");
+    div.className="recipe";
 
-    card.innerHTML=`<strong>${r.title}</strong>`;
+    div.innerHTML=`
+      <strong>${r.title}</strong>
 
-    card.onclick=()=>openRecipe(r);
+      <div class="macros">
+        Calories: ${r.macros?.calories ?? "-"} |
+        Protein: ${r.macros?.protein ?? "-"}g |
+        Sat fat: ${r.macros?.saturated ?? "-"}g
+      </div>
+    `;
 
-    container.appendChild(card);
+    div.onclick=()=>openRecipe(r);
+
+    container.appendChild(div);
   });
 }
 
 function openRecipe(r){
-
   const detail=document.getElementById("recipeDetail");
 
   detail.innerHTML=`
+    <h2>${r.title}</h2>
 
-  <h2>${r.title}</h2>
+    <h3>Ingredients</h3>
+    <ul>
+      ${r.ingredients.map(i=>`<li>${i}</li>`).join("")}
+    </ul>
 
-  <p><strong>Portions:</strong> ${r.portions}</p>
+    <h3>Instructions</h3>
+    <ol>
+      ${r.instructions.map(i=>`<li>${i}</li>`).join("")}
+    </ol>
 
-  <h3>Macros Per Portion</h3>
-  <ul>
-  <li>Calories: ${r.macrosPerPortion.calories}</li>
-  <li>Protein: ${r.macrosPerPortion.protein} g</li>
-  <li>Carbs: ${r.macrosPerPortion.carbs} g</li>
-  <li>Fat: ${r.macrosPerPortion.fat} g</li>
-  <li>Saturated Fat: ${r.macrosPerPortion.saturated} g</li>
-  <li>Fibre: ${r.macrosPerPortion.fibre} g</li>
-  </ul>
+    <div class="macros-section">
+      <div>
+        <h3>Main Macros</h3>
+        <ul>
+          <li>Calories: ${r.macros?.calories ?? "-"}</li>
+          <li>Protein: ${r.macros?.protein ?? "-"} g</li>
+          <li>Carbs: ${r.macros?.carbs ?? "-"} g</li>
+          <li>Fat: ${r.macros?.fat ?? "-"} g</li>
+          <li>Saturated fat: ${r.macros?.saturated ?? "-"} g</li>
+          <li>Fibre: ${r.macros?.fibre ?? "-"} g</li>
+        </ul>
+      </div>
 
-  <h3>Ingredients</h3>
-  <ul>
-  ${r.ingredients.map(i=>`<li>${i}</li>`).join("")}
-  </ul>
+      <div>
+        <h3>Macros per Portion</h3>
+        <ul>
+          <li>Calories: ${r.macrosPerPortion?.calories ?? "-"}</li>
+          <li>Protein: ${r.macrosPerPortion?.protein ?? "-"} g</li>
+          <li>Carbs: ${r.macrosPerPortion?.carbs ?? "-"} g</li>
+          <li>Fat: ${r.macrosPerPortion?.fat ?? "-"} g</li>
+          <li>Saturated fat: ${r.macrosPerPortion?.saturated ?? "-"} g</li>
+          <li>Fibre: ${r.macrosPerPortion?.fibre ?? "-"} g</li>
+        </ul>
 
-  <h3>Instructions</h3>
-  <ol>
-  ${r.instructions.map(i=>`<li>${i}</li>`).join("")}
-  </ol>
+        <h3>Portions</h3>
+        <p>${r.portions ?? "-"}</p>
 
-  <p>${r.notes || ""}</p>
-
+        <h3>Notes</h3>
+        <p>${r.notes ?? "-"}</p>
+      </div>
+    </div>
   `;
 
   document.getElementById("popup").style.display="flex";
@@ -191,15 +267,9 @@ function closePopup(){
 }
 
 document.getElementById("search").addEventListener("input",function(){
-
   const term=this.value.toLowerCase();
-
-  const filtered=recipes.filter(r=>
-  r.title.toLowerCase().includes(term)
-  );
-
+  const filtered=recipes.filter(r=> r.title.toLowerCase().includes(term) );
   renderRecipes(filtered);
-
 });
 
 </script>
