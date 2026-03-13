@@ -1,0 +1,72 @@
+[
+  {
+    "title":"Turkey Burgers",
+    "ingredients":["400g turkey mince","1 egg","1½ tsp psyllium husk","1 tsp soy sauce","garlic powder","smoked paprika","salt","pepper","2 burger buns"],
+    "instructions":["Mix turkey with egg, psyllium, soy sauce, and spices.","Rest 5 minutes.","Form into patties.","Air fry at 190°C 11–13 min, flipping halfway.","Toast buns if desired.","Assemble and serve."],
+    "macros":{"calories":620,"protein":60,"carbs":30,"fat":24,"fibre":3,"saturated":6,"mono":10,"poly":6},
+    "notes":""
+  },
+  {
+    "title":"Veggie Burger",
+    "ingredients":["100g mushrooms","50g broccoli","50g peas","50g carrot","1 egg","breadcrumbs","salt","pepper","2 burger buns"],
+    "instructions":["Steam and mash veggies.","Add egg and breadcrumbs.","Form patties.","Bake or air fry 180°C 12–15 min.","Toast buns.","Assemble and serve."],
+    "macros":{"calories":290,"protein":12,"carbs":30,"fat":8,"fibre":6,"saturated":2,"mono":3,"poly":2},
+    "notes":""
+  },
+  {
+    "title":"Turkey Burger Wrap",
+    "ingredients":["400g turkey mince","1 egg","1½ tsp psyllium husk","1 tsp soy sauce","garlic powder","smoked paprika","salt","pepper","2 whole grain wraps","lettuce leaves","tomato","onion"],
+    "instructions":["Prepare patties.","Air fry 190°C 11–13 min.","Place on wrap.","Add lettuce, tomato, onion.","Wrap and serve."],
+    "macros":{"calories":540,"protein":60,"carbs":40,"fat":24,"fibre":6,"saturated":6,"mono":10,"poly":6},
+    "notes":""
+  },
+  {
+    "title":"Veggie Burger Wrap",
+    "ingredients":["100g mushrooms","50g broccoli","50g peas","50g carrot","1 egg","breadcrumbs","salt","pepper","2 whole grain wraps","lettuce","tomato","onion"],
+    "instructions":["Prepare veggie patties.","Bake or air fry until cooked.","Place on wrap.","Add lettuce, tomato, onion.","Wrap and serve."],
+    "macros":{"calories":230,"protein":12,"carbs":35,"fat":8,"fibre":6,"saturated":2,"mono":3,"poly":2},
+    "notes":""
+  },
+  {
+    "title":"Creamy Mushroom & Spinach Whole Wheat Pasta",
+    "ingredients":["200 g whole wheat pasta","250 g mushrooms","2 handfuls spinach","1 small onion","2 cloves garlic","150 g skyr or low-fat yogurt","1 tbsp olive oil","salt","pepper","optional lemon juice"],
+    "instructions":["Cook pasta.","Sauté onion, garlic, mushrooms.","Add spinach, skyr/yogurt.","Combine with pasta.","Season and serve."],
+    "macros":{"calories":480,"protein":26,"carbs":70,"fat":12,"fibre":11,"saturated":1.8,"mono":7.2,"poly":1.9},
+    "notes":"Vegetarian, heart-friendly."
+  },
+  {
+    "title":"Heart-Healthy Banana Cocoa Cake",
+    "ingredients":["2 ripe bananas","2 eggs","50g oats","15g cocoa powder","1 tsp baking powder","10g olive oil"],
+    "instructions":["Preheat oven to 180°C.","Mash bananas.","Mix in eggs and olive oil.","Add oats, cocoa, and baking powder.","Pour into tray.","Bake 25–30 min."],
+    "macros":{"calories":420,"protein":14,"carbs":55,"fat":16,"fibre":9,"saturated":3,"mono":9,"poly":2},
+    "notes":"Slice and enjoy with banana or cocoa topping."
+  },
+  {
+    "title":"Banana Chocolate Oat Cake",
+    "ingredients":["2 ripe bananas","50g oats","1 egg","15g cocoa powder","10g olive oil"],
+    "instructions":["Preheat oven to 180°C.","Mash bananas.","Add egg and mix.","Stir in oats, cocoa, and oil.","Pour into tray.","Bake 25 min.","Cool and slice."],
+    "macros":{"calories":360,"protein":12,"carbs":50,"fat":12,"fibre":7,"saturated":2,"mono":7,"poly":2},
+    "notes":""
+  },
+  {
+    "title":"Fillet Steak with Potatoes",
+    "ingredients":["286g fillet steak","500g potatoes","10g olive oil"],
+    "instructions":["Season steak.","Pan-fry or grill steak.","Boil/roast potatoes.","Serve with olive oil."],
+    "macros":{"calories":720,"protein":62,"carbs":55,"fat":25,"fibre":6,"saturated":8,"mono":12,"poly":5},
+    "notes":""
+  },
+  {
+    "title":"Fillet Steak with Mushrooms",
+    "ingredients":["240g fillet steak","451g potatoes","100g grilled mushrooms","10g olive oil"],
+    "instructions":["Cook steak and mushrooms.","Boil/roast potatoes.","Serve together with olive oil."],
+    "macros":{"calories":710,"protein":55,"carbs":60,"fat":20,"fibre":7,"saturated":6,"mono":11,"poly":3},
+    "notes":""
+  },
+  {
+    "title":"Individual Beef Wellingtons (Valentine's Day)",
+    "ingredients":["2 beef fillets (~200g)","200g mushrooms","1 shallot","1 garlic clove","2 tbsp olive oil","2 puff pastry sheets","1 egg","salt","pepper"],
+    "instructions":["Preheat oven to 200°C.","Sauté mushrooms, shallot, garlic in oil.","Season beef and sear.","Assemble beef in pastry with mushroom mixture.","Brush with egg.","Bake 15–20 min.","Rest 5 min.","Serve."],
+    "macros":{"calories":650,"protein":50,"carbs":40,"fat":35,"fibre":3,"saturated":12,"mono":15,"poly":5},
+    "notes":"Perfect for special occasions."
+  }
+]
