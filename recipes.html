@@ -1,0 +1,205 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Recipe App</title>
+
+<!-- Google Fonts for Calligraphy & Sans -->
+<link href="https://fonts.googleapis.com/css2?family=Great+Vibes&family=Roboto:wght@400;700&display=swap" rel="stylesheet">
+
+<style>
+  /* General Reset */
+  * { margin: 0; padding: 0; box-sizing: border-box; }
+
+  body {
+    font-family: 'Roboto', sans-serif;
+    background: linear-gradient(120deg, #f5f5f5, #e0e0e0);
+    color: #222;
+    padding: 20px;
+  }
+
+  h1, h2 {
+    font-family: 'Great Vibes', cursive;
+    font-weight: 700;
+    color: #111;
+  }
+
+  h1 { font-size: 3rem; text-align: center; margin-bottom: 20px; }
+  h2 { font-size: 2rem; margin-top: 15px; margin-bottom: 10px; }
+
+  /* Search bar */
+  #searchBar {
+    display: block;
+    width: 100%;
+    max-width: 500px;
+    margin: 0 auto 30px auto;
+    padding: 12px 15px;
+    font-size: 1rem;
+    border-radius: 8px;
+    border: 1px solid #aaa;
+    box-shadow: 1px 1px 5px rgba(0,0,0,0.1);
+  }
+
+  /* Recipe Cards */
+  .recipe-card {
+    background: #fff;
+    border-radius: 12px;
+    padding: 20px;
+    margin-bottom: 25px;
+    box-shadow: 0 5px 15px rgba(0,0,0,0.05);
+    transition: transform 0.2s, box-shadow 0.2s;
+  }
+
+  .recipe-card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 10px 20px rgba(0,0,0,0.1);
+  }
+
+  .recipe-title {
+    font-family: 'Great Vibes', cursive;
+    font-size: 2rem;
+    font-weight: bold;
+    margin-bottom: 10px;
+  }
+
+  .recipe-section {
+    margin-bottom: 15px;
+  }
+
+  ul, ol {
+    margin-left: 20px;
+  }
+
+  .macros {
+    font-size: 0.9rem;
+    margin-top: 10px;
+    padding: 10px;
+    background: #f0f0f0;
+    border-radius: 6px;
+  }
+
+  .notes {
+    font-style: italic;
+    color: #555;
+  }
+
+  /* Tags styling */
+  .tag {
+    display: inline-block;
+    background: #ccc;
+    color: #111;
+    padding: 5px 10px;
+    border-radius: 12px;
+    margin: 0 5px 5px 0;
+    cursor: pointer;
+    font-size: 0.85rem;
+  }
+
+  .tag:hover { background: #bbb; }
+</style>
+</head>
+<body>
+
+<h1>My Recipe Collection</h1>
+<input type="text" id="searchBar" placeholder="Search recipes...">
+
+<div id="recipeContainer"></div>
+
+<script>
+  // Load recipes JSON
+  async function loadRecipes() {
+    const response = await fetch('recipes.json');
+    const recipes = await response.json();
+    return recipes;
+  }
+
+  function createRecipeCard(recipe) {
+    const card = document.createElement('div');
+    card.className = 'recipe-card';
+
+    // Title
+    const title = document.createElement('div');
+    title.className = 'recipe-title';
+    title.textContent = recipe.title;
+    card.appendChild(title);
+
+    // Ingredients
+    const ingredientsDiv = document.createElement('div');
+    ingredientsDiv.className = 'recipe-section';
+    const ingredientsHeader = document.createElement('h2');
+    ingredientsHeader.textContent = 'Ingredients';
+    ingredientsDiv.appendChild(ingredientsHeader);
+    const ul = document.createElement('ul');
+    recipe.ingredients.forEach(ing => {
+      const li = document.createElement('li');
+      li.textContent = ing;
+      ul.appendChild(li);
+    });
+    ingredientsDiv.appendChild(ul);
+    card.appendChild(ingredientsDiv);
+
+    // Instructions
+    const instructionsDiv = document.createElement('div');
+    instructionsDiv.className = 'recipe-section';
+    const instructionsHeader = document.createElement('h2');
+    instructionsHeader.textContent = 'Instructions';
+    instructionsDiv.appendChild(instructionsHeader);
+    const ol = document.createElement('ol');
+    recipe.instructions.forEach(step => {
+      const li = document.createElement('li');
+      li.textContent = step;
+      ol.appendChild(li);
+    });
+    instructionsDiv.appendChild(ol);
+    card.appendChild(instructionsDiv);
+
+    // Macros
+    if (recipe.macros && Object.keys(recipe.macros).length > 0) {
+      const macrosDiv = document.createElement('div');
+      macrosDiv.className = 'macros';
+      macrosDiv.innerHTML = `
+        <strong>Macros:</strong> Calories: ${recipe.macros.calories || 'N/A'}, Protein: ${recipe.macros.protein || 'N/A'}g, Carbs: ${recipe.macros.carbs || 'N/A'}g, Fat: ${recipe.macros.fat || 'N/A'}g
+      `;
+      card.appendChild(macrosDiv);
+    }
+
+    // Notes
+    if (recipe.notes) {
+      const notesDiv = document.createElement('div');
+      notesDiv.className = 'notes';
+      notesDiv.textContent = `Notes: ${recipe.notes}`;
+      card.appendChild(notesDiv);
+    }
+
+    return card;
+  }
+
+  function renderRecipes(recipes) {
+    const container = document.getElementById('recipeContainer');
+    container.innerHTML = '';
+    recipes.forEach(recipe => {
+      const card = createRecipeCard(recipe);
+      container.appendChild(card);
+    });
+  }
+
+  // Search functionality
+  function setupSearch(recipes) {
+    const searchBar = document.getElementById('searchBar');
+    searchBar.addEventListener('input', () => {
+      const query = searchBar.value.toLowerCase();
+      const filtered = recipes.filter(r => r.title.toLowerCase().includes(query) || r.ingredients.join(' ').toLowerCase().includes(query));
+      renderRecipes(filtered);
+    });
+  }
+
+  // Initialize
+  loadRecipes().then(recipes => {
+    renderRecipes(recipes);
+    setupSearch(recipes);
+  });
+</script>
+
+</body>
+</html>
