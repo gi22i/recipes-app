@@ -128,6 +128,7 @@
     },
     "notes": ""
   },
+
   {
     "title": "Turkey Burger Wrap",
     "ingredients": [
@@ -140,17 +141,16 @@
       "salt",
       "pepper",
       "2 whole grain wraps",
-      "lettuce leaves",
+      "lettuce",
       "tomato",
       "onion"
     ],
     "instructions": [
-      "Prepare turkey burger patties as above.",
-      "Air fry at 190°C for 11–13 minutes.",
-      "Warm whole grain wraps slightly if desired.",
-      "Place cooked patties on wraps.",
-      "Add lettuce, tomato and onion.",
-      "Wrap tightly and serve."
+      "Prepare turkey burger mixture.",
+      "Form patties and air fry 11–13 minutes at 190°C.",
+      "Warm wraps.",
+      "Add patty and vegetables.",
+      "Wrap and serve."
     ],
     "macros": {
       "calories": 540,
@@ -171,6 +171,7 @@
     },
     "notes": ""
   },
+
   {
     "title": "Veggie Burger Wrap",
     "ingredients": [
@@ -188,12 +189,10 @@
       "onion"
     ],
     "instructions": [
-      "Prepare veggie burger mixture as above.",
-      "Shape into patties and bake or air fry until cooked.",
-      "Warm whole grain wraps slightly if desired.",
-      "Place patties on wraps.",
-      "Add lettuce, tomato, and onion.",
-      "Wrap tightly and serve."
+      "Prepare veggie burger mixture.",
+      "Cook patties.",
+      "Add to wraps with vegetables.",
+      "Wrap and serve."
     ],
     "macros": {
       "calories": 230,
@@ -214,6 +213,7 @@
     },
     "notes": ""
   },
+
   {
     "title": "Creamy Mushroom & Spinach Whole Wheat Pasta",
     "ingredients": [
@@ -225,17 +225,14 @@
       "150 g skyr or low-fat yogurt",
       "1 tbsp olive oil",
       "salt",
-      "pepper",
-      "optional lemon juice"
+      "pepper"
     ],
     "instructions": [
-      "Cook pasta in salted water until al dente.",
-      "Sauté onion, garlic, and mushrooms in olive oil.",
-      "Add spinach and cook until wilted.",
-      "Lower heat, stir in skyr or yogurt.",
-      "Add pasta and combine with sauce.",
-      "Season with salt, pepper, and optional lemon juice.",
-      "Serve immediately."
+      "Cook pasta.",
+      "Sauté onion garlic mushrooms.",
+      "Add spinach.",
+      "Stir in skyr.",
+      "Combine with pasta."
     ],
     "macros": {
       "calories": 480,
@@ -255,5 +252,105 @@
       "saturated": 0.9
     },
     "notes": "Vegetarian, heart-friendly option."
+  },
+
+  {
+    "title": "Heart-Healthy Banana Cocoa Cake",
+    "ingredients": ["bananas", "oats", "cocoa", "eggs"],
+    "instructions": ["Mix ingredients", "Bake until set"],
+    "macros": {"calories": 1200,"protein": 40,"carbs": 180,"fat": 30,"fibre": 15,"saturated": 6},
+    "portions": 8,
+    "macrosPerPortion": {"calories": 150,"protein": 5,"carbs": 22,"fat": 4,"fibre": 2,"saturated": 0.7},
+    "notes": ""
+  },
+
+  {
+    "title": "Banana Chocolate Oat Cake",
+    "ingredients": ["bananas","oats","cocoa"],
+    "instructions": ["Blend","Bake"],
+    "macros": {"calories": 1400,"protein": 50,"carbs": 210,"fat": 35,"fibre": 18,"saturated": 7},
+    "portions": 8,
+    "macrosPerPortion": {"calories": 175,"protein": 6,"carbs": 26,"fat": 4,"fibre": 2.2,"saturated": 0.9},
+    "notes": ""
+  },
+
+  {
+    "title": "Fillet Steak with Potatoes",
+    "ingredients": ["fillet steak","potatoes","olive oil"],
+    "instructions": ["Cook steak","Air fry potatoes"],
+    "macros": {"calories": 900,"protein": 80,"carbs": 90,"fat": 25,"fibre": 8,"saturated": 8},
+    "portions": 2,
+    "macrosPerPortion": {"calories": 450,"protein": 40,"carbs": 45,"fat": 12.5,"fibre": 4,"saturated": 4},
+    "notes": ""
+  },
+
+  {
+    "title": "Fillet Steak with Mushrooms",
+    "ingredients": ["fillet steak","mushrooms","olive oil"],
+    "instructions": ["Cook steak","Sauté mushrooms"],
+    "macros": {"calories": 820,"protein": 85,"carbs": 20,"fat": 40,"fibre": 4,"saturated": 9},
+    "portions": 2,
+    "macrosPerPortion": {"calories": 410,"protein": 42.5,"carbs": 10,"fat": 20,"fibre": 2,"saturated": 4.5},
+    "notes": ""
+  },
+
+  {
+    "title": "Individual Beef Wellingtons",
+    "ingredients": ["beef fillet","puff pastry","mushrooms"],
+    "instructions": ["Wrap beef","Bake"],
+    "macros": {"calories": 1400,"protein": 90,"carbs": 110,"fat": 60,"fibre": 5,"saturated": 18},
+    "portions": 2,
+    "macrosPerPortion": {"calories": 700,"protein": 45,"carbs": 55,"fat": 30,"fibre": 2.5,"saturated": 9},
+    "notes": ""
+  },
+
+  {
+    "title": "Fluffy Keto Buns",
+    "ingredients": ["almond flour","eggs","baking powder"],
+    "instructions": ["Mix","Bake"],
+    "macros": {"calories": 900,"protein": 45,"carbs": 20,"fat": 70,"fibre": 12,"saturated": 7},
+    "portions": 6,
+    "macrosPerPortion": {"calories": 150,"protein": 7.5,"carbs": 3,"fat": 12,"fibre": 2,"saturated": 1.2},
+    "notes": ""
+  },
+
+  {
+    "title": "Keto Bread Rolls",
+    "ingredients": ["almond flour","eggs","psyllium"],
+    "instructions": ["Mix","Bake"],
+    "macros": {"calories": 800,"protein": 40,"carbs": 18,"fat": 60,"fibre": 10,"saturated": 6},
+    "portions": 6,
+    "macrosPerPortion": {"calories": 133,"protein": 6.6,"carbs": 3,"fat": 10,"fibre": 1.6,"saturated": 1},
+    "notes": ""
+  },
+
+  {
+    "title": "Creamy Chicken and Broccoli Pasta",
+    "ingredients": ["chicken","broccoli","whole wheat pasta","skyr"],
+    "instructions": ["Cook pasta","Cook chicken","Combine with sauce"],
+    "macros": {"calories": 900,"protein": 90,"carbs": 100,"fat": 20,"fibre": 10,"saturated": 3},
+    "portions": 2,
+    "macrosPerPortion": {"calories": 450,"protein": 45,"carbs": 50,"fat": 10,"fibre": 5,"saturated": 1.5},
+    "notes": ""
+  },
+
+  {
+    "title": "Bread and Butter Pudding",
+    "ingredients": ["bread","eggs","milk","butter"],
+    "instructions": ["Layer bread","Bake custard"],
+    "macros": {"calories": 1200,"protein": 35,"carbs": 150,"fat": 45,"fibre": 6,"saturated": 20},
+    "portions": 6,
+    "macrosPerPortion": {"calories": 200,"protein": 6,"carbs": 25,"fat": 7.5,"fibre": 1,"saturated": 3.3},
+    "notes": ""
+  },
+
+  {
+    "title": "Sandwich Bread",
+    "ingredients": ["flour","yeast","water","salt"],
+    "instructions": ["Mix dough","Rise","Bake"],
+    "macros": {"calories": 1200,"protein": 40,"carbs": 220,"fat": 10,"fibre": 8,"saturated": 1},
+    "portions": 12,
+    "macrosPerPortion": {"calories": 100,"protein": 3.3,"carbs": 18,"fat": 0.8,"fibre": 0.6,"saturated": 0.08},
+    "notes": ""
   }
 ]
