@@ -1,11 +1,10 @@
-<!DOCTYPE html>
+<!<!DOCTYPE html>
 <html>
 <head>
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <title>Recipes</title>
 
 <style>
-
 body{
   font-family:-apple-system,BlinkMacSystemFont,"SF Pro Display","Segoe UI",Roboto,Helvetica,Arial,sans-serif;
   margin:0;
@@ -83,7 +82,6 @@ header{
 }
 
 /* watermark */
-
 .recipe::before{
   content:"🍽️";
   position:absolute;
@@ -95,7 +93,6 @@ header{
 }
 
 /* title */
-
 .recipe strong{
   display:block;
   text-align:center;
@@ -106,7 +103,6 @@ header{
 }
 
 /* macros */
-
 .macros{
   text-align:center;
   font-size:16px;
@@ -115,7 +111,6 @@ header{
 }
 
 /* divider */
-
 .recipe::after{
   content:"";
   display:block;
@@ -127,7 +122,6 @@ header{
 }
 
 /* popup */
-
 .popup{
   position:fixed;
   top:0;
@@ -156,7 +150,6 @@ header{
   font-size:20px;
   cursor:pointer;
 }
-
 </style>
 </head>
 
@@ -177,16 +170,12 @@ header{
 
 <div class="popup" id="popup">
   <div class="popup-content">
-
     <span class="close" onclick="closePopup()">✕</span>
-
     <div id="recipeDetail"></div>
-
   </div>
 </div>
 
 <script>
-
 const url="https://raw.githubusercontent.com/gi22i/recipes-app/main/recipes.json";
 
 let recipes=[];
@@ -195,7 +184,7 @@ fetch(url)
 .then(res=>res.json())
 .then(data=>{
   recipes=data;
-  renderRecipes(data);
+  renderRecipes(recipes); // display all recipes initially
 })
 .catch(err=>{
   console.error("Error loading recipes",err);
@@ -272,13 +261,12 @@ document.getElementById("search").addEventListener("input",function(){
 // Filters
 function applyFilter(type){
   let filtered = recipes.slice();
-  if(type==='lowSat') filtered = filtered.filter(r=>r.macrosPerPortion.saturated < 5);
-  if(type==='highProtein') filtered = filtered.filter(r=>r.macrosPerPortion.protein > 20);
-  if(type==='under590') filtered = filtered.filter(r=>r.macrosPerPortion.calories < 590);
+  if(type==='lowSat') filtered = filtered.filter(r=>r.macrosPerPortion?.saturated < 5);
+  if(type==='highProtein') filtered = filtered.filter(r=>r.macrosPerPortion?.protein > 20);
+  if(type==='under590') filtered = filtered.filter(r=>r.macrosPerPortion?.calories < 590);
   if(type==='all') filtered = recipes.slice();
   renderRecipes(filtered);
 }
-
 </script>
 
 </body>
