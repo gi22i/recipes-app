@@ -8,66 +8,32 @@
 
 body{
 font-family:-apple-system,BlinkMacSystemFont,"Segoe UI",Roboto;
-background:#121212;
-color:white;
 margin:0;
-padding:0;
+background:#f5f5f5;
 }
 
 header{
-padding:20px;
+background:#222;
+color:white;
+padding:16px;
 text-align:center;
-font-size:26px;
-font-weight:600;
-background:#1e1e1e;
+font-size:22px;
 }
 
 #search{
 width:90%;
 margin:15px auto;
 display:block;
-padding:12px;
-border-radius:10px;
-border:none;
+padding:10px;
 font-size:16px;
 }
 
-.container{
-display:grid;
-grid-template-columns:1fr;
-gap:15px;
+.recipe{
+background:white;
+margin:10px;
 padding:15px;
-}
-
-.card{
-background:#1e1e1e;
-border-radius:14px;
-padding:16px;
+border-radius:10px;
 cursor:pointer;
-transition:0.2s;
-}
-
-.card:hover{
-background:#2a2a2a;
-}
-
-.title{
-font-size:18px;
-font-weight:600;
-margin-bottom:10px;
-}
-
-.macros{
-display:flex;
-gap:8px;
-flex-wrap:wrap;
-}
-
-.badge{
-background:#333;
-padding:6px 10px;
-border-radius:8px;
-font-size:13px;
 }
 
 .popup{
@@ -76,19 +42,19 @@ top:0;
 left:0;
 right:0;
 bottom:0;
-background:rgba(0,0,0,0.8);
+background:rgba(0,0,0,0.7);
 display:none;
 align-items:center;
 justify-content:center;
 }
 
 .popup-content{
-background:#1e1e1e;
-padding:20px;
-border-radius:14px;
+background:white;
 width:90%;
 max-height:80%;
 overflow:auto;
+padding:20px;
+border-radius:10px;
 }
 
 .close{
@@ -97,29 +63,24 @@ font-size:20px;
 cursor:pointer;
 }
 
-h3{
-margin-top:20px;
-}
-
-ul,ol{
-padding-left:18px;
-}
-
 </style>
 </head>
 
 <body>
 
-<header>My Recipes</header>
+<header>Recipes</header>
 
-<input id="search" placeholder="Search recipes...">
+<input id="search" placeholder="Search recipes">
 
-<div class="container" id="recipes"></div>
+<div id="recipes"></div>
 
 <div class="popup" id="popup">
 <div class="popup-content">
+
 <span class="close" onclick="closePopup()">✕</span>
+
 <div id="recipeDetail"></div>
+
 </div>
 </div>
 
@@ -130,39 +91,38 @@ const url="https://raw.githubusercontent.com/gi22i/recipes-app/main/recipes.json
 let recipes=[];
 
 fetch(url)
-.then(r=>r.json())
+.then(res=>res.json())
 .then(data=>{
 recipes=data;
 renderRecipes(data);
+})
+.catch(err=>{
+console.error("Error loading recipes",err);
 });
 
-function renderRecipes(data){
+function renderRecipes(list){
 
 const container=document.getElementById("recipes");
 container.innerHTML="";
 
-data.forEach(r=>{
+list.forEach(r=>{
 
-let card=document.createElement("div");
-card.className="card";
+let div=document.createElement("div");
+div.className="recipe";
 
-card.innerHTML=`
+div.innerHTML=`
 
-<div class="title">${r.title}</div>
+<strong>${r.title}</strong><br>
 
-<div class="macros">
-
-<span class="badge">🔥 ${r.macros.calories || "-"} kcal</span>
-<span class="badge">💪 ${r.macros.protein || "-"} g protein</span>
-<span class="badge">🧈 ${r.macros.saturated || "-"} g sat fat</span>
-
-</div>
+Calories: ${r.macros?.calories ?? "-"} |
+Protein: ${r.macros?.protein ?? "-"}g |
+Sat fat: ${r.macros?.saturated ?? "-"}g
 
 `;
 
-card.onclick=()=>openRecipe(r);
+div.onclick=()=>openRecipe(r);
 
-container.appendChild(card);
+container.appendChild(div);
 
 });
 
@@ -189,12 +149,12 @@ ${r.instructions.map(i=>`<li>${i}</li>`).join("")}
 <h3>Macros</h3>
 
 <ul>
-<li>Calories: ${r.macros.calories || "-"}</li>
-<li>Protein: ${r.macros.protein || "-"} g</li>
-<li>Carbs: ${r.macros.carbs || "-"} g</li>
-<li>Fat: ${r.macros.fat || "-"} g</li>
-<li>Saturated fat: ${r.macros.saturated || "-"} g</li>
-<li>Fibre: ${r.macros.fibre || "-"} g</li>
+<li>Calories: ${r.macros?.calories ?? "-"}</li>
+<li>Protein: ${r.macros?.protein ?? "-"} g</li>
+<li>Carbs: ${r.macros?.carbs ?? "-"} g</li>
+<li>Fat: ${r.macros?.fat ?? "-"} g</li>
+<li>Saturated fat: ${r.macros?.saturated ?? "-"} g</li>
+<li>Fibre: ${r.macros?.fibre ?? "-"} g</li>
 </ul>
 
 `;
