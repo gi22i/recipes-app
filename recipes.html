@@ -1,4 +1,4 @@
-<!<!DOCTYPE html>
+<!DOCTYPE html>
 <html>
 <head>
 <meta name="viewport" content="width=device-width, initial-scale=1">
@@ -20,7 +20,6 @@ header{
   text-align:center;
   font-size:30px;
   font-weight:600;
-  letter-spacing:0.5px;
 }
 
 #search{
@@ -46,20 +45,8 @@ header{
   border-radius:16px;
   cursor:pointer;
   position:relative;
-  transition:all 0.15s ease;
-  box-shadow:
-    0 4px 12px rgba(0,0,0,0.4),
-    inset 0 1px 0 rgba(255,255,255,0.05);
+  box-shadow:0 4px 12px rgba(0,0,0,0.4);
 }
-
-.recipe:hover{
-  transform:translateY(-3px);
-  box-shadow:
-    0 8px 20px rgba(0,0,0,0.6),
-    inset 0 1px 0 rgba(255,255,255,0.08);
-}
-
-/* watermark */
 
 .recipe::before{
   content:"🍽️";
@@ -68,30 +55,14 @@ header{
   right:12px;
   font-size:32px;
   opacity:0.1;
-  pointer-events:none;
 }
-
-/* title */
 
 .recipe strong{
   display:block;
   text-align:center;
   font-size:22px;
-  font-weight:700;
   margin-bottom:8px;
-  padding-right:40px;
 }
-
-/* macros */
-
-.macros{
-  text-align:center;
-  font-size:16px;
-  color:#d0d0d0;
-  margin-bottom:12px;
-}
-
-/* divider */
 
 .recipe::after{
   content:"";
@@ -103,8 +74,6 @@ header{
   border-radius:3px;
 }
 
-/* popup */
-
 .popup{
   position:fixed;
   top:0;
@@ -115,7 +84,6 @@ header{
   display:none;
   align-items:center;
   justify-content:center;
-  color:white;
 }
 
 .popup-content{
@@ -147,11 +115,8 @@ header{
 
 <div class="popup" id="popup">
   <div class="popup-content">
-
     <span class="close" onclick="closePopup()">✕</span>
-
     <div id="recipeDetail"></div>
-
   </div>
 </div>
 
@@ -165,10 +130,7 @@ fetch(url)
 .then(res=>res.json())
 .then(data=>{
   recipes=data;
-  renderRecipes(data);
-})
-.catch(err=>{
-  console.error("Error loading recipes",err);
+  renderRecipes(recipes);
 });
 
 function renderRecipes(list){
@@ -176,53 +138,49 @@ function renderRecipes(list){
   container.innerHTML="";
 
   list.forEach(r=>{
-    let div=document.createElement("div");
-    div.className="recipe";
+    const card=document.createElement("div");
+    card.className="recipe";
 
-    div.innerHTML=`
-      <strong>${r.title}</strong>
-      <div class="macros">
-        Calories: ${r.macrosPerPortion?.calories ?? "-"} |
-        Protein: ${r.macrosPerPortion?.protein ?? "-"}g |
-        Sat fat: ${r.macrosPerPortion?.saturated ?? "-"}g |
-        Portions: ${r.portions ?? "-"}
-      </div>
-    `;
+    card.innerHTML=`<strong>${r.title}</strong>`;
 
-    div.onclick=()=>openRecipe(r);
+    card.onclick=()=>openRecipe(r);
 
-    container.appendChild(div);
+    container.appendChild(card);
   });
 }
 
 function openRecipe(r){
+
   const detail=document.getElementById("recipeDetail");
 
   detail.innerHTML=`
-    <h2>${r.title}</h2>
 
-    <h3>Ingredients</h3>
-    <ul>
-      ${r.ingredients.map(i=>`<li>${i}</li>`).join("")}
-    </ul>
+  <h2>${r.title}</h2>
 
-    <h3>Instructions</h3>
-    <ol>
-      ${r.instructions.map(i=>`<li>${i}</li>`).join("")}
-    </ol>
+  <p><strong>Portions:</strong> ${r.portions}</p>
 
-    <h3>Macros (Per Portion)</h3>
-    <ul>
-      <li>Calories: ${r.macrosPerPortion?.calories ?? "-"}</li>
-      <li>Protein: ${r.macrosPerPortion?.protein ?? "-"} g</li>
-      <li>Carbs: ${r.macrosPerPortion?.carbs ?? "-"} g</li>
-      <li>Fat: ${r.macrosPerPortion?.fat ?? "-"} g</li>
-      <li>Saturated fat: ${r.macrosPerPortion?.saturated ?? "-"} g</li>
-      <li>Fibre: ${r.macrosPerPortion?.fibre ?? "-"} g</li>
-    </ul>
+  <h3>Macros Per Portion</h3>
+  <ul>
+  <li>Calories: ${r.macrosPerPortion.calories}</li>
+  <li>Protein: ${r.macrosPerPortion.protein} g</li>
+  <li>Carbs: ${r.macrosPerPortion.carbs} g</li>
+  <li>Fat: ${r.macrosPerPortion.fat} g</li>
+  <li>Saturated Fat: ${r.macrosPerPortion.saturated} g</li>
+  <li>Fibre: ${r.macrosPerPortion.fibre} g</li>
+  </ul>
 
-    <p><strong>Portions:</strong> ${r.portions ?? "-"}</p>
-    <p><strong>Notes:</strong> ${r.notes ?? ""}</p>
+  <h3>Ingredients</h3>
+  <ul>
+  ${r.ingredients.map(i=>`<li>${i}</li>`).join("")}
+  </ul>
+
+  <h3>Instructions</h3>
+  <ol>
+  ${r.instructions.map(i=>`<li>${i}</li>`).join("")}
+  </ol>
+
+  <p>${r.notes || ""}</p>
+
   `;
 
   document.getElementById("popup").style.display="flex";
@@ -233,9 +191,15 @@ function closePopup(){
 }
 
 document.getElementById("search").addEventListener("input",function(){
+
   const term=this.value.toLowerCase();
-  const filtered=recipes.filter(r=>r.title.toLowerCase().includes(term));
+
+  const filtered=recipes.filter(r=>
+  r.title.toLowerCase().includes(term)
+  );
+
   renderRecipes(filtered);
+
 });
 
 </script>
