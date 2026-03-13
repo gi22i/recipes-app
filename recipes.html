@@ -198,9 +198,9 @@ function renderRecipes(list){
       <strong>${r.title}</strong>
 
       <div class="macros">
-        Calories: ${r.macrosPerPortion?.calories ?? "-"} |
-        Protein: ${r.macrosPerPortion?.protein ?? "-"}g |
-        Sat fat: ${r.macrosPerPortion?.saturated ?? "-"}g
+        Calories: ${r.macros?.calories ?? "-"} |
+        Protein: ${r.macros?.protein ?? "-"}g |
+        Sat fat: ${r.macros?.saturated ?? "-"}g
       </div>
     `;
 
