@@ -1,143 +1,68 @@
 <!DOCTYPE html>
-<html lang="en">
+<html>
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=0">
-  <title>Recipes</title>
-  <style>
-    body { 
-      margin: 0; 
-      font-family: -apple-system, system-ui, sans-serif; 
-      background: #000; 
-      color: #fff; 
-      -webkit-tap-highlight-color: transparent; 
-    }
-    .header { text-align: center; padding: 25px 10px 10px; font-size: 20px; font-weight: 600; }
-    
-    .search-container { padding: 0 16px 15px; }
-    .search-bar { 
-      width: 100%; padding: 12px; border-radius: 6px; border: none; 
-      background: #fff; color: #000; font-size: 16px; box-sizing: border-box;
-    }
+<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=0">
+<title>Recipes</title>
+<style>
+  body { margin: 0; font-family: -apple-system, sans-serif; background: #000; color: #fff; }
+  .header { text-align: center; padding: 25px 10px 10px; font-size: 20px; font-weight: 600; }
+  .search-container { padding: 0 16px 15px; }
+  .search-bar { width: 100%; padding: 12px; border-radius: 6px; border: none; background: #fff; color: #000; font-size: 16px; box-sizing: border-box; }
+  .section-title { padding: 20px 16px 5px; font-size: 18px; font-weight: 700; }
+  .grid { display: grid; grid-template-columns: 1fr 1fr; gap: 10px; padding: 0 16px 20px; }
+  .card {
+    background: #1c1c1e; border-radius: 10px; padding: 15px; cursor: pointer;
+    display: flex; flex-direction: column; justify-content: center; align-items: center;
+    aspect-ratio: 2 / 1; box-sizing: border-box; position: relative; text-align: center;
+  }
+  .card-title { font-size: 14px; font-weight: 700; margin-bottom: 6px; text-decoration: underline; text-underline-offset: 3px; }
+  .card-macros { font-size: 10px; color: #b0b0b0; }
+  .watermark-icon { position: absolute; top: 8px; left: 10px; font-size: 16px; opacity: 0.1; }
+  .heart-icon { position: absolute; top: 8px; right: 10px; font-size: 12px; }
 
-    .section-title { padding: 20px 16px 5px; font-size: 18px; font-weight: 700; text-align: left; }
-    
-    .grid { display: grid; grid-template-columns: 1fr 1fr; gap: 10px; padding: 0 16px 20px; }
-    
-    .card {
-      background: #1c1c1e;
-      border-radius: 10px;
-      padding: 15px;
-      cursor: pointer;
-      display: flex;
-      flex-direction: column;
-      justify-content: center;
-      align-items: center;
-      aspect-ratio: 2 / 1;
-      box-sizing: border-box;
-      position: relative;
-      text-align: center;
-    }
-    
-    .card:active { background: #2c2c2e; }
-    
-    .card-title {
-      font-size: 14px;
-      font-weight: 700;
-      margin-bottom: 6px;
-      text-decoration: underline;
-      text-underline-offset: 3px;
-      line-height: 1.2;
-      width: 100%;
-    }
-    
-    .card-macros {
-      font-size: 10px;
-      color: #b0b0b0;
-      line-height: 1.4;
-      width: 100%;
-    }
-
-    .watermark-icon {
-      position: absolute;
-      top: 8px;
-      left: 10px;
-      font-size: 16px;
-      opacity: 0.1;
-    }
-
-    .heart-icon { position: absolute; top: 8px; right: 10px; font-size: 12px; }
-
-    /* Popup Styles */
-    .popup {
-      position: fixed;
-      top: 0; left: 0; width: 100%; height: 100%;
-      background: #000; display: none; overflow-y: auto; z-index: 1000;
-    }
-    .popup-inner { padding: 40px 20px; max-width: 600px; margin: 0 auto; }
-    .close-btn { position: fixed; top: 15px; right: 20px; font-size: 32px; cursor: pointer; z-index: 1001; }
-    
-    .recipe-detail h1 { text-align: center; font-size: 24px; text-decoration: underline; margin-bottom: 10px; }
-    .recipe-detail h3 { border-bottom: 1px solid #333; padding-bottom: 8px; margin-top: 25px; font-size: 18px; }
-    .recipe-detail ul, .recipe-detail ol { padding-left: 20px; color: #ddd; }
-    .recipe-detail li { margin-bottom: 12px; font-size: 16px; line-height: 1.5; }
-    .full-macros-box { margin-top: 20px; padding: 15px; background: #1c1c1e; border-radius: 8px; font-size: 14px; }
-  </style>
+  /* Popup Styles */
+  .popup { position: fixed; top: 0; left: 0; width: 100%; height: 100%; background: #000; display: none; overflow-y: auto; z-index: 1000; }
+  .popup-inner { padding: 40px 20px; max-width: 600px; margin: 0 auto; }
+  .close-btn { position: fixed; top: 15px; right: 20px; font-size: 32px; cursor: pointer; }
+  .recipe-detail h1 { text-align: center; font-size: 24px; text-decoration: underline; }
+  .recipe-detail h3 { border-bottom: 1px solid #333; padding-bottom: 8px; margin-top: 25px; }
+  .macro-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 15px; margin-top: 20px; }
+  .macro-box { background: #1c1c1e; padding: 12px; border-radius: 8px; font-size: 13px; line-height: 1.6; }
+</style>
 </head>
 <body>
-
 <div class="header">Recipes</div>
-<div class="search-container">
-  <input type="text" id="searchInput" class="search-bar" placeholder="Search recipes..." onkeyup="search()">
-</div>
-
+<div class="search-container"><input type="text" id="searchInput" class="search-bar" placeholder="Search..." onkeyup="search()"></div>
 <div id="recipe-list"></div>
-
-<div id="popup" class="popup">
-  <span class="close-btn" onclick="closePopup()">✕</span>
-  <div id="popup-content" class="popup-inner"></div>
-</div>
+<div id="popup" class="popup"><span class="close-btn" onclick="closePopup()">✕</span><div id="popup-content" class="popup-inner"></div></div>
 
 <script>
 let allRecipes = [];
-
 async function init() {
-  try {
-    const res = await fetch('recipes.json');
-    allRecipes = await res.json();
-    render(allRecipes);
-  } catch (e) { console.error("Data load failed"); }
+  const res = await fetch('recipes.json');
+  allRecipes = await res.json();
+  render(allRecipes);
 }
 
 function render(data) {
   const container = document.getElementById('recipe-list');
   container.innerHTML = '';
-  
   const order = ["Meals", "Bakery", "Desserts", "Heart-Healthy Desserts"];
-  const existingCats = [...new Set(data.map(r => r.category))];
-  const sortedCats = order.filter(cat => existingCats.includes(cat));
-
-  sortedCats.forEach(cat => {
+  order.forEach(cat => {
+    const filtered = data.filter(r => r.category === cat);
+    if (filtered.length === 0) return;
     const section = document.createElement('div');
     section.innerHTML = `<div class="section-title">${cat}</div>`;
     const grid = document.createElement('div');
     grid.className = 'grid';
-    
-    data.filter(r => r.category === cat).forEach(r => {
+    filtered.forEach(r => {
       const card = document.createElement('div');
       card.className = 'card';
       card.onclick = () => openPopup(r);
-      const isHeart = cat.includes("Heart-Healthy") ? '<span class="heart-icon">❤️</span>' : '';
-      const mP = r.macrosPerPortion || {};
-      
-      card.innerHTML = `
-        <div class="watermark-icon">🍽️</div>
-        ${isHeart}
+      const m = r.macrosPerPortion;
+      card.innerHTML = `<div class="watermark-icon">🍽️</div>${cat.includes("Heart") ? '<span class="heart-icon">❤️</span>' : ''}
         <div class="card-title">${r.title}</div>
-        <div class="card-macros">
-          ${mP.calories || 0} kcal • P ${mP.protein || 0}g • C ${mP.carbs || 0}g • F ${mP.fat || 0}g
-        </div>
-      `;
+        <div class="card-macros">${m.calories} kcal • P ${m.protein}g • C ${m.carbs}g • F ${m.fat}g</div>`;
       grid.appendChild(card);
     });
     section.appendChild(grid);
@@ -147,43 +72,28 @@ function render(data) {
 
 function openPopup(r) {
   const content = document.getElementById('popup-content');
-  const mP = r.macrosPerPortion || {};
-  const mT = r.macros || {};
-  
+  const mp = r.macrosPerPortion;
+  const mt = r.macros;
   content.innerHTML = `
     <div class="recipe-detail">
       <h1>${r.title}</h1>
-      <p style="text-align:center; color:#aaa;">Portions: ${r.portions} | ${mP.calories} kcal</p>
-      
-      <h3>Ingredients</h3>
-      <ul>${(r.ingredients || []).map(i => `<li>${i}</li>`).join('')}</ul>
-      
-      <h3>Method</h3>
-      <ol>${(r.instructions || []).map(s => `<li>${s}</li>`).join('')}</ol>
-      
-      <h3>Full Macros (Total Recipe)</h3>
-      <div class="full-macros-box">
-        <strong>Calories:</strong> ${mT.calories || 0} kcal<br>
-        <strong>Protein:</strong> ${mT.protein || 0}g | <strong>Carbs:</strong> ${mT.carbs || 0}g | <strong>Fat:</strong> ${mT.fat || 0}g<br>
-        <strong>Fibre:</strong> ${mT.fibre || 0}g
+      <p style="text-align:center; color:#aaa;">Portions: ${r.portions}</p>
+      <div class="macro-grid">
+        <div class="macro-box"><strong>Per Portion</strong><br>Calories: ${mp.calories}kcal<br>P: ${mp.protein}g | C: ${mp.carbs}g | F: ${mp.fat}g</div>
+        <div class="macro-box"><strong>Total Recipe</strong><br>Calories: ${mt.calories}kcal<br>P: ${mt.protein}g | C: ${mt.carbs}g | F: ${mt.fat}g</div>
       </div>
-    </div>
-  `;
+      <h3>Ingredients</h3><ul>${r.ingredients.map(i => `<li>${i}</li>`).join('')}</ul>
+      <h3>Method</h3><ol>${r.instructions.map(s => `<li>${s}</li>`).join('')}</ol>
+    </div>`;
   document.getElementById('popup').style.display = 'block';
   document.body.style.overflow = 'hidden';
 }
 
-function closePopup() {
-  document.getElementById('popup').style.display = 'none';
-  document.body.style.overflow = 'auto';
-}
-
+function closePopup() { document.getElementById('popup').style.display = 'none'; document.body.style.overflow = 'auto'; }
 function search() {
   const q = document.getElementById('searchInput').value.toLowerCase();
-  const f = allRecipes.filter(r => r.title.toLowerCase().includes(q));
-  render(f);
+  render(allRecipes.filter(r => r.title.toLowerCase().includes(q)));
 }
-
 init();
 </script>
 </body>
