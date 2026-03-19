@@ -23,14 +23,16 @@
     padding: 25px 16px 10px; 
     font-size: 18px; 
     font-weight: 700; 
-    clear: both; /* Ensures headers don't float next to cards */
+    clear: both;
   }
   
   .grid { 
     display: grid; 
     grid-template-columns: 1fr 1fr; 
     gap: 10px; 
-    padding: 0 16px 20px; 
+    padding: 0 16px 20px;
+    /* Forces all rows in this grid to be the exact same height */
+    grid-auto-rows: 1fr; 
   }
   
   .card {
@@ -42,10 +44,12 @@
     flex-direction: column;
     justify-content: center;
     align-items: center;
-    aspect-ratio: 2.5 / 1; /* This makes them SLIM like your screenshot */
+    /* This ratio (3 to 1) creates the "long and slim" look */
+    aspect-ratio: 3 / 1; 
     text-align: center;
     position: relative;
     box-sizing: border-box;
+    width: 100%;
   }
   
   .card:active { background: #2c2c2e; }
@@ -56,10 +60,11 @@
     margin-bottom: 4px;
     text-decoration: underline;
     text-underline-offset: 2px;
-    white-space: nowrap;
+    line-height: 1.2;
+    display: -webkit-box;
+    -webkit-line-clamp: 2;
+    -webkit-box-orient: vertical;
     overflow: hidden;
-    text-overflow: ellipsis;
-    width: 90%;
   }
   
   .card-macros {
@@ -83,24 +88,23 @@
   .recipe-detail h1 { text-align: center; font-size: 22px; text-decoration: underline; margin-bottom: 5px; }
   .portion-sub { text-align: center; color: #aaa; font-size: 14px; margin-bottom: 20px; }
   
-  .macro-display {
-    display: flex;
-    justify-content: space-between;
+  .macro-grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
     gap: 10px;
     margin-bottom: 20px;
   }
-  .macro-col {
-    flex: 1;
+  .macro-box {
     background: #1c1c1e;
-    padding: 10px;
+    padding: 12px;
     border-radius: 8px;
     font-size: 12px;
-    line-height: 1.5;
+    line-height: 1.6;
   }
 
-  .recipe-detail h3 { border-bottom: 1px solid #333; padding-bottom: 8px; margin-top: 20px; font-size: 17px; }
+  .recipe-detail h3 { border-bottom: 1px solid #333; padding-bottom: 8px; margin-top: 25px; font-size: 17px; }
   .recipe-detail ul, .recipe-detail ol { padding-left: 20px; color: #ddd; }
-  .recipe-detail li { margin-bottom: 10px; font-size: 15px; }
+  .recipe-detail li { margin-bottom: 12px; font-size: 15px; }
 </style>
 </head>
 <body>
@@ -121,9 +125,11 @@
 let allRecipes = [];
 
 async function init() {
-  const res = await fetch('recipes.json');
-  allRecipes = await res.json();
-  render(allRecipes);
+  try {
+    const res = await fetch('recipes.json');
+    allRecipes = await res.json();
+    render(allRecipes);
+  } catch (e) { console.error("Error loading JSON"); }
 }
 
 function render(data) {
@@ -135,13 +141,13 @@ function render(data) {
     const catRecipes = data.filter(r => r.category === cat);
     if (catRecipes.length === 0) return;
 
-    const title = document.createElement('div');
-    title.className = 'section-title';
-    title.innerText = cat;
-    container.appendChild(title);
+    const titleDiv = document.createElement('div');
+    titleDiv.className = 'section-title';
+    titleDiv.innerText = cat;
+    container.appendChild(titleDiv);
     
-    const grid = document.createElement('div');
-    grid.className = 'grid';
+    const gridDiv = document.createElement('div');
+    gridDiv.className = 'grid';
     
     catRecipes.forEach(r => {
       const card = document.createElement('div');
@@ -158,9 +164,9 @@ function render(data) {
           ${m.calories} kcal<br>P ${m.protein}g • C ${m.carbs}g • F ${m.fat}g
         </div>
       `;
-      grid.appendChild(card);
+      gridDiv.appendChild(card);
     });
-    container.appendChild(grid);
+    container.appendChild(gridDiv);
   });
 }
 
@@ -174,14 +180,14 @@ function openPopup(r) {
       <h1>${r.title}</h1>
       <div class="portion-sub">Portions: ${r.portions} | ${mp.calories} kcal</div>
       
-      <div class="macro-display">
-        <div class="macro-col">
+      <div class="macro-grid">
+        <div class="macro-box">
           <strong>Per Portion</strong><br>
-          P: ${mp.protein}g | C: ${mp.carbs}g<br>F: ${mp.fat}g
+          P: ${mp.protein}g | C: ${mp.carbs}g | F: ${mp.fat}g
         </div>
-        <div class="macro-col">
+        <div class="macro-box">
           <strong>Full Recipe</strong><br>
-          P: ${mt.protein}g | C: ${mt.carbs}g<br>F: ${mt.fat}g
+          P: ${mt.protein}g | C: ${mt.carbs}g | F: ${mt.fat}g
         </div>
       </div>
 
