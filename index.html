@@ -5,7 +5,6 @@
 <title>Recipes</title>
 
 <style>
-
 body{
   margin:0;
   font-family:-apple-system, BlinkMacSystemFont, "Segoe UI", Roboto;
@@ -68,22 +67,6 @@ body{
   opacity:0.8;
 }
 
-.watermark{
-  position:absolute;
-  top:8px;
-  right:10px;
-  font-size:22px;
-  opacity:0.08;
-}
-
-.heart-badge{
-  position:absolute;
-  top:8px;
-  left:10px;
-  font-size:16px;
-  opacity:0.85;
-}
-
 .popup{
   position:fixed;
   top:0;
@@ -96,10 +79,6 @@ body{
   padding:20px;
 }
 
-.popup h2{
-  text-align:center;
-}
-
 .close-btn{
   position:fixed;
   top:15px;
@@ -107,7 +86,6 @@ body{
   font-size:24px;
   cursor:pointer;
 }
-
 </style>
 </head>
 
@@ -126,17 +104,59 @@ body{
 
 <script>
 
-let recipes = [];
+const recipes = [
+  {
+    "title": "Turkey Burgers",
+    "category": "Meals",
+    "ingredients": ["400g turkey mince","1 egg","psyllium husk","soy sauce","spices","burger buns"],
+    "instructions": ["Mix ingredients","Form patties","Cook in air fryer","Serve in buns"],
+    "macrosPerPortion": {"calories":310,"protein":30,"carbs":15,"fat":12}
+  },
+  {
+    "title": "Mediterranean Chicken Bake",
+    "category": "Meals",
+    "ingredients": ["chicken","vegetables","mozzarella","olive oil"],
+    "instructions": ["Add to dish","Bake 25 min","Add cheese","Bake 5 min"],
+    "macrosPerPortion": {"calories":371,"protein":50.5,"carbs":10,"fat":10.5}
+  },
+  {
+    "title": "Veggie Burger",
+    "category": "Meals",
+    "ingredients": ["vegetables","egg","breadcrumbs"],
+    "instructions": ["Cook veg","Mix","Form patties","Bake"],
+    "macrosPerPortion": {"calories":145,"protein":6,"carbs":15,"fat":4}
+  },
+  {
+    "title": "Creamy Chicken and Broccoli Pasta",
+    "category": "Meals",
+    "ingredients": ["chicken","broccoli","pasta","skyr"],
+    "instructions": ["Cook ingredients","Mix together"],
+    "macrosPerPortion": {"calories":450,"protein":45,"carbs":50,"fat":10}
+  },
+  {
+    "title": "Fillet Steak with Potatoes",
+    "category": "Meals",
+    "ingredients": ["steak","potatoes","olive oil"],
+    "instructions": ["Cook potatoes","Cook steak","Rest and serve"],
+    "macrosPerPortion": {"calories":450,"protein":40,"carbs":45,"fat":12.5}
+  },
 
-async function loadRecipes(){
-  try{
-    const res = await fetch("recipes.json");
-    recipes = await res.json();
-    displayRecipes(recipes);
-  } catch(e){
-    console.error("JSON failed to load:", e);
+  {
+    "title": "Heart Healthy Bean Oat Cake",
+    "category": "Heart-Healthy Desserts",
+    "ingredients": ["cannellini beans","oat flour","eggs","cocoa","honey","dark chocolate"],
+    "instructions": ["Blend beans","Mix ingredients","Fold chocolate","Bake at 180°C"],
+    "macrosPerPortion": {"calories":138,"protein":4.4,"carbs":17.5,"fat":4}
+  },
+
+  {
+    "title": "Banana Cocoa Cake",
+    "category": "Heart-Healthy Desserts",
+    "ingredients": ["bananas","oats","cocoa","eggs"],
+    "instructions": ["Mix","Bake"],
+    "macrosPerPortion": {"calories":150,"protein":5,"carbs":22,"fat":4}
   }
-}
+];
 
 function displayRecipes(data){
 
@@ -146,7 +166,6 @@ function displayRecipes(data){
   let categories = {};
 
   data.forEach(r => {
-    if(!r.category) return;
     if(!categories[r.category]) categories[r.category] = [];
     categories[r.category].push(r);
   });
@@ -160,26 +179,18 @@ function displayRecipes(data){
 
     categories[category].forEach(r => {
 
-      let heart = r.category === "Heart-Healthy Desserts"
-        ? `<div class="heart-badge">❤️</div>`
-        : "";
-
-      let macros = r.macrosPerPortion || {};
-
       let card = document.createElement("div");
       card.className = "card";
 
       card.onclick = () => openPopup(r);
 
       card.innerHTML = `
-        ${heart}
-        <div class="watermark">🍽️</div>
-        <div class="card-title">${r.title || "Untitled"}</div>
+        <div class="card-title">${r.title}</div>
         <div class="macros">
-          ${macros.calories ?? 0} kcal • 
-          P ${macros.protein ?? 0}g • 
-          C ${macros.carbs ?? 0}g • 
-          F ${macros.fat ?? 0}g
+          ${r.macrosPerPortion.calories} kcal • 
+          P ${r.macrosPerPortion.protein}g • 
+          C ${r.macrosPerPortion.carbs}g • 
+          F ${r.macrosPerPortion.fat}g
         </div>
       `;
 
@@ -196,25 +207,21 @@ function openPopup(recipe){
   const popup = document.getElementById("popup");
   const content = document.getElementById("popup-content");
 
-  const ingredients = recipe.ingredients || [];
-  const instructions = recipe.instructions || [];
-  const macros = recipe.macrosPerPortion || {};
-
   content.innerHTML = `
     <h2>${recipe.title}</h2>
 
     <h3>Ingredients</h3>
-    <ul>${ingredients.map(i => `<li>${i}</li>`).join("")}</ul>
+    <ul>${recipe.ingredients.map(i => `<li>${i}</li>`).join("")}</ul>
 
     <h3>Instructions</h3>
-    <ol>${instructions.map(i => `<li>${i}</li>`).join("")}</ol>
+    <ol>${recipe.instructions.map(i => `<li>${i}</li>`).join("")}</ol>
 
-    <h3>Macros (per portion)</h3>
+    <h3>Macros</h3>
     <p>
-      ${macros.calories ?? 0} kcal<br>
-      Protein: ${macros.protein ?? 0}g<br>
-      Carbs: ${macros.carbs ?? 0}g<br>
-      Fat: ${macros.fat ?? 0}g
+      ${recipe.macrosPerPortion.calories} kcal<br>
+      Protein: ${recipe.macrosPerPortion.protein}g<br>
+      Carbs: ${recipe.macrosPerPortion.carbs}g<br>
+      Fat: ${recipe.macrosPerPortion.fat}g
     </p>
   `;
 
@@ -235,7 +242,7 @@ function searchRecipes(){
   displayRecipes(filtered);
 }
 
-loadRecipes();
+displayRecipes(recipes);
 
 </script>
 
