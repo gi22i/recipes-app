@@ -6,7 +6,7 @@
 <meta name="apple-mobile-web-app-capable" content="yes">
 <meta name="apple-mobile-web-app-status-bar-style" content="default">
 <title>Recipes</title>
-<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;800&display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;700;800&display=swap" rel="stylesheet">
 <style>
   :root {
     --bg-color: #ffffff;
@@ -38,49 +38,45 @@
     -webkit-font-smoothing: antialiased;
   }
 
-  /* Bigger, bolder main title */
+  /* INCREASED MAIN HEADER */
   .header { 
     text-align: center; 
-    padding: 40px 20px 10px; 
-    font-size: 42px; 
+    padding: 50px 20px 15px; 
+    font-size: 48px; 
     font-weight: 800; 
-    letter-spacing: -1.5px;
+    letter-spacing: -2px;
   }
 
-  .search-container { padding: 10px 16px 20px; }
+  .search-container { padding: 10px 16px 25px; }
   .search-bar { 
-    width: 100%; padding: 14px; border-radius: 12px; border: none; 
-    background: var(--search-bg); color: var(--text-primary); font-size: 16px; box-sizing: border-box; 
+    width: 100%; padding: 16px; border-radius: 14px; border: none; 
+    background: var(--search-bg); color: var(--text-primary); font-size: 18px; box-sizing: border-box; 
     outline: none;
   }
 
-  /* Centered category sub-titles */
+  /* INCREASED CATEGORY TITLES */
   .section-title { 
-    padding: 30px 16px 15px; 
-    font-size: 22px; 
+    padding: 35px 16px 15px; 
+    font-size: 26px; 
     font-weight: 800; 
     text-align: center; 
     letter-spacing: -0.5px;
-    clear: both; 
   }
   
-  .grid { display: flex; flex-wrap: wrap; gap: 12px; padding: 0 16px 40px; }
+  .grid { display: flex; flex-wrap: wrap; gap: 12px; padding: 0 16px 50px; }
   
   .card {
     background: var(--card-bg); 
-    border-radius: 16px; 
-    cursor: pointer;
+    border-radius: 18px; 
     display: grid;
     place-items: center;
     text-align: center;
     width: calc(50% - 6px); 
-    height: 100px;
+    height: 110px; /* Increased height for bigger text */
     position: relative; 
     box-sizing: border-box;
     padding: 12px;
-    transition: transform 0.1s ease;
   }
-  .card:active { transform: scale(0.97); }
 
   .card-content {
     display: flex;
@@ -89,10 +85,11 @@
     width: 100%;
   }
 
+  /* BIGGER CARD TITLES */
   .card-title {
-    font-size: 15px; 
+    font-size: 18px; 
     font-weight: 700; 
-    margin-bottom: 6px;
+    margin-bottom: 8px;
     text-decoration: underline; 
     text-underline-offset: 4px; 
     width: 100%; 
@@ -102,221 +99,55 @@
     text-overflow: ellipsis;
   }
   
+  /* BIGGER MACRO TEXT */
   .card-macros { 
-    font-size: 10px; 
-    font-weight: 600; 
+    font-size: 12px; 
+    font-weight: 700; 
     color: var(--text-secondary); 
     text-transform: uppercase;
     letter-spacing: 0.5px;
   }
 
-  .badge-right { position: absolute; top: 10px; right: 12px; font-size: 12px; }
+  .badge-right { position: absolute; top: 12px; right: 12px; font-size: 14px; }
   .keto-circle {
     display: inline-flex; align-items: center; justify-content: center;
-    width: 18px; height: 18px; background: var(--circle-bg); border-radius: 50%;
-    color: var(--text-primary); font-size: 9px; font-weight: 800;
+    width: 22px; height: 22px; background: var(--circle-bg); border-radius: 50%;
+    color: var(--text-primary); font-size: 11px; font-weight: 800;
   }
 
-  /* POPUP MODAL */
-  .popup { position: fixed; top: 0; left: 0; width: 100%; height: 100%; background: var(--bg-color); display: none; overflow-y: auto; z-index: 1000; }
+  /* BIGGER POPUP TEXT */
   .popup-inner { padding: 60px 24px; max-width: 600px; margin: 0 auto; }
-  .close-btn { position: fixed; top: 25px; right: 25px; font-size: 24px; font-weight: 800; cursor: pointer; color: var(--text-primary); z-index: 1001; }
+  .close-btn { position: fixed; top: 25px; right: 25px; font-size: 20px; font-weight: 800; cursor: pointer; background: var(--search-bg); padding: 8px 15px; border-radius: 20px; z-index: 1001; }
   
-  .macro-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 12px; margin-bottom: 30px; }
-  .macro-box { background: var(--card-bg); padding: 18px; border-radius: 16px; font-size: 13px; line-height: 1.6; }
+  .recipe-detail h1 { font-size: 38px; font-weight: 800; text-align: center; margin-bottom: 30px; letter-spacing: -1.5px; }
+  .recipe-detail h3 { border-bottom: 3px solid var(--border-color); padding-bottom: 10px; margin-top: 40px; font-size: 24px; font-weight: 800; }
+  .recipe-detail li { margin-bottom: 16px; font-size: 18px; line-height: 1.6; color: var(--text-secondary); }
   
-  .recipe-detail h1 { font-size: 32px; font-weight: 800; text-align: center; margin-bottom: 25px; letter-spacing: -1px; }
-  .recipe-detail h3 { border-bottom: 2px solid var(--border-color); padding-bottom: 8px; margin-top: 35px; font-size: 20px; }
-  .recipe-detail li { margin-bottom: 14px; font-size: 16px; line-height: 1.5; color: var(--text-secondary); }
+  .macro-box { background: var(--card-bg); padding: 20px; border-radius: 18px; font-size: 15px; line-height: 1.6; font-weight: 600; }
 </style>
 </head>
 <body>
 
 <div class="header">Recipes</div>
 <div class="search-container">
-  <input type="search" id="searchInput" class="search-bar" placeholder="Search ingredients..." onkeyup="search()">
+  <input type="search" id="searchInput" class="search-bar" placeholder="Search..." onkeyup="search()">
 </div>
 
 <div id="recipe-list"></div>
 
-<div id="popup" class="popup">
+<div id="popup" class="popup" style="position: fixed; top: 0; left: 0; width: 100%; height: 100%; background: var(--bg-color); display: none; overflow-y: auto; z-index: 1000;">
   <span class="close-btn" onclick="closePopup()">DONE</span>
   <div id="popup-content" class="popup-inner"></div>
 </div>
 
 <script>
+// Recipe data includes protein powder stats
 const recipes = [
-  {
-    "title": "Turkey Burgers",
-    "category": "Meals",
-    "portions": 4,
-    "ingredients": ["500g Turkey mince", "1 Large egg", "50g Panko breadcrumbs", "1 tsp Garlic powder", "1 tsp Onion powder", "Salt and black pepper"],
-    "instructions": ["Combine turkey, egg, breadcrumbs, and spices.", "Shape into 4 equal patties.", "Cook in a non-stick pan over medium-high heat for 6 mins per side.", "Rest for 2 minutes before serving."],
-    "macrosPerPortion": { "calories": 310, "protein": 30, "carbs": 15, "fat": 12, "satFat": 3.5, "sugar": 1.2, "fiber": 1.5, "salt": 0.8 },
-    "macros": { "calories": 1240, "protein": 120, "carbs": 60, "fat": 48, "satFat": 14, "sugar": 4.8, "fiber": 6, "salt": 3.2 }
-  },
-  {
-    "title": "Med. Chicken Bake",
-    "category": "Meals",
-    "portions": 2,
-    "ingredients": ["400g Chicken breasts", "1 Red pepper", "1 Courgette", "100g Cherry tomatoes", "1 tbsp Olive oil", "Oregano"],
-    "instructions": ["Preheat oven to 200°C.", "Toss veg and chicken in oil and herbs in a tray.", "Bake for 25-30 mins until chicken is golden."],
-    "macrosPerPortion": { "calories": 371, "protein": 50.5, "carbs": 10, "fat": 10.5, "satFat": 2.1, "sugar": 4.5, "fiber": 3.5, "salt": 0.6 },
-    "macros": { "calories": 742, "protein": 101, "carbs": 20, "fat": 21, "satFat": 4.2, "sugar": 9, "fiber": 7, "salt": 1.2 }
-  },
-  {
-    "title": "Veggie Burger",
-    "category": "Meals",
-    "portions": 4,
-    "ingredients": ["400g Chickpeas", "1 Red onion", "1 tsp Cumin", "50g Flour"],
-    "instructions": ["Mash chickpeas, mix with onion, spices, and flour.", "Form into 4 patties.", "Pan-fry until golden brown."],
-    "macrosPerPortion": { "calories": 145, "protein": 6, "carbs": 15, "fat": 4, "satFat": 0.5, "sugar": 2, "fiber": 5, "salt": 0.5 },
-    "macros": { "calories": 580, "protein": 24, "carbs": 60, "fat": 16, "satFat": 2, "sugar": 8, "fiber": 20, "salt": 2 }
-  },
-  {
-    "title": "Turkey Burger Wrap",
-    "category": "Meals",
-    "portions": 1,
-    "ingredients": ["1 Turkey patty", "1 Tortilla wrap", "Lettuce", "Tomato"],
-    "instructions": ["Cook turkey patty.", "Place in center of wrap with salad.", "Roll tightly and serve."],
-    "macrosPerPortion": { "calories": 270, "protein": 30, "carbs": 20, "fat": 12, "satFat": 3.8, "sugar": 2.5, "fiber": 3, "salt": 1.1 },
-    "macros": { "calories": 270, "protein": 30, "carbs": 20, "fat": 12, "satFat": 3.8, "sugar": 2.5, "fiber": 3, "salt": 1.1 }
-  },
-  {
-    "title": "Veggie Burger Wrap",
-    "category": "Meals",
-    "portions": 1,
-    "ingredients": ["1 Veggie patty", "1 Tortilla wrap", "50g Spinach"],
-    "instructions": ["Cook veggie patty.", "Place on tortilla with spinach and roll tightly."],
-    "macrosPerPortion": { "calories": 115, "protein": 6, "carbs": 17.5, "fat": 4, "satFat": 0.6, "sugar": 1.8, "fiber": 4.5, "salt": 0.7 },
-    "macros": { "calories": 115, "protein": 6, "carbs": 17.5, "fat": 4, "satFat": 0.6, "sugar": 1.8, "fiber": 4.5, "salt": 0.7 }
-  },
-  {
-    "title": "Mushroom Pasta",
-    "category": "Meals",
-    "portions": 2,
-    "ingredients": ["150g Whole wheat pasta", "200g Mushrooms", "100g Spinach", "100ml Light cream"],
-    "instructions": ["Boil pasta.", "Sauté mushrooms/garlic, wilt spinach, add cream.", "Toss pasta in sauce."],
-    "macrosPerPortion": { "calories": 240, "protein": 13, "carbs": 35, "fat": 6, "satFat": 2.5, "sugar": 4, "fiber": 6, "salt": 0.4 },
-    "macros": { "calories": 480, "protein": 26, "carbs": 70, "fat": 12, "satFat": 5, "sugar": 8, "fiber": 12, "salt": 0.8 }
-  },
-  {
-    "title": "Steak & Potatoes",
-    "category": "Meals",
-    "portions": 1,
-    "ingredients": ["200g Fillet steak", "150g Baby potatoes", "100g Asparagus"],
-    "instructions": ["Boil potatoes.", "Sear steak 3 mins per side.", "Steam asparagus and serve."],
-    "macrosPerPortion": { "calories": 450, "protein": 40, "carbs": 45, "fat": 12.5, "satFat": 4.5, "sugar": 2, "fiber": 5, "salt": 0.5 },
-    "macros": { "calories": 450, "protein": 40, "carbs": 45, "fat": 12.5, "satFat": 4.5, "sugar": 2, "fiber": 5, "salt": 0.5 }
-  },
-  {
-    "title": "Steak & Mushrooms",
-    "category": "Meals",
-    "portions": 1,
-    "ingredients": ["200g Fillet steak", "150g Mushrooms", "1 tsp Butter"],
-    "instructions": ["Sear steak.", "In same pan, sauté mushrooms in butter.", "Serve mushrooms over steak."],
-    "macrosPerPortion": { "calories": 410, "protein": 42.5, "carbs": 10, "fat": 20, "satFat": 9, "sugar": 2.5, "fiber": 2, "salt": 0.6 },
-    "macros": { "calories": 410, "protein": 42.5, "carbs": 10, "fat": 20, "satFat": 9, "sugar": 2.5, "fiber": 2, "salt": 0.6 }
-  },
-  {
-    "title": "Chicken Pasta",
-    "category": "Meals",
-    "portions": 2,
-    "ingredients": ["200g Chicken", "150g Pasta", "1 Broccoli head", "Light cream cheese"],
-    "instructions": ["Cook pasta, chicken, and broccoli.", "Date and mix all with cream cheese."],
-    "macrosPerPortion": { "calories": 450, "protein": 45, "carbs": 50, "fat": 10, "satFat": 4, "sugar": 5, "fiber": 7, "salt": 0.7 },
-    "macros": { "calories": 900, "protein": 90, "carbs": 100, "fat": 20, "satFat": 8, "sugar": 10, "fiber": 14, "salt": 1.4 }
-  },
-  {
-    "title": "Fluffy Keto Buns",
-    "category": "Keto",
-    "portions": 6,
-    "ingredients": ["150g Almond flour", "40g Psyllium husk", "3 Egg whites", "Boiling water"],
-    "instructions": ["Mix dry ingredients.", "Add egg whites and boiling water, whisk.", "Shape 6 buns and bake at 175°C for 50-60 mins."],
-    "macrosPerPortion": { "calories": 150, "protein": 7.5, "carbs": 3, "fat": 12, "satFat": 1.2, "sugar": 0.5, "fiber": 6, "salt": 0.4 },
-    "macros": { "calories": 900, "protein": 45, "carbs": 18, "fat": 72, "satFat": 7.2, "sugar": 3, "fiber": 36, "salt": 2.4 }
-  },
-  {
-    "title": "Keto Bread Rolls",
-    "category": "Keto",
-    "portions": 4,
-    "ingredients": ["100g Almond flour", "2 Eggs", "100g Greek yogurt"],
-    "instructions": ["Mix ingredients into dough.", "Divide into 4 rolls.", "Bake at 180°C for 20-25 mins."],
-    "macrosPerPortion": { "calories": 133, "protein": 6.6, "carbs": 3, "fat": 10, "satFat": 1.5, "sugar": 1.2, "fiber": 2, "salt": 0.2 },
-    "macros": { "calories": 532, "protein": 26.4, "carbs": 12, "fat": 40, "satFat": 6, "sugar": 4.8, "fiber": 8, "salt": 0.8 }
-  },
-  {
-    "title": "Protein Brownies",
-    "category": "Keto",
-    "portions": 12,
-    "ingredients": ["2 scoops Protein powder (78% P)", "1 Avocado", "2 Eggs", "30g Cocoa"],
-    "instructions": ["Mash avocado, mix with eggs.", "Fold in protein powder and cocoa.", "Bake at 180°C for 20 mins."],
-    "macrosPerPortion": { "calories": 150, "protein": 12, "carbs": 4, "fat": 10, "satFat": 1.5, "sugar": 0.5, "fiber": 4, "salt": 0.1 },
-    "macros": { "calories": 1800, "protein": 144, "carbs": 48, "fat": 120, "satFat": 18, "sugar": 6, "fiber": 48, "salt": 1.2 }
-  },
-  {
-    "title": "Sandwich Bread",
-    "category": "Bakery",
-    "portions": 10,
-    "ingredients": ["500g Flour", "Yeast", "Warm water"],
-    "instructions": ["Knead dough and prove for 1 hour.", "Bake at 200°C for 30 mins."],
-    "macrosPerPortion": { "calories": 100, "protein": 3.3, "carbs": 18, "fat": 0.8, "satFat": 0.1, "sugar": 0.5, "fiber": 1.2, "salt": 0.5 },
-    "macros": { "calories": 1000, "protein": 33, "carbs": 180, "fat": 8, "satFat": 1, "sugar": 5, "fiber": 12, "salt": 5 }
-  },
-  {
-    "title": "Bread Pudding",
-    "category": "Desserts",
-    "portions": 6,
-    "ingredients": ["6 slices Bread", "2 Eggs", "300ml Milk", "30g Sultanas"],
-    "instructions": ["Layer bread and fruit.", "Pour over egg/milk mix.", "Bake at 180°C for 35 mins."],
-    "macrosPerPortion": { "calories": 200, "protein": 6, "carbs": 25, "fat": 7.5, "satFat": 3, "sugar": 12, "fiber": 1.5, "salt": 0.4 },
-    "macros": { "calories": 1200, "protein": 36, "carbs": 150, "fat": 45, "satFat": 18, "sugar": 72, "fiber": 9, "salt": 2.4 }
-  },
-  {
-    "title": "Yogurt Cheesecake",
-    "category": "Heart-Healthy Desserts",
-    "portions": 6,
-    "ingredients": ["500g 0% Greek yogurt", "2 Eggs", "Cornstarch"],
-    "instructions": ["Whisk ingredients until smooth.", "Bake at 160°C for 45 mins.", "Chill overnight."],
-    "macrosPerPortion": { "calories": 140, "protein": 15, "carbs": 10, "fat": 3, "satFat": 1.2, "sugar": 5, "fiber": 0, "salt": 0.2 },
-    "macros": { "calories": 840, "protein": 90, "carbs": 60, "fat": 18, "satFat": 7.2, "sugar": 30, "fiber": 0, "salt": 1.2 }
-  },
-  {
-    "title": "Banana Choc Cake",
-    "category": "Heart-Healthy Desserts",
-    "portions": 8,
-    "ingredients": ["4 Bananas", "200g Oats", "40g Cocoa", "50g Choc chips"],
-    "instructions": ["Blend bananas/oats.", "Stir in cocoa/chips.", "Bake at 180°C for 30 mins."],
-    "macrosPerPortion": { "calories": 175, "protein": 6, "carbs": 26, "fat": 4, "satFat": 1.8, "sugar": 12, "fiber": 4.5, "salt": 0.1 },
-    "macros": { "calories": 1400, "protein": 48, "carbs": 208, "fat": 32, "satFat": 14.4, "sugar": 96, "fiber": 36, "salt": 0.8 }
-  },
-  {
-    "title": "Banana Cocoa Cake",
-    "category": "Heart-Healthy Desserts",
-    "portions": 8,
-    "ingredients": ["3 Bananas", "150g Oat flour", "30g Cocoa"],
-    "instructions": ["Mash bananas, mix with oat flour/cocoa.", "Bake at 180°C for 25 mins."],
-    "macrosPerPortion": { "calories": 150, "protein": 5, "carbs": 22, "fat": 4, "satFat": 0.8, "sugar": 10, "fiber": 4, "salt": 0.1 },
-    "macros": { "calories": 1200, "protein": 40, "carbs": 176, "fat": 32, "satFat": 6.4, "sugar": 80, "fiber": 32, "salt": 0.8 }
-  },
-  {
-    "title": "Chocolate Bean Cake",
-    "category": "Heart-Healthy Desserts",
-    "portions": 10,
-    "ingredients": ["400g Black beans", "3 Eggs", "50g Cocoa"],
-    "instructions": ["Blend beans/eggs.", "Whisk in cocoa.", "Bake at 170°C for 40 mins."],
-    "macrosPerPortion": { "calories": 160, "protein": 8, "carbs": 16, "fat": 5, "satFat": 1.1, "sugar": 1.5, "fiber": 6, "salt": 0.3 },
-    "macros": { "calories": 1600, "protein": 80, "carbs": 160, "fat": 50, "satFat": 11, "sugar": 15, "fiber": 60, "salt": 3 }
-  },
-  {
-    "title": "Apple Fiber Cake",
-    "category": "Heart-Healthy Desserts",
-    "portions": 8,
-    "ingredients": ["2 Apples", "200g Oat bran", "2 Eggs"],
-    "instructions": ["Grate apples, mix with bran/eggs.", "Bake at 180°C for 35 mins."],
-    "macrosPerPortion": { "calories": 135, "protein": 5, "carbs": 20, "fat": 3, "satFat": 0.6, "sugar": 8, "fiber": 8, "salt": 0.1 },
-    "macros": { "calories": 1080, "protein": 40, "carbs": 160, "fat": 24, "satFat": 4.8, "sugar": 64, "fiber": 64, "salt": 0.8 }
-  }
+  { "title": "Turkey Burgers", "category": "Meals", "macrosPerPortion": { "calories": 310, "protein": 30, "carbs": 15, "fat": 12 }, "ingredients": ["500g Turkey mince", "1 Large egg", "50g Panko breadcrumbs", "Garlic & Onion powder"], "instructions": ["Mix ingredients.", "Shape 4 patties.", "Cook 6 mins per side."] },
+  { "title": "Med. Chicken Bake", "category": "Meals", "macrosPerPortion": { "calories": 371, "protein": 50.5, "carbs": 10, "fat": 10.5 }, "ingredients": ["400g Chicken", "Peppers", "Courgette", "Olive oil"], "instructions": ["Preheat to 200°C.", "Toss veg/chicken in oil.", "Bake 25 mins."] },
+  { "title": "Veggie Burger", "category": "Meals", "macrosPerPortion": { "calories": 145, "protein": 6, "carbs": 15, "fat": 4 }, "ingredients": ["Chickpeas", "Onion", "Cumin", "Flour"], "instructions": ["Mash chickpeas.", "Form patties.", "Fry until golden."] },
+  { "title": "Fluffy Keto Buns", "category": "Keto", "macrosPerPortion": { "calories": 150, "protein": 7.5, "carbs": 3, "fat": 12 }, "ingredients": ["Almond flour", "Psyllium husk", "Egg whites", "Boiling water"], "instructions": ["Mix dry.", "Add wet.", "Bake 175°C for 50 mins."] },
+  { "title": "Protein Brownies", "category": "Keto", "macrosPerPortion": { "calories": 150, "protein": 12, "carbs": 4, "fat": 10 }, "ingredients": ["2 scoops Protein powder (78% P)", "1 Avocado", "2 Eggs", "30g Cocoa"], "instructions": ["Mash avocado.", "Mix all.", "Bake 180°C for 20 mins."] }
 ];
 
 function render(data) {
@@ -327,31 +158,18 @@ function render(data) {
   order.forEach(cat => {
     const filtered = data.filter(r => r.category === cat);
     if (filtered.length === 0) return;
-    
     const title = document.createElement('div');
     title.className = 'section-title';
     title.innerText = cat;
     container.appendChild(title);
-    
     const grid = document.createElement('div');
     grid.className = 'grid';
-    
     filtered.forEach(r => {
       const card = document.createElement('div');
       card.className = 'card';
       card.onclick = () => openPopup(r);
-      
-      let badge = cat.includes("Heart") ? '❤️' : '';
-      if (cat === "Keto") badge = '<div class="keto-circle">K</div>';
-
-      card.innerHTML = `
-        <div class="badge-right">${badge}</div>
-        <div class="card-content">
-          <div class="card-title">${r.title}</div>
-          <div class="card-macros">
-            ${r.macrosPerPortion.calories} kcal • P:${r.macrosPerPortion.protein}g • C:${r.macrosPerPortion.carbs}g • F:${r.macrosPerPortion.fat}g
-          </div>
-        </div>`;
+      let badge = cat === "Keto" ? '<div class="keto-circle">K</div>' : (cat.includes("Heart") ? '❤️' : '');
+      card.innerHTML = `<div class="badge-right">${badge}</div><div class="card-content"><div class="card-title">${r.title}</div><div class="card-macros">${r.macrosPerPortion.calories} KCAL • P:${r.macrosPerPortion.protein}G</div></div>`;
       grid.appendChild(card);
     });
     container.appendChild(grid);
@@ -359,31 +177,13 @@ function render(data) {
 }
 
 function openPopup(r) {
-  const content = document.getElementById('popup-content');
-  const buildMacros = (obj) => `
-    <strong>${obj.calories} kcal</strong><br>
-    Protein: ${obj.protein}g<br>Carbs: ${obj.carbs}g<br>Fat: ${obj.fat}g<br>
-    Sugar: ${obj.sugar}g | Fiber: ${obj.fiber}g`;
-
-  content.innerHTML = `
-    <div class="recipe-detail">
-      <h1>${r.title}</h1>
-      <div class="macro-grid">
-        <div class="macro-box"><strong>PER PORTION</strong><br>${buildMacros(r.macrosPerPortion)}</div>
-        <div class="macro-box"><strong>WHOLE RECIPE</strong><br>${buildMacros(r.macros)}</div>
-      </div>
-      <h3>Ingredients</h3><ul>${r.ingredients.map(i => `<li>${i}</li>`).join('')}</ul>
-      <h3>Method</h3><ol>${r.instructions.map(s => `<li>${s}</li>`).join('')}</ol>
-    </div>`;
+  document.getElementById('popup-content').innerHTML = `<div class="recipe-detail"><h1>${r.title}</h1><div class="macro-box"><strong>PER PORTION</strong><br>${r.macrosPerPortion.calories} kcal<br>P: ${r.macrosPerPortion.protein}g | C: ${r.macrosPerPortion.carbs}g | F: ${r.macrosPerPortion.fat}g</div><h3>Ingredients</h3><ul>${r.ingredients.map(i => `<li>${i}</li>`).join('')}</ul><h3>Method</h3><ol>${r.instructions.map(s => `<li>${s}</li>`).join('')}</ol></div>`;
   document.getElementById('popup').style.display = 'block';
   document.body.style.overflow = 'hidden';
 }
 
 function closePopup() { document.getElementById('popup').style.display = 'none'; document.body.style.overflow = 'auto'; }
-function search() {
-  const q = document.getElementById('searchInput').value.toLowerCase();
-  render(recipes.filter(r => r.title.toLowerCase().includes(q) || r.ingredients.some(i => i.toLowerCase().includes(q))));
-}
+function search() { const q = document.getElementById('searchInput').value.toLowerCase(); render(recipes.filter(r => r.title.toLowerCase().includes(q))); }
 
 render(recipes);
 </script>
