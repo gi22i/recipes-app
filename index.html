@@ -5,46 +5,60 @@
 <title>Recipes</title>
 <style>
   body { margin: 0; font-family: -apple-system, system-ui; background: #000; color: #fff; -webkit-tap-highlight-color: transparent; }
-  .header { text-align: center; padding: 25px 10px 10px; font-size: 22px; font-weight: 600; }
+  .header { text-align: center; padding: 25px 10px 10px; font-size: 20px; font-weight: 600; }
   
-  /* White search bar as per screenshot */
   .search-container { padding: 0 16px 15px; }
   .search-bar { 
     width: 100%; padding: 12px; border-radius: 8px; border: none; 
     background: #fff; color: #000; font-size: 16px; box-sizing: border-box;
   }
 
-  .section-title { padding: 20px 16px 5px; font-size: 18px; font-weight: 600; }
-  .grid { display: grid; grid-template-columns: 1fr 1fr; gap: 12px; padding: 12px 16px; }
+  .section-title { padding: 20px 16px 5px; font-size: 18px; font-weight: 700; }
   
-  /* Left-aligned cards with underlined titles */
+  /* Uniform 2-column grid */
+  .grid { 
+    display: grid; 
+    grid-template-columns: 1fr 1fr; 
+    gap: 12px; 
+    padding: 0 16px 20px; 
+  }
+  
+  /* Uniform Rectangles with Left Alignment */
   .card {
     background: #2c2c2e;
     border-radius: 12px;
-    padding: 15px;
+    padding: 16px;
     cursor: pointer;
     display: flex;
     flex-direction: column;
-    min-height: 100px;
+    justify-content: flex-start;
+    aspect-ratio: 1.5 / 1; /* Forces all boxes to be the same rectangular shape */
+    box-sizing: border-box;
+    overflow: hidden;
   }
   .card:active { background: #3a3a3c; }
   
   .card-title {
-    font-size: 15px;
+    font-size: 16px; /* Slightly larger for readability */
     font-weight: 700;
     margin-bottom: 8px;
     text-decoration: underline;
-    text-underline-offset: 4px;
+    text-underline-offset: 3px;
     text-align: left;
+    line-height: 1.2;
+    display: -webkit-box;
+    -webkit-line-clamp: 2; /* Prevents title from breaking box shape */
+    -webkit-box-orient: vertical;
+    overflow: hidden;
   }
+  
   .card-macros {
-    font-size: 11px;
+    font-size: 12px; /* Increased from 10px/11px */
     color: #b0b0b0;
     text-align: left;
     line-height: 1.4;
+    margin-top: auto; /* Pushes macros to the bottom of the uniform box */
   }
-
-  .heart-icon { margin-right: 5px; color: #ff3b30; }
 
   /* Popup Styles */
   .popup {
@@ -58,7 +72,7 @@
   .recipe-detail h1 { text-decoration: underline; font-size: 24px; margin-bottom: 10px; }
   .recipe-detail h3 { border-bottom: 1px solid #333; padding-bottom: 8px; margin-top: 25px; }
   .recipe-detail ul, .recipe-detail ol { padding-left: 20px; color: #ddd; }
-  .recipe-detail li { margin-bottom: 12px; font-size: 16px; line-height: 1.5; }
+  .recipe-detail li { margin-bottom: 12px; font-size: 16px; }
 </style>
 </head>
 <body>
@@ -90,10 +104,11 @@ function render(data) {
   const container = document.getElementById('recipe-list');
   container.innerHTML = '';
   
-  // Dynamic category grouping
-  const categories = [...new Set(data.map(r => r.category))];
+  const order = ["Meals", "Bakery", "Desserts", "Heart-Healthy Desserts"];
+  const existingCats = [...new Set(data.map(r => r.category))];
+  const sortedCats = order.filter(cat => existingCats.includes(cat));
 
-  categories.forEach(cat => {
+  sortedCats.forEach(cat => {
     const section = document.createElement('div');
     section.innerHTML = `<div class="section-title">${cat}</div>`;
     
@@ -105,12 +120,11 @@ function render(data) {
       card.className = 'card';
       card.onclick = () => openPopup(r);
       
-      const isHeart = cat.includes("Heart-Healthy") ? '<span class="heart-icon">❤️</span>' : '';
-      
       card.innerHTML = `
-        <div class="card-title">${isHeart}${r.title}</div>
+        <div class="card-title">${r.title}</div>
         <div class="card-macros">
-          Calories: ${r.macrosPerPortion.calories} | Protein: ${r.macrosPerPortion.protein}g | Sat fat: ${r.macrosPerPortion.saturated || 0}g
+          Calories: ${r.macrosPerPortion.calories}<br>
+          Protein: ${r.macrosPerPortion.protein}g | Sat fat: ${r.macrosPerPortion.saturated || 0}g
         </div>
       `;
       grid.appendChild(card);
