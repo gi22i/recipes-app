@@ -97,21 +97,25 @@ body{
 
 <script>
 
-const recipes = /* JSON START */ 
-[
-  /* 🔽 YOUR FULL JSON INSERTED HERE EXACTLY AS PROVIDED */
-  {
-    "title": "Turkey Burgers",
-    "category": "Meals",
-    "ingredients": ["400g turkey mince","1 egg","1½ tsp psyllium husk","1 tsp soy sauce","garlic powder","smoked paprika","salt","pepper","2 burger buns"],
-    "instructions": ["Add turkey mince to a bowl.","Mix in egg, psyllium husk, soy sauce and seasonings.","Rest 5 min.","Form patties.","Air fry 190°C 11–13 min.","Serve in buns."],
-    "macros": {"calories":620,"protein":60,"carbs":30,"fat":24,"fibre":3,"saturated":6},
-    "portions":2,
-    "macrosPerPortion": {"calories":310,"protein":30,"carbs":15,"fat":12,"fibre":1.5,"saturated":3},
-    "notes": ""
+let recipes = [];
+
+async function loadRecipes(){
+  try {
+    const res = await fetch("recipes.json");
+
+    if(!res.ok){
+      throw new Error("HTTP error " + res.status);
+    }
+
+    recipes = await res.json();
+    displayRecipes(recipes);
+
+  } catch(err){
+    console.error("Failed to load JSON:", err);
+    document.getElementById("recipes").innerHTML =
+      "<p style='padding:16px'>Error loading recipes.json</p>";
   }
-]
-/* JSON END */;
+}
 
 function displayRecipes(data){
 
@@ -149,7 +153,6 @@ function displayRecipes(data){
       `;
 
       grid.appendChild(card);
-
     });
 
     container.appendChild(grid);
@@ -199,7 +202,7 @@ function searchRecipes(){
   displayRecipes(filtered);
 }
 
-displayRecipes(recipes);
+loadRecipes();
 
 </script>
 
