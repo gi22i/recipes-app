@@ -9,7 +9,6 @@
     "macrosPerPortion": {"calories":310,"protein":30,"carbs":15,"fat":12,"fibre":1.5,"saturated":3},
     "notes": ""
   },
-
   {
     "title": "Mediterranean Chicken Bake",
     "category": "Meals",
@@ -20,7 +19,6 @@
     "macrosPerPortion": {"calories":371,"protein":50.5,"carbs":10,"fat":10.5,"fibre":3,"saturated":2.95},
     "notes": ""
   },
-
   {
     "title": "Veggie Burger",
     "category": "Meals",
@@ -31,7 +29,6 @@
     "macrosPerPortion": {"calories":145,"protein":6,"carbs":15,"fat":4,"fibre":3,"saturated":1},
     "notes": ""
   },
-
   {
     "title": "Turkey Burger Wrap",
     "category": "Meals",
@@ -42,7 +39,6 @@
     "macrosPerPortion": {"calories":270,"protein":30,"carbs":20,"fat":12,"fibre":3,"saturated":3},
     "notes": ""
   },
-
   {
     "title": "Veggie Burger Wrap",
     "category": "Meals",
@@ -53,7 +49,6 @@
     "macrosPerPortion": {"calories":115,"protein":6,"carbs":17.5,"fat":4,"fibre":3,"saturated":1},
     "notes": ""
   },
-
   {
     "title": "Creamy Mushroom & Spinach Whole Wheat Pasta",
     "category": "Meals",
@@ -64,7 +59,6 @@
     "macrosPerPortion": {"calories":240,"protein":13,"carbs":35,"fat":6,"fibre":5.5,"saturated":0.9},
     "notes": ""
   },
-
   {
     "title": "Fillet Steak with Potatoes",
     "category": "Meals",
@@ -75,7 +69,6 @@
     "macrosPerPortion": {"calories":450,"protein":40,"carbs":45,"fat":12.5,"fibre":4,"saturated":4},
     "notes": ""
   },
-
   {
     "title": "Fillet Steak with Mushrooms",
     "category": "Meals",
@@ -86,7 +79,6 @@
     "macrosPerPortion": {"calories":410,"protein":42.5,"carbs":10,"fat":20,"fibre":2,"saturated":4.5},
     "notes": ""
   },
-
   {
     "title": "Creamy Chicken and Broccoli Pasta",
     "category": "Meals",
@@ -97,7 +89,6 @@
     "macrosPerPortion": {"calories":450,"protein":45,"carbs":50,"fat":10,"fibre":5,"saturated":1.5},
     "notes": ""
   },
-
   {
     "title": "Fluffy Keto Buns",
     "category": "Bakery",
@@ -108,7 +99,6 @@
     "macrosPerPortion": {"calories":150,"protein":7.5,"carbs":3,"fat":12,"fibre":2,"saturated":1.2},
     "notes": ""
   },
-
   {
     "title": "Keto Bread Rolls",
     "category": "Bakery",
@@ -119,7 +109,6 @@
     "macrosPerPortion": {"calories":133,"protein":6.6,"carbs":3,"fat":10,"fibre":1.6,"saturated":1},
     "notes": ""
   },
-
   {
     "title": "Sandwich Bread",
     "category": "Bakery",
@@ -130,7 +119,6 @@
     "macrosPerPortion": {"calories":100,"protein":3.3,"carbs":18,"fat":0.8,"fibre":0.6,"saturated":0.08},
     "notes": ""
   },
-
   {
     "title": "Bread and Butter Pudding",
     "category": "Desserts",
@@ -141,7 +129,6 @@
     "macrosPerPortion": {"calories":200,"protein":6,"carbs":25,"fat":7.5,"fibre":1,"saturated":3.3},
     "notes": ""
   },
-
   {
     "title": "Heart-Healthy Banana Cocoa Cake",
     "category": "Heart-Healthy Desserts",
@@ -152,7 +139,6 @@
     "macrosPerPortion": {"calories":150,"protein":5,"carbs":22,"fat":4,"fibre":2,"saturated":0.7},
     "notes": ""
   },
-
   {
     "title": "Banana Chocolate Oat Cake",
     "category": "Heart-Healthy Desserts",
@@ -163,7 +149,6 @@
     "macrosPerPortion": {"calories":175,"protein":6,"carbs":26,"fat":4,"fibre":2.2,"saturated":0.9},
     "notes": ""
   },
-
   {
     "title": "Heart-Healthy Chocolate Bean Cake",
     "category": "Heart-Healthy Desserts",
@@ -174,7 +159,6 @@
     "macrosPerPortion": {"calories":160,"protein":8,"carbs":16,"fat":5,"fibre":3,"saturated":0.8},
     "notes": ""
   },
-
   {
     "title": "High-Protein Yogurt Cheesecake",
     "category": "Heart-Healthy Desserts",
@@ -185,7 +169,6 @@
     "macrosPerPortion": {"calories":140,"protein":15,"carbs":10,"fat":3,"fibre":1,"saturated":0.7},
     "notes": ""
   },
-
   {
     "title": "Chocolate Protein Brownies",
     "category": "Heart-Healthy Desserts",
@@ -196,7 +179,6 @@
     "macrosPerPortion": {"calories":150,"protein":12,"carbs":15,"fat":4,"fibre":1.6,"saturated":0.8},
     "notes": ""
   },
-
   {
     "title": "Apple Cinnamon Fiber Cake",
     "category": "Heart-Healthy Desserts",
