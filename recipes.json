@@ -1,0 +1,40 @@
+[
+  {
+    "title": "Turkey Burgers",
+    "category": "Meals",
+    "ingredients": ["400g turkey mince","1 egg","1½ tsp psyllium husk","1 tsp soy sauce","garlic powder","smoked paprika","salt","pepper","2 burger buns"],
+    "instructions": ["Add turkey mince to a bowl.","Mix in egg, psyllium husk, soy sauce and seasonings.","Rest 5 min.","Form patties.","Air fry 190°C 11–13 min.","Serve in buns."],
+    "macros": {"calories":620,"protein":60,"carbs":30,"fat":24,"fibre":3,"saturated":6},
+    "portions":2,
+    "macrosPerPortion": {"calories":310,"protein":30,"carbs":15,"fat":12,"fibre":1.5,"saturated":3},
+    "notes": ""
+  },
+
+  {
+    "title": "Mediterranean Chicken Bake",
+    "category": "Meals",
+    "ingredients": ["400g chicken","courgette","peppers","onion","mozzarella","olives","olive oil"],
+    "instructions": ["Prep ingredients","Bake 190°C 25 min","Add cheese","Bake 5 min"],
+    "macros": {"calories":742,"protein":101,"carbs":20,"fat":21,"fibre":6,"saturated":5.9},
+    "portions":2,
+    "macrosPerPortion": {"calories":371,"protein":50.5,"carbs":10,"fat":10.5,"fibre":3,"saturated":2.95},
+    "notes": ""
+  },
+
+  {
+    "title": "Veggie Burger",
+    "category": "Meals",
+    "ingredients": ["mushrooms","broccoli","peas","carrot","egg","breadcrumbs"],
+    "instructions": ["Cook veg","Mash","Form patties","Bake"],
+    "macros": {"calories":290,"protein":12,"carbs":30,"fat":8,"fibre":6,"saturated":2},
+    "portions":2,
+    "macrosPerPortion": {"calories":145,"protein":6,"carbs":15,"fat":4,"fibre":3,"saturated":1},
+    "notes": ""
+  },
+
+  {
+    "title": "Turkey Burger Wrap",
+    "category": "Meals",
+    "ingredients": ["turkey mince","egg","wraps","veg"],
+    "instructions": ["Cook patties","Assemble wrap"],
+    "macros": {"calories":540,"protein":60,"carbs":40,"fat":24,"fibre":6,"saturated":6},
