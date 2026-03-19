@@ -6,7 +6,7 @@
 <meta name="apple-mobile-web-app-status-bar-style" content="default">
 <title>Recipes</title>
 <style>
-  /* LIGHT MODE (Default) */
+  /* AUTO LIGHT/DARK MODE VARIABLES */
   :root {
     --bg-color: #ffffff;
     --card-bg: #f2f2f7;
@@ -16,10 +16,8 @@
     --border-color: #d1d1d6;
     --circle-bg: rgba(0, 0, 0, 0.1);
     --circle-text: #000000;
-    --status-bar: #ffffff;
   }
 
-  /* DARK MODE (Auto-Switch) */
   @media (prefers-color-scheme: dark) {
     :root {
       --bg-color: #000000;
@@ -30,21 +28,18 @@
       --border-color: #38383a;
       --circle-bg: rgba(255, 255, 255, 0.2);
       --circle-text: #ffffff;
-      --status-bar: #000000;
     }
   }
 
   body { 
     margin: 0; 
-    font-family: -apple-system, BlinkMacSystemFont, sans-serif; 
+    font-family: -apple-system, sans-serif; 
     background: var(--bg-color); 
     color: var(--text-primary); 
     -webkit-font-smoothing: antialiased;
-    transition: background 0.3s ease;
   }
 
   .header { text-align: center; padding: 25px 10px 5px; font-size: 22px; font-weight: 700; }
-  
   .search-container { padding: 0 16px 15px; }
   .search-bar { 
     width: 100%; padding: 12px; border-radius: 10px; border: none; 
@@ -53,7 +48,6 @@
 
   .section-title { padding: 25px 16px 10px; font-size: 20px; font-weight: 800; clear: both; }
   
-  /* Flex Layout for Web Clip Stability */
   .grid { display: flex; flex-wrap: wrap; gap: 10px; padding: 0 16px 30px; }
   
   .card {
@@ -63,17 +57,17 @@
     cursor: pointer;
     display: flex; 
     flex-direction: column; 
-    justify-content: center; 
-    align-items: center;
+    justify-content: center; /* Vertical Center */
+    align-items: center;     /* Horizontal Center */
     width: calc(50% - 5px); 
     height: 85px; 
     position: relative; 
     box-sizing: border-box;
-    overflow: hidden;
+    text-align: center;      /* Centers inline text */
   }
 
-  .watermark-icon { position: absolute; top: 8px; left: 10px; font-size: 14px; opacity: 0.2; z-index: 1; }
-  .badge-right { position: absolute; top: 8px; right: 10px; z-index: 1; }
+  .watermark-icon { position: absolute; top: 8px; left: 10px; font-size: 14px; opacity: 0.2; }
+  .badge-right { position: absolute; top: 8px; right: 10px; }
   
   .keto-circle {
     display: inline-flex; align-items: center; justify-content: center;
@@ -81,37 +75,32 @@
     color: var(--circle-text); font-size: 12px; font-weight: 900;
   }
 
-  .heart-icon { font-size: 14px; }
-
   .card-title {
-    font-size: 16px; font-weight: 700; margin-bottom: 4px;
-    text-decoration: underline; text-underline-offset: 3px; z-index: 2;
-    width: 90%; line-height: 1.2; white-space: nowrap; overflow: hidden; text-overflow: ellipsis;
+    font-size: 16px; font-weight: 700; 
+    margin: 0 0 4px 0;
+    text-decoration: underline; text-underline-offset: 3px; 
+    width: 95%; line-height: 1.2; 
+    white-space: nowrap; overflow: hidden; text-overflow: ellipsis;
   }
   
   .card-macros { 
     font-size: 11px; font-weight: 600; color: var(--text-secondary); 
-    white-space: nowrap; z-index: 2; width: 100%; letter-spacing: -0.1px;
+    white-space: nowrap; width: 100%; letter-spacing: -0.1px;
   }
 
-  /* Popup/Modal */
+  /* Popup Styles */
   .popup { position: fixed; top: 0; left: 0; width: 100%; height: 100%; background: var(--bg-color); display: none; overflow-y: auto; z-index: 1000; }
   .popup-inner { padding: 50px 20px; max-width: 600px; margin: 0 auto; }
   .close-btn { position: fixed; top: 20px; right: 20px; font-size: 30px; cursor: pointer; z-index: 1001; color: var(--text-primary); }
-  
   .macro-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 12px; margin-bottom: 25px; }
   .macro-box { background: var(--card-bg); padding: 15px; border-radius: 12px; font-size: 13px; line-height: 1.6; }
-  
-  .recipe-detail h1 { font-size: 26px; text-align: center; margin-bottom: 20px; }
-  .recipe-detail h3 { border-bottom: 1px solid var(--border-color); padding-bottom: 10px; margin-top: 30px; }
-  .recipe-detail li { margin-bottom: 12px; font-size: 16px; line-height: 1.4; color: var(--text-secondary); }
 </style>
 </head>
 <body>
 
 <div class="header">Recipes</div>
 <div class="search-container">
-  <input type="text" id="searchInput" class="search-bar" placeholder="Search ingredients or titles..." onkeyup="search()">
+  <input type="text" id="searchInput" class="search-bar" placeholder="Search..." onkeyup="search()">
 </div>
 
 <div id="recipe-list"></div>
@@ -175,7 +164,7 @@ function openPopup(r) {
 
   content.innerHTML = `
     <div class="recipe-detail">
-      <h1>${r.title}</h1>
+      <h1 style="text-align:center;">${r.title}</h1>
       <div class="macro-grid">
         <div class="macro-box"><strong>Per Portion</strong><br>${buildMacros(r.macrosPerPortion)}</div>
         <div class="macro-box"><strong>Full Recipe</strong><br>${buildMacros(r.macros)}</div>
@@ -187,19 +176,11 @@ function openPopup(r) {
   document.body.style.overflow = 'hidden';
 }
 
-function closePopup() { 
-  document.getElementById('popup').style.display = 'none'; 
-  document.body.style.overflow = 'auto'; 
-}
-
+function closePopup() { document.getElementById('popup').style.display = 'none'; document.body.style.overflow = 'auto'; }
 function search() {
   const q = document.getElementById('searchInput').value.toLowerCase();
-  render(allRecipes.filter(r => 
-    r.title.toLowerCase().includes(q) || 
-    r.ingredients.some(i => i.toLowerCase().includes(q))
-  ));
+  render(allRecipes.filter(r => r.title.toLowerCase().includes(q) || r.ingredients.some(i => i.toLowerCase().includes(q))));
 }
-
 init();
 </script>
 </body>
