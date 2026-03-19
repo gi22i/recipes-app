@@ -2,7 +2,7 @@
   {
     "title": "Turkey Burgers",
     "category": "Meals",
-    "ingredients": ["400g turkey mince","1 egg","1½ tsp psyllium husk","1 tsp soy sauce","1 tsp garlic powder","1 tsp smoked paprika","salt","pepper","2 burger buns"],
+    "ingredients": ["400g turkey mince","1 egg","1½ tsp psyllium husk","1 tsp soy sauce","garlic powder","smoked paprika","salt","pepper","2 burger buns"],
     "instructions": ["Add turkey mince to a bowl.","Mix in egg, psyllium husk, soy sauce and seasonings.","Rest 5 min.","Form patties.","Air fry 190°C 11–13 min.","Serve in buns."],
     "macros": {"calories":620,"protein":60,"carbs":30,"fat":24,"fibre":3,"saturated":6},
     "portions":2,
@@ -11,7 +11,7 @@
   {
     "title": "Mediterranean Chicken Bake",
     "category": "Meals",
-    "ingredients": ["400g chicken breast","1 medium courgette","2 bell peppers","1 red onion","60g light mozzarella","30g pitted olives","1 tbsp olive oil"],
+    "ingredients": ["400g chicken breast","1 courgette","2 peppers","1 onion","60g mozzarella","30g olives","1 tbsp olive oil"],
     "instructions": ["Prep ingredients","Bake 190°C 25 min","Add cheese","Bake 5 min"],
     "macros": {"calories":742,"protein":101,"carbs":20,"fat":21,"fibre":6,"saturated":5.9},
     "portions":2,
@@ -20,8 +20,8 @@
   {
     "title": "Veggie Burger",
     "category": "Meals",
-    "ingredients": ["150g mushrooms","100g broccoli","50g peas","1 large carrot","1 egg","40g breadcrumbs"],
-    "instructions": ["Cook veg until soft","Mash thoroughly","Form 2 patties","Bake at 180°C for 20 min"],
+    "ingredients": ["150g mushrooms","100g broccoli","50g peas","1 carrot","1 egg","40g breadcrumbs"],
+    "instructions": ["Cook veg","Mash","Form patties","Bake 180°C 20 min"],
     "macros": {"calories":290,"protein":12,"carbs":30,"fat":8,"fibre":6,"saturated":2},
     "portions":2,
     "macrosPerPortion": {"calories":145,"protein":6,"carbs":15,"fat":4,"fibre":3,"saturated":1}
@@ -29,8 +29,8 @@
   {
     "title": "Turkey Burger Wrap",
     "category": "Meals",
-    "ingredients": ["400g turkey mince","1 egg","2 whole wheat wraps","100g mixed salad veg"],
-    "instructions": ["Cook patties","Assemble wrap with veg"],
+    "ingredients": ["400g turkey mince","1 egg","2 whole wheat wraps","mixed salad veg"],
+    "instructions": ["Cook patties","Assemble wrap"],
     "macros": {"calories":540,"protein":60,"carbs":40,"fat":24,"fibre":6,"saturated":6},
     "portions":2,
     "macrosPerPortion": {"calories":270,"protein":30,"carbs":20,"fat":12,"fibre":3,"saturated":3}
@@ -38,8 +38,8 @@
   {
     "title": "Veggie Burger Wrap",
     "category": "Meals",
-    "ingredients": ["2 veggie patties (from recipe)","2 whole wheat wraps","50g lettuce","1 tomato"],
-    "instructions": ["Cook patties","Wrap with salad"],
+    "ingredients": ["2 veggie patties","2 wraps","lettuce","tomato"],
+    "instructions": ["Cook patties","Wrap"],
     "macros": {"calories":230,"protein":12,"carbs":35,"fat":8,"fibre":6,"saturated":2},
     "portions":2,
     "macrosPerPortion": {"calories":115,"protein":6,"carbs":17.5,"fat":4,"fibre":3,"saturated":1}
@@ -47,8 +47,8 @@
   {
     "title": "Creamy Mushroom & Spinach Pasta",
     "category": "Meals",
-    "ingredients": ["120g whole wheat pasta (dry)","200g mushrooms","100g fresh spinach","100g skyr"],
-    "instructions": ["Cook pasta","Cook veg","Mix with skyr at low heat"],
+    "ingredients": ["120g pasta","200g mushrooms","100g spinach","100g skyr"],
+    "instructions": ["Cook pasta","Cook veg","Mix"],
     "macros": {"calories":480,"protein":26,"carbs":70,"fat":12,"fibre":11,"saturated":1.8},
     "portions":2,
     "macrosPerPortion": {"calories":240,"protein":13,"carbs":35,"fat":6,"fibre":5.5,"saturated":0.9}
@@ -56,8 +56,8 @@
   {
     "title": "Fillet Steak with Potatoes",
     "category": "Meals",
-    "ingredients": ["2x 200g fillet steaks","400g potatoes","1 tsp oil","rosemary","garlic"],
-    "instructions": ["Cook steak to preference","Air fry potatoes at 200°C for 20 min"],
+    "ingredients": ["2x 200g fillet steaks","400g potatoes","1 tsp oil"],
+    "instructions": ["Cook steak","Air fry potatoes 200°C 20 min"],
     "macros": {"calories":900,"protein":80,"carbs":90,"fat":25,"fibre":8,"saturated":8},
     "portions":2,
     "macrosPerPortion": {"calories":450,"protein":40,"carbs":45,"fat":12.5,"fibre":4,"saturated":4}
@@ -65,8 +65,8 @@
   {
     "title": "Fillet Steak with Mushrooms",
     "category": "Meals",
-    "ingredients": ["2x 200g fillet steaks","300g mushrooms","1 tbsp butter","thyme"],
-    "instructions": ["Cook steak","Sauté mushrooms in butter"],
+    "ingredients": ["2x 200g fillet steaks","300g mushrooms","1 tbsp butter"],
+    "instructions": ["Cook steak","Cook mushrooms"],
     "macros": {"calories":820,"protein":85,"carbs":20,"fat":40,"fibre":4,"saturated":9},
     "portions":2,
     "macrosPerPortion": {"calories":410,"protein":42.5,"carbs":10,"fat":20,"fibre":2,"saturated":4.5}
@@ -74,8 +74,8 @@
   {
     "title": "Creamy Chicken and Broccoli Pasta",
     "category": "Meals",
-    "ingredients": ["300g chicken breast","200g broccoli","150g whole wheat pasta"],
-    "instructions": ["Cook all components","Combine with splash of pasta water"],
+    "ingredients": ["300g chicken","200g broccoli","150g pasta"],
+    "instructions": ["Cook","Combine"],
     "macros": {"calories":900,"protein":90,"carbs":100,"fat":20,"fibre":10,"saturated":3},
     "portions":2,
     "macrosPerPortion": {"calories":450,"protein":45,"carbs":50,"fat":10,"fibre":5,"saturated":1.5}
@@ -83,8 +83,8 @@
   {
     "title": "Individual Beef Wellingtons",
     "category": "Meals",
-    "ingredients": ["2x 150g fillet steaks","100g puff pastry","100g mushroom pâté","1 egg (glaze)"],
-    "instructions": ["Sear steak","Wrap in pâté and pastry","Bake 200°C for 15-20 min"],
+    "ingredients": ["2x 150g fillet steaks","100g puff pastry","100g mushroom pâté","1 egg"],
+    "instructions": ["Sear steak","Wrap in pâté and pastry","Bake 200°C 20 min"],
     "macros": {"calories":1300,"protein":100,"carbs":60,"fat":24,"fibre":4,"saturated":12},
     "portions":2,
     "macrosPerPortion": {"calories":650,"protein":50,"carbs":30,"fat":12,"fibre":2,"saturated":6}
@@ -92,8 +92,8 @@
   {
     "title": "Fluffy Keto Buns",
     "category": "Bakery",
-    "ingredients": ["150g almond flour","3 large eggs","1 tsp baking powder","pinch salt"],
-    "instructions": ["Mix ingredients","Bake 180°C for 15 min"],
+    "ingredients": ["150g almond flour","3 eggs","1 tsp baking powder"],
+    "instructions": ["Mix","Bake 180°C 15 min"],
     "macros": {"calories":900,"protein":45,"carbs":20,"fat":70,"fibre":12,"saturated":7},
     "portions":6,
     "macrosPerPortion": {"calories":150,"protein":7.5,"carbs":3,"fat":12,"fibre":2,"saturated":1.2}
@@ -101,8 +101,8 @@
   {
     "title": "Keto Bread Rolls",
     "category": "Bakery",
-    "ingredients": ["120g almond flour","2 eggs","2 tbsp psyllium husk","1 tsp baking powder"],
-    "instructions": ["Mix","Form 6 rolls","Bake 180°C for 20 min"],
+    "ingredients": ["120g almond flour","2 eggs","2 tbsp psyllium","1 tsp baking powder"],
+    "instructions": ["Mix","Bake 180°C 20 min"],
     "macros": {"calories":800,"protein":40,"carbs":18,"fat":60,"fibre":10,"saturated":6},
     "portions":6,
     "macrosPerPortion": {"calories":133,"protein":6.6,"carbs":3,"fat":10,"fibre":1.6,"saturated":1}
@@ -110,8 +110,8 @@
   {
     "title": "Sandwich Bread",
     "category": "Bakery",
-    "ingredients": ["500g strong bread flour","7g dried yeast","300ml warm water","1 tsp salt"],
-    "instructions": ["Knead dough","Prove 1 hour","Bake 200°C for 30 min"],
+    "ingredients": ["500g strong flour","7g yeast","300ml water","1 tsp salt"],
+    "instructions": ["Knead","Prove 1 hour","Bake 200°C 30 min"],
     "macros": {"calories":1200,"protein":40,"carbs":220,"fat":10,"fibre":8,"saturated":1},
     "portions":12,
     "macrosPerPortion": {"calories":100,"protein":3.3,"carbs":18,"fat":0.8,"fibre":0.6,"saturated":0.08}
@@ -119,8 +119,8 @@
   {
     "title": "Bread and Butter Pudding",
     "category": "Desserts",
-    "ingredients": ["6 slices sandwich bread","300ml skimmed milk","30g butter","2 eggs","sweetener"],
-    "instructions": ["Layer bread and butter","Pour over milk and egg mix","Bake 180°C for 30 min"],
+    "ingredients": ["6 slices bread","300ml milk","30g butter","2 eggs","sweetener"],
+    "instructions": ["Layer","Pour custard","Bake 180°C 30 min"],
     "macros": {"calories":1200,"protein":35,"carbs":150,"fat":45,"fibre":6,"saturated":20},
     "portions":6,
     "macrosPerPortion": {"calories":200,"protein":6,"carbs":25,"fat":7.5,"fibre":1,"saturated":3.3}
@@ -128,8 +128,8 @@
   {
     "title": "Heart-Healthy Banana Cocoa Cake",
     "category": "Heart-Healthy Desserts",
-    "ingredients": ["3 ripe bananas","150g oats","30g cocoa powder","2 eggs"],
-    "instructions": ["Mash bananas","Mix in eggs and dry ingredients","Bake 180°C for 25-30 min"],
+    "ingredients": ["3 bananas","150g oats","30g cocoa","2 eggs"],
+    "instructions": ["Mash bananas","Mix in eggs/dry","Bake 180°C 25 min"],
     "macros": {"calories":1200,"protein":40,"carbs":180,"fat":30,"fibre":15,"saturated":6},
     "portions":8,
     "macrosPerPortion": {"calories":150,"protein":5,"carbs":22,"fat":4,"fibre":2,"saturated":0.7}
@@ -137,8 +137,8 @@
   {
     "title": "Banana Chocolate Oat Cake",
     "category": "Heart-Healthy Desserts",
-    "ingredients": ["4 ripe bananas","200g oats","40g cocoa powder","50g dark chocolate chips"],
-    "instructions": ["Blend bananas and oats","Stir in cocoa and chips","Bake 180°C for 30 min"],
+    "ingredients": ["4 bananas","200g oats","40g cocoa","50g chocolate chips"],
+    "instructions": ["Blend","Bake 180°C 30 min"],
     "macros": {"calories":1400,"protein":50,"carbs":210,"fat":35,"fibre":18,"saturated":7},
     "portions":8,
     "macrosPerPortion": {"calories":175,"protein":6,"carbs":26,"fat":4,"fibre":2.2,"saturated":0.9}
@@ -146,8 +146,8 @@
   {
     "title": "Heart-Healthy Chocolate Bean Cake",
     "category": "Heart-Healthy Desserts",
-    "ingredients": ["240g tinned black beans (rinsed)","80g oat flour","2 eggs","3 tbsp cocoa powder","sweetener"],
-    "instructions": ["Blend beans until smooth","Add other ingredients","Bake 180°C for 30 min"],
+    "ingredients": ["240g black beans","80g oat flour","2 eggs","3 tbsp cocoa","sweetener"],
+    "instructions": ["Blend beans","Mix others","Bake 180°C 30 min"],
     "macros": {"calories":960,"protein":48,"carbs":96,"fat":30,"fibre":18,"saturated":5},
     "portions":6,
     "macrosPerPortion": {"calories":160,"protein":8,"carbs":16,"fat":5,"fibre":3,"saturated":0.8}
@@ -155,8 +155,8 @@
   {
     "title": "High-Protein Yogurt Cheesecake",
     "category": "Heart-Healthy Desserts",
-    "ingredients": ["500g skyr","2 eggs","60g vanilla protein powder","1 tsp vanilla extract"],
-    "instructions": ["Whisk until smooth","Bake 170°C for 35 min","Chill 4 hours"],
+    "ingredients": ["500g skyr","2 eggs","60g protein powder","vanilla"],
+    "instructions": ["Mix","Bake 170°C 35 min","Chill"],
     "macros": {"calories":840,"protein":90,"carbs":60,"fat":18,"fibre":6,"saturated":4},
     "portions":6,
     "macrosPerPortion": {"calories":140,"protein":15,"carbs":10,"fat":3,"fibre":1,"saturated":0.7}
@@ -164,8 +164,8 @@
   {
     "title": "Chocolate Protein Brownies",
     "category": "Heart-Healthy Desserts",
-    "ingredients": ["90g protein powder","3 eggs","40g cocoa powder","40g oat flour","50ml almond milk"],
-    "instructions": ["Mix ingredients","Bake 180°C for 20 min"],
+    "ingredients": ["90g protein powder","3 eggs","40g cocoa","40g oat flour","50ml almond milk"],
+    "instructions": ["Mix","Bake 180°C 20 min"],
     "macros": {"calories":900,"protein":72,"carbs":90,"fat":24,"fibre":10,"saturated":5},
     "portions":6,
     "macrosPerPortion": {"calories":150,"protein":12,"carbs":15,"fat":4,"fibre":1.6,"saturated":0.8}
@@ -173,8 +173,8 @@
   {
     "title": "Apple Cinnamon Fiber Cake",
     "category": "Heart-Healthy Desserts",
-    "ingredients": ["2 large apples (grated)","150g oats","2 eggs","2 tsp cinnamon"],
-    "instructions": ["Mix all","Bake 180°C for 30 min"],
+    "ingredients": ["2 apples","150g oats","2 eggs","cinnamon"],
+    "instructions": ["Mix","Bake 180°C 30 min"],
     "macros": {"calories":810,"protein":30,"carbs":120,"fat":18,"fibre":15,"saturated":3},
     "portions":6,
     "macrosPerPortion": {"calories":135,"protein":5,"carbs":20,"fat":3,"fibre":2.5,"saturated":0.5}
