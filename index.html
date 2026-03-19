@@ -3,7 +3,6 @@
 <head>
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <title>Recipes</title>
-
 <style>
 body{
   margin:0;
@@ -11,14 +10,12 @@ body{
   background:#000;
   color:#fff;
 }
-
 .header{
   text-align:center;
-  padding:20px;
-  font-size:22px;
+  padding:20px 10px 10px;
+  font-size:24px;
   font-weight:600;
 }
-
 .search-bar{
   width:90%;
   margin:10px auto;
@@ -26,40 +23,55 @@ body{
   padding:12px;
   border-radius:12px;
   border:none;
+  outline:none;
+  font-size:16px;
   background:#111;
   color:#fff;
 }
-
 .section-title{
-  padding:12px 16px;
-  font-weight:600;
+  padding:10px 16px 0;
   font-size:18px;
+  font-weight:600;
 }
-
 .grid{
   display:grid;
   grid-template-columns:1fr 1fr;
   gap:12px;
   padding:12px;
 }
-
 .card{
-  background:#111;
-  padding:12px;
-  border-radius:12px;
+  position:relative;
+  background:linear-gradient(145deg,#111,#1a1a1a);
+  border-radius:18px;
+  padding:14px;
+  box-shadow:0 6px 20px rgba(0,0,0,0.6);
   cursor:pointer;
 }
-
 .card-title{
+  text-align:center;
+  font-size:16px;
   font-weight:600;
   margin-bottom:6px;
 }
-
 .macros{
+  text-align:center;
   font-size:12px;
   opacity:0.8;
 }
-
+.watermark{
+  position:absolute;
+  top:8px;
+  right:10px;
+  font-size:22px;
+  opacity:0.08;
+}
+.heart-badge{
+  position:absolute;
+  top:8px;
+  left:10px;
+  font-size:16px;
+  opacity:0.85;
+}
 .popup{
   position:fixed;
   top:0;
@@ -68,81 +80,82 @@ body{
   height:100%;
   background:#000;
   display:none;
-  overflow:auto;
+  overflow-y:auto;
   padding:20px;
+  box-sizing: border-box;
 }
-
+.popup-content-inner {
+  max-width: 500px;
+  margin: 0 auto;
+}
 .close-btn{
   position:fixed;
-  top:10px;
-  right:15px;
+  top:15px;
+  right:20px;
   font-size:24px;
   cursor:pointer;
+  z-index: 10;
 }
+h2 { text-align: center; margin-top: 40px; }
+h3 { border-bottom: 1px solid #222; padding-bottom: 5px; margin-top: 25px; }
+li { margin-bottom: 10px; }
 </style>
 </head>
-
 <body>
 
 <div class="header">Recipes</div>
 
-<input class="search-bar" placeholder="Search..." onkeyup="searchRecipes()">
+<input type="text" class="search-bar" placeholder="Search recipes..." onkeyup="searchRecipes()">
 
 <div id="recipes"></div>
 
 <div id="popup" class="popup">
   <div class="close-btn" onclick="closePopup()">✕</div>
-  <div id="popup-content"></div>
+  <div id="popup-content" class="popup-content-inner"></div>
 </div>
 
 <script>
-
 let recipes = [];
 
 async function loadRecipes(){
-  try {
+  try{
     const res = await fetch("recipes.json");
-
-    if(!res.ok){
-      throw new Error("HTTP error " + res.status);
-    }
-
     recipes = await res.json();
     displayRecipes(recipes);
-
-  } catch(err){
-    console.error("Failed to load JSON:", err);
-    document.getElementById("recipes").innerHTML =
-      "<p style='padding:16px'>Error loading recipes.json</p>";
+  } catch(e){
+    console.error("JSON failed to load:", e);
   }
 }
 
 function displayRecipes(data){
-
   const container = document.getElementById("recipes");
   container.innerHTML = "";
 
   let categories = {};
-
   data.forEach(r => {
     if(!categories[r.category]) categories[r.category] = [];
     categories[r.category].push(r);
   });
 
   for(let category in categories){
-
-    container.innerHTML += `<div class="section-title">${category}</div>`;
+    // Category Header
+    let catTitle = document.createElement("div");
+    catTitle.className = "section-title";
+    catTitle.innerText = category;
+    container.appendChild(catTitle);
 
     let grid = document.createElement("div");
     grid.className = "grid";
 
     categories[category].forEach(r => {
-
+      let heart = r.category.includes("Heart-Healthy") ? `<div class="heart-badge">❤️</div>` : "";
+      
       let card = document.createElement("div");
       card.className = "card";
       card.onclick = () => openPopup(r);
-
       card.innerHTML = `
+        ${heart}
+        <div class="watermark">🍽️</div>
         <div class="card-title">${r.title}</div>
         <div class="macros">
           ${r.macrosPerPortion.calories} kcal • 
@@ -151,60 +164,49 @@ function displayRecipes(data){
           F ${r.macrosPerPortion.fat}g
         </div>
       `;
-
       grid.appendChild(card);
     });
-
     container.appendChild(grid);
   }
 }
 
 function openPopup(recipe){
-
   const popup = document.getElementById("popup");
   const content = document.getElementById("popup-content");
 
   content.innerHTML = `
     <h2>${recipe.title}</h2>
-
-    <p><strong>Portions:</strong> ${recipe.portions}</p>
-
     <h3>Ingredients</h3>
     <ul>${recipe.ingredients.map(i => `<li>${i}</li>`).join("")}</ul>
-
-    <h3>Instructions</h3>
+    <h3>Method</h3>
     <ol>${recipe.instructions.map(i => `<li>${i}</li>`).join("")}</ol>
-
-    <h3>Macros (Per Portion)</h3>
+    <h3>Macros (per portion)</h3>
     <p>
-      Calories: ${recipe.macrosPerPortion.calories}<br>
-      Protein: ${recipe.macrosPerPortion.protein}g<br>
-      Carbs: ${recipe.macrosPerPortion.carbs}g<br>
-      Fat: ${recipe.macrosPerPortion.fat}g<br>
-      Fibre: ${recipe.macrosPerPortion.fibre}g
+      <strong>Calories:</strong> ${recipe.macrosPerPortion.calories} kcal<br>
+      <strong>Protein:</strong> ${recipe.macrosPerPortion.protein}g<br>
+      <strong>Carbs:</strong> ${recipe.macrosPerPortion.carbs}g<br>
+      <strong>Fat:</strong> ${recipe.macrosPerPortion.fat}g<br>
+      <strong>Fibre:</strong> ${recipe.macrosPerPortion.fibre}g
     </p>
   `;
-
   popup.style.display = "block";
+  document.body.style.overflow = "hidden"; // Prevent background scroll
 }
 
 function closePopup(){
   document.getElementById("popup").style.display = "none";
+  document.body.style.overflow = "auto";
 }
 
 function searchRecipes(){
   const value = document.querySelector(".search-bar").value.toLowerCase();
-
   let filtered = recipes.filter(r =>
-    r.title.toLowerCase().includes(value)
+    r.title.toLowerCase().includes(value) || r.category.toLowerCase().includes(value)
   );
-
   displayRecipes(filtered);
 }
 
 loadRecipes();
-
 </script>
-
 </body>
 </html>
