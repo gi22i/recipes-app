@@ -9,32 +9,138 @@
     "macrosPerPortion": {"calories":310,"protein":30,"carbs":15,"fat":12,"fibre":1.5,"saturated":3},
     "notes": ""
   },
-
   {
     "title": "Mediterranean Chicken Bake",
     "category": "Meals",
     "ingredients": ["400g chicken","courgette","peppers","onion","mozzarella","olives","olive oil"],
-    "instructions": ["Prep ingredients","Bake 190°C 25 min","Add cheese","Bake 5 min"],
+    "instructions": ["Preheat oven to 190°C.","Prep and chop all vegetables and chicken.","Place in a baking dish with olive oil and seasonings.","Bake for 25 min.","Add mozzarella cheese on top.","Bake for a final 5 min until cheese is melted."],
     "macros": {"calories":742,"protein":101,"carbs":20,"fat":21,"fibre":6,"saturated":5.9},
     "portions":2,
     "macrosPerPortion": {"calories":371,"protein":50.5,"carbs":10,"fat":10.5,"fibre":3,"saturated":2.95},
     "notes": ""
   },
-
   {
     "title": "Veggie Burger",
     "category": "Meals",
-    "ingredients": ["mushrooms","broccoli","peas","carrot","egg","breadcrumbs"],
-    "instructions": ["Cook veg","Mash","Form patties","Bake"],
+    "ingredients": ["mushrooms","broccoli","peas","carrot","1 egg","breadcrumbs"],
+    "instructions": ["Steam or boil vegetables until soft.","Mash the vegetables in a large bowl.","Mix in the egg and enough breadcrumbs to form a firm texture.","Form into patties.","Bake at 180°C until golden and firm."],
     "macros": {"calories":290,"protein":12,"carbs":30,"fat":8,"fibre":6,"saturated":2},
     "portions":2,
     "macrosPerPortion": {"calories":145,"protein":6,"carbs":15,"fat":4,"fibre":3,"saturated":1},
     "notes": ""
   },
-
   {
     "title": "Turkey Burger Wrap",
     "category": "Meals",
-    "ingredients": ["turkey mince","egg","wraps","veg"],
-    "instructions": ["Cook patties","Assemble wrap"],
+    "ingredients": ["turkey mince","1 egg","whole wheat wraps","mixed salad veg"],
+    "instructions": ["Season turkey mince and mix with egg.","Form into smaller, flatter patties.","Cook patties in a pan or air fryer.","Assemble in a wrap with fresh vegetables."],
     "macros": {"calories":540,"protein":60,"carbs":40,"fat":24,"fibre":6,"saturated":6},
+    "portions":2,
+    "macrosPerPortion": {"calories":270,"protein":30,"carbs":20,"fat":12,"fibre":3,"saturated":3},
+    "notes": ""
+  },
+  {
+    "title": "Veggie Burger Wrap",
+    "category": "Meals",
+    "ingredients": ["Veggie patty mix","whole wheat wraps","lettuce","tomato"],
+    "instructions": ["Prepare veggie patties as per recipe.","Cook until golden.","Place inside a wrap with fresh lettuce and tomato."],
+    "macros": {"calories":230,"protein":12,"carbs":35,"fat":8,"fibre":6,"saturated":2},
+    "portions":2,
+    "macrosPerPortion": {"calories":115,"protein":6,"carbs":17.5,"fat":4,"fibre":3,"saturated":1},
+    "notes": ""
+  },
+  {
+    "title": "Creamy Mushroom & Spinach Pasta",
+    "category": "Meals",
+    "ingredients": ["Whole wheat pasta","mushrooms","fresh spinach","skyr or Greek yogurt"],
+    "instructions": ["Boil pasta in salted water.","Sauté mushrooms and spinach in a pan until wilted.","Lower heat and stir in skyr to create a creamy sauce.","Toss with pasta and serve."],
+    "macros": {"calories":480,"protein":26,"carbs":70,"fat":12,"fibre":11,"saturated":1.8},
+    "portions":2,
+    "macrosPerPortion": {"calories":240,"protein":13,"carbs":35,"fat":6,"fibre":5.5,"saturated":0.9},
+    "notes": ""
+  },
+  {
+    "title": "Fillet Steak with Potatoes",
+    "category": "Meals",
+    "ingredients": ["2 fillet steaks","500g potatoes","rosemary","garlic"],
+    "instructions": ["Cut potatoes into wedges and air fry/bake at 200°C until crisp.","Season steaks with salt and pepper.","Sear steaks in a hot pan to desired doneness.","Rest for 5 minutes before serving."],
+    "macros": {"calories":900,"protein":80,"carbs":90,"fat":25,"fibre":8,"saturated":8},
+    "portions":2,
+    "macrosPerPortion": {"calories":450,"protein":40,"carbs":45,"fat":12.5,"fibre":4,"saturated":4},
+    "notes": ""
+  },
+  {
+    "title": "Fluffy Keto Buns",
+    "category": "Bakery",
+    "ingredients": ["150g almond flour","3 egg whites","1 tsp baking powder","Pinch of salt"],
+    "instructions": ["Whisk egg whites until stiff peaks form.","Gently fold in almond flour and baking powder.","Form into 6 buns.","Bake at 170°C for 20-25 minutes."],
+    "macros": {"calories":900,"protein":45,"carbs":20,"fat":70,"fibre":12,"saturated":7},
+    "portions":6,
+    "macrosPerPortion": {"calories":150,"protein":7.5,"carbs":3,"fat":12,"fibre":2,"saturated":1.2},
+    "notes": ""
+  },
+  {
+    "title": "Heart-Healthy Chocolate Bean Cake",
+    "category": "Heart-Healthy Desserts",
+    "ingredients": [
+      "240g black beans (drained/rinsed)",
+      "80g oat flour",
+      "2 eggs",
+      "3 tbsp cocoa powder",
+      "60g honey or maple syrup",
+      "1 tsp baking powder",
+      "1 tsp vanilla extract",
+      "1 tbsp oil"
+    ],
+    "instructions": [
+      "Blend beans first until completely smooth.",
+      "Add eggs, sweetener, vanilla, and oil; blend again.",
+      "Mix in oat flour, cocoa, and baking powder.",
+      "Pour into a lined tin.",
+      "Bake at 180°C for 25–35 mins.",
+      "Cool completely before slicing."
+    ],
+    "portions": 6,
+    "macros": {"calories":960,"protein":48,"carbs":96,"fat":30,"fibre":18,"saturated":5},
+    "macrosPerPortion": {"calories":160,"protein":8,"carbs":16,"fat":5,"fibre":3,"saturated":0.8},
+    "notes": ""
+  },
+  {
+    "title": "High-Protein Yogurt Cheesecake",
+    "category": "Heart-Healthy Desserts",
+    "ingredients": [
+      "500g skyr or high-protein yogurt",
+      "2 eggs",
+      "30g protein powder (vanilla)",
+      "1 tsp vanilla extract",
+      "20g honey or sweetener"
+    ],
+    "instructions": [
+      "Preheat oven to 170°C.",
+      "Mix all ingredients together until smooth.",
+      "Pour into a lined baking dish.",
+      "Bake for 30–35 minutes until the edges are set but the center slightly jiggles.",
+      "Cool and refrigerate for 2+ hours."
+    ],
+    "portions": 6,
+    "macros": {"calories":840,"protein":90,"carbs":60,"fat":18,"fibre":6,"saturated":4},
+    "macrosPerPortion": {"calories":140,"protein":15,"carbs":10,"fat":3,"fibre":1,"saturated":0.7},
+    "notes": ""
+  },
+  {
+    "title": "Chocolate Protein Brownies",
+    "category": "Heart-Healthy Desserts",
+    "ingredients": ["100g protein powder","3 eggs","40g cocoa powder","40g oat flour","Splash of almond milk"],
+    "instructions": [
+      "Mix eggs and almond milk.",
+      "Stir in protein powder, cocoa, and oat flour.",
+      "Pour into a small lined tray.",
+      "Bake at 180°C for 20 minutes.",
+      "Do not overbake to keep them fudgy."
+    ],
+    "portions": 6,
+    "macros": {"calories":900,"protein":72,"carbs":90,"fat":24,"fibre":10,"saturated":5},
+    "macrosPerPortion": {"calories":150,"protein":12,"carbs":15,"fat":4,"fibre":1.6,"saturated":0.8},
+    "notes": ""
+  }
+]
