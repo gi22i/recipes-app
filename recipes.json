@@ -4,158 +4,104 @@
     "category": "Meals",
     "ingredients": [
       "400g turkey mince",
-      "1 large egg",
+      "1 egg",
       "1½ tsp psyllium husk",
       "1 tsp soy sauce",
-      "1 tsp garlic powder",
-      "1 tsp smoked paprika",
-      "½ tsp salt",
-      "½ tsp black pepper",
+      "garlic powder",
+      "smoked paprika",
+      "salt",
+      "pepper",
       "2 burger buns"
     ],
     "instructions": [
-      "Add turkey mince to a large bowl",
-      "Add egg, psyllium husk, soy sauce, and all seasonings",
-      "Mix thoroughly until well combined",
-      "Let mixture rest for 5 minutes to thicken",
-      "Form into 2 equal patties",
-      "Preheat air fryer to 190°C",
-      "Cook patties for 11–13 minutes, flipping halfway",
-      "Serve in burger buns"
+      "Mix all ingredients in a bowl",
+      "Rest for 5 minutes",
+      "Form into patties",
+      "Air fry at 190°C for 11–13 minutes, flipping halfway",
+      "Serve in buns"
     ],
-    "macros": {"calories":620,"protein":60,"carbs":30,"fat":24,"fibre":3,"saturated":6},
-    "portions":2,
-    "macrosPerPortion": {"calories":310,"protein":30,"carbs":15,"fat":12,"fibre":1.5,"saturated":3},
-    "notes": ""
+    "macrosPerPortion": {
+      "calories": 310,
+      "protein": 30,
+      "carbs": 15,
+      "fat": 12
+    }
   },
 
   {
     "title": "Mediterranean Chicken Bake",
     "category": "Meals",
     "ingredients": [
-      "400g chicken breast (cubed)",
-      "1 courgette (sliced)",
-      "1 red pepper (chopped)",
-      "1 small onion (sliced)",
+      "400g chicken breast",
+      "1 courgette",
+      "1 red pepper",
+      "1 onion",
       "100g mozzarella",
       "50g olives",
-      "1 tbsp olive oil",
-      "salt and pepper"
+      "1 tbsp olive oil"
     ],
     "instructions": [
       "Preheat oven to 190°C",
-      "Place chicken and vegetables in a baking dish",
-      "Drizzle with olive oil and season with salt and pepper",
-      "Mix everything evenly",
+      "Add all ingredients except cheese to a baking dish",
       "Bake for 25 minutes",
-      "Remove from oven, add mozzarella and olives",
-      "Bake for an additional 5 minutes until cheese melts"
+      "Add mozzarella",
+      "Bake 5 more minutes"
     ],
-    "macros": {"calories":742,"protein":101,"carbs":20,"fat":21,"fibre":6,"saturated":5.9},
-    "portions":2,
-    "macrosPerPortion": {"calories":371,"protein":50.5,"carbs":10,"fat":10.5,"fibre":3,"saturated":2.95},
-    "notes": ""
+    "macrosPerPortion": {
+      "calories": 371,
+      "protein": 50.5,
+      "carbs": 10,
+      "fat": 10.5
+    }
   },
 
   {
     "title": "Veggie Burger",
     "category": "Meals",
     "ingredients": [
-      "150g mushrooms (chopped)",
-      "100g broccoli (chopped)",
+      "150g mushrooms",
+      "100g broccoli",
       "100g peas",
-      "1 carrot (grated)",
+      "1 carrot",
       "1 egg",
-      "50g breadcrumbs",
-      "salt and pepper"
+      "50g breadcrumbs"
     ],
     "instructions": [
-      "Steam or cook vegetables until soft",
-      "Mash or finely chop the cooked vegetables",
-      "Add egg and breadcrumbs",
-      "Season with salt and pepper",
-      "Mix until a firm mixture forms",
-      "Shape into patties",
-      "Bake at 190°C for 20 minutes, flipping halfway"
+      "Cook vegetables",
+      "Mash or finely chop",
+      "Mix with egg and breadcrumbs",
+      "Form patties",
+      "Bake at 190°C for 20 minutes"
     ],
-    "macros": {"calories":290,"protein":12,"carbs":30,"fat":8,"fibre":6,"saturated":2},
-    "portions":2,
-    "macrosPerPortion": {"calories":145,"protein":6,"carbs":15,"fat":4,"fibre":3,"saturated":1},
-    "notes": ""
+    "macrosPerPortion": {
+      "calories": 145,
+      "protein": 6,
+      "carbs": 15,
+      "fat": 4
+    }
   },
 
   {
-    "title": "Turkey Burger Wrap",
+    "title": "Creamy Chicken and Broccoli Pasta",
     "category": "Meals",
     "ingredients": [
-      "200g turkey mince",
-      "1 egg",
-      "1 tsp seasoning mix",
-      "2 whole wheat wraps",
-      "100g lettuce",
-      "50g tomato slices"
+      "150g pasta",
+      "300g chicken breast",
+      "200g broccoli",
+      "150g skyr"
     ],
     "instructions": [
-      "Mix turkey mince, egg, and seasoning in a bowl",
-      "Form into patties and cook in a pan for 6–8 minutes per side",
-      "Warm wraps slightly",
-      "Add lettuce, tomato, and cooked patties to wraps",
-      "Roll and serve"
+      "Cook pasta",
+      "Cook chicken",
+      "Steam broccoli",
+      "Mix everything with skyr sauce"
     ],
-    "macros": {"calories":540,"protein":60,"carbs":40,"fat":24,"fibre":6,"saturated":6},
-    "portions":2,
-    "macrosPerPortion": {"calories":270,"protein":30,"carbs":20,"fat":12,"fibre":3,"saturated":3},
-    "notes": ""
-  },
-
-  {
-    "title": "Veggie Burger Wrap",
-    "category": "Meals",
-    "ingredients": [
-      "2 veggie patties",
-      "2 whole wheat wraps",
-      "100g lettuce",
-      "50g tomato",
-      "30g sauce of choice"
-    ],
-    "instructions": [
-      "Cook veggie patties according to recipe",
-      "Warm wraps slightly",
-      "Place lettuce and tomato onto wraps",
-      "Add cooked patties and sauce",
-      "Wrap tightly and serve"
-    ],
-    "macros": {"calories":230,"protein":12,"carbs":35,"fat":8,"fibre":6,"saturated":2},
-    "portions":2,
-    "macrosPerPortion": {"calories":115,"protein":6,"carbs":17.5,"fat":4,"fibre":3,"saturated":1},
-    "notes": ""
-  },
-
-  {
-    "title": "Creamy Mushroom & Spinach Whole Wheat Pasta",
-    "category": "Meals",
-    "ingredients": [
-      "150g whole wheat pasta (dry)",
-      "150g mushrooms (sliced)",
-      "100g spinach",
-      "150g skyr",
-      "2 cloves garlic",
-      "1 tsp olive oil",
-      "salt and pepper"
-    ],
-    "instructions": [
-      "Cook pasta according to package instructions",
-      "Heat olive oil in a pan and sauté garlic",
-      "Add mushrooms and cook until soft",
-      "Add spinach and cook until wilted",
-      "Stir in skyr and mix until creamy",
-      "Combine with drained pasta",
-      "Season and serve"
-    ],
-    "macros": {"calories":480,"protein":26,"carbs":70,"fat":12,"fibre":11,"saturated":1.8},
-    "portions":2,
-    "macrosPerPortion": {"calories":240,"protein":13,"carbs":35,"fat":6,"fibre":5.5,"saturated":0.9},
-    "notes": ""
+    "macrosPerPortion": {
+      "calories": 450,
+      "protein": 45,
+      "carbs": 50,
+      "fat": 10
+    }
   },
 
   {
@@ -164,182 +110,44 @@
     "ingredients": [
       "300g fillet steak",
       "400g potatoes",
-      "1 tbsp olive oil",
-      "salt and pepper"
+      "1 tbsp olive oil"
     ],
     "instructions": [
-      "Preheat oven to 200°C",
-      "Cut potatoes into wedges and season with half the oil, salt, and pepper",
-      "Bake potatoes for 35–40 minutes",
-      "Season steak with salt and pepper",
-      "Heat a pan and cook steak to desired doneness",
-      "Rest steak for 5 minutes and serve with potatoes"
+      "Bake potatoes at 200°C for 35–40 minutes",
+      "Cook steak in a pan",
+      "Rest steak and serve"
     ],
-    "macros": {"calories":900,"protein":80,"carbs":90,"fat":25,"fibre":8,"saturated":8},
-    "portions":2,
-    "macrosPerPortion": {"calories":450,"protein":40,"carbs":45,"fat":12.5,"fibre":4,"saturated":4},
-    "notes": ""
-  },
-
-  {
-    "title": "Fillet Steak with Mushrooms",
-    "category": "Meals",
-    "ingredients": [
-      "300g fillet steak",
-      "200g mushrooms",
-      "1 tbsp butter",
-      "1 tsp olive oil",
-      "salt and pepper"
-    ],
-    "instructions": [
-      "Season steak with salt and pepper",
-      "Heat pan with olive oil and cook steak to desired doneness",
-      "Remove steak and let rest",
-      "In the same pan, add butter and cook mushrooms until browned",
-      "Serve steak topped with mushrooms"
-    ],
-    "macros": {"calories":820,"protein":85,"carbs":20,"fat":40,"fibre":4,"saturated":9},
-    "portions":2,
-    "macrosPerPortion": {"calories":410,"protein":42.5,"carbs":10,"fat":20,"fibre":2,"saturated":4.5},
-    "notes": ""
-  },
-
-  {
-    "title": "Creamy Chicken and Broccoli Pasta",
-    "category": "Meals",
-    "ingredients": [
-      "150g pasta (dry)",
-      "300g chicken breast",
-      "200g broccoli",
-      "150g skyr",
-      "1 tsp olive oil",
-      "salt and pepper"
-    ],
-    "instructions": [
-      "Cook pasta according to package instructions",
-      "Cook chicken in a pan until fully done, then slice",
-      "Steam broccoli until tender",
-      "Combine skyr with a little pasta water to create a sauce",
-      "Mix pasta, chicken, broccoli, and sauce together",
-      "Season and serve"
-    ],
-    "macros": {"calories":900,"protein":90,"carbs":100,"fat":20,"fibre":10,"saturated":3},
-    "portions":2,
-    "macrosPerPortion": {"calories":450,"protein":45,"carbs":50,"fat":10,"fibre":5,"saturated":1.5},
-    "notes": ""
-  },
-
-  {
-    "title": "Fluffy Keto Buns",
-    "category": "Bakery",
-    "ingredients": [
-      "200g almond flour",
-      "4 eggs",
-      "1 tsp baking powder",
-      "1 tbsp psyllium husk",
-      "pinch of salt"
-    ],
-    "instructions": [
-      "Preheat oven to 180°C",
-      "Mix all ingredients into a dough",
-      "Divide into 6 equal portions and shape into buns",
-      "Place on baking tray",
-      "Bake for 20–25 minutes until golden",
-      "Cool before serving"
-    ],
-    "macros": {"calories":900,"protein":45,"carbs":20,"fat":70,"fibre":12,"saturated":7},
-    "portions":6,
-    "macrosPerPortion": {"calories":150,"protein":7.5,"carbs":3,"fat":12,"fibre":2,"saturated":1.2},
-    "notes": ""
-  },
-
-  {
-    "title": "Keto Bread Rolls",
-    "category": "Bakery",
-    "ingredients": [
-      "150g almond flour",
-      "3 eggs",
-      "1 tbsp psyllium husk",
-      "1 tsp baking powder",
-      "pinch of salt"
-    ],
-    "instructions": [
-      "Preheat oven to 180°C",
-      "Mix all ingredients into a dough",
-      "Shape into rolls",
-      "Bake for 20–25 minutes until firm and golden",
-      "Allow to cool before slicing"
-    ],
-    "macros": {"calories":800,"protein":40,"carbs":18,"fat":60,"fibre":10,"saturated":6},
-    "portions":6,
-    "macrosPerPortion": {"calories":133,"protein":6.6,"carbs":3,"fat":10,"fibre":1.6,"saturated":1},
-    "notes": ""
-  },
-
-  {
-    "title": "Sandwich Bread",
-    "category": "Bakery",
-    "ingredients": [
-      "500g flour",
-      "7g yeast",
-      "300ml water",
-      "1 tsp salt"
-    ],
-    "instructions": [
-      "Mix flour, yeast, salt, and water to form dough",
-      "Knead for 10 minutes",
-      "Let dough rise for 1 hour",
-      "Shape into loaf",
-      "Bake at 180°C for 30–35 minutes"
-    ],
-    "macros": {"calories":1200,"protein":40,"carbs":220,"fat":10,"fibre":8,"saturated":1},
-    "portions":12,
-    "macrosPerPortion": {"calories":100,"protein":3.3,"carbs":18,"fat":0.8,"fibre":0.6,"saturated":0.08},
-    "notes": ""
+    "macrosPerPortion": {
+      "calories": 450,
+      "protein": 40,
+      "carbs": 45,
+      "fat": 12.5
+    }
   },
 
   {
     "title": "Heart Healthy Bean Oat Cake",
     "category": "Heart-Healthy Desserts",
     "ingredients": [
-      "240g cannellini beans (drained and rinsed)",
+      "240g cannellini beans",
       "100g oat flour",
       "3 eggs",
       "3 tbsp cocoa powder",
       "80g honey",
-      "1 tsp baking powder",
-      "1 tsp vanilla extract",
-      "1 tbsp olive oil",
-      "pinch of salt",
-      "40g dark chocolate (chopped)"
+      "40g dark chocolate"
     ],
     "instructions": [
-      "Preheat oven to 180°C",
-      "Blend beans until completely smooth",
-      "Add eggs, honey, vanilla, and olive oil and blend again",
-      "Mix in oat flour, cocoa powder, baking powder, and salt",
-      "Fold in chopped dark chocolate",
-      "Pour into lined baking tin",
-      "Bake for 25–35 minutes",
-      "Allow to cool fully before slicing"
+      "Blend beans until smooth",
+      "Add remaining wet ingredients",
+      "Mix in dry ingredients",
+      "Fold in chocolate",
+      "Bake at 180°C for 25–35 minutes"
     ],
-    "macros": {
-      "calories": 1100,
-      "protein": 35,
-      "carbs": 140,
-      "fat": 32,
-      "fibre": 18,
-      "saturated": 6
-    },
-    "portions": 8,
     "macrosPerPortion": {
       "calories": 138,
       "protein": 4.4,
       "carbs": 17.5,
-      "fat": 4,
-      "fibre": 2.25,
-      "saturated": 0.75
-    },
-    "notes": ""
+      "fat": 4
+    }
   }
 ]
