@@ -6,21 +6,18 @@
 <style>
   body { margin: 0; font-family: -apple-system, system-ui; background: #000; color: #fff; -webkit-tap-highlight-color: transparent; }
   .header { text-align: center; padding: 25px 10px 10px; font-size: 18px; font-weight: 600; }
-  
   .search-container { padding: 0 16px 15px; }
   .search-bar { 
     width: 100%; padding: 10px; border-radius: 8px; border: none; 
     background: #1c1c1e; color: #8e8e93; font-size: 14px; box-sizing: border-box;
   }
-
-  .section-title { padding: 15px 16px 5px; font-size: 18px; font-weight: 700; color: #fff; }
+  .section-title { padding: 15px 16px 5px; font-size: 18px; font-weight: 700; }
   .grid { display: grid; grid-template-columns: 1fr 1fr; gap: 10px; padding: 10px 16px; }
   
-  /* Matches the second screenshot: Darker background, centered text */
   .card {
-    background: #111111;
+    background: #1c1c1e; /* Original dark gray */
     border-radius: 14px;
-    padding: 18px 10px;
+    padding: 20px 10px;
     cursor: pointer;
     display: flex;
     flex-direction: column;
@@ -29,24 +26,22 @@
     min-height: 80px;
     position: relative;
   }
-  .card:active { background: #1c1c1e; }
+  .card:active { background: #2c2c2e; }
   
   .card-title {
     font-size: 14px;
     font-weight: 700;
     margin-bottom: 6px;
     text-align: center;
-    width: 100%;
+    width: 90%;
   }
   .card-macros {
-    font-size: 11px;
+    font-size: 10px;
     color: #8e8e93;
     text-align: center;
     line-height: 1.4;
   }
-
   .heart-icon { position: absolute; top: 12px; left: 10px; font-size: 14px; }
-  .watermark { position: absolute; top: 12px; right: 10px; font-size: 16px; opacity: 0.1; }
 
   /* Popup Styles */
   .popup {
@@ -92,7 +87,6 @@ function render(data) {
   const container = document.getElementById('recipe-list');
   container.innerHTML = '';
   
-  // Custom category order to match your screenshot
   const order = ["Meals", "Bakery", "Desserts", "Heart-Healthy Desserts"];
   const existingCats = [...new Set(data.map(r => r.category))];
   const sortedCats = order.filter(cat => existingCats.includes(cat));
@@ -113,7 +107,6 @@ function render(data) {
       
       card.innerHTML = `
         ${isHeart}
-        <div class="watermark">🍽️</div>
         <div class="card-title">${r.title}</div>
         <div class="card-macros">
           ${r.macrosPerPortion.calories} kcal • P ${r.macrosPerPortion.protein}g • C ${r.macrosPerPortion.carbs}g • F ${r.macrosPerPortion.fat}g
