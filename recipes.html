@@ -2,151 +2,122 @@
 <html>
 <head>
 <meta name="viewport" content="width=device-width, initial-scale=1">
+
 <title>Recipes</title>
 
 <style>
 
 body{
-  font-family:-apple-system,BlinkMacSystemFont,"SF Pro Display","Segoe UI",Roboto,Helvetica,Arial,sans-serif;
   margin:0;
-  background:#111;
-  color:white;
+  font-family:-apple-system, BlinkMacSystemFont, "Segoe UI", Roboto;
+  background:#000;
+  color:#fff;
 }
 
-header{
-  background:#222;
-  color:white;
-  padding:16px;
+/* Header */
+.header{
   text-align:center;
-  font-size:30px;
+  padding:20px 10px 10px;
+  font-size:24px;
   font-weight:600;
-  letter-spacing:0.5px;
 }
 
-#search{
+/* Search */
+.search-bar{
   width:90%;
-  margin:20px auto;
+  margin:10px auto;
   display:block;
   padding:12px;
-  font-size:18px;
-  border-radius:10px;
+  border-radius:12px;
   border:none;
+  outline:none;
+  font-size:16px;
+  background:#111;
+  color:#fff;
 }
 
-#recipes{
+/* Grid */
+.grid{
   display:grid;
-  grid-template-columns:repeat(2,1fr);
-  gap:20px;
-  padding:15px;
+  grid-template-columns:1fr 1fr;
+  gap:12px;
+  padding:12px;
 }
 
-.recipe{
-  background:linear-gradient(145deg,#3a3a3a,#2f2f2f);
-  padding:22px;
-  border-radius:16px;
-  cursor:pointer;
+/* Card */
+.card{
   position:relative;
-  transition:all 0.15s ease;
-  box-shadow:
-    0 4px 12px rgba(0,0,0,0.4),
-    inset 0 1px 0 rgba(255,255,255,0.05);
+  background:linear-gradient(145deg,#111,#1a1a1a);
+  border-radius:18px;
+  padding:14px;
+  box-shadow:0 6px 20px rgba(0,0,0,0.6);
+  cursor:pointer;
 }
 
-.recipe:hover{
-  transform:translateY(-3px);
-  box-shadow:
-    0 8px 20px rgba(0,0,0,0.6),
-    inset 0 1px 0 rgba(255,255,255,0.08);
-}
-
-/* watermark */
-.recipe::before{
-  content:"🍽️";
-  position:absolute;
-  top:10px;
-  right:12px;
-  font-size:32px;
-  opacity:0.1;
-  pointer-events:none;
-}
-
-/* title */
-.recipe strong{
-  display:block;
-  text-align:center;
-  font-size:22px;
-  font-weight:700;
-  margin-bottom:8px;
-  padding-right:40px;
-}
-
-/* macros */
-.macros{
+/* Title */
+.card-title{
   text-align:center;
   font-size:16px;
-  color:#d0d0d0;
-  margin-bottom:12px;
+  font-weight:600;
+  margin-bottom:6px;
 }
 
-/* divider */
-.recipe::after{
-  content:"";
-  display:block;
-  width:60%;
-  height:4px;
-  background:white;
-  margin:10px auto 0 auto;
-  border-radius:3px;
+/* Macros */
+.macros{
+  text-align:center;
+  font-size:12px;
+  opacity:0.8;
 }
 
-/* popup */
+/* Watermark */
+.watermark{
+  position:absolute;
+  top:8px;
+  right:10px;
+  font-size:22px;
+  opacity:0.08;
+}
+
+/* Heart Badge */
+.heart-badge{
+  position:absolute;
+  top:8px;
+  left:10px;
+  font-size:16px;
+  opacity:0.85;
+}
+
+/* Popup */
 .popup{
   position:fixed;
   top:0;
   left:0;
-  right:0;
-  bottom:0;
-  background:rgba(0,0,0,0.7);
+  width:100%;
+  height:100%;
+  background:#000;
   display:none;
-  align-items:center;
-  justify-content:center;
-  color:white;
-}
-
-.popup-content{
-  background:#2f2f2f;
-  width:90%;
-  max-height:80%;
-  overflow:auto;
+  overflow-y:auto;
   padding:20px;
-  border-radius:10px;
-  color:white;
 }
 
-.close{
-  float:right;
-  font-size:20px;
+.popup h2{
+  text-align:center;
+}
+
+.close-btn{
+  position:fixed;
+  top:15px;
+  right:20px;
+  font-size:24px;
   cursor:pointer;
 }
 
-h3{
-  margin-top:20px;
-  margin-bottom:8px;
-}
-
-ul, ol{
-  padding-left:20px;
-}
-
-.macros-section{
-  display:flex;
-  flex-wrap:wrap;
-  justify-content:space-between;
-}
-
-.macros-section ul{
-  width:48%;
-  margin-bottom:10px;
+/* Sections */
+.section-title{
+  padding:10px 16px 0;
+  font-size:18px;
+  font-weight:600;
+  opacity:0.9;
 }
 
 </style>
@@ -154,123 +125,114 @@ ul, ol{
 
 <body>
 
-<header>Recipes</header>
+<div class="header">Recipes</div>
 
-<input id="search" placeholder="Search recipes">
+<input type="text" class="search-bar" placeholder="Search recipes..." onkeyup="searchRecipes()">
 
 <div id="recipes"></div>
 
-<div class="popup" id="popup">
-  <div class="popup-content">
-
-    <span class="close" onclick="closePopup()">✕</span>
-
-    <div id="recipeDetail"></div>
-
-  </div>
+<div id="popup" class="popup">
+  <div class="close-btn" onclick="closePopup()">✕</div>
+  <div id="popup-content"></div>
 </div>
 
 <script>
 
-const url="recipes.json";
+let recipes = []; // loaded from your JSON
 
-let recipes=[];
-
-fetch(url)
-.then(res=>res.json())
-.then(data=>{
-  recipes=data;
-  renderRecipes(data);
-})
-.catch(err=>{
-  console.error("Error loading recipes",err);
-});
-
-function renderRecipes(list){
-  const container=document.getElementById("recipes");
-  container.innerHTML="";
-
-  list.forEach(r=>{
-    let div=document.createElement("div");
-    div.className="recipe";
-
-    div.innerHTML=`
-      <strong>${r.title}</strong>
-
-      <div class="macros">
-        Calories: ${r.macros?.calories ?? "-"} |
-        Protein: ${r.macros?.protein ?? "-"}g |
-        Sat fat: ${r.macros?.saturated ?? "-"}g
-      </div>
-    `;
-
-    div.onclick=()=>openRecipe(r);
-
-    container.appendChild(div);
-  });
+async function loadRecipes(){
+  const res = await fetch("recipes.json");
+  recipes = await res.json();
+  displayRecipes(recipes);
 }
 
-function openRecipe(r){
-  const detail=document.getElementById("recipeDetail");
+function displayRecipes(data){
 
-  detail.innerHTML=`
-    <h2>${r.title}</h2>
+  const container = document.getElementById("recipes");
+  container.innerHTML = "";
+
+  let categories = {};
+
+  data.forEach(r => {
+    if(!categories[r.category]) categories[r.category] = [];
+    categories[r.category].push(r);
+  });
+
+  for(let category in categories){
+
+    container.innerHTML += `<div class="section-title">${category}</div>`;
+
+    let grid = document.createElement("div");
+    grid.className = "grid";
+
+    categories[category].forEach(r => {
+
+      let heart = r.category === "Heart-Healthy Desserts" ? `<div class="heart-badge">❤️</div>` : "";
+
+      let card = document.createElement("div");
+      card.className = "card";
+      card.onclick = () => openPopup(r);
+
+      card.innerHTML = `
+        ${heart}
+        <div class="watermark">🍽️</div>
+        <div class="card-title">${r.name}</div>
+        <div class="macros">
+          ${r.macros_per_portion.calories} kcal • 
+          P ${r.macros_per_portion.protein} • 
+          C ${r.macros_per_portion.carbs} • 
+          F ${r.macros_per_portion.fat}
+        </div>
+      `;
+
+      grid.appendChild(card);
+
+    });
+
+    container.appendChild(grid);
+  }
+}
+
+function openPopup(recipe){
+  const popup = document.getElementById("popup");
+  const content = document.getElementById("popup-content");
+
+  content.innerHTML = `
+    <h2>${recipe.name}</h2>
 
     <h3>Ingredients</h3>
-    <ul>
-      ${r.ingredients.map(i=>`<li>${i}</li>`).join("")}
-    </ul>
+    <ul>${recipe.ingredients.map(i => `<li>${i}</li>`).join("")}</ul>
 
     <h3>Instructions</h3>
-    <ol>
-      ${r.instructions.map(i=>`<li>${i}</li>`).join("")}
-    </ol>
+    <ol>${recipe.instructions.map(i => `<li>${i}</li>`).join("")}</ol>
 
-    <div class="macros-section">
-      <div>
-        <h3>Main Macros</h3>
-        <ul>
-          <li>Calories: ${r.macros?.calories ?? "-"}</li>
-          <li>Protein: ${r.macros?.protein ?? "-"} g</li>
-          <li>Carbs: ${r.macros?.carbs ?? "-"} g</li>
-          <li>Fat: ${r.macros?.fat ?? "-"} g</li>
-          <li>Saturated fat: ${r.macros?.saturated ?? "-"} g</li>
-          <li>Fibre: ${r.macros?.fibre ?? "-"} g</li>
-        </ul>
-      </div>
-
-      <div>
-        <h3>Macros per Portion</h3>
-        <ul>
-          <li>Calories: ${r.macrosPerPortion?.calories ?? "-"}</li>
-          <li>Protein: ${r.macrosPerPortion?.protein ?? "-"} g</li>
-          <li>Carbs: ${r.macrosPerPortion?.carbs ?? "-"} g</li>
-          <li>Fat: ${r.macrosPerPortion?.fat ?? "-"} g</li>
-          <li>Saturated fat: ${r.macrosPerPortion?.saturated ?? "-"} g</li>
-          <li>Fibre: ${r.macrosPerPortion?.fibre ?? "-"} g</li>
-        </ul>
-
-        <h3>Portions</h3>
-        <p>${r.portions ?? "-"}</p>
-
-        <h3>Notes</h3>
-        <p>${r.notes ?? "-"}</p>
-      </div>
-    </div>
+    <h3>Macros (per portion)</h3>
+    <p>
+      ${recipe.macros_per_portion.calories} kcal<br>
+      Protein: ${recipe.macros_per_portion.protein}g<br>
+      Carbs: ${recipe.macros_per_portion.carbs}g<br>
+      Fat: ${recipe.macros_per_portion.fat}g
+    </p>
   `;
 
-  document.getElementById("popup").style.display="flex";
+  popup.style.display = "block";
 }
 
 function closePopup(){
-  document.getElementById("popup").style.display="none";
+  document.getElementById("popup").style.display = "none";
 }
 
-document.getElementById("search").addEventListener("input",function(){
-  const term=this.value.toLowerCase();
-  const filtered=recipes.filter(r=> r.title.toLowerCase().includes(term) );
-  renderRecipes(filtered);
-});
+function searchRecipes(){
+  const value = document.querySelector(".search-bar").value.toLowerCase();
+
+  let filtered = recipes.filter(r =>
+    r.name.toLowerCase().includes(value)
+  );
+
+  displayRecipes(filtered);
+}
+
+loadRecipes();
 
 </script>
 
