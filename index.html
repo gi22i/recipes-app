@@ -3,7 +3,9 @@
 <head>
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <title>Recipes</title>
+
 <style>
+
 body{
   margin:0;
   font-family:-apple-system, BlinkMacSystemFont, "Segoe UI", Roboto;
@@ -11,7 +13,6 @@ body{
   color:#fff;
 }
 
-/* Header */
 .header{
   text-align:center;
   padding:20px 10px 10px;
@@ -19,7 +20,6 @@ body{
   font-weight:600;
 }
 
-/* Search */
 .search-bar{
   width:90%;
   margin:10px auto;
@@ -33,14 +33,12 @@ body{
   color:#fff;
 }
 
-/* Section title */
 .section-title{
   padding:10px 16px 0;
   font-size:18px;
   font-weight:600;
 }
 
-/* Grid */
 .grid{
   display:grid;
   grid-template-columns:1fr 1fr;
@@ -48,7 +46,6 @@ body{
   padding:12px;
 }
 
-/* Card */
 .card{
   position:relative;
   background:linear-gradient(145deg,#111,#1a1a1a);
@@ -58,7 +55,6 @@ body{
   cursor:pointer;
 }
 
-/* Title */
 .card-title{
   text-align:center;
   font-size:16px;
@@ -66,14 +62,12 @@ body{
   margin-bottom:6px;
 }
 
-/* Macros */
 .macros{
   text-align:center;
   font-size:12px;
   opacity:0.8;
 }
 
-/* Watermark */
 .watermark{
   position:absolute;
   top:8px;
@@ -82,7 +76,6 @@ body{
   opacity:0.08;
 }
 
-/* Heart badge */
 .heart-badge{
   position:absolute;
   top:8px;
@@ -91,7 +84,6 @@ body{
   opacity:0.85;
 }
 
-/* Popup */
 .popup{
   position:fixed;
   top:0;
@@ -115,6 +107,7 @@ body{
   font-size:24px;
   cursor:pointer;
 }
+
 </style>
 </head>
 
@@ -132,6 +125,7 @@ body{
 </div>
 
 <script>
+
 let recipes = [];
 
 async function loadRecipes(){
@@ -141,47 +135,56 @@ async function loadRecipes(){
     displayRecipes(recipes);
   } catch(e){
     console.error("JSON failed to load:", e);
-    document.getElementById("recipes").innerHTML = `<div style="text-align:center; padding:20px;">Failed to load recipes. Please try refreshing.</div>`;
   }
 }
 
 function displayRecipes(data){
+
   const container = document.getElementById("recipes");
   container.innerHTML = "";
 
   let categories = {};
 
   data.forEach(r => {
+    if(!r.category) return;
     if(!categories[r.category]) categories[r.category] = [];
     categories[r.category].push(r);
   });
 
   for(let category in categories){
+
     container.innerHTML += `<div class="section-title">${category}</div>`;
 
     let grid = document.createElement("div");
     grid.className = "grid";
 
     categories[category].forEach(r => {
-      let heart = r.category === "Heart-Healthy Desserts" ? `<div class="heart-badge">❤️</div>` : "";
+
+      let heart = r.category === "Heart-Healthy Desserts"
+        ? `<div class="heart-badge">❤️</div>`
+        : "";
+
+      let macros = r.macrosPerPortion || {};
 
       let card = document.createElement("div");
       card.className = "card";
+
       card.onclick = () => openPopup(r);
 
       card.innerHTML = `
         ${heart}
         <div class="watermark">🍽️</div>
-        <div class="card-title">${r.title}</div>
+        <div class="card-title">${r.title || "Untitled"}</div>
         <div class="macros">
-          ${r.macrosPerPortion.calories} kcal • 
-          P ${r.macrosPerPortion.protein}g • 
-          C ${r.macrosPerPortion.carbs}g • 
-          F ${r.macrosPerPortion.fat}g
+          ${macros.calories ?? 0} kcal • 
+          P ${macros.protein ?? 0}g • 
+          C ${macros.carbs ?? 0}g • 
+          F ${macros.fat ?? 0}g
         </div>
       `;
 
       grid.appendChild(card);
+
     });
 
     container.appendChild(grid);
@@ -189,24 +192,29 @@ function displayRecipes(data){
 }
 
 function openPopup(recipe){
+
   const popup = document.getElementById("popup");
   const content = document.getElementById("popup-content");
+
+  const ingredients = recipe.ingredients || [];
+  const instructions = recipe.instructions || [];
+  const macros = recipe.macrosPerPortion || {};
 
   content.innerHTML = `
     <h2>${recipe.title}</h2>
 
     <h3>Ingredients</h3>
-    <ul>${recipe.ingredients.map(i => `<li>${i}</li>`).join("")}</ul>
+    <ul>${ingredients.map(i => `<li>${i}</li>`).join("")}</ul>
 
     <h3>Instructions</h3>
-    <ol>${recipe.instructions.map(i => `<li>${i}</li>`).join("")}</ol>
+    <ol>${instructions.map(i => `<li>${i}</li>`).join("")}</ol>
 
     <h3>Macros (per portion)</h3>
     <p>
-      ${recipe.macrosPerPortion.calories} kcal<br>
-      Protein: ${recipe.macrosPerPortion.protein}g<br>
-      Carbs: ${recipe.macrosPerPortion.carbs}g<br>
-      Fat: ${recipe.macrosPerPortion.fat}g
+      ${macros.calories ?? 0} kcal<br>
+      Protein: ${macros.protein ?? 0}g<br>
+      Carbs: ${macros.carbs ?? 0}g<br>
+      Fat: ${macros.fat ?? 0}g
     </p>
   `;
 
@@ -227,7 +235,6 @@ function searchRecipes(){
   displayRecipes(filtered);
 }
 
-// Load recipes when the page opens
 loadRecipes();
 
 </script>
