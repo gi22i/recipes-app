@@ -36,6 +36,13 @@ body{
   color:#fff;
 }
 
+/* Section title */
+.section-title{
+  padding:10px 16px 0;
+  font-size:18px;
+  font-weight:600;
+}
+
 /* Grid */
 .grid{
   display:grid;
@@ -78,7 +85,7 @@ body{
   opacity:0.08;
 }
 
-/* Heart Badge */
+/* Heart badge */
 .heart-badge{
   position:absolute;
   top:8px;
@@ -112,14 +119,6 @@ body{
   cursor:pointer;
 }
 
-/* Sections */
-.section-title{
-  padding:10px 16px 0;
-  font-size:18px;
-  font-weight:600;
-  opacity:0.9;
-}
-
 </style>
 </head>
 
@@ -138,12 +137,16 @@ body{
 
 <script>
 
-let recipes = []; // loaded from your JSON
+let recipes = [];
 
 async function loadRecipes(){
-  const res = await fetch("recipes.json");
-  recipes = await res.json();
-  displayRecipes(recipes);
+  try{
+    const res = await fetch("recipes.json");
+    recipes = await res.json();
+    displayRecipes(recipes);
+  } catch(e){
+    console.error("JSON failed to load:", e);
+  }
 }
 
 function displayRecipes(data){
@@ -176,12 +179,12 @@ function displayRecipes(data){
       card.innerHTML = `
         ${heart}
         <div class="watermark">🍽️</div>
-        <div class="card-title">${r.name}</div>
+        <div class="card-title">${r.title}</div>
         <div class="macros">
-          ${r.macros_per_portion.calories} kcal • 
-          P ${r.macros_per_portion.protein} • 
-          C ${r.macros_per_portion.carbs} • 
-          F ${r.macros_per_portion.fat}
+          ${r.macrosPerPortion.calories} kcal • 
+          P ${r.macrosPerPortion.protein}g • 
+          C ${r.macrosPerPortion.carbs}g • 
+          F ${r.macrosPerPortion.fat}g
         </div>
       `;
 
@@ -198,7 +201,7 @@ function openPopup(recipe){
   const content = document.getElementById("popup-content");
 
   content.innerHTML = `
-    <h2>${recipe.name}</h2>
+    <h2>${recipe.title}</h2>
 
     <h3>Ingredients</h3>
     <ul>${recipe.ingredients.map(i => `<li>${i}</li>`).join("")}</ul>
@@ -208,10 +211,10 @@ function openPopup(recipe){
 
     <h3>Macros (per portion)</h3>
     <p>
-      ${recipe.macros_per_portion.calories} kcal<br>
-      Protein: ${recipe.macros_per_portion.protein}g<br>
-      Carbs: ${recipe.macros_per_portion.carbs}g<br>
-      Fat: ${recipe.macros_per_portion.fat}g
+      ${recipe.macrosPerPortion.calories} kcal<br>
+      Protein: ${recipe.macrosPerPortion.protein}g<br>
+      Carbs: ${recipe.macrosPerPortion.carbs}g<br>
+      Fat: ${recipe.macrosPerPortion.fat}g
     </p>
   `;
 
@@ -226,7 +229,7 @@ function searchRecipes(){
   const value = document.querySelector(".search-bar").value.toLowerCase();
 
   let filtered = recipes.filter(r =>
-    r.name.toLowerCase().includes(value)
+    r.title.toLowerCase().includes(value)
   );
 
   displayRecipes(filtered);
