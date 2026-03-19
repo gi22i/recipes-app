@@ -3,8 +3,22 @@
     "title": "Turkey Burgers",
     "category": "Meals",
     "portions": 4,
-    "ingredients": ["500g Turkey mince", "1 Egg", "50g Breadcrumbs", "1 tsp Garlic powder", "Salt & Pepper"],
-    "instructions": ["Mix all ingredients in a bowl.", "Shape into 4 patties.", "Grill or pan-fry for 5-6 minutes per side until cooked through.", "Serve in buns with desired toppings."],
+    "ingredients": [
+      "500g Turkey mince (lean)",
+      "1 Large egg",
+      "50g Panko breadcrumbs",
+      "1 tsp Garlic powder",
+      "1 tsp Onion powder",
+      "Salt and black pepper to taste"
+    ],
+    "instructions": [
+      "In a large mixing bowl, combine the turkey mince, egg, breadcrumbs, and spices.",
+      "Mix by hand until just combined (do not overwork the meat or it will become tough).",
+      "Divide the mixture into 4 equal portions and shape into tight patties about 1-inch thick.",
+      "Heat a non-stick pan or grill over medium-high heat with a light spray of oil.",
+      "Cook the patties for 5-6 minutes per side until the internal temperature reaches 75°C.",
+      "Let the burgers rest for 2 minutes before serving in buns with your favorite toppings."
+    ],
     "macrosPerPortion": { "calories": 310, "protein": 30, "carbs": 15, "fat": 12 },
     "macros": { "calories": 1240, "protein": 120, "carbs": 60, "fat": 48, "fibre": 4 }
   },
@@ -12,8 +26,23 @@
     "title": "Mediterranean Chicken Bake",
     "category": "Meals",
     "portions": 2,
-    "ingredients": ["2 Chicken breasts", "1 Red pepper", "1 Courgette", "100g Cherry tomatoes", "1 tbsp Olive oil", "Oregano"],
-    "instructions": ["Chop vegetables and place in a baking tray.", "Place chicken on top and drizzle with oil and oregano.", "Bake at 200°C for 25-30 minutes."],
+    "ingredients": [
+      "2 Chicken breasts (approx 400g)",
+      "1 Red bell pepper, sliced",
+      "1 Medium courgette, sliced",
+      "100g Cherry tomatoes, halved",
+      "1 tbsp Olive oil",
+      "2 tsp Dried oregano",
+      "1 Lemon (half sliced, half juiced)"
+    ],
+    "instructions": [
+      "Preheat your oven to 200°C (180°C fan).",
+      "Place the sliced peppers, courgette, and cherry tomatoes in a large baking dish.",
+      "Nestle the chicken breasts among the vegetables.",
+      "Drizzle everything with olive oil and lemon juice, then sprinkle generously with oregano, salt, and pepper.",
+      "Place lemon slices on top of the chicken for extra flavor.",
+      "Bake for 25-30 minutes until the chicken is golden and the vegetables are tender."
+    ],
     "macrosPerPortion": { "calories": 371, "protein": 50.5, "carbs": 10, "fat": 10.5 },
     "macros": { "calories": 742, "protein": 101, "carbs": 20, "fat": 21, "fibre": 6 }
   },
@@ -21,8 +50,22 @@
     "title": "Veggie Burger",
     "category": "Meals",
     "portions": 4,
-    "ingredients": ["400g Chickpeas (drained)", "1 Onion", "1 tsp Cumin", "50g Flour"],
-    "instructions": ["Mash chickpeas and mix with finely chopped onion and spices.", "Form into patties.", "Fry in a lightly oiled pan until golden brown."],
+    "ingredients": [
+      "400g Can chickpeas, drained and rinsed",
+      "1 Small red onion, finely diced",
+      "1 tsp Ground cumin",
+      "1 tsp Smoked paprika",
+      "50g All-purpose flour or oat flour",
+      "Handful of fresh parsley, chopped"
+    ],
+    "instructions": [
+      "Place the chickpeas in a bowl and mash with a fork or potato masher until mostly smooth but with some texture remaining.",
+      "Stir in the onion, spices, parsley, and flour until a thick dough forms.",
+      "If the mixture is too wet, add another tablespoon of flour.",
+      "Shape into 4 patties and chill in the fridge for 15 minutes to firm up.",
+      "Heat a splash of oil in a pan over medium heat.",
+      "Fry the patties for 4-5 minutes on each side until a brown crust forms."
+    ],
     "macrosPerPortion": { "calories": 145, "protein": 6, "carbs": 15, "fat": 4 },
     "macros": { "calories": 580, "protein": 24, "carbs": 60, "fat": 16, "fibre": 12 }
   },
@@ -30,26 +73,45 @@
     "title": "Turkey Burger Wrap",
     "category": "Meals",
     "portions": 1,
-    "ingredients": ["1 Turkey patty", "1 Large tortilla wrap", "Lettuce", "Tomato"],
-    "instructions": ["Cook turkey patty as instructed.", "Place in center of wrap with salad.", "Fold tightly and serve."],
+    "ingredients": [
+      "1 Turkey patty (pre-cooked)",
+      "1 Large whole-wheat tortilla wrap",
+      "Handful of shredded lettuce",
+      "2 Slices of tomato",
+      "1 tbsp Light mayonnaise or Greek yogurt"
+    ],
+    "instructions": [
+      "Warm the tortilla wrap in a dry pan for 30 seconds to make it pliable.",
+      "Spread the mayonnaise or yogurt across the center of the wrap.",
+      "Slice the cooked turkey patty into strips and place them on the wrap.",
+      "Top with lettuce and tomato.",
+      "Fold in the sides of the wrap, then roll tightly from the bottom up.",
+      "Optional: Toast the closed wrap in a pan for 1 minute to seal the edge."
+    ],
     "macrosPerPortion": { "calories": 270, "protein": 30, "carbs": 20, "fat": 12 },
     "macros": { "calories": 270, "protein": 30, "carbs": 20, "fat": 12, "fibre": 2 }
-  },
-  {
-    "title": "Veggie Burger Wrap",
-    "category": "Meals",
-    "portions": 1,
-    "ingredients": ["1 Veggie patty", "1 Tortilla wrap", "Spinach"],
-    "instructions": ["Cook veggie patty.", "Place in wrap and roll up."],
-    "macrosPerPortion": { "calories": 115, "protein": 6, "carbs": 17.5, "fat": 4 },
-    "macros": { "calories": 115, "protein": 6, "carbs": 17.5, "fat": 4, "fibre": 3 }
   },
   {
     "title": "Creamy Mushroom & Spinach Pasta",
     "category": "Meals",
     "portions": 2,
-    "ingredients": ["150g Whole wheat pasta", "200g Mushrooms", "100g Spinach", "100ml Light cream"],
-    "instructions": ["Boil pasta.", "Sauté mushrooms and spinach.", "Add cream and pasta, toss together."],
+    "ingredients": [
+      "150g Whole wheat penne or fusilli",
+      "200g Chestnut mushrooms, sliced",
+      "100g Fresh baby spinach",
+      "100ml Light cooking cream or Elmlea Single",
+      "2 Garlic cloves, minced",
+      "1 tsp Olive oil"
+    ],
+    "instructions": [
+      "Bring a large pot of salted water to a boil and cook pasta according to package instructions.",
+      "Meanwhile, heat oil in a large skillet over medium heat.",
+      "Add mushrooms and cook for 5-7 minutes until they have released their moisture and turned golden.",
+      "Add the minced garlic and cook for another 60 seconds.",
+      "Lower the heat and stir in the light cream and fresh spinach. Let the spinach wilt into the sauce.",
+      "Drain the pasta (reserve a splash of pasta water) and toss into the sauce.",
+      "Add a little pasta water if the sauce is too thick, and season with plenty of black pepper."
+    ],
     "macrosPerPortion": { "calories": 240, "protein": 13, "carbs": 35, "fat": 6 },
     "macros": { "calories": 480, "protein": 26, "carbs": 70, "fat": 12, "fibre": 8 }
   },
@@ -57,117 +119,95 @@
     "title": "Fillet Steak with Potatoes",
     "category": "Meals",
     "portions": 1,
-    "ingredients": ["200g Fillet steak", "150g Baby potatoes", "Asparagus"],
-    "instructions": ["Boil potatoes.", "Sear steak for 3 mins per side.", "Steam asparagus and serve."],
+    "ingredients": [
+      "200g Beef fillet steak",
+      "150g Baby potatoes",
+      "100g Asparagus spears",
+      "1 tsp Olive oil",
+      "Sea salt and cracked black pepper"
+    ],
+    "instructions": [
+      "Take the steak out of the fridge 20 minutes before cooking to reach room temperature.",
+      "Halve the baby potatoes and boil in salted water for 12-15 minutes until tender. Drain and set aside.",
+      "Season the steak generously with salt and pepper on both sides.",
+      "Heat a heavy-based pan with oil until smoking hot. Sear the steak for 3 minutes per side (for medium-rare).",
+      "Remove the steak and let it rest on a warm plate for 5 minutes.",
+      "While the steak rests, toss the asparagus and cooked potatoes into the steak pan for 3-4 minutes to pick up the flavors."
+    ],
     "macrosPerPortion": { "calories": 450, "protein": 40, "carbs": 45, "fat": 12.5 },
     "macros": { "calories": 450, "protein": 40, "carbs": 45, "fat": 12.5, "fibre": 5 }
-  },
-  {
-    "title": "Fillet Steak with Mushrooms",
-    "category": "Meals",
-    "portions": 1,
-    "ingredients": ["200g Fillet steak", "150g Mushrooms", "Garlic butter"],
-    "instructions": ["Pan sear steak to preference.", "Sauté mushrooms in garlic butter in the same pan."],
-    "macrosPerPortion": { "calories": 410, "protein": 42.5, "carbs": 10, "fat": 20 },
-    "macros": { "calories": 410, "protein": 42.5, "carbs": 10, "fat": 20, "fibre": 3 }
-  },
-  {
-    "title": "Creamy Chicken and Broccoli Pasta",
-    "category": "Meals",
-    "portions": 2,
-    "ingredients": ["200g Chicken breast", "150g Pasta", "1 head Broccoli", "Light cream cheese"],
-    "instructions": ["Cook pasta and chicken.", "Steam broccoli.", "Mix all with cream cheese."],
-    "macrosPerPortion": { "calories": 450, "protein": 45, "carbs": 50, "fat": 10 },
-    "macros": { "calories": 900, "protein": 90, "carbs": 100, "fat": 20, "fibre": 7 }
   },
   {
     "title": "Fluffy Keto Buns",
     "category": "Bakery",
     "portions": 6,
-    "ingredients": ["150g Almond flour", "40g Psyllium husk", "2 tsp Baking powder", "3 Egg whites"],
-    "instructions": ["Mix dry ingredients.", "Add egg whites and boiling water.", "Bake at 175°C for 50 mins."],
+    "ingredients": [
+      "150g Almond flour (fine ground)",
+      "40g Psyllium husk powder (not whole husks)",
+      "2 tsp Baking powder",
+      "1 tsp Sea salt",
+      "3 Large egg whites",
+      "250ml Boiling water"
+    ],
+    "instructions": [
+      "Preheat oven to 175°C and line a baking sheet with parchment paper.",
+      "In a large bowl, whisk together the almond flour, psyllium husk, baking powder, and salt.",
+      "Add the egg whites and stir until a thick paste forms.",
+      "Carefully pour in the boiling water. Use a hand mixer or whisk to blend for about 30 seconds until the dough thickens and becomes rubbery.",
+      "Wet your hands and divide the dough into 6 equal balls. Place them on the baking sheet.",
+      "Bake for 50-60 minutes. The buns are done when they sound hollow when tapped on the bottom.",
+      "Crucial: Let them cool completely before slicing, or they will be moist inside."
+    ],
     "macrosPerPortion": { "calories": 150, "protein": 7.5, "carbs": 3, "fat": 12 },
     "macros": { "calories": 900, "protein": 45, "carbs": 18, "fat": 72, "fibre": 24 }
-  },
-  {
-    "title": "Keto Bread Rolls",
-    "category": "Bakery",
-    "portions": 4,
-    "ingredients": ["100g Almond flour", "2 Eggs", "100g Greek yogurt"],
-    "instructions": ["Mix all into a dough.", "Form rolls.", "Bake at 180°C for 20 mins."],
-    "macrosPerPortion": { "calories": 133, "protein": 6.6, "carbs": 3, "fat": 10 },
-    "macros": { "calories": 532, "protein": 26.4, "carbs": 12, "fat": 40, "fibre": 4 }
-  },
-  {
-    "title": "Sandwich Bread",
-    "category": "Bakery",
-    "portions": 10,
-    "ingredients": ["500g Bread flour", "7g Yeast", "300ml Water", "Salt"],
-    "instructions": ["Knead ingredients into a dough.", "Let rise for 1 hour.", "Bake at 200°C for 30 mins."],
-    "macrosPerPortion": { "calories": 100, "protein": 3.3, "carbs": 18, "fat": 0.8 },
-    "macros": { "calories": 1000, "protein": 33, "carbs": 180, "fat": 8, "fibre": 5 }
-  },
-  {
-    "title": "Bread and Butter Pudding",
-    "category": "Desserts",
-    "portions": 6,
-    "ingredients": ["6 slices Bread", "2 Eggs", "300ml Milk", "30g Sultanas"],
-    "instructions": ["Layer bread and sultanas.", "Whisk eggs and milk, pour over bread.", "Bake at 180°C for 35 mins."],
-    "macrosPerPortion": { "calories": 200, "protein": 6, "carbs": 25, "fat": 7.5 },
-    "macros": { "calories": 1200, "protein": 36, "carbs": 150, "fat": 45, "fibre": 4 }
-  },
-  {
-    "title": "Heart-Healthy Banana Cocoa Cake",
-    "category": "Heart-Healthy Desserts",
-    "portions": 8,
-    "ingredients": ["3 Ripe bananas", "150g Oat flour", "30g Cocoa powder", "Honey"],
-    "instructions": ["Mash bananas.", "Mix with flour and cocoa.", "Bake at 180°C for 25 mins."],
-    "macrosPerPortion": { "calories": 150, "protein": 5, "carbs": 22, "fat": 4 },
-    "macros": { "calories": 1200, "protein": 40, "carbs": 176, "fat": 32, "fibre": 16 }
   },
   {
     "title": "Banana Chocolate Oat Cake",
     "category": "Heart-Healthy Desserts",
     "portions": 8,
-    "ingredients": ["4 Bananas", "200g Oats", "40g Cocoa", "50g Chocolate chips"],
-    "instructions": ["Blend bananas, oats, and cocoa.", "Stir in chips.", "Bake at 180°C for 30 mins."],
+    "ingredients": [
+      "4 Large ripe bananas (spotted brown)",
+      "200g Rolled oats (blended into flour)",
+      "40g Unsweetened cocoa powder",
+      "50g Dark chocolate chips (70% cocoa)",
+      "1 tsp Baking powder",
+      "1 tsp Vanilla extract"
+    ],
+    "instructions": [
+      "Preheat your oven to 180°C and grease a standard loaf tin or 8-inch square pan.",
+      "In a high-speed blender, blitz the oats until they reach a flour-like consistency.",
+      "In a large bowl, mash the 4 bananas until they are a smooth liquid.",
+      "Stir the oat flour, cocoa powder, baking powder, and vanilla into the mashed bananas.",
+      "Fold in the chocolate chips.",
+      "Pour the batter into the prepared tin and smooth the top.",
+      "Bake for 30-35 minutes. A toothpick inserted into the center should come out mostly clean.",
+      "Allow to cool in the tin for 10 minutes before transferring to a wire rack."
+    ],
     "macrosPerPortion": { "calories": 175, "protein": 6, "carbs": 26, "fat": 4 },
     "macros": { "calories": 1400, "protein": 48, "carbs": 208, "fat": 32, "fibre": 24 }
-  },
-  {
-    "title": "Heart-Healthy Chocolate Bean Cake",
-    "category": "Heart-Healthy Desserts",
-    "portions": 10,
-    "ingredients": ["400g Black beans", "3 Eggs", "50g Cocoa", "Stevia"],
-    "instructions": ["Blend beans and eggs.", "Mix in cocoa and bake at 170°C for 40 mins."],
-    "macrosPerPortion": { "calories": 160, "protein": 8, "carbs": 16, "fat": 5 },
-    "macros": { "calories": 1600, "protein": 80, "carbs": 160, "fat": 50, "fibre": 20 }
   },
   {
     "title": "High-Protein Yogurt Cheesecake",
     "category": "Heart-Healthy Desserts",
     "portions": 6,
-    "ingredients": ["500g Greek yogurt", "2 Eggs", "Vanilla extract", "1 tbsp Cornstarch"],
-    "instructions": ["Whisk all ingredients.", "Pour into a tin and bake at 160°C for 45 mins.", "Chill before serving."],
+    "ingredients": [
+      "500g 0% Fat Greek yogurt",
+      "2 Large eggs",
+      "1 tbsp Cornstarch (cornflour)",
+      "2 tsp Vanilla extract",
+      "3 tbsp Stevia or honey (to taste)"
+    ],
+    "instructions": [
+      "Preheat oven to 160°C. Line the bottom of a 6-inch springform pan with parchment paper.",
+      "In a bowl, whisk the Greek yogurt until smooth.",
+      "Add the eggs one at a time, whisking gently so you don't incorporate too much air.",
+      "Sift in the cornstarch and add the vanilla and sweetener. Whisk until perfectly smooth.",
+      "Pour the mixture into the pan.",
+      "Bake for 45-50 minutes. The edges should be set but the center should still have a slight jiggle.",
+      "Turn off the oven and leave the door slightly ajar for 30 minutes to let it cool slowly (this prevents cracking).",
+      "Refrigerate for at least 4 hours (ideally overnight) before removing from the pan."
+    ],
     "macrosPerPortion": { "calories": 140, "protein": 15, "carbs": 10, "fat": 3 },
     "macros": { "calories": 840, "protein": 90, "carbs": 60, "fat": 18, "fibre": 0 }
-  },
-  {
-    "title": "Chocolate Protein Brownies",
-    "category": "Heart-Healthy Desserts",
-    "portions": 12,
-    "ingredients": ["2 scoops Protein powder", "1 Avocado", "2 Eggs", "30g Cocoa"],
-    "instructions": ["Mash avocado and mix with eggs.", "Add dry ingredients and bake at 180°C for 20 mins."],
-    "macrosPerPortion": { "calories": 150, "protein": 12, "carbs": 15, "fat": 4 },
-    "macros": { "calories": 1800, "protein": 144, "carbs": 180, "fat": 48, "fibre": 15 }
-  },
-  {
-    "title": "Apple Cinnamon Fiber Cake",
-    "category": "Heart-Healthy Desserts",
-    "portions": 8,
-    "ingredients": ["2 Apples (grated)", "200g Oat bran", "Cinnamon", "2 Eggs"],
-    "instructions": ["Mix apples, eggs, and bran.", "Sprinkle with cinnamon.", "Bake at 180°C for 35 mins."],
-    "macrosPerPortion": { "calories": 135, "protein": 5, "carbs": 20, "fat": 3 },
-    "macros": { "calories": 1080, "protein": 40, "carbs": 160, "fat": 24, "fibre": 28 }
   }
 ]
