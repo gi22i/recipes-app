@@ -7,67 +7,70 @@
   body { 
     margin: 0; 
     font-family: -apple-system, system-ui, sans-serif; 
-    background: #000; 
+    background: #000; /* Absolute black background */
     color: #fff; 
     -webkit-tap-highlight-color: transparent; 
   }
   .header { text-align: center; padding: 25px 10px 10px; font-size: 20px; font-weight: 600; }
   
-  /* Matches the first image search bar */
   .search-container { padding: 0 16px 15px; }
   .search-bar { 
     width: 100%; padding: 12px; border-radius: 6px; border: none; 
-    background: #fff; color: #8e8e93; font-size: 16px; box-sizing: border-box;
+    background: #fff; color: #000; font-size: 16px; box-sizing: border-box;
   }
 
-  .section-title { padding: 20px 16px 5px; font-size: 18px; font-weight: 700; color: #fff; }
+  .section-title { padding: 20px 16px 5px; font-size: 18px; font-weight: 700; text-align: left; }
   
-  /* 2-column uniform grid */
-  .grid { display: grid; grid-template-columns: 1fr 1fr; gap: 15px; padding: 0 16px 20px; }
+  /* Slim uniform grid as per image */
+  .grid { display: grid; grid-template-columns: 1fr 1fr; gap: 10px; padding: 0 16px 20px; }
   
-  /* Matching the exact dimensions and look of the cards in Image 1 */
+  /* Centered text within slim rectangles */
   .card {
-    background: #2c2c2e;
-    border-radius: 12px;
-    padding: 20px 15px;
+    background: #1c1c1e; /* Darker grey box */
+    border-radius: 10px;
+    padding: 15px;
     cursor: pointer;
     display: flex;
     flex-direction: column;
-    justify-content: flex-start;
-    aspect-ratio: 1.3 / 1;
+    justify-content: center; /* Vertical center */
+    align-items: center;    /* Horizontal center */
+    aspect-ratio: 2 / 1;    /* Slimmer rectangular profile */
     box-sizing: border-box;
     position: relative;
+    text-align: center;
   }
   
+  .card:active { background: #2c2c2e; }
+  
+  /* Centered and Underlined Title */
   .card-title {
-    font-size: 16px;
+    font-size: 15px;
     font-weight: 700;
-    margin-bottom: 4px;
-    text-align: left;
-    display: inline-block;
-    border-bottom: 2px solid #fff; /* The white underline from image 1 */
-    padding-bottom: 4px;
-    align-self: flex-start;
+    margin-bottom: 6px;
+    text-decoration: underline;
+    text-underline-offset: 3px;
     line-height: 1.2;
+    width: 100%;
   }
   
+  /* Centered Macros */
   .card-macros {
-    font-size: 11px;
-    color: #fff;
-    opacity: 0.9;
-    text-align: left;
-    margin-top: 8px;
-    white-space: nowrap;
+    font-size: 10px;
+    color: #b0b0b0;
+    line-height: 1.4;
+    width: 100%;
   }
 
-  /* The subtle icon in the top left corner */
+  /* Watermark icon on the TOP LEFT */
   .watermark-icon {
     position: absolute;
-    top: 10px;
+    top: 8px;
     left: 10px;
-    font-size: 18px;
-    opacity: 0.15;
+    font-size: 16px;
+    opacity: 0.1;
   }
+
+  .heart-icon { position: absolute; top: 8px; right: 10px; font-size: 12px; }
 
   /* Popup Styles */
   .popup {
@@ -78,10 +81,9 @@
   .popup-inner { padding: 40px 20px; max-width: 600px; margin: 0 auto; }
   .close-btn { position: fixed; top: 15px; right: 20px; font-size: 32px; cursor: pointer; z-index: 1001; }
   
-  .recipe-detail h1 { font-size: 26px; margin-bottom: 10px; border-bottom: 2px solid #fff; display: inline-block; }
+  .recipe-detail h1 { text-align: center; font-size: 24px; text-decoration: underline; }
   .recipe-detail h3 { border-bottom: 1px solid #333; padding-bottom: 8px; margin-top: 25px; }
-  .recipe-detail ul, .recipe-detail ol { padding-left: 20px; color: #ddd; }
-  .recipe-detail li { margin-bottom: 12px; font-size: 16px; }
+  .recipe-detail li { margin-bottom: 12px; font-size: 16px; line-height: 1.5; }
 </style>
 </head>
 <body>
@@ -129,13 +131,15 @@ function render(data) {
       card.className = 'card';
       card.onclick = () => openPopup(r);
       
+      const isHeart = cat.includes("Heart-Healthy") ? '<span class="heart-icon">❤️</span>' : '';
       const m = r.macrosPerPortion || {};
       
       card.innerHTML = `
         <div class="watermark-icon">🍽️</div>
+        ${isHeart}
         <div class="card-title">${r.title}</div>
         <div class="card-macros">
-          Calories: ${m.calories} | Protein: ${m.protein}g | Sat fat: ${m.saturated || 0}g
+          ${m.calories ?? 0} kcal • P ${m.protein ?? 0}g • C ${m.carbs ?? 0}g • F ${m.fat ?? 0}g
         </div>
       `;
       grid.appendChild(card);
@@ -147,10 +151,11 @@ function render(data) {
 
 function openPopup(r) {
   const content = document.getElementById('popup-content');
+  const m = r.macrosPerPortion || {};
   content.innerHTML = `
     <div class="recipe-detail">
       <h1>${r.title}</h1>
-      <p style="color:#aaa; margin-top:10px;">Portions: ${r.portions} | ${r.macrosPerPortion.calories} kcal per portion</p>
+      <p style="text-align:center; color:#aaa;">Portions: ${r.portions} | ${m.calories} kcal</p>
       <h3>Ingredients</h3>
       <ul>${(r.ingredients || []).map(i => `<li>${i}</li>`).join('')}</ul>
       <h3>Method</h3>
