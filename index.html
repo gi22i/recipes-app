@@ -19,56 +19,57 @@
     background: #1c1c1e; color: #fff; font-size: 16px; box-sizing: border-box;
   }
 
-  /* This ensures every header starts on a clean line with space above it */
-  .section-container { clear: both; padding-bottom: 20px; }
   .section-title { 
-    padding: 20px 16px 10px; 
+    padding: 25px 16px 10px; 
     font-size: 18px; 
     font-weight: 700; 
-    text-align: left;
-    color: #fff;
+    clear: both; /* Ensures headers don't float next to cards */
   }
   
-  /* Grid ensures all cards stay in their rows and don't overlap headers */
   .grid { 
     display: grid; 
     grid-template-columns: 1fr 1fr; 
-    gap: 12px; 
-    padding: 0 16px; 
+    gap: 10px; 
+    padding: 0 16px 20px; 
   }
   
   .card {
     background: #1c1c1e;
-    border-radius: 12px;
-    padding: 15px;
+    border-radius: 10px;
+    padding: 10px;
     cursor: pointer;
     display: flex;
     flex-direction: column;
     justify-content: center;
     align-items: center;
-    min-height: 100px; /* Uniform height to prevent layout shifts */
+    aspect-ratio: 2.5 / 1; /* This makes them SLIM like your screenshot */
     text-align: center;
     position: relative;
+    box-sizing: border-box;
   }
   
   .card:active { background: #2c2c2e; }
   
   .card-title {
-    font-size: 14px;
+    font-size: 13px;
     font-weight: 700;
-    margin-bottom: 8px;
+    margin-bottom: 4px;
     text-decoration: underline;
-    text-underline-offset: 3px;
+    text-underline-offset: 2px;
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    width: 90%;
   }
   
   .card-macros {
-    font-size: 11px;
+    font-size: 10px;
     color: #b0b0b0;
-    line-height: 1.4;
+    line-height: 1.2;
   }
 
-  .watermark-icon { position: absolute; top: 8px; left: 10px; font-size: 14px; opacity: 0.2; }
-  .heart-icon { position: absolute; top: 8px; right: 10px; font-size: 12px; }
+  .watermark-icon { position: absolute; top: 6px; left: 8px; font-size: 14px; opacity: 0.1; }
+  .heart-icon { position: absolute; top: 6px; right: 8px; font-size: 10px; }
 
   /* Popup Styles */
   .popup {
@@ -79,19 +80,27 @@
   .popup-inner { padding: 40px 20px; max-width: 600px; margin: 0 auto; }
   .close-btn { position: fixed; top: 15px; right: 20px; font-size: 30px; cursor: pointer; z-index: 1001; }
   
-  .recipe-detail h1 { text-align: center; font-size: 24px; text-decoration: underline; }
-  .recipe-detail h3 { border-bottom: 1px solid #333; padding-bottom: 8px; margin-top: 25px; }
-  .recipe-detail li { margin-bottom: 12px; font-size: 16px; line-height: 1.5; color: #ddd; }
+  .recipe-detail h1 { text-align: center; font-size: 22px; text-decoration: underline; margin-bottom: 5px; }
+  .portion-sub { text-align: center; color: #aaa; font-size: 14px; margin-bottom: 20px; }
   
-  .macro-summary {
+  .macro-display {
     display: flex;
-    justify-content: space-around;
-    background: #1c1c1e;
-    padding: 15px;
-    border-radius: 10px;
-    margin-top: 20px;
-    font-size: 13px;
+    justify-content: space-between;
+    gap: 10px;
+    margin-bottom: 20px;
   }
+  .macro-col {
+    flex: 1;
+    background: #1c1c1e;
+    padding: 10px;
+    border-radius: 8px;
+    font-size: 12px;
+    line-height: 1.5;
+  }
+
+  .recipe-detail h3 { border-bottom: 1px solid #333; padding-bottom: 8px; margin-top: 20px; font-size: 17px; }
+  .recipe-detail ul, .recipe-detail ol { padding-left: 20px; color: #ddd; }
+  .recipe-detail li { margin-bottom: 10px; font-size: 15px; }
 </style>
 </head>
 <body>
@@ -112,26 +121,24 @@
 let allRecipes = [];
 
 async function init() {
-  try {
-    const res = await fetch('recipes.json');
-    allRecipes = await res.json();
-    render(allRecipes);
-  } catch (e) { console.error("Could not load recipes.json"); }
+  const res = await fetch('recipes.json');
+  allRecipes = await res.json();
+  render(allRecipes);
 }
 
 function render(data) {
   const container = document.getElementById('recipe-list');
   container.innerHTML = '';
-  
-  const categories = ["Meals", "Bakery", "Desserts", "Heart-Healthy Desserts"];
-  
-  categories.forEach(cat => {
+  const order = ["Meals", "Bakery", "Desserts", "Heart-Healthy Desserts"];
+
+  order.forEach(cat => {
     const catRecipes = data.filter(r => r.category === cat);
     if (catRecipes.length === 0) return;
 
-    const section = document.createElement('div');
-    section.className = 'section-container';
-    section.innerHTML = `<div class="section-title">${cat}</div>`;
+    const title = document.createElement('div');
+    title.className = 'section-title';
+    title.innerText = cat;
+    container.appendChild(title);
     
     const grid = document.createElement('div');
     grid.className = 'grid';
@@ -140,7 +147,6 @@ function render(data) {
       const card = document.createElement('div');
       card.className = 'card';
       card.onclick = () => openPopup(r);
-      
       const isHeart = cat.includes("Heart") ? '<span class="heart-icon">❤️</span>' : '';
       const m = r.macrosPerPortion || {};
       
@@ -149,32 +155,34 @@ function render(data) {
         ${isHeart}
         <div class="card-title">${r.title}</div>
         <div class="card-macros">
-          ${m.calories || 0} kcal<br>
-          P ${m.protein || 0}g | C ${m.carbs || 0}g | F ${m.fat || 0}g
+          ${m.calories} kcal<br>P ${m.protein}g • C ${m.carbs}g • F ${m.fat}g
         </div>
       `;
       grid.appendChild(card);
     });
-    
-    section.appendChild(grid);
-    container.appendChild(section);
+    container.appendChild(grid);
   });
 }
 
 function openPopup(r) {
   const content = document.getElementById('popup-content');
   const mp = r.macrosPerPortion || {};
-  const mt = r.macros || {}; // Total Macros
+  const mt = r.macros || {}; 
   
   content.innerHTML = `
     <div class="recipe-detail">
       <h1>${r.title}</h1>
-      <p style="text-align:center; color:#aaa;">Portions: ${r.portions || 1} | ${mp.calories || 0} kcal per portion</p>
+      <div class="portion-sub">Portions: ${r.portions} | ${mp.calories} kcal</div>
       
-      <div class="macro-summary">
-        <div><strong>Total P:</strong> ${mt.protein || 0}g</div>
-        <div><strong>Total C:</strong> ${mt.carbs || 0}g</div>
-        <div><strong>Total F:</strong> ${mt.fat || 0}g</div>
+      <div class="macro-display">
+        <div class="macro-col">
+          <strong>Per Portion</strong><br>
+          P: ${mp.protein}g | C: ${mp.carbs}g<br>F: ${mp.fat}g
+        </div>
+        <div class="macro-col">
+          <strong>Full Recipe</strong><br>
+          P: ${mt.protein}g | C: ${mt.carbs}g<br>F: ${mt.fat}g
+        </div>
       </div>
 
       <h3>Ingredients</h3>
@@ -194,9 +202,8 @@ function closePopup() {
 }
 
 function search() {
-  const query = document.getElementById('searchInput').value.toLowerCase();
-  const filtered = allRecipes.filter(r => r.title.toLowerCase().includes(query));
-  render(filtered);
+  const q = document.getElementById('searchInput').value.toLowerCase();
+  render(allRecipes.filter(r => r.title.toLowerCase().includes(q)));
 }
 
 init();
