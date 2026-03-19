@@ -5,9 +5,9 @@
 <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=0">
 <meta name="apple-mobile-web-app-capable" content="yes">
 <meta name="apple-mobile-web-app-status-bar-style" content="default">
-<title>My Recipes</title>
+<title>Recipes</title>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;800&display=swap" rel="stylesheet">
 <style>
-  /* AUTO LIGHT/DARK MODE SYSTEM */
   :root {
     --bg-color: #ffffff;
     --card-bg: #f2f2f7;
@@ -15,7 +15,7 @@
     --text-secondary: #6c6c70;
     --search-bg: #e3e3e8;
     --border-color: #d1d1d6;
-    --circle-bg: rgba(0, 0, 0, 0.1);
+    --circle-bg: rgba(0, 0, 0, 0.05);
   }
 
   @media (prefers-color-scheme: dark) {
@@ -26,109 +26,125 @@
       --text-secondary: #aeaeb2;
       --search-bg: #1c1c1e;
       --border-color: #38383a;
-      --circle-bg: rgba(255, 255, 255, 0.2);
+      --circle-bg: rgba(255, 255, 255, 0.1);
     }
   }
 
   body { 
     margin: 0; 
-    font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif; 
+    font-family: 'Inter', -apple-system, sans-serif; 
     background: var(--bg-color); 
     color: var(--text-primary); 
     -webkit-font-smoothing: antialiased;
   }
 
-  .header { text-align: center; padding: 25px 10px 5px; font-size: 22px; font-weight: 700; }
-  .search-container { padding: 0 16px 15px; }
-  .search-bar { 
-    width: 100%; padding: 12px; border-radius: 10px; border: none; 
-    background: var(--search-bg); color: var(--text-primary); font-size: 16px; box-sizing: border-box; 
+  /* Bigger, bolder main title */
+  .header { 
+    text-align: center; 
+    padding: 40px 20px 10px; 
+    font-size: 42px; 
+    font-weight: 800; 
+    letter-spacing: -1.5px;
   }
 
-  .section-title { padding: 25px 16px 10px; font-size: 20px; font-weight: 800; clear: both; }
+  .search-container { padding: 10px 16px 20px; }
+  .search-bar { 
+    width: 100%; padding: 14px; border-radius: 12px; border: none; 
+    background: var(--search-bg); color: var(--text-primary); font-size: 16px; box-sizing: border-box; 
+    outline: none;
+  }
+
+  /* Centered category sub-titles */
+  .section-title { 
+    padding: 30px 16px 15px; 
+    font-size: 22px; 
+    font-weight: 800; 
+    text-align: center; 
+    letter-spacing: -0.5px;
+    clear: both; 
+  }
   
-  /* STABLE GRID FOR WEB CLIPS */
-  .grid { display: flex; flex-wrap: wrap; gap: 10px; padding: 0 16px 30px; }
+  .grid { display: flex; flex-wrap: wrap; gap: 12px; padding: 0 16px 40px; }
   
   .card {
     background: var(--card-bg); 
-    border-radius: 12px; 
+    border-radius: 16px; 
     cursor: pointer;
-    display: flex; 
-    flex-direction: column; 
-    justify-content: center; /* Vertical centering */
-    align-items: center;     /* Horizontal block centering */
-    text-align: center;      /* Horizontal text line centering */
-    width: calc(50% - 5px); 
-    height: 90px;            /* Fixed height for stability */
+    display: grid;
+    place-items: center;
+    text-align: center;
+    width: calc(50% - 6px); 
+    height: 100px;
     position: relative; 
     box-sizing: border-box;
-    padding: 10px;
-    overflow: hidden;
+    padding: 12px;
+    transition: transform 0.1s ease;
+  }
+  .card:active { transform: scale(0.97); }
+
+  .card-content {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 100%;
   }
 
   .card-title {
-    font-size: 16px; 
+    font-size: 15px; 
     font-weight: 700; 
-    margin: 0 auto 4px auto; 
+    margin-bottom: 6px;
     text-decoration: underline; 
-    text-underline-offset: 3px; 
+    text-underline-offset: 4px; 
     width: 100%; 
     line-height: 1.2; 
     white-space: nowrap; 
     overflow: hidden; 
     text-overflow: ellipsis;
-    display: block; 
   }
   
   .card-macros { 
-    font-size: 11px; 
+    font-size: 10px; 
     font-weight: 600; 
     color: var(--text-secondary); 
-    width: 100%; 
-    display: block;
-    margin: 0 auto;
-    letter-spacing: -0.1px;
+    text-transform: uppercase;
+    letter-spacing: 0.5px;
   }
 
-  /* ICONS & BADGES */
-  .watermark-icon { position: absolute; top: 8px; left: 10px; font-size: 14px; opacity: 0.2; z-index: 1; }
-  .badge-right { position: absolute; top: 8px; right: 10px; z-index: 1; }
+  .badge-right { position: absolute; top: 10px; right: 12px; font-size: 12px; }
   .keto-circle {
     display: inline-flex; align-items: center; justify-content: center;
-    width: 20px; height: 20px; background: var(--circle-bg); border-radius: 50%;
-    color: var(--text-primary); font-size: 11px; font-weight: 900;
+    width: 18px; height: 18px; background: var(--circle-bg); border-radius: 50%;
+    color: var(--text-primary); font-size: 9px; font-weight: 800;
   }
 
   /* POPUP MODAL */
   .popup { position: fixed; top: 0; left: 0; width: 100%; height: 100%; background: var(--bg-color); display: none; overflow-y: auto; z-index: 1000; }
-  .popup-inner { padding: 50px 20px; max-width: 600px; margin: 0 auto; }
-  .close-btn { position: fixed; top: 20px; right: 20px; font-size: 30px; cursor: pointer; z-index: 1001; color: var(--text-primary); }
+  .popup-inner { padding: 60px 24px; max-width: 600px; margin: 0 auto; }
+  .close-btn { position: fixed; top: 25px; right: 25px; font-size: 24px; font-weight: 800; cursor: pointer; color: var(--text-primary); z-index: 1001; }
   
-  .macro-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 12px; margin-bottom: 25px; }
-  .macro-box { background: var(--card-bg); padding: 15px; border-radius: 12px; font-size: 13px; line-height: 1.6; border: 1px solid var(--border-color); }
+  .macro-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 12px; margin-bottom: 30px; }
+  .macro-box { background: var(--card-bg); padding: 18px; border-radius: 16px; font-size: 13px; line-height: 1.6; }
   
-  .recipe-detail h1 { font-size: 26px; text-align: center; margin-bottom: 20px; text-decoration: underline; }
-  .recipe-detail h3 { border-bottom: 1px solid var(--border-color); padding-bottom: 10px; margin-top: 30px; }
-  .recipe-detail li { margin-bottom: 12px; font-size: 16px; line-height: 1.4; color: var(--text-secondary); }
+  .recipe-detail h1 { font-size: 32px; font-weight: 800; text-align: center; margin-bottom: 25px; letter-spacing: -1px; }
+  .recipe-detail h3 { border-bottom: 2px solid var(--border-color); padding-bottom: 8px; margin-top: 35px; font-size: 20px; }
+  .recipe-detail li { margin-bottom: 14px; font-size: 16px; line-height: 1.5; color: var(--text-secondary); }
 </style>
 </head>
 <body>
 
 <div class="header">Recipes</div>
 <div class="search-container">
-  <input type="search" id="searchInput" class="search-bar" placeholder="Search recipes..." onkeyup="search()">
+  <input type="search" id="searchInput" class="search-bar" placeholder="Search ingredients..." onkeyup="search()">
 </div>
 
 <div id="recipe-list"></div>
 
 <div id="popup" class="popup">
-  <span class="close-btn" onclick="closePopup()">✕</span>
+  <span class="close-btn" onclick="closePopup()">DONE</span>
   <div id="popup-content" class="popup-inner"></div>
 </div>
 
 <script>
-// Recipe Data including your specific Protein Powder stats
 const recipes = [
   {
     "title": "Turkey Burgers",
@@ -140,7 +156,7 @@ const recipes = [
     "macros": { "calories": 1240, "protein": 120, "carbs": 60, "fat": 48, "satFat": 14, "sugar": 4.8, "fiber": 6, "salt": 3.2 }
   },
   {
-    "title": "Mediterranean Chicken Bake",
+    "title": "Med. Chicken Bake",
     "category": "Meals",
     "portions": 2,
     "ingredients": ["400g Chicken breasts", "1 Red pepper", "1 Courgette", "100g Cherry tomatoes", "1 tbsp Olive oil", "Oregano"],
@@ -176,7 +192,7 @@ const recipes = [
     "macros": { "calories": 115, "protein": 6, "carbs": 17.5, "fat": 4, "satFat": 0.6, "sugar": 1.8, "fiber": 4.5, "salt": 0.7 }
   },
   {
-    "title": "Creamy Mushroom & Spinach Pasta",
+    "title": "Mushroom Pasta",
     "category": "Meals",
     "portions": 2,
     "ingredients": ["150g Whole wheat pasta", "200g Mushrooms", "100g Spinach", "100ml Light cream"],
@@ -185,7 +201,7 @@ const recipes = [
     "macros": { "calories": 480, "protein": 26, "carbs": 70, "fat": 12, "satFat": 5, "sugar": 8, "fiber": 12, "salt": 0.8 }
   },
   {
-    "title": "Fillet Steak with Potatoes",
+    "title": "Steak & Potatoes",
     "category": "Meals",
     "portions": 1,
     "ingredients": ["200g Fillet steak", "150g Baby potatoes", "100g Asparagus"],
@@ -194,7 +210,7 @@ const recipes = [
     "macros": { "calories": 450, "protein": 40, "carbs": 45, "fat": 12.5, "satFat": 4.5, "sugar": 2, "fiber": 5, "salt": 0.5 }
   },
   {
-    "title": "Fillet Steak with Mushrooms",
+    "title": "Steak & Mushrooms",
     "category": "Meals",
     "portions": 1,
     "ingredients": ["200g Fillet steak", "150g Mushrooms", "1 tsp Butter"],
@@ -203,11 +219,11 @@ const recipes = [
     "macros": { "calories": 410, "protein": 42.5, "carbs": 10, "fat": 20, "satFat": 9, "sugar": 2.5, "fiber": 2, "salt": 0.6 }
   },
   {
-    "title": "Creamy Chicken and Broccoli Pasta",
+    "title": "Chicken Pasta",
     "category": "Meals",
     "portions": 2,
     "ingredients": ["200g Chicken", "150g Pasta", "1 Broccoli head", "Light cream cheese"],
-    "instructions": ["Cook pasta, chicken, and broccoli.", "Drain and mix all with cream cheese."],
+    "instructions": ["Cook pasta, chicken, and broccoli.", "Date and mix all with cream cheese."],
     "macrosPerPortion": { "calories": 450, "protein": 45, "carbs": 50, "fat": 10, "satFat": 4, "sugar": 5, "fiber": 7, "salt": 0.7 },
     "macros": { "calories": 900, "protein": 90, "carbs": 100, "fat": 20, "satFat": 8, "sugar": 10, "fiber": 14, "salt": 1.4 }
   },
@@ -230,10 +246,10 @@ const recipes = [
     "macros": { "calories": 532, "protein": 26.4, "carbs": 12, "fat": 40, "satFat": 6, "sugar": 4.8, "fiber": 8, "salt": 0.8 }
   },
   {
-    "title": "Chocolate Protein Brownies",
+    "title": "Protein Brownies",
     "category": "Keto",
     "portions": 12,
-    "ingredients": ["2 scoops Protein powder (78% Protein)", "1 Avocado", "2 Eggs", "30g Cocoa"],
+    "ingredients": ["2 scoops Protein powder (78% P)", "1 Avocado", "2 Eggs", "30g Cocoa"],
     "instructions": ["Mash avocado, mix with eggs.", "Fold in protein powder and cocoa.", "Bake at 180°C for 20 mins."],
     "macrosPerPortion": { "calories": 150, "protein": 12, "carbs": 4, "fat": 10, "satFat": 1.5, "sugar": 0.5, "fiber": 4, "salt": 0.1 },
     "macros": { "calories": 1800, "protein": 144, "carbs": 48, "fat": 120, "satFat": 18, "sugar": 6, "fiber": 48, "salt": 1.2 }
@@ -248,7 +264,7 @@ const recipes = [
     "macros": { "calories": 1000, "protein": 33, "carbs": 180, "fat": 8, "satFat": 1, "sugar": 5, "fiber": 12, "salt": 5 }
   },
   {
-    "title": "Bread and Butter Pudding",
+    "title": "Bread Pudding",
     "category": "Desserts",
     "portions": 6,
     "ingredients": ["6 slices Bread", "2 Eggs", "300ml Milk", "30g Sultanas"],
@@ -266,7 +282,7 @@ const recipes = [
     "macros": { "calories": 840, "protein": 90, "carbs": 60, "fat": 18, "satFat": 7.2, "sugar": 30, "fiber": 0, "salt": 1.2 }
   },
   {
-    "title": "Banana Chocolate Oat Cake",
+    "title": "Banana Choc Cake",
     "category": "Heart-Healthy Desserts",
     "portions": 8,
     "ingredients": ["4 Bananas", "200g Oats", "40g Cocoa", "50g Choc chips"],
@@ -293,7 +309,7 @@ const recipes = [
     "macros": { "calories": 1600, "protein": 80, "carbs": 160, "fat": 50, "satFat": 11, "sugar": 15, "fiber": 60, "salt": 3 }
   },
   {
-    "title": "Apple Cinnamon Fiber Cake",
+    "title": "Apple Fiber Cake",
     "category": "Heart-Healthy Desserts",
     "portions": 8,
     "ingredients": ["2 Apples", "200g Oat bran", "2 Eggs"],
@@ -329,10 +345,13 @@ function render(data) {
       if (cat === "Keto") badge = '<div class="keto-circle">K</div>';
 
       card.innerHTML = `
-        <div class="watermark-icon">🍽️</div>
         <div class="badge-right">${badge}</div>
-        <div class="card-title">${r.title}</div>
-        <div class="card-macros">${r.macrosPerPortion.calories}kcal | P:${r.macrosPerPortion.protein}g | C:${r.macrosPerPortion.carbs}g | F:${r.macrosPerPortion.fat}g</div>`;
+        <div class="card-content">
+          <div class="card-title">${r.title}</div>
+          <div class="card-macros">
+            ${r.macrosPerPortion.calories} kcal • P:${r.macrosPerPortion.protein}g • C:${r.macrosPerPortion.carbs}g • F:${r.macrosPerPortion.fat}g
+          </div>
+        </div>`;
       grid.appendChild(card);
     });
     container.appendChild(grid);
@@ -342,17 +361,16 @@ function render(data) {
 function openPopup(r) {
   const content = document.getElementById('popup-content');
   const buildMacros = (obj) => `
-    <strong>Calories: ${obj.calories}kcal</strong><br>
-    P: ${obj.protein}g | C: ${obj.carbs}g | F: ${obj.fat}g<br>
-    Sat Fat: ${obj.satFat}g | Sugar: ${obj.sugar}g<br>
-    Fiber: ${obj.fiber}g | Salt: ${obj.salt}g`;
+    <strong>${obj.calories} kcal</strong><br>
+    Protein: ${obj.protein}g<br>Carbs: ${obj.carbs}g<br>Fat: ${obj.fat}g<br>
+    Sugar: ${obj.sugar}g | Fiber: ${obj.fiber}g`;
 
   content.innerHTML = `
     <div class="recipe-detail">
       <h1>${r.title}</h1>
       <div class="macro-grid">
-        <div class="macro-box"><strong>Per Portion</strong><br>${buildMacros(r.macrosPerPortion)}</div>
-        <div class="macro-box"><strong>Full Recipe</strong><br>${buildMacros(r.macros)}</div>
+        <div class="macro-box"><strong>PER PORTION</strong><br>${buildMacros(r.macrosPerPortion)}</div>
+        <div class="macro-box"><strong>WHOLE RECIPE</strong><br>${buildMacros(r.macros)}</div>
       </div>
       <h3>Ingredients</h3><ul>${r.ingredients.map(i => `<li>${i}</li>`).join('')}</ul>
       <h3>Method</h3><ol>${r.instructions.map(s => `<li>${s}</li>`).join('')}</ol>
@@ -361,21 +379,12 @@ function openPopup(r) {
   document.body.style.overflow = 'hidden';
 }
 
-function closePopup() { 
-  document.getElementById('popup').style.display = 'none'; 
-  document.body.style.overflow = 'auto'; 
-}
-
+function closePopup() { document.getElementById('popup').style.display = 'none'; document.body.style.overflow = 'auto'; }
 function search() {
   const q = document.getElementById('searchInput').value.toLowerCase();
-  const filtered = recipes.filter(r => 
-    r.title.toLowerCase().includes(q) || 
-    r.ingredients.some(i => i.toLowerCase().includes(q))
-  );
-  render(filtered);
+  render(recipes.filter(r => r.title.toLowerCase().includes(q) || r.ingredients.some(i => i.toLowerCase().includes(q))));
 }
 
-// Start
 render(recipes);
 </script>
 </body>
