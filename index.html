@@ -5,64 +5,72 @@
 <title>Recipes</title>
 <style>
   body { margin: 0; font-family: -apple-system, sans-serif; background: #000; color: #fff; }
-  .header { text-align: center; padding: 25px 10px 10px; font-size: 20px; font-weight: 600; }
+  .header { text-align: center; padding: 25px 10px 10px; font-size: 22px; font-weight: 700; }
   .search-container { padding: 0 16px 15px; }
-  .search-bar { width: 100%; padding: 12px; border-radius: 6px; border: none; background: #1c1c1e; color: #fff; font-size: 16px; box-sizing: border-box; }
+  .search-bar { width: 100%; padding: 14px; border-radius: 8px; border: none; background: #1c1c1e; color: #fff; font-size: 16px; box-sizing: border-box; }
 
-  .section-title { padding: 25px 16px 10px; font-size: 18px; font-weight: 700; clear: both; }
-  .grid { display: grid; grid-template-columns: 1fr 1fr; gap: 10px; padding: 0 16px 20px; grid-auto-rows: 1fr; }
+  .section-title { padding: 30px 16px 12px; font-size: 20px; font-weight: 800; clear: both; color: #fff; }
+  .grid { display: grid; grid-template-columns: 1fr 1fr; gap: 12px; padding: 0 16px 20px; grid-auto-rows: 1fr; }
   
   .card {
-    background: #1c1c1e; border-radius: 10px; padding: 12px; cursor: pointer;
+    background: #1c1c1e; border-radius: 12px; padding: 10px; cursor: pointer;
     display: flex; flex-direction: column; justify-content: center; align-items: center;
-    aspect-ratio: 3 / 1; text-align: center; position: relative; box-sizing: border-box;
+    /* Adjusted ratio to allow text to breathe while staying slim */
+    aspect-ratio: 2.6 / 1; text-align: center; position: relative; box-sizing: border-box;
   }
 
-  /* Icon Placements */
-  .watermark-icon { position: absolute; top: 8px; left: 8px; font-size: 14px; opacity: 0.15; z-index: 1; }
+  .watermark-icon { position: absolute; top: 8px; left: 8px; font-size: 16px; opacity: 0.15; z-index: 1; }
   .badge-right { position: absolute; top: 8px; right: 8px; z-index: 1; }
   
-  /* Keto Badge - Black circle with White K */
   .keto-circle {
     display: inline-flex; align-items: center; justify-content: center;
-    width: 18px; height: 18px; background: rgba(0,0,0,0.5); border-radius: 50%;
-    color: #ffffff; font-size: 11px; font-weight: 900; opacity: 0.4;
+    width: 20px; height: 20px; background: rgba(0,0,0,0.6); border-radius: 50%;
+    color: #ffffff; font-size: 12px; font-weight: 900; opacity: 0.5;
   }
 
-  .heart-icon { font-size: 12px; opacity: 0.8; }
+  .heart-icon { font-size: 14px; opacity: 0.9; }
 
+  /* Larger title that fills more width */
   .card-title {
-    font-size: 13px; font-weight: 700; margin-top: 5px; margin-bottom: 4px;
-    text-decoration: underline; text-underline-offset: 2px; z-index: 2;
-    width: 85%; overflow: hidden; text-overflow: ellipsis; white-space: nowrap;
+    font-size: 15px; font-weight: 700; margin-top: 8px; margin-bottom: 6px;
+    text-decoration: underline; text-underline-offset: 3px; z-index: 2;
+    width: 90%; line-height: 1.2;
+    display: -webkit-box; -webkit-line-clamp: 2; -webkit-box-orient: vertical; overflow: hidden;
   }
   
-  .card-macros { font-size: 9px; color: #b0b0b0; white-space: nowrap; z-index: 2; width: 100%; }
+  /* Bolder, larger macro text */
+  .card-macros { 
+    font-size: 11px; font-weight: 500; color: #d1d1d6; 
+    white-space: nowrap; z-index: 2; width: 100%; letter-spacing: 0.2px;
+  }
 
   /* Popup Styles */
   .popup { position: fixed; top: 0; left: 0; width: 100%; height: 100%; background: #000; display: none; overflow-y: auto; z-index: 1000; }
-  .popup-inner { padding: 40px 20px; max-width: 600px; margin: 0 auto; }
-  .close-btn { position: fixed; top: 15px; right: 20px; font-size: 30px; cursor: pointer; z-index: 1001; }
+  .popup-inner { padding: 50px 24px; max-width: 600px; margin: 0 auto; }
+  .close-btn { position: fixed; top: 15px; right: 20px; font-size: 34px; cursor: pointer; z-index: 1001; }
   
-  .macro-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 10px; margin-bottom: 20px; }
-  .macro-box { background: #1c1c1e; padding: 12px; border-radius: 8px; font-size: 11px; line-height: 1.5; }
+  .macro-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 12px; margin-bottom: 25px; }
+  .macro-box { background: #1c1c1e; padding: 15px; border-radius: 10px; font-size: 13px; line-height: 1.6; border: 1px solid #2c2c2e; }
   
-  .recipe-detail h3 { border-bottom: 1px solid #333; padding-bottom: 8px; margin-top: 25px; }
-  .recipe-detail li { margin-bottom: 10px; font-size: 15px; color: #ddd; }
+  .recipe-detail h1 { font-size: 26px; margin-bottom: 10px; }
+  .recipe-detail h3 { border-bottom: 1px solid #333; padding-bottom: 10px; margin-top: 30px; font-size: 18px; }
+  .recipe-detail li { margin-bottom: 12px; font-size: 16px; color: #efeff4; line-height: 1.5; }
 </style>
 </head>
 <body>
-<div class="header">Recipes</div>
-<div class="search-container"><input type="text" id="searchInput" class="search-bar" placeholder="Search..." onkeyup="search()"></div>
+<div class="header">My Recipes</div>
+<div class="search-container"><input type="text" id="searchInput" class="search-bar" placeholder="Search recipes..." onkeyup="search()"></div>
 <div id="recipe-list"></div>
 <div id="popup" class="popup"><span class="close-btn" onclick="closePopup()">✕</span><div id="popup-content" class="popup-inner"></div></div>
 
 <script>
 let allRecipes = [];
 async function init() {
-  const res = await fetch('recipes.json');
-  allRecipes = await res.json();
-  render(allRecipes);
+  try {
+    const res = await fetch('recipes.json');
+    allRecipes = await res.json();
+    render(allRecipes);
+  } catch (e) { console.error("Data load failed"); }
 }
 
 function render(data) {
@@ -105,18 +113,18 @@ function openPopup(r) {
   const mp = r.macrosPerPortion;
   const mt = r.macros;
   const buildMacros = (obj) => `
-    Calories: ${obj.calories}kcal<br>
+    <strong>Calories: ${obj.calories}kcal</strong><br>
     P: ${obj.protein}g | C: ${obj.carbs}g | F: ${obj.fat}g<br>
-    Sat Fat: ${obj.satFat || 0}g | Sugar: ${obj.sugar || 0}g<br>
-    Fiber: ${obj.fiber || 0}g | Salt: ${obj.salt || 0}g`;
+    Sat Fat: ${obj.satFat}g | Sugar: ${obj.sugar}g<br>
+    Fiber: ${obj.fiber}g | Salt: ${obj.salt}g`;
 
   content.innerHTML = `
     <div class="recipe-detail">
       <h1 style="text-align:center; text-decoration:underline;">${r.title}</h1>
-      <p style="text-align:center; color:#aaa;">Portions: ${r.portions}</p>
+      <p style="text-align:center; color:#8e8e93; font-weight:600;">Portions: ${r.portions}</p>
       <div class="macro-grid">
-        <div class="macro-box"><strong>Per Portion</strong><br>${buildMacros(mp)}</div>
-        <div class="macro-box"><strong>Full Recipe</strong><br>${buildMacros(mt)}</div>
+        <div class="macro-box"><strong>Per Portion</strong><hr style="border:0; border-top:1px solid #333; margin:8px 0;">${buildMacros(mp)}</div>
+        <div class="macro-box"><strong>Full Recipe</strong><hr style="border:0; border-top:1px solid #333; margin:8px 0;">${buildMacros(mt)}</div>
       </div>
       <h3>Ingredients</h3><ul>${r.ingredients.map(i => `<li>${i}</li>`).join('')}</ul>
       <h3>Method</h3><ol>${r.instructions.map(s => `<li>${s}</li>`).join('')}</ol>
