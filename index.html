@@ -14,9 +14,8 @@ body{
 
 .header{
   text-align:center;
-  padding:20px 10px 10px;
+  padding:20px;
   font-size:24px;
-  font-weight:600;
 }
 
 .search-bar{
@@ -26,15 +25,12 @@ body{
   padding:12px;
   border-radius:12px;
   border:none;
-  outline:none;
-  font-size:16px;
   background:#111;
   color:#fff;
 }
 
 .section-title{
-  padding:10px 16px 0;
-  font-size:18px;
+  padding:10px 16px;
   font-weight:600;
 }
 
@@ -46,25 +42,16 @@ body{
 }
 
 .card{
-  position:relative;
-  background:linear-gradient(145deg,#111,#1a1a1a);
-  border-radius:18px;
-  padding:14px;
-  box-shadow:0 6px 20px rgba(0,0,0,0.6);
+  background:#111;
+  padding:12px;
+  border-radius:12px;
   cursor:pointer;
 }
 
-.card-title{
-  text-align:center;
-  font-size:16px;
-  font-weight:600;
-  margin-bottom:6px;
-}
-
-.macros{
-  text-align:center;
-  font-size:12px;
-  opacity:0.8;
+.error{
+  color:red;
+  padding:20px;
+  white-space:pre-wrap;
 }
 
 .popup{
@@ -75,16 +62,15 @@ body{
   height:100%;
   background:#000;
   display:none;
-  overflow-y:auto;
+  overflow:auto;
   padding:20px;
 }
 
 .close-btn{
   position:fixed;
-  top:15px;
-  right:20px;
+  top:10px;
+  right:15px;
   font-size:24px;
-  cursor:pointer;
 }
 </style>
 </head>
@@ -93,7 +79,7 @@ body{
 
 <div class="header">Recipes</div>
 
-<input type="text" class="search-bar" placeholder="Search recipes..." onkeyup="searchRecipes()">
+<input class="search-bar" placeholder="Search..." onkeyup="searchRecipes()">
 
 <div id="recipes"></div>
 
@@ -104,59 +90,58 @@ body{
 
 <script>
 
-const recipes = [
-  {
-    "title": "Turkey Burgers",
-    "category": "Meals",
-    "ingredients": ["400g turkey mince","1 egg","psyllium husk","soy sauce","spices","burger buns"],
-    "instructions": ["Mix ingredients","Form patties","Cook in air fryer","Serve in buns"],
-    "macrosPerPortion": {"calories":310,"protein":30,"carbs":15,"fat":12}
-  },
-  {
-    "title": "Mediterranean Chicken Bake",
-    "category": "Meals",
-    "ingredients": ["chicken","vegetables","mozzarella","olive oil"],
-    "instructions": ["Add to dish","Bake 25 min","Add cheese","Bake 5 min"],
-    "macrosPerPortion": {"calories":371,"protein":50.5,"carbs":10,"fat":10.5}
-  },
-  {
-    "title": "Veggie Burger",
-    "category": "Meals",
-    "ingredients": ["vegetables","egg","breadcrumbs"],
-    "instructions": ["Cook veg","Mix","Form patties","Bake"],
-    "macrosPerPortion": {"calories":145,"protein":6,"carbs":15,"fat":4}
-  },
-  {
-    "title": "Creamy Chicken and Broccoli Pasta",
-    "category": "Meals",
-    "ingredients": ["chicken","broccoli","pasta","skyr"],
-    "instructions": ["Cook ingredients","Mix together"],
-    "macrosPerPortion": {"calories":450,"protein":45,"carbs":50,"fat":10}
-  },
-  {
-    "title": "Fillet Steak with Potatoes",
-    "category": "Meals",
-    "ingredients": ["steak","potatoes","olive oil"],
-    "instructions": ["Cook potatoes","Cook steak","Rest and serve"],
-    "macrosPerPortion": {"calories":450,"protein":40,"carbs":45,"fat":12.5}
-  },
+let recipes = [];
 
-  {
-    "title": "Heart Healthy Bean Oat Cake",
-    "category": "Heart-Healthy Desserts",
-    "ingredients": ["cannellini beans","oat flour","eggs","cocoa","honey","dark chocolate"],
-    "instructions": ["Blend beans","Mix ingredients","Fold chocolate","Bake at 180°C"],
-    "macrosPerPortion": {"calories":138,"protein":4.4,"carbs":17.5,"fat":4}
-  },
+try {
 
+recipes = [
   {
-    "title": "Banana Cocoa Cake",
-    "category": "Heart-Healthy Desserts",
-    "ingredients": ["bananas","oats","cocoa","eggs"],
-    "instructions": ["Mix","Bake"],
-    "macrosPerPortion": {"calories":150,"protein":5,"carbs":22,"fat":4}
+    title: "Turkey Burgers",
+    category: "Meals",
+    ingredients: ["400g turkey mince","egg"],
+    instructions: ["Mix","Cook"],
+    macrosPerPortion: {calories:310,protein:30,carbs:15,fat:12}
+  },
+  {
+    title: "Mediterranean Chicken Bake",
+    category: "Meals",
+    ingredients: ["chicken","veg"],
+    instructions: ["Bake"],
+    macrosPerPortion: {calories:371,protein:50,carbs:10,fat:10}
+  },
+  {
+    title: "Veggie Burger",
+    category: "Meals",
+    ingredients: ["veg","egg"],
+    instructions: ["Cook"],
+    macrosPerPortion: {calories:145,protein:6,carbs:15,fat:4}
+  },
+  {
+    title: "Creamy Chicken and Broccoli Pasta",
+    category: "Meals",
+    ingredients: ["chicken","broccoli","pasta"],
+    instructions: ["Cook","Mix"],
+    macrosPerPortion: {calories:450,protein:45,carbs:50,fat:10}
+  },
+  {
+    title: "Fillet Steak with Potatoes",
+    category: "Meals",
+    ingredients: ["steak","potatoes"],
+    instructions: ["Cook"],
+    macrosPerPortion: {calories:450,protein:40,carbs:45,fat:12.5}
+  },
+  {
+    title: "Heart Healthy Bean Oat Cake",
+    category: "Heart-Healthy Desserts",
+    ingredients: ["beans","oats","eggs","cocoa"],
+    instructions: ["Blend","Bake"],
+    macrosPerPortion: {calories:138,protein:4.4,carbs:17.5,fat:4}
   }
 ];
+
+} catch (e) {
+  document.body.innerHTML = "<div class='error'>JS ERROR:\n" + e.message + "</div>";
+}
 
 function displayRecipes(data){
 
@@ -181,17 +166,11 @@ function displayRecipes(data){
 
       let card = document.createElement("div");
       card.className = "card";
-
       card.onclick = () => openPopup(r);
 
       card.innerHTML = `
-        <div class="card-title">${r.title}</div>
-        <div class="macros">
-          ${r.macrosPerPortion.calories} kcal • 
-          P ${r.macrosPerPortion.protein}g • 
-          C ${r.macrosPerPortion.carbs}g • 
-          F ${r.macrosPerPortion.fat}g
-        </div>
+        <div>${r.title}</div>
+        <div>${r.macrosPerPortion.calories} kcal</div>
       `;
 
       grid.appendChild(card);
@@ -209,20 +188,10 @@ function openPopup(recipe){
 
   content.innerHTML = `
     <h2>${recipe.title}</h2>
-
     <h3>Ingredients</h3>
     <ul>${recipe.ingredients.map(i => `<li>${i}</li>`).join("")}</ul>
-
     <h3>Instructions</h3>
     <ol>${recipe.instructions.map(i => `<li>${i}</li>`).join("")}</ol>
-
-    <h3>Macros</h3>
-    <p>
-      ${recipe.macrosPerPortion.calories} kcal<br>
-      Protein: ${recipe.macrosPerPortion.protein}g<br>
-      Carbs: ${recipe.macrosPerPortion.carbs}g<br>
-      Fat: ${recipe.macrosPerPortion.fat}g
-    </p>
   `;
 
   popup.style.display = "block";
