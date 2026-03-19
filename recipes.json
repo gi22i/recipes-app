@@ -4,7 +4,13 @@
     "category": "Meals",
     "portions": 4,
     "ingredients": ["500g Turkey mince", "1 Egg", "50g Breadcrumbs", "1 tsp Garlic powder", "Salt & Pepper"],
-    "instructions": ["Combine all ingredients in a bowl.", "Shape into 4 equal patties.", "Cook in a pan for 6 mins per side until internal temp is 75°C."],
+    "instructions": [
+      "In a large bowl, combine turkey mince, egg, breadcrumbs, and spices.",
+      "Shape the mixture into 4 equal-sized patties.",
+      "Heat a non-stick pan over medium heat with a light oil spray.",
+      "Cook patties for 6 minutes per side until golden brown and cooked through.",
+      "Serve on buns with lettuce and tomato."
+    ],
     "macrosPerPortion": { "calories": 310, "protein": 30, "carbs": 15, "fat": 12 },
     "macros": { "calories": 1240, "protein": 120, "carbs": 60, "fat": 48 }
   },
@@ -13,7 +19,12 @@
     "category": "Meals",
     "portions": 2,
     "ingredients": ["2 Chicken breasts", "1 Red pepper", "1 Courgette", "100g Cherry tomatoes", "1 tbsp Olive oil", "Oregano"],
-    "instructions": ["Preheat oven to 200°C.", "Toss veg in oil/oregano in a tray.", "Place chicken on top and bake for 25 mins."],
+    "instructions": [
+      "Preheat oven to 200°C.",
+      "Chop the pepper and courgette into bite-sized chunks.",
+      "Place chicken and vegetables in a baking dish, drizzle with oil and oregano.",
+      "Bake for 25-30 minutes until chicken is cooked and veg is tender."
+    ],
     "macrosPerPortion": { "calories": 371, "protein": 50.5, "carbs": 10, "fat": 10.5 },
     "macros": { "calories": 742, "protein": 101, "carbs": 20, "fat": 21 }
   },
@@ -22,7 +33,12 @@
     "category": "Meals",
     "portions": 4,
     "ingredients": ["400g Chickpeas", "1 Onion", "1 tsp Cumin", "50g Flour"],
-    "instructions": ["Mash chickpeas and mix with diced onion and spices.", "Form 4 patties.", "Pan fry until golden brown."],
+    "instructions": [
+      "Drain and mash the chickpeas in a bowl.",
+      "Stir in finely diced onion, cumin, and flour until combined.",
+      "Form into 4 patties and chill in the fridge for 10 minutes.",
+      "Fry in a pan for 5 minutes per side until crispy."
+    ],
     "macrosPerPortion": { "calories": 145, "protein": 6, "carbs": 15, "fat": 4 },
     "macros": { "calories": 580, "protein": 24, "carbs": 60, "fat": 16 }
   },
@@ -31,7 +47,12 @@
     "category": "Meals",
     "portions": 1,
     "ingredients": ["1 Turkey patty", "1 Tortilla wrap", "Lettuce", "Tomato"],
-    "instructions": ["Cook patty.", "Place in center of wrap with veg.", "Roll tightly and slice."],
+    "instructions": [
+      "Cook the turkey patty as per the burger recipe.",
+      "Place the patty in the center of a large tortilla.",
+      "Add fresh salad and wrap tightly, tucking in the sides.",
+      "Slice in half and serve."
+    ],
     "macrosPerPortion": { "calories": 270, "protein": 30, "carbs": 20, "fat": 12 },
     "macros": { "calories": 270, "protein": 30, "carbs": 20, "fat": 12 }
   },
@@ -40,7 +61,11 @@
     "category": "Meals",
     "portions": 1,
     "ingredients": ["1 Veggie patty", "1 Tortilla wrap", "Spinach"],
-    "instructions": ["Cook veggie patty.", "Place in wrap and roll."],
+    "instructions": [
+      "Cook veggie patty until golden.",
+      "Lay the wrap flat and place the patty and spinach in the middle.",
+      "Roll the wrap firmly and toast in a dry pan for 1 minute to seal."
+    ],
     "macrosPerPortion": { "calories": 115, "protein": 6, "carbs": 17.5, "fat": 4 },
     "macros": { "calories": 115, "protein": 6, "carbs": 17.5, "fat": 4 }
   },
@@ -49,7 +74,12 @@
     "category": "Meals",
     "portions": 2,
     "ingredients": ["150g Pasta", "200g Mushrooms", "100g Spinach", "100ml Light cream"],
-    "instructions": ["Boil pasta.", "Sauté mushrooms and spinach.", "Add cream, simmer, and toss with pasta."],
+    "instructions": [
+      "Boil pasta in salted water until al dente.",
+      "Sauté mushrooms in a pan until browned, then add spinach to wilt.",
+      "Pour in light cream and simmer for 2 minutes.",
+      "Toss the pasta into the sauce and season with black pepper."
+    ],
     "macrosPerPortion": { "calories": 240, "protein": 13, "carbs": 35, "fat": 6 },
     "macros": { "calories": 480, "protein": 26, "carbs": 70, "fat": 12 }
   },
@@ -58,7 +88,12 @@
     "category": "Meals",
     "portions": 1,
     "ingredients": ["200g Fillet steak", "150g Baby potatoes", "Asparagus"],
-    "instructions": ["Boil potatoes.", "Sear steak for 3 mins per side.", "Steam asparagus and serve."],
+    "instructions": [
+      "Boil baby potatoes for 12 minutes until tender.",
+      "Season steak and sear in a hot pan for 3-4 minutes per side.",
+      "Steam asparagus for 3 minutes.",
+      "Rest the steak for 5 minutes before serving with potatoes and veg."
+    ],
     "macrosPerPortion": { "calories": 450, "protein": 40, "carbs": 45, "fat": 12.5 },
     "macros": { "calories": 450, "protein": 40, "carbs": 45, "fat": 12.5 }
   },
@@ -67,7 +102,11 @@
     "category": "Meals",
     "portions": 1,
     "ingredients": ["200g Fillet steak", "150g Mushrooms", "Garlic"],
-    "instructions": ["Pan sear steak.", "Sauté mushrooms in same pan with garlic."],
+    "instructions": [
+      "Sear seasoned steak in a pan to your preferred level of doneness.",
+      "Remove steak to rest. In the same pan, sauté sliced mushrooms with minced garlic.",
+      "Deglaze the pan with a splash of water or stock to make a light sauce."
+    ],
     "macrosPerPortion": { "calories": 410, "protein": 42.5, "carbs": 10, "fat": 20 },
     "macros": { "calories": 410, "protein": 42.5, "carbs": 10, "fat": 20 }
   },
@@ -76,7 +115,12 @@
     "category": "Meals",
     "portions": 2,
     "ingredients": ["200g Chicken", "150g Pasta", "1 Broccoli head", "Light cream cheese"],
-    "instructions": ["Cook chicken and pasta.", "Steam broccoli.", "Mix all with cream cheese."],
+    "instructions": [
+      "Cook pasta and chicken breast chunks.",
+      "Steam broccoli florets until tender-crisp.",
+      "Drain pasta, saving a little water.",
+      "Mix all ingredients with light cream cheese until a creamy sauce forms."
+    ],
     "macrosPerPortion": { "calories": 450, "protein": 45, "carbs": 50, "fat": 10 },
     "macros": { "calories": 900, "protein": 90, "carbs": 100, "fat": 20 }
   },
@@ -85,7 +129,12 @@
     "category": "Bakery",
     "portions": 6,
     "ingredients": ["150g Almond flour", "40g Psyllium husk", "3 Egg whites", "Boiling water"],
-    "instructions": ["Mix dry ingredients.", "Add egg whites and water.", "Bake at 175°C for 50 mins."],
+    "instructions": [
+      "Whisk dry ingredients together.",
+      "Add egg whites and boiling water, stirring until a thick dough forms.",
+      "Shape into 6 buns and place on a lined baking tray.",
+      "Bake at 175°C for 50-60 minutes."
+    ],
     "macrosPerPortion": { "calories": 150, "protein": 7.5, "carbs": 3, "fat": 12 },
     "macros": { "calories": 900, "protein": 45, "carbs": 18, "fat": 72 }
   },
@@ -94,7 +143,11 @@
     "category": "Bakery",
     "portions": 4,
     "ingredients": ["100g Almond flour", "2 Eggs", "100g Greek yogurt"],
-    "instructions": ["Mix and form rolls.", "Bake at 180°C for 20 mins."],
+    "instructions": [
+      "Mix all ingredients into a sticky dough.",
+      "Wet hands and divide into 4 rolls.",
+      "Bake at 180°C for 20-25 minutes until golden and firm."
+    ],
     "macrosPerPortion": { "calories": 133, "protein": 6.6, "carbs": 3, "fat": 10 },
     "macros": { "calories": 532, "protein": 26.4, "carbs": 12, "fat": 40 }
   },
@@ -102,8 +155,13 @@
     "title": "Sandwich Bread",
     "category": "Bakery",
     "portions": 10,
-    "ingredients": ["500g Flour", "Yeast", "Water"],
-    "instructions": ["Knead and rise for 1 hour.", "Bake at 200°C for 30 mins."],
+    "ingredients": ["500g Flour", "7g Yeast", "300ml Warm water"],
+    "instructions": [
+      "Knead flour, yeast, and water for 10 minutes.",
+      "Let rise in a warm place for 1 hour until doubled in size.",
+      "Punch down and place in a loaf tin.",
+      "Bake at 200°C for 30 minutes."
+    ],
     "macrosPerPortion": { "calories": 100, "protein": 3.3, "carbs": 18, "fat": 0.8 },
     "macros": { "calories": 1000, "protein": 33, "carbs": 180, "fat": 8 }
   },
@@ -112,7 +170,12 @@
     "category": "Desserts",
     "portions": 6,
     "ingredients": ["6 slices Bread", "2 Eggs", "300ml Milk", "30g Sultanas"],
-    "instructions": ["Layer bread.", "Pour egg/milk mix over.", "Bake at 180°C for 35 mins."],
+    "instructions": [
+      "Grease a dish and layer bread slices with sultanas.",
+      "Whisk eggs and milk together, then pour over the bread.",
+      "Let soak for 15 minutes.",
+      "Bake at 180°C for 35 minutes until the custard is set."
+    ],
     "macrosPerPortion": { "calories": 200, "protein": 6, "carbs": 25, "fat": 7.5 },
     "macros": { "calories": 1200, "protein": 36, "carbs": 150, "fat": 45 }
   },
@@ -121,7 +184,11 @@
     "category": "Heart-Healthy Desserts",
     "portions": 8,
     "ingredients": ["3 Bananas", "150g Oat flour", "30g Cocoa"],
-    "instructions": ["Mash bananas, mix in dry ingredients.", "Bake at 180°C for 25 mins."],
+    "instructions": [
+      "Mash bananas into a smooth puree.",
+      "Stir in oat flour and cocoa powder.",
+      "Pour into a lined tin and bake at 180°C for 25 minutes."
+    ],
     "macrosPerPortion": { "calories": 150, "protein": 5, "carbs": 22, "fat": 4 },
     "macros": { "calories": 1200, "protein": 40, "carbs": 176, "fat": 32 }
   },
@@ -130,7 +197,11 @@
     "category": "Heart-Healthy Desserts",
     "portions": 8,
     "ingredients": ["4 Bananas", "200g Oats", "40g Cocoa", "50g Choc chips"],
-    "instructions": ["Blend bananas/oats/cocoa.", "Stir in chips.", "Bake at 180°C for 30 mins."],
+    "instructions": [
+      "Blend bananas and oats until smooth.",
+      "Add cocoa and fold in chocolate chips.",
+      "Bake at 180°C for 30 minutes. Let cool before slicing."
+    ],
     "macrosPerPortion": { "calories": 175, "protein": 6, "carbs": 26, "fat": 4 },
     "macros": { "calories": 1400, "protein": 48, "carbs": 208, "fat": 32 }
   },
@@ -139,7 +210,11 @@
     "category": "Heart-Healthy Desserts",
     "portions": 10,
     "ingredients": ["400g Black beans", "3 Eggs", "50g Cocoa"],
-    "instructions": ["Blend all until smooth.", "Bake at 170°C for 40 mins."],
+    "instructions": [
+      "Rinse beans thoroughly and blend with eggs until smooth.",
+      "Whisk in cocoa powder.",
+      "Bake in a square tin at 170°C for 40 minutes."
+    ],
     "macrosPerPortion": { "calories": 160, "protein": 8, "carbs": 16, "fat": 5 },
     "macros": { "calories": 1600, "protein": 80, "carbs": 160, "fat": 50 }
   },
@@ -148,7 +223,11 @@
     "category": "Heart-Healthy Desserts",
     "portions": 6,
     "ingredients": ["500g Greek yogurt", "2 Eggs", "Cornstarch"],
-    "instructions": ["Whisk all, bake at 160°C for 45 mins.", "Chill overnight."],
+    "instructions": [
+      "Mix all ingredients until perfectly smooth.",
+      "Pour into a small lined tin.",
+      "Bake at 160°C for 45 minutes, then chill in the fridge overnight."
+    ],
     "macrosPerPortion": { "calories": 140, "protein": 15, "carbs": 10, "fat": 3 },
     "macros": { "calories": 840, "protein": 90, "carbs": 60, "fat": 18 }
   },
@@ -157,7 +236,11 @@
     "category": "Heart-Healthy Desserts",
     "portions": 12,
     "ingredients": ["2 scoops Protein powder", "1 Avocado", "2 Eggs", "30g Cocoa"],
-    "instructions": ["Mash avocado, mix with eggs and dry ingredients.", "Bake at 180°C for 20 mins."],
+    "instructions": [
+      "Mash avocado until creamy, then mix with eggs.",
+      "Fold in protein powder and cocoa.",
+      "Bake at 180°C for 20 minutes for a fudgy texture."
+    ],
     "macrosPerPortion": { "calories": 150, "protein": 12, "carbs": 15, "fat": 4 },
     "macros": { "calories": 1800, "protein": 144, "carbs": 180, "fat": 48 }
   },
@@ -166,7 +249,11 @@
     "category": "Heart-Healthy Desserts",
     "portions": 8,
     "ingredients": ["2 Apples", "200g Oat bran", "2 Eggs"],
-    "instructions": ["Grate apples and mix with bran/eggs.", "Bake at 180°C for 35 mins."],
+    "instructions": [
+      "Grate the apples and mix with oat bran and beaten eggs.",
+      "Add a dash of cinnamon.",
+      "Bake at 180°C for 35 minutes until golden."
+    ],
     "macrosPerPortion": { "calories": 135, "protein": 5, "carbs": 20, "fat": 3 },
     "macros": { "calories": 1080, "protein": 40, "carbs": 160, "fat": 24 }
   }
