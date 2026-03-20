@@ -25,16 +25,27 @@
       --text-secondary: #aeaeb2;
       --search-bg: #1c1c1e;
       --border-color: #38383a;
+      --keto-bg: #ffffff;
+      --keto-text: #000000;
     }
   }
 
   body { margin: 0; font-family: 'Inter', sans-serif; background: var(--bg-color); color: var(--text-primary); -webkit-font-smoothing: antialiased; }
 
-  .header { text-align: center; padding: 60px 20px 20px; font-size: 56px; font-weight: 800; letter-spacing: -2px; }
-  .search-container { padding: 10px 16px 25px; }
+  .header { text-align: center; padding: 60px 20px 10px; font-size: 56px; font-weight: 800; letter-spacing: -2px; }
+  
+  /* Filter Bar Styling */
+  .filter-container { display: flex; justify-content: center; gap: 20px; padding: 0 16px 20px; }
+  .filter-btn { 
+    display: flex; align-items: center; justify-content: center; 
+    cursor: pointer; transition: opacity 0.2s; border: none; background: none; padding: 5px;
+  }
+  .filter-btn.inactive { opacity: 0.3; }
+
+  .search-container { padding: 0 16px 20px; }
   .search-bar { width: 100%; padding: 16px; border-radius: 14px; border: none; background: var(--search-bg); color: var(--text-primary); font-size: 18px; box-sizing: border-box; outline: none; }
 
-  .section-title { padding: 40px 16px 15px; font-size: 28px; font-weight: 800; text-align: center; }
+  .section-title { padding: 30px 16px 15px; font-size: 28px; font-weight: 800; text-align: center; }
   .grid { display: flex; flex-wrap: wrap; gap: 12px; padding: 0 16px 50px; }
   
   .card {
@@ -66,8 +77,14 @@
 <body>
 
 <div class="header">Recipes</div>
+
+<div class="filter-container">
+  <button class="filter-btn" id="heartFilter" onclick="toggleFilter('Heart')">❤️</button>
+  <button class="filter-btn" id="ketoFilter" onclick="toggleFilter('Keto')"><div class="keto-badge">K</div></button>
+</div>
+
 <div class="search-container">
-  <input type="search" id="searchInput" class="search-bar" placeholder="Search..." onkeyup="search()">
+  <input type="search" id="searchInput" class="search-bar" placeholder="Search ingredients or titles..." onkeyup="runFilters()">
 </div>
 
 <div id="recipe-list"></div>
@@ -79,11 +96,42 @@
 
 <script>
 let allRecipes = [];
+let activeFilter = null;
 
 fetch('recipes.json').then(res => res.json()).then(data => {
   allRecipes = data;
   render(allRecipes);
 });
+
+function toggleFilter(type) {
+  if (activeFilter === type) {
+    activeFilter = null;
+    document.getElementById('heartFilter').classList.remove('inactive');
+    document.getElementById('ketoFilter').classList.remove('inactive');
+  } else {
+    activeFilter = type;
+    document.getElementById('heartFilter').classList.toggle('inactive', type !== 'Heart');
+    document.getElementById('ketoFilter').classList.toggle('inactive', type !== 'Keto');
+  }
+  runFilters();
+}
+
+function runFilters() {
+  const query = document.getElementById('searchInput').value.toLowerCase();
+  let filtered = allRecipes;
+
+  if (activeFilter) {
+    filtered = filtered.filter(r => r.designations?.includes(activeFilter));
+  }
+
+  if (query) {
+    filtered = filtered.filter(r => 
+      r.title.toLowerCase().includes(query) || 
+      r.ingredients.some(i => i.toLowerCase().includes(query))
+    );
+  }
+  render(filtered);
+}
 
 function render(data) {
   const container = document.getElementById('recipe-list');
@@ -151,10 +199,6 @@ function openPopup(r) {
 }
 
 function closePopup() { document.getElementById('popup').style.display = 'none'; document.body.style.overflow = 'auto'; }
-function search() { 
-  const q = document.getElementById('searchInput').value.toLowerCase(); 
-  render(allRecipes.filter(r => r.title.toLowerCase().includes(q))); 
-}
 </script>
 </body>
 </html>
