@@ -4,76 +4,102 @@
     "category": "Meals",
     "designations": ["Heart"],
     "portions": 4,
-    "ingredients": [
-      "200g smoked firm tofu (crumbled)",
-      "100g red lentils (dry)",
-      "1 can chopped tomatoes (400g)",
-      "1 onion (finely chopped)",
-      "2 cloves garlic (minced)",
-      "1 carrot (grated)",
-      "1 tbsp olive oil",
-      "1 tsp smoked paprika",
-      "1 tsp dried oregano",
-      "1/2 tsp black pepper",
-      "300-400ml stock or water",
-      "240g whole grain spaghetti (dry)"
-    ],
-    "instructions": [
-      "Heat olive oil in a pan, cook onion and garlic until soft.",
-      "Add carrot and cook for 3-4 mins.",
-      "Add crumbled smoked tofu and cook until lightly browned.",
-      "Stir in paprika, oregano, and pepper.",
-      "Add lentils, chopped tomatoes, and stock/water.",
-      "Simmer for 20-25 mins until lentils are soft.",
-      "Add water if needed to maintain a thick sauce consistency.",
-      "Serve over cooked whole grain spaghetti."
-    ],
-    "macrosPerPortion": {
-      "calories": 480,
-      "protein": 26,
-      "carbs": 65,
-      "sugar": 5.2,
-      "fat": 11,
-      "satFat": 1.5,
-      "polyFat": 5.0,
-      "monoFat": 4.5
-    },
-    "macros": {
-      "calories": 1920,
-      "protein": 104,
-      "carbs": 260,
-      "sugar": 20.8,
-      "fat": 44,
-      "satFat": 6,
-      "polyFat": 20,
-      "monoFat": 18
-    }
+    "ingredients": ["200g smoked tofu", "100g red lentils", "400g chopped tomatoes", "1 onion", "1 carrot", "1 tbsp olive oil", "240g whole grain spaghetti"],
+    "instructions": ["Sauté veg and tofu.", "Add lentils, tomatoes, and stock.", "Simmer 20 mins.", "Serve over spaghetti."],
+    "macrosPerPortion": { "calories": 480, "protein": 26, "carbs": 65, "sugar": 5.2, "fat": 11, "satFat": 1.5, "polyFat": 5.0, "monoFat": 4.5 },
+    "macros": { "calories": 1920, "protein": 104, "carbs": 260, "sugar": 20.8, "fat": 44, "satFat": 6, "polyFat": 20, "monoFat": 18 }
   },
   {
     "title": "Turkey Burgers",
     "category": "Meals",
     "portions": 4,
-    "ingredients": ["500g Turkey mince", "1 Large egg", "50g Panko breadcrumbs", "1 tsp Garlic powder", "1 tsp Onion powder", "Salt and black pepper"],
-    "instructions": ["Combine turkey, egg, breadcrumbs, and spices.", "Shape into 4 equal patties.", "Cook in a non-stick pan over medium-high heat for 6 mins per side.", "Rest for 2 minutes before serving."],
+    "ingredients": ["500g Turkey mince", "1 Egg", "50g Panko", "Spices"],
+    "instructions": ["Mix ingredients.", "Shape 4 patties.", "Cook 6 mins per side."],
     "macrosPerPortion": { "calories": 310, "protein": 30, "carbs": 15, "sugar": 1.2, "fat": 12, "satFat": 3.5, "polyFat": 3.5, "monoFat": 5.0 },
     "macros": { "calories": 1240, "protein": 120, "carbs": 60, "sugar": 4.8, "fat": 48, "satFat": 14, "polyFat": 14, "monoFat": 20 }
   },
   {
     "title": "Med. Chicken Bake",
     "category": "Meals",
+    "designations": ["Heart"],
     "portions": 2,
-    "ingredients": ["400g Chicken breasts", "1 Red pepper", "1 Courgette", "100g Cherry tomatoes", "1 tbsp Olive oil", "Oregano"],
-    "instructions": ["Preheat oven to 200°C.", "Toss veg and chicken in oil and herbs in a tray.", "Bake for 25-30 mins until chicken is golden."],
+    "ingredients": ["400g Chicken", "Peppers", "Courgette", "Olive oil"],
+    "instructions": ["Toss in oil.", "Bake at 200°C for 25 mins."],
     "macrosPerPortion": { "calories": 371, "protein": 50.5, "carbs": 10, "sugar": 4.5, "fat": 10.5, "satFat": 2.1, "polyFat": 4.0, "monoFat": 4.4 },
     "macros": { "calories": 742, "protein": 101, "carbs": 20, "sugar": 9, "fat": 21, "satFat": 4.2, "polyFat": 8, "monoFat": 8.8 }
+  },
+  {
+    "title": "Veggie Burger",
+    "category": "Meals",
+    "designations": ["Heart"],
+    "portions": 4,
+    "ingredients": ["400g Chickpeas", "Onion", "Cumin", "Flour"],
+    "instructions": ["Mash chickpeas.", "Form 4 patties.", "Fry until golden."],
+    "macrosPerPortion": { "calories": 145, "protein": 6, "carbs": 15, "sugar": 2.0, "fat": 4, "satFat": 0.5, "polyFat": 1.5, "monoFat": 2.0 },
+    "macros": { "calories": 580, "protein": 24, "carbs": 60, "sugar": 8, "fat": 16, "satFat": 2, "polyFat": 6, "monoFat": 8 }
+  },
+  {
+    "title": "Turkey Burger Wrap",
+    "category": "Meals",
+    "portions": 1,
+    "ingredients": ["1 Turkey patty", "1 Tortilla", "Salad"],
+    "instructions": ["Cook patty.", "Wrap with salad."],
+    "macrosPerPortion": { "calories": 270, "protein": 30, "carbs": 20, "sugar": 2.5, "fat": 12, "satFat": 3.8, "polyFat": 3.2, "monoFat": 5.0 },
+    "macros": { "calories": 270, "protein": 30, "carbs": 20, "sugar": 2.5, "fat": 12, "satFat": 3.8, "polyFat": 3.2, "monoFat": 5.0 }
+  },
+  {
+    "title": "Veggie Burger Wrap",
+    "category": "Meals",
+    "designations": ["Heart"],
+    "portions": 1,
+    "ingredients": ["1 Veggie patty", "1 Tortilla", "Spinach"],
+    "instructions": ["Cook patty.", "Wrap with spinach."],
+    "macrosPerPortion": { "calories": 115, "protein": 6, "carbs": 17.5, "sugar": 1.8, "fat": 4, "satFat": 0.6, "polyFat": 1.4, "monoFat": 2.0 },
+    "macros": { "calories": 115, "protein": 6, "carbs": 17.5, "sugar": 1.8, "fat": 4, "satFat": 0.6, "polyFat": 1.4, "monoFat": 2.0 }
+  },
+  {
+    "title": "Mushroom & Spinach Pasta",
+    "category": "Meals",
+    "portions": 2,
+    "ingredients": ["150g Pasta", "Mushrooms", "Spinach", "100ml Light cream"],
+    "instructions": ["Boil pasta.", "Sauté veg.", "Mix with cream."],
+    "macrosPerPortion": { "calories": 240, "protein": 13, "carbs": 35, "sugar": 4.0, "fat": 6, "satFat": 2.5, "polyFat": 1.5, "monoFat": 2.0 },
+    "macros": { "calories": 480, "protein": 26, "carbs": 70, "sugar": 8, "fat": 12, "satFat": 5, "polyFat": 3, "monoFat": 4 }
+  },
+  {
+    "title": "Fillet Steak & Potatoes",
+    "category": "Meals",
+    "portions": 1,
+    "ingredients": ["200g Fillet steak", "150g Potatoes", "Asparagus"],
+    "instructions": ["Sear steak.", "Boil potatoes."],
+    "macrosPerPortion": { "calories": 450, "protein": 40, "carbs": 45, "sugar": 2.0, "fat": 12.5, "satFat": 4.5, "polyFat": 1.0, "monoFat": 7.0 },
+    "macros": { "calories": 450, "protein": 40, "carbs": 45, "sugar": 2, "fat": 12.5, "satFat": 4.5, "polyFat": 1, "monoFat": 7 }
+  },
+  {
+    "title": "Fillet Steak & Mushrooms",
+    "category": "Meals",
+    "portions": 1,
+    "ingredients": ["200g Fillet steak", "150g Mushrooms", "1 tsp Butter"],
+    "instructions": ["Sear steak.", "Sauté mushrooms."],
+    "macrosPerPortion": { "calories": 410, "protein": 42.5, "carbs": 10, "sugar": 2.5, "fat": 20, "satFat": 9.0, "polyFat": 1.5, "monoFat": 9.5 },
+    "macros": { "calories": 410, "protein": 42.5, "carbs": 10, "sugar": 2.5, "fat": 20, "satFat": 9, "polyFat": 1.5, "monoFat": 9.5 }
+  },
+  {
+    "title": "Chicken & Broccoli Pasta",
+    "category": "Meals",
+    "portions": 2,
+    "ingredients": ["200g Chicken", "150g Pasta", "Broccoli", "Light cream cheese"],
+    "instructions": ["Cook all.", "Mix with cheese."],
+    "macrosPerPortion": { "calories": 450, "protein": 45, "carbs": 50, "sugar": 5.0, "fat": 10, "satFat": 4.0, "polyFat": 2.0, "monoFat": 4.0 },
+    "macros": { "calories": 900, "protein": 90, "carbs": 100, "sugar": 10, "fat": 20, "satFat": 8, "polyFat": 4, "monoFat": 8 }
   },
   {
     "title": "Fluffy Keto Buns",
     "category": "Bakery",
     "designations": ["Keto"],
     "portions": 6,
-    "ingredients": ["150g Almond flour", "40g Psyllium husk", "3 Egg whites", "Boiling water"],
-    "instructions": ["Mix dry ingredients.", "Add egg whites and boiling water, whisk.", "Shape 6 buns and bake at 175°C for 50-60 mins."],
+    "ingredients": ["Almond flour", "Psyllium husk", "Egg whites"],
+    "instructions": ["Mix dry.", "Add wet.", "Bake 50 mins."],
     "macrosPerPortion": { "calories": 150, "protein": 7.5, "carbs": 3, "sugar": 0.5, "fat": 12, "satFat": 1.2, "polyFat": 5.8, "monoFat": 5.0 },
     "macros": { "calories": 900, "protein": 45, "carbs": 18, "sugar": 3, "fat": 72, "satFat": 7.2, "polyFat": 34.8, "monoFat": 30 }
   },
@@ -82,27 +108,37 @@
     "category": "Bakery",
     "designations": ["Keto"],
     "portions": 4,
-    "ingredients": ["100g Almond flour", "2 Eggs", "100g Greek yogurt"],
-    "instructions": ["Mix ingredients into dough.", "Divide into 4 rolls.", "Bake at 180°C for 20-25 mins."],
+    "ingredients": ["Almond flour", "Eggs", "Greek yogurt"],
+    "instructions": ["Mix and divide.", "Bake 20 mins."],
     "macrosPerPortion": { "calories": 133, "protein": 6.6, "carbs": 3, "sugar": 1.2, "fat": 10, "satFat": 1.5, "polyFat": 4.5, "monoFat": 4.0 },
     "macros": { "calories": 532, "protein": 26.4, "carbs": 12, "sugar": 4.8, "fat": 40, "satFat": 6, "polyFat": 18, "monoFat": 16 }
+  },
+  {
+    "title": "Sandwich Bread",
+    "category": "Bakery",
+    "designations": ["Heart"],
+    "portions": 10,
+    "ingredients": ["500g Flour", "Yeast", "Water"],
+    "instructions": ["Knead.", "Prove.", "Bake 30 mins."],
+    "macrosPerPortion": { "calories": 100, "protein": 3.3, "carbs": 18, "sugar": 0.5, "fat": 0.8, "satFat": 0.1, "polyFat": 0.4, "monoFat": 0.3 },
+    "macros": { "calories": 1000, "protein": 33, "carbs": 180, "sugar": 5, "fat": 8, "satFat": 1, "polyFat": 4, "monoFat": 3 }
   },
   {
     "title": "Protein Brownies",
     "category": "Desserts",
     "portions": 12,
-    "ingredients": ["2 scoops Protein powder (78% P)", "1 Avocado", "2 Eggs", "30g Cocoa"],
-    "instructions": ["Mash avocado.", "Mix all.", "Bake 180°C for 20 mins."],
-    "macrosPerPortion": { "calories": 150, "protein": 12, "carbs": 4, "sugar": 0.5, "fat": 10, "satFat": 1.5, "polyFat": 4.5, "monoFat": 4.0 },
-    "macros": { "calories": 1800, "protein": 144, "carbs": 48, "sugar": 6, "fat": 120, "satFat": 18, "polyFat": 54, "monoFat": 48 }
+    "ingredients": ["Protein powder", "Avocado", "Eggs", "Cocoa"],
+    "instructions": ["Mash avocado.", "Mix and bake."],
+    "macrosPerPortion": { "calories": 150, "protein": 12, "carbs": 4, "sugar": 0.5, "fat": 10, "satFat": 1.5, "polyFat": 1.5, "monoFat": 7.0 },
+    "macros": { "calories": 1800, "protein": 144, "carbs": 48, "sugar": 6, "fat": 120, "satFat": 18, "polyFat": 18, "monoFat": 84 }
   },
   {
-    "title": "Bread Pudding",
+    "title": "Bread & Butter Pudding",
     "category": "Desserts",
     "portions": 6,
-    "ingredients": ["6 slices Bread", "2 Eggs", "300ml Milk", "30g Sultanas"],
-    "instructions": ["Layer bread and fruit.", "Pour over egg/milk mix.", "Bake at 180°C for 35 mins."],
-    "macrosPerPortion": { "calories": 200, "protein": 6, "carbs": 25, "sugar": 12, "fat": 7.5, "satFat": 3, "polyFat": 2.5, "monoFat": 2.0 },
+    "ingredients": ["Bread", "Eggs", "Milk", "Sultanas"],
+    "instructions": ["Layer bread.", "Pour milk mix.", "Bake 35 mins."],
+    "macrosPerPortion": { "calories": 200, "protein": 6, "carbs": 25, "sugar": 12, "fat": 7.5, "satFat": 3.0, "polyFat": 2.5, "monoFat": 2.0 },
     "macros": { "calories": 1200, "protein": 36, "carbs": 150, "sugar": 72, "fat": 45, "satFat": 18, "polyFat": 15, "monoFat": 12 }
   },
   {
@@ -110,17 +146,17 @@
     "category": "Desserts",
     "designations": ["Heart"],
     "portions": 6,
-    "ingredients": ["500g 0% Greek yogurt", "2 Eggs", "Cornstarch"],
-    "instructions": ["Whisk ingredients until smooth.", "Bake at 160°C for 45 mins.", "Chill overnight."],
-    "macrosPerPortion": { "calories": 140, "protein": 15, "carbs": 10, "sugar": 5, "fat": 3, "satFat": 1.2, "polyFat": 0.8, "monoFat": 1.0 },
+    "ingredients": ["0% Yogurt", "Eggs", "Cornstarch"],
+    "instructions": ["Whisk.", "Bake 45 mins.", "Chill."],
+    "macrosPerPortion": { "calories": 140, "protein": 15, "carbs": 10, "sugar": 5.0, "fat": 3, "satFat": 1.2, "polyFat": 0.8, "monoFat": 1.0 },
     "macros": { "calories": 840, "protein": 90, "carbs": 60, "sugar": 30, "fat": 18, "satFat": 7.2, "polyFat": 4.8, "monoFat": 6 }
   },
   {
-    "title": "Banana Choc Cake",
+    "title": "Banana Choc Oat Cake",
     "category": "Desserts",
     "portions": 8,
-    "ingredients": ["4 Bananas", "200g Oats", "40g Cocoa", "50g Choc chips"],
-    "instructions": ["Blend bananas/oats.", "Stir in cocoa/chips.", "Bake at 180°C for 30 mins."],
+    "ingredients": ["Bananas", "Oats", "Cocoa", "Chips"],
+    "instructions": ["Blend and bake."],
     "macrosPerPortion": { "calories": 175, "protein": 6, "carbs": 26, "sugar": 12, "fat": 4, "satFat": 1.8, "polyFat": 1.0, "monoFat": 1.2 },
     "macros": { "calories": 1400, "protein": 48, "carbs": 208, "sugar": 96, "fat": 32, "satFat": 14.4, "polyFat": 8, "monoFat": 9.6 }
   },
@@ -129,19 +165,29 @@
     "category": "Desserts",
     "designations": ["Heart"],
     "portions": 8,
-    "ingredients": ["3 Bananas", "150g Oat flour", "30g Cocoa"],
-    "instructions": ["Mash bananas, mix with oat flour/cocoa.", "Bake at 180°C for 25 mins."],
+    "ingredients": ["Bananas", "Oat flour", "Cocoa"],
+    "instructions": ["Mash and bake."],
     "macrosPerPortion": { "calories": 150, "protein": 5, "carbs": 22, "sugar": 10, "fat": 4, "satFat": 0.8, "polyFat": 1.2, "monoFat": 2.0 },
-    "macros": { "calories": 1200, "protein": 40, "carbs": 176, "sugar": 80, "fat": 32, "satFat": 6.4, "sugar": 80, "fiber": 32, "polyFat": 9.6, "monoFat": 16 }
+    "macros": { "calories": 1200, "protein": 40, "carbs": 176, "sugar": 80, "fat": 32, "satFat": 6.4, "polyFat": 9.6, "monoFat": 16 }
   },
   {
     "title": "Chocolate Bean Cake",
     "category": "Desserts",
     "designations": ["Heart"],
     "portions": 10,
-    "ingredients": ["400g Black beans", "3 Eggs", "50g Cocoa"],
-    "instructions": ["Blend beans/eggs.", "Whisk in cocoa.", "Bake at 170°C for 40 mins."],
+    "ingredients": ["Black beans", "Eggs", "Cocoa"],
+    "instructions": ["Blend and bake."],
     "macrosPerPortion": { "calories": 160, "protein": 8, "carbs": 16, "sugar": 1.5, "fat": 5, "satFat": 1.1, "polyFat": 1.9, "monoFat": 2.0 },
-    "macros": { "calories": 1600, "protein": 80, "carbs": 160, "sugar": 15, "fat": 50, "satFat": 11, "fiber": 60, "polyFat": 19, "monoFat": 20 }
+    "macros": { "calories": 1600, "protein": 80, "carbs": 160, "sugar": 15, "fat": 50, "satFat": 11, "polyFat": 19, "monoFat": 20 }
+  },
+  {
+    "title": "Apple Cinnamon Cake",
+    "category": "Desserts",
+    "designations": ["Heart"],
+    "portions": 8,
+    "ingredients": ["Apples", "Oat bran", "Eggs"],
+    "instructions": ["Grate and bake."],
+    "macrosPerPortion": { "calories": 135, "protein": 5, "carbs": 20, "sugar": 8, "fat": 3, "satFat": 0.6, "polyFat": 1.4, "monoFat": 1.0 },
+    "macros": { "calories": 1080, "protein": 40, "carbs": 160, "sugar": 64, "fat": 24, "satFat": 4.8, "polyFat": 11.2, "monoFat": 8 }
   }
 ]
