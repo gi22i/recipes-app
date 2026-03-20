@@ -141,14 +141,16 @@
 </div>
 
 <script>
-// Recipe data includes protein powder stats
-const recipes = [
-  { "title": "Turkey Burgers", "category": "Meals", "macrosPerPortion": { "calories": 310, "protein": 30, "carbs": 15, "fat": 12 }, "ingredients": ["500g Turkey mince", "1 Large egg", "50g Panko breadcrumbs", "Garlic & Onion powder"], "instructions": ["Mix ingredients.", "Shape 4 patties.", "Cook 6 mins per side."] },
-  { "title": "Med. Chicken Bake", "category": "Meals", "macrosPerPortion": { "calories": 371, "protein": 50.5, "carbs": 10, "fat": 10.5 }, "ingredients": ["400g Chicken", "Peppers", "Courgette", "Olive oil"], "instructions": ["Preheat to 200°C.", "Toss veg/chicken in oil.", "Bake 25 mins."] },
-  { "title": "Veggie Burger", "category": "Meals", "macrosPerPortion": { "calories": 145, "protein": 6, "carbs": 15, "fat": 4 }, "ingredients": ["Chickpeas", "Onion", "Cumin", "Flour"], "instructions": ["Mash chickpeas.", "Form patties.", "Fry until golden."] },
-  { "title": "Fluffy Keto Buns", "category": "Keto", "macrosPerPortion": { "calories": 150, "protein": 7.5, "carbs": 3, "fat": 12 }, "ingredients": ["Almond flour", "Psyllium husk", "Egg whites", "Boiling water"], "instructions": ["Mix dry.", "Add wet.", "Bake 175°C for 50 mins."] },
-  { "title": "Protein Brownies", "category": "Keto", "macrosPerPortion": { "calories": 150, "protein": 12, "carbs": 4, "fat": 10 }, "ingredients": ["2 scoops Protein powder (78% P)", "1 Avocado", "2 Eggs", "30g Cocoa"], "instructions": ["Mash avocado.", "Mix all.", "Bake 180°C for 20 mins."] }
-];
+let allRecipes = [];
+
+// Fetch recipes from the JSON file
+fetch('recipes.json')
+  .then(response => response.json())
+  .then(data => {
+    allRecipes = data;
+    render(allRecipes);
+  })
+  .catch(error => console.error("Error loading recipes:", error));
 
 function render(data) {
   const container = document.getElementById('recipe-list');
@@ -177,15 +179,38 @@ function render(data) {
 }
 
 function openPopup(r) {
-  document.getElementById('popup-content').innerHTML = `<div class="recipe-detail"><h1>${r.title}</h1><div class="macro-box"><strong>PER PORTION</strong><br>${r.macrosPerPortion.calories} kcal<br>P: ${r.macrosPerPortion.protein}g | C: ${r.macrosPerPortion.carbs}g | F: ${r.macrosPerPortion.fat}g</div><h3>Ingredients</h3><ul>${r.ingredients.map(i => `<li>${i}</li>`).join('')}</ul><h3>Method</h3><ol>${r.instructions.map(s => `<li>${s}</li>`).join('')}</ol></div>`;
+  // Dynamically add fiber and sugar if they exist in the JSON
+  let extraMacros = '';
+  if (r.macrosPerPortion.fiber !== undefined) extraMacros += ` | Fiber: ${r.macrosPerPortion.fiber}g`;
+  if (r.macrosPerPortion.sugar !== undefined) extraMacros += ` | Sugar: ${r.macrosPerPortion.sugar}g`;
+
+  document.getElementById('popup-content').innerHTML = `
+    <div class="recipe-detail">
+      <h1>${r.title}</h1>
+      <div class="macro-box">
+        <strong>PER PORTION</strong><br>
+        ${r.macrosPerPortion.calories} kcal<br>
+        P: ${r.macrosPerPortion.protein}g | C: ${r.macrosPerPortion.carbs}g | F: ${r.macrosPerPortion.fat}g${extraMacros}
+      </div>
+      <h3>Ingredients</h3>
+      <ul>${r.ingredients.map(i => `<li>${i}</li>`).join('')}</ul>
+      <h3>Method</h3>
+      <ol>${r.instructions.map(s => `<li>${s}</li>`).join('')}</ol>
+    </div>`;
+  
   document.getElementById('popup').style.display = 'block';
   document.body.style.overflow = 'hidden';
 }
 
-function closePopup() { document.getElementById('popup').style.display = 'none'; document.body.style.overflow = 'auto'; }
-function search() { const q = document.getElementById('searchInput').value.toLowerCase(); render(recipes.filter(r => r.title.toLowerCase().includes(q))); }
+function closePopup() { 
+  document.getElementById('popup').style.display = 'none'; 
+  document.body.style.overflow = 'auto'; 
+}
 
-render(recipes);
+function search() { 
+  const q = document.getElementById('searchInput').value.toLowerCase(); 
+  render(allRecipes.filter(r => r.title.toLowerCase().includes(q))); 
+}
 </script>
 </body>
 </html>
