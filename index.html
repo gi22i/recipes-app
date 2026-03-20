@@ -3,8 +3,6 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=0">
-<meta name="apple-mobile-web-app-capable" content="yes">
-<meta name="apple-mobile-web-app-status-bar-style" content="default">
 <title>Recipes</title>
 <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;700;800&display=swap" rel="stylesheet">
 <style>
@@ -15,7 +13,8 @@
     --text-secondary: #6c6c70;
     --search-bg: #e3e3e8;
     --border-color: #d1d1d6;
-    --circle-bg: rgba(0, 0, 0, 0.05);
+    --keto-bg: #000000;
+    --keto-text: #ffffff;
   }
 
   @media (prefers-color-scheme: dark) {
@@ -26,104 +25,42 @@
       --text-secondary: #aeaeb2;
       --search-bg: #1c1c1e;
       --border-color: #38383a;
-      --circle-bg: rgba(255, 255, 255, 0.1);
     }
   }
 
-  body { 
-    margin: 0; 
-    font-family: 'Inter', -apple-system, sans-serif; 
-    background: var(--bg-color); 
-    color: var(--text-primary); 
-    -webkit-font-smoothing: antialiased;
-  }
+  body { margin: 0; font-family: 'Inter', sans-serif; background: var(--bg-color); color: var(--text-primary); -webkit-font-smoothing: antialiased; }
 
-  /* INCREASED MAIN HEADER */
-  .header { 
-    text-align: center; 
-    padding: 50px 20px 15px; 
-    font-size: 48px; 
-    font-weight: 800; 
-    letter-spacing: -2px;
-  }
-
+  .header { text-align: center; padding: 60px 20px 20px; font-size: 56px; font-weight: 800; letter-spacing: -2px; }
   .search-container { padding: 10px 16px 25px; }
-  .search-bar { 
-    width: 100%; padding: 16px; border-radius: 14px; border: none; 
-    background: var(--search-bg); color: var(--text-primary); font-size: 18px; box-sizing: border-box; 
-    outline: none;
-  }
+  .search-bar { width: 100%; padding: 16px; border-radius: 14px; border: none; background: var(--search-bg); color: var(--text-primary); font-size: 18px; box-sizing: border-box; outline: none; }
 
-  /* INCREASED CATEGORY TITLES */
-  .section-title { 
-    padding: 35px 16px 15px; 
-    font-size: 26px; 
-    font-weight: 800; 
-    text-align: center; 
-    letter-spacing: -0.5px;
-  }
-  
+  .section-title { padding: 40px 16px 15px; font-size: 28px; font-weight: 800; text-align: center; }
   .grid { display: flex; flex-wrap: wrap; gap: 12px; padding: 0 16px 50px; }
   
   .card {
-    background: var(--card-bg); 
-    border-radius: 18px; 
-    display: grid;
-    place-items: center;
-    text-align: center;
-    width: calc(50% - 6px); 
-    height: 110px; /* Increased height for bigger text */
-    position: relative; 
-    box-sizing: border-box;
-    padding: 12px;
+    background: var(--card-bg); border-radius: 18px; width: calc(50% - 6px); 
+    height: 125px; position: relative; box-sizing: border-box; padding: 15px;
+    display: flex; flex-direction: column; justify-content: center; align-items: center; text-align: center;
   }
 
-  .card-content {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    width: 100%;
+  .card-title { font-size: 17px; font-weight: 700; margin-bottom: 6px; text-decoration: underline; text-underline-offset: 3px; line-height: 1.2; }
+  .card-macros { font-size: 11px; font-weight: 700; color: var(--text-secondary); text-transform: uppercase; line-height: 1.4; }
+
+  .badge-right { position: absolute; top: 12px; right: 12px; }
+  .keto-badge {
+    background: var(--keto-bg); color: var(--keto-text); width: 22px; height: 22px; 
+    border-radius: 50%; display: flex; align-items: center; justify-content: center; font-size: 12px; font-weight: 800;
   }
 
-  /* BIGGER CARD TITLES */
-  .card-title {
-    font-size: 18px; 
-    font-weight: 700; 
-    margin-bottom: 8px;
-    text-decoration: underline; 
-    text-underline-offset: 4px; 
-    width: 100%; 
-    line-height: 1.2; 
-    white-space: nowrap; 
-    overflow: hidden; 
-    text-overflow: ellipsis;
-  }
-  
-  /* BIGGER MACRO TEXT */
-  .card-macros { 
-    font-size: 12px; 
-    font-weight: 700; 
-    color: var(--text-secondary); 
-    text-transform: uppercase;
-    letter-spacing: 0.5px;
-  }
-
-  .badge-right { position: absolute; top: 12px; right: 12px; font-size: 14px; }
-  .keto-circle {
-    display: inline-flex; align-items: center; justify-content: center;
-    width: 22px; height: 22px; background: var(--circle-bg); border-radius: 50%;
-    color: var(--text-primary); font-size: 11px; font-weight: 800;
-  }
-
-  /* BIGGER POPUP TEXT */
   .popup-inner { padding: 60px 24px; max-width: 600px; margin: 0 auto; }
-  .close-btn { position: fixed; top: 25px; right: 25px; font-size: 20px; font-weight: 800; cursor: pointer; background: var(--search-bg); padding: 8px 15px; border-radius: 20px; z-index: 1001; }
+  .close-btn { position: fixed; top: 25px; right: 25px; font-size: 18px; font-weight: 800; cursor: pointer; background: var(--search-bg); padding: 10px 20px; border-radius: 25px; z-index: 1001; }
   
-  .recipe-detail h1 { font-size: 38px; font-weight: 800; text-align: center; margin-bottom: 30px; letter-spacing: -1.5px; }
-  .recipe-detail h3 { border-bottom: 3px solid var(--border-color); padding-bottom: 10px; margin-top: 40px; font-size: 24px; font-weight: 800; }
-  .recipe-detail li { margin-bottom: 16px; font-size: 18px; line-height: 1.6; color: var(--text-secondary); }
+  .macro-container { display: flex; gap: 12px; margin-bottom: 25px; }
+  .macro-box { flex: 1; background: var(--card-bg); padding: 18px; border-radius: 18px; font-size: 14px; line-height: 1.6; font-weight: 600; }
   
-  .macro-box { background: var(--card-bg); padding: 20px; border-radius: 18px; font-size: 15px; line-height: 1.6; font-weight: 600; }
+  .recipe-detail h1 { font-size: 38px; font-weight: 800; text-align: center; margin-bottom: 20px; }
+  .recipe-detail h3 { border-bottom: 3px solid var(--border-color); padding-bottom: 10px; margin-top: 30px; font-size: 22px; font-weight: 800; }
+  .recipe-detail ul, .recipe-detail ol { padding-left: 20px; color: var(--text-secondary); font-size: 18px; line-height: 1.6; }
 </style>
 </head>
 <body>
@@ -135,7 +72,7 @@
 
 <div id="recipe-list"></div>
 
-<div id="popup" class="popup" style="position: fixed; top: 0; left: 0; width: 100%; height: 100%; background: var(--bg-color); display: none; overflow-y: auto; z-index: 1000;">
+<div id="popup" style="position: fixed; top: 0; left: 0; width: 100%; height: 100%; background: var(--bg-color); display: none; overflow-y: auto; z-index: 1000;">
   <span class="close-btn" onclick="closePopup()">DONE</span>
   <div id="popup-content" class="popup-inner"></div>
 </div>
@@ -143,35 +80,43 @@
 <script>
 let allRecipes = [];
 
-// Fetch recipes from the JSON file
-fetch('recipes.json')
-  .then(response => response.json())
-  .then(data => {
-    allRecipes = data;
-    render(allRecipes);
-  })
-  .catch(error => console.error("Error loading recipes:", error));
+fetch('recipes.json').then(res => res.json()).then(data => {
+  allRecipes = data;
+  render(allRecipes);
+});
 
 function render(data) {
   const container = document.getElementById('recipe-list');
   container.innerHTML = '';
-  const order = ["Meals", "Keto", "Bakery", "Desserts", "Heart-Healthy Desserts"];
+  const order = ["Meals", "Bakery", "Desserts"];
 
   order.forEach(cat => {
     const filtered = data.filter(r => r.category === cat);
     if (filtered.length === 0) return;
+
     const title = document.createElement('div');
     title.className = 'section-title';
     title.innerText = cat;
     container.appendChild(title);
+
     const grid = document.createElement('div');
     grid.className = 'grid';
     filtered.forEach(r => {
       const card = document.createElement('div');
       card.className = 'card';
       card.onclick = () => openPopup(r);
-      let badge = cat === "Keto" ? '<div class="keto-circle">K</div>' : (cat.includes("Heart") ? '❤️' : '');
-      card.innerHTML = `<div class="badge-right">${badge}</div><div class="card-content"><div class="card-title">${r.title}</div><div class="card-macros">${r.macrosPerPortion.calories} KCAL • P:${r.macrosPerPortion.protein}G</div></div>`;
+      
+      let badge = '';
+      if (r.designations?.includes("Keto")) badge = '<div class="keto-badge">K</div>';
+      else if (r.designations?.includes("Heart")) badge = '❤️';
+
+      card.innerHTML = `
+        <div class="badge-right">${badge}</div>
+        <div class="card-title">${r.title}</div>
+        <div class="card-macros">
+          ${r.macrosPerPortion.calories} KCAL • P: ${r.macrosPerPortion.protein}G<br>
+          F: ${r.macrosPerPortion.fat}G • SAT: ${r.macrosPerPortion.satFat}G
+        </div>`;
       grid.appendChild(card);
     });
     container.appendChild(grid);
@@ -179,34 +124,33 @@ function render(data) {
 }
 
 function openPopup(r) {
-  // Dynamically add fiber and sugar if they exist in the JSON
-  let extraMacros = '';
-  if (r.macrosPerPortion.fiber !== undefined) extraMacros += ` | Fiber: ${r.macrosPerPortion.fiber}g`;
-  if (r.macrosPerPortion.sugar !== undefined) extraMacros += ` | Sugar: ${r.macrosPerPortion.sugar}g`;
+  const formatBox = (m, label) => `
+    <div class="macro-box">
+      <strong style="text-decoration: underline;">${label}</strong><br>
+      ${m.calories} kcal<br>
+      P: ${m.protein}g<br>
+      C: ${m.carbs}g (Sugar: ${m.sugar}g)<br>
+      F: ${m.fat}g (Sat: ${m.satFat}g)<br>
+      <small>Poly: ${m.polyFat}g | Mono: ${m.monoFat}g</small>
+    </div>`;
 
   document.getElementById('popup-content').innerHTML = `
     <div class="recipe-detail">
       <h1>${r.title}</h1>
-      <div class="macro-box">
-        <strong>PER PORTION</strong><br>
-        ${r.macrosPerPortion.calories} kcal<br>
-        P: ${r.macrosPerPortion.protein}g | C: ${r.macrosPerPortion.carbs}g | F: ${r.macrosPerPortion.fat}g${extraMacros}
+      <div class="macro-container">
+        ${formatBox(r.macrosPerPortion, "PER PORTION")}
+        ${formatBox(r.macros, `TOTAL (${r.portions})`)}
       </div>
       <h3>Ingredients</h3>
       <ul>${r.ingredients.map(i => `<li>${i}</li>`).join('')}</ul>
       <h3>Method</h3>
       <ol>${r.instructions.map(s => `<li>${s}</li>`).join('')}</ol>
     </div>`;
-  
   document.getElementById('popup').style.display = 'block';
   document.body.style.overflow = 'hidden';
 }
 
-function closePopup() { 
-  document.getElementById('popup').style.display = 'none'; 
-  document.body.style.overflow = 'auto'; 
-}
-
+function closePopup() { document.getElementById('popup').style.display = 'none'; document.body.style.overflow = 'auto'; }
 function search() { 
   const q = document.getElementById('searchInput').value.toLowerCase(); 
   render(allRecipes.filter(r => r.title.toLowerCase().includes(q))); 
