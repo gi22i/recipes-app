@@ -132,48 +132,6 @@
     "macrosPerPortion": { "calories": 150, "protein": 12, "carbs": 4, "sugar": 0.5, "fat": 10, "satFat": 1.5, "polyFat": 1.5, "monoFat": 7.0 },
     "macros": { "calories": 1800, "protein": 144, "carbs": 48, "sugar": 6, "fat": 120, "satFat": 18, "polyFat": 18, "monoFat": 84 }
   },
-    {
-    "title": "Brookie Baked Oats",
-    "category": "Desserts",
-    "designations": ["Heart"],
-    "portions": 1,
-    "ingredients": [
-      "50g Oat flour",
-      "60g Natural yogurt",
-      "100ml 0.5% UHT milk",
-      "10g Cocoa powder",
-      "1/2 tsp Baking powder",
-      "5g Dark chocolate",
-      "5g White chocolate"
-    ],
-    "instructions": [
-      "Preheat oven to 180°C.",
-      "Mix oat flour, yogurt, baking powder, and milk into a batter.",
-      "Divide batter; mix cocoa powder into one half.",
-      "Pour vanilla and chocolate batters side-by-side into a ramekin.",
-      "Place chocolate pieces in the center and cover with batter.",
-      "Bake for 25-30 minutes until set."
-    ],
-    "macrosPerPortion": {
-      "calories": 378,
-      "protein": 18.5,
-      "carbs": 52.0,
-      "sugar": 13.5,
-      "fat": 8.5,
-      "satFat": 4.4,
-      "polyFat": 1.8,
-      "monoFat": 2.5
-    },
-    "macros": {
-      "calories": 378,
-      "protein": 18.5,
-      "carbs": 52.0,
-      "sugar": 13.5,
-      "fat": 8.5,
-      "satFat": 4.4,
-      "polyFat": 1.8,
-      "monoFat": 2.5
-    },
   {
     "title": "Bread & Butter Pudding",
     "category": "Desserts",
@@ -231,5 +189,48 @@
     "instructions": ["Grate and bake."],
     "macrosPerPortion": { "calories": 135, "protein": 5, "carbs": 20, "sugar": 8, "fat": 3, "satFat": 0.6, "polyFat": 1.4, "monoFat": 1.0 },
     "macros": { "calories": 1080, "protein": 40, "carbs": 160, "sugar": 64, "fat": 24, "satFat": 4.8, "polyFat": 11.2, "monoFat": 8 }
+  },
+  {
+    "title": "Brookie Baked Oats",
+    "category": "Desserts",
+    "designations": ["Heart"],
+    "portions": 1,
+    "ingredients": [
+      "50g Oat flour",
+      "60g Natural yogurt",
+      "100ml 0.5% UHT milk",
+      "10g Cocoa powder",
+      "1/2 tsp Baking powder",
+      "5g Dark chocolate",
+      "5g White chocolate"
+    ],
+    "instructions": [
+      "Preheat oven to 180°C.",
+      "Mix oat flour, yogurt, baking powder, and milk into a batter.",
+      "Divide batter; mix cocoa powder into one half.",
+      "Pour vanilla and chocolate batters side-by-side into a ramekin.",
+      "Place chocolate pieces in the center and cover with batter.",
+      "Bake for 25-30 minutes until set."
+    ],
+    "macrosPerPortion": { 
+      "calories": 378, 
+      "protein": 18.5, 
+      "carbs": 52.0, 
+      "sugar": 13.5, 
+      "fat": 8.5, 
+      "satFat": 4.4, 
+      "polyFat": 1.8, 
+      "monoFat": 2.5 
+    },
+    "macros": { 
+      "calories": 378, 
+      "protein": 18.5, 
+      "carbs": 52.0, 
+      "sugar": 13.5, 
+      "fat": 8.5, 
+      "satFat": 4.4, 
+      "polyFat": 1.8, 
+      "monoFat": 2.5 
+    }
   }
 ]
