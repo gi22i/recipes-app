@@ -1,5 +1,126 @@
 [
   {
+    "title": "Oats Yogurt Fruit Bowl",
+    "category": "Breakfasts",
+    "designations": ["Heart"],
+    "portions": 2,
+    "ingredients": [
+      "100g oats",
+      "300g skyr or natural yogurt",
+      "1 apple or banana (chopped)",
+      "10g honey (optional)"
+    ],
+    "instructions": [
+      "Divide the oats evenly into two serving bowls.",
+      "Add 150g of yogurt to each bowl and stir slightly.",
+      "Chop your chosen fruit and layer it evenly across both servings.",
+      "Drizzle with honey if desired and serve immediately."
+    ],
+    "macrosPerPortion": {
+      "calories": 290,
+      "protein": 16,
+      "carbs": 44,
+      "sugar": 12,
+      "fiber": 6,
+      "fat": 5,
+      "satFat": 0.8,
+      "polyFat": 1.2,
+      "monoFat": 2.0
+    },
+    "macros": {
+      "calories": 580,
+      "protein": 32,
+      "carbs": 88,
+      "sugar": 24,
+      "fiber": 12,
+      "fat": 10,
+      "satFat": 1.6,
+      "polyFat": 2.4,
+      "monoFat": 4.0
+    }
+  },
+  {
+    "title": "Scrambled Eggs with Toast",
+    "category": "Breakfasts",
+    "designations": [],
+    "portions": 2,
+    "ingredients": [
+      "4 large eggs",
+      "30ml skimmed milk",
+      "1 tbsp butter or olive oil",
+      "2 slices whole grain bread",
+      "Salt and pepper"
+    ],
+    "instructions": [
+      "Whisk the eggs in a bowl with the milk, salt, and pepper until combined.",
+      "Heat butter or oil in a non-stick pan over low-medium heat.",
+      "Pour in the egg mixture and cook gently, stirring constantly for a creamy texture.",
+      "Toast the bread until golden and serve the eggs immediately on top."
+    ],
+    "macrosPerPortion": {
+      "calories": 260,
+      "protein": 16,
+      "carbs": 17,
+      "sugar": 1.5,
+      "fiber": 3,
+      "fat": 15,
+      "satFat": 5.5,
+      "polyFat": 2.5,
+      "monoFat": 6.0
+    },
+    "macros": {
+      "calories": 520,
+      "protein": 32,
+      "carbs": 34,
+      "sugar": 3,
+      "fiber": 6,
+      "fat": 30,
+      "satFat": 11,
+      "polyFat": 5,
+      "monoFat": 12
+    }
+  },
+  {
+    "title": "Yogurt Oats Bowl",
+    "category": "Breakfasts",
+    "designations": ["Heart"],
+    "portions": 2,
+    "ingredients": [
+      "300g skyr or natural yogurt",
+      "80g oats",
+      "1 banana or apple",
+      "20g peanut butter"
+    ],
+    "instructions": [
+      "Divide the yogurt evenly between two bowls.",
+      "Stir 40g of oats into each portion of yogurt.",
+      "Slice your fruit and arrange it on top of the mixture.",
+      "Add a dollop of peanut butter to each bowl and mix before eating."
+    ],
+    "macrosPerPortion": {
+      "calories": 325,
+      "protein": 19,
+      "carbs": 42,
+      "sugar": 10,
+      "fiber": 5.5,
+      "fat": 10,
+      "satFat": 1.5,
+      "polyFat": 3.0,
+      "monoFat": 4.5
+    },
+    "macros": {
+      "calories": 650,
+      "protein": 38,
+      "carbs": 85,
+      "sugar": 20,
+      "fiber": 11,
+      "fat": 20,
+      "satFat": 3,
+      "polyFat": 6,
+      "monoFat": 9
+    }
+  },
+  {
     "title": "Smoky Tofu & Lentil Bolognese",
     "category": "Meals",
     "designations": ["Heart"],
