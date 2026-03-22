@@ -40,34 +40,34 @@
     flex-direction: column;
     align-items: center;
     padding-top: 40px;
-    overflow: hidden; /* Keeps icons from causing scrollbars */
+    overflow: hidden;
   }
 
-  /* Large Background Icons */
+  /* Large Background Icons - Adjusted for Center Alignment */
   .header-wrapper::before,
   .header-wrapper::after {
     content: "";
     position: absolute;
-    top: 20px; /* Slight buffer from the very top */
-    bottom: 20px; /* Ends just above the search bar area */
-    width: 25%; /* Occupies a large portion of the side space */
-    max-width: 120px; /* Prevents them from getting too massive on tablets */
+    top: 15px; 
+    bottom: 15px; 
+    width: 30%; /* Increased width for larger scale */
+    max-width: 150px; 
     background-size: contain;
     background-repeat: no-repeat;
     background-position: center;
     z-index: 1;
-    pointer-events: none; /* Allows clicking through icons to buttons if they overlap */
+    pointer-events: none;
   }
 
-  /* Left Side (Cookbook) */
+  /* Left Side (Cookbook) - Moved further from edge */
   .header-wrapper::before {
-    left: 15px; /* Slight buffer from the left edge */
+    left: 10%; /* Percentage-based positioning moves it toward center */
     background-image: url('left_icon.png');
   }
 
-  /* Right Side (Whisk) */
+  /* Right Side (Whisk) - Moved further from edge */
   .header-wrapper::after {
-    right: 15px; /* Slight buffer from the right edge */
+    right: 10%; /* Percentage-based positioning moves it toward center */
     background-image: url('right_icon.png');
   }
 
@@ -78,12 +78,12 @@
     }
   }
 
-  /* Central Content (Title & Filters) */
+  /* Central Content */
   .header-content {
     position: relative;
     z-index: 2;
     text-align: center;
-    max-width: 180px; /* Forces the text/icons to stay centered and narrow */
+    max-width: 220px; /* Slightly wider to balance larger icons */
   }
 
   .header-title {
