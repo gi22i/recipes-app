@@ -32,59 +32,50 @@
 
   body { margin: 0; font-family: 'Inter', sans-serif; background: var(--bg-color); color: var(--text-primary); -webkit-font-smoothing: antialiased; }
 
-  /* --- UPDATED HEADER WITH SPACE-FILLING ICONS --- */
+  /* --- UPDATED HEADER WITH ICONS --- */
   .header { 
     display: flex;
+    align-items: center;
     justify-content: center;
+    gap: 20px; 
     padding: 60px 20px 10px; 
     font-family: 'Playfair Display', serif;
     font-size: 56px; 
     font-weight: 800; 
     letter-spacing: -1px;
-    line-height: 1.2;
+    text-align: center;
   }
 
-  .header span {
-    position: relative;
-    display: inline-flex;
-    align-items: center;
-    padding: 0 80px; /* This creates the horizontal space for your icons */
-  }
-
-  /* Shared styles for the left and right icons */
-  .header span::before,
-  .header span::after {
+  /* Icons are attached to the header container */
+  .header::before,
+  .header::after {
     content: "";
-    position: absolute;
-    top: 0;
-    bottom: 0;
-    width: 70px; /* Adjust this to change how wide the icons are */
+    display: inline-block;
+    width: 60px;  
+    height: 60px; 
     background-size: contain;
     background-repeat: no-repeat;
     background-position: center;
   }
 
   /* Left Icon - Cookbook */
-  .header span::before {
-    left: 0;
+  .header::before {
     background-image: url('left_icon.png');
   }
 
   /* Right Icon - Whisk */
-  .header span::after {
-    right: 0;
+  .header::after {
     background-image: url('right_icon.png');
   }
 
-  /* Ensures icons flip to white in dark mode */
+  /* Dark Mode Inversion */
   @media (prefers-color-scheme: dark) {
-    .header span::before,
-    .header span::after {
+    .header::before,
+    .header::after {
       filter: invert(1);
     }
   }
-  
-  /* --- REST OF YOUR ORIGINAL STYLES --- */
+
   .filter-container { display: flex; justify-content: center; gap: 25px; padding: 10px 16px 30px; }
   .filter-btn { cursor: pointer; transition: transform 0.2s, opacity 0.2s; border: none; background: none; padding: 0; }
   .filter-btn:active { transform: scale(0.95); }
@@ -129,9 +120,7 @@
 </head>
 <body>
 
-<div class="header">
-  <span>Recipes</span>
-</div>
+<div class="header">Recipes</div>
 
 <div class="filter-container">
   <button class="filter-btn" id="heartFilter" onclick="toggleFilter('Heart')">
