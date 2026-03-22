@@ -44,7 +44,7 @@
     overflow: hidden;
   }
 
-  /* Large Background Icons with increased transparency */
+  /* Icons reverted to original transparency (1.0) */
   .header-wrapper::before,
   .header-wrapper::after {
     content: "";
@@ -57,7 +57,7 @@
     background-repeat: no-repeat;
     background-position: center;
     z-index: 1;
-    opacity: 0.15; /* Subtler background effect */
+    opacity: 1.0; 
     pointer-events: none;
   }
 
@@ -122,11 +122,11 @@
 
   /* --- GRID & TITLES --- */
   .section-title { 
-    padding: 60px 16px 30px; /* Increased breathing room */
+    padding: 60px 16px 30px; 
     font-family: 'Playfair Display', serif; 
     font-size: 34px; 
     font-weight: 700; 
-    text-align: center; 
+    text-align: center; /* Centered as requested */
     text-decoration: underline; 
     text-underline-offset: 8px;
     text-decoration-thickness: 1px;
@@ -137,7 +137,7 @@
     flex-wrap: wrap; 
     gap: 12px; 
     padding: 0 16px 40px; 
-    margin-top: -15px; /* Raised recipe cards higher */
+    margin-top: -15px; 
   }
   
   .card {
