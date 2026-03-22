@@ -50,12 +50,11 @@
   .card {
     background: var(--card-bg); border-radius: 18px; width: calc(50% - 6px); 
     min-height: 120px; position: relative; box-sizing: border-box; 
-    padding: 4px; /* Ultra-low padding */
+    padding: 4px; 
     display: flex; flex-direction: column; justify-content: center; align-items: center; text-align: center;
     cursor: pointer; overflow: hidden;
   }
 
-  /* Large Title */
   .card-title { 
     font-size: 22px; 
     font-weight: 800; 
@@ -66,25 +65,32 @@
     width: 95%;
   }
 
-  /* Single-line Macros */
   .card-macros { 
     font-size: 13px; 
     font-weight: 700; 
     color: var(--text-secondary); 
     text-transform: uppercase; 
-    white-space: nowrap; /* Forces one line */
+    white-space: nowrap; 
     width: 100%;
     overflow: hidden;
-    text-overflow: ellipsis; /* Adds "..." if it's too long for a tiny screen */
+    text-overflow: ellipsis; 
   }
 
-  .badge-right { position: absolute; top: 6px; right: 6px; }
+  /* Modified to allow side-by-side badges */
+  .badge-right { 
+    position: absolute; 
+    top: 6px; 
+    right: 6px; 
+    display: flex; 
+    gap: 4px; 
+    align-items: center;
+  }
+
   .keto-badge {
     background: var(--keto-bg); color: var(--keto-text); width: 22px; height: 22px; 
     border-radius: 50%; display: flex; align-items: center; justify-content: center; font-size: 12px; font-weight: 800;
   }
 
-  /* Pop-up Styles remain the same for legibility */
   .popup-inner { padding: 60px 24px; max-width: 600px; margin: 0 auto; }
   .close-btn { position: fixed; top: 25px; right: 25px; font-size: 16px; font-weight: 800; cursor: pointer; background: var(--search-bg); padding: 10px 20px; border-radius: 25px; z-index: 1001; }
   
@@ -178,13 +184,13 @@ function render(data) {
       card.className = 'card';
       card.onclick = () => openPopup(r);
       
-      let badge = '';
-      if (r.designations?.includes("Keto")) badge = '<div class="keto-badge">K</div>';
-      else if (r.designations?.includes("Heart")) badge = '❤️';
+      // LOGIC UPDATE: Append badges side-by-side
+      let badges = '';
+      if (r.designations?.includes("Heart")) badges += '<span>❤️</span>';
+      if (r.designations?.includes("Keto")) badges += '<div class="keto-badge">K</div>';
 
-      // One-line macros formatting
       card.innerHTML = `
-        <div class="badge-right">${badge}</div>
+        <div class="badge-right">${badges}</div>
         <div class="card-title">${r.title}</div>
         <div class="card-macros">
           ${r.macrosPerPortion.calories}cal • P:${r.macrosPerPortion.protein}g • F:${r.macrosPerPortion.fat}g • S:${r.macrosPerPortion.satFat}g
