@@ -1,4 +1,772 @@
 [
+  {
+    "title": "Avocado Chocolate Mousse",
+    "category": "Desserts",
+    "designations": ["Heart", "Keto"],
+    "portions": 2,
+    "ingredients": [
+      "150g ripe avocado",
+      "20g unsweetened cocoa powder",
+      "30g erythritol (or to taste)",
+      "30ml unsweetened almond milk",
+      "2g vanilla extract"
+    ],
+    "instructions": [
+      "Place the 150g of avocado flesh into a blender or food processor.",
+      "Add 20g of cocoa powder, 30g of erythritol, 30ml of almond milk, and 2g of vanilla extract.",
+      "Blend on high speed until the mixture is completely smooth and creamy.",
+      "Taste and add more erythritol if a sweeter taste is desired.",
+      "Divide the mousse into two small bowls and chill in the refrigerator for at least 30 minutes before serving."
+    ],
+    "macrosPerPortion": {
+      "calories": 160, "protein": 3, "carbs": 9, "sugar": 1, "fiber": 7, "fat": 14, "satFat": 2.2, "polyFat": 1.8, "monoFat": 10
+    },
+    "macros": {
+      "calories": 320, "protein": 6, "carbs": 18, "sugar": 2, "fiber": 14, "fat": 28, "satFat": 4.4, "polyFat": 3.6, "monoFat": 20
+    }
+  },
+  {
+    "title": "Raspberry Almond Mug Cake",
+    "category": "Desserts",
+    "designations": ["Heart", "Keto"],
+    "portions": 1,
+    "ingredients": [
+      "35g almond flour",
+      "1 large egg white",
+      "10ml rapeseed oil",
+      "15g erythritol",
+      "20g frozen raspberries",
+      "2g baking powder"
+    ],
+    "instructions": [
+      "In a microwave-safe mug, whisk together 35g of almond flour, 15g of erythritol, and 2g of baking powder.",
+      "Stir in 1 egg white and 10ml of rapeseed oil until a smooth batter forms.",
+      "Gently fold in 20g of frozen raspberries.",
+      "Microwave on high for 60–90 seconds (time varies by microwave) until the cake is firm to the touch.",
+      "Let cool for 1 minute before eating directly from the mug."
+    ],
+    "macrosPerPortion": {
+      "calories": 280, "protein": 10, "carbs": 8, "sugar": 1.5, "fiber": 4, "fat": 24, "satFat": 1.8, "polyFat": 6, "monoFat": 15
+    },
+    "macros": {
+      "calories": 280, "protein": 10, "carbs": 8, "sugar": 1.5, "fiber": 4, "fat": 24, "satFat": 1.8, "polyFat": 6, "monoFat": 15
+    }
+  },
+  {
+    "title": "Dark Chocolate Walnut Clusters",
+    "category": "Desserts",
+    "designations": ["Heart", "Keto"],
+    "portions": 4,
+    "ingredients": [
+      "100g walnut halves",
+      "25g dark chocolate (min 85% cocoa)",
+      "1g sea salt"
+    ],
+    "instructions": [
+      "Preheat oven to 160°C and toast 100g of walnuts on a tray for 5–7 minutes until fragrant.",
+      "Break 25g of dark chocolate into small pieces and melt in a heat-proof bowl over simmering water (or in short bursts in the microwave).",
+      "Line a plate with parchment paper.",
+      "Dip each walnut half into the melted chocolate or drizzle the chocolate over small clusters of walnuts on the paper.",
+      "Sprinkle with a tiny pinch of sea salt.",
+      "Place in the refrigerator for 20 minutes until the chocolate is set. One portion is roughly 30g."
+    ],
+    "macrosPerPortion": {
+      "calories": 195, "protein": 4, "carbs": 4, "sugar": 0.8, "fiber": 2, "fat": 19, "satFat": 2.1, "polyFat": 12, "monoFat": 3.5
+    },
+    "macros": {
+      "calories": 780, "protein": 16, "carbs": 16, "sugar": 3.2, "fiber": 8, "fat": 76, "satFat": 8.4, "polyFat": 48, "monoFat": 14
+    }
+  },
+  {
+    "title": "Vanilla Berry Chia Pudding",
+    "category": "Desserts",
+    "designations": ["Heart", "Keto"],
+    "portions": 2,
+    "ingredients": [
+      "40g chia seeds",
+      "250ml unsweetened almond milk",
+      "20g erythritol",
+      "2g vanilla extract",
+      "40g mixed berries (blueberries/raspberries)"
+    ],
+    "instructions": [
+      "In a glass jar or bowl, whisk together 40g of chia seeds, 250ml of almond milk, 20g of erythritol, and 2g of vanilla extract.",
+      "Stir well, then let sit for 10 minutes and stir again to prevent clumping.",
+      "Cover and refrigerate for at least 4 hours, or ideally overnight.",
+      "Before serving, stir the pudding again and divide into two portions.",
+      "Top each bowl with 20g of fresh or thawed mixed berries."
+    ],
+    "macrosPerPortion": {
+      "calories": 145, "protein": 5, "carbs": 10, "sugar": 1.5, "fiber": 8, "fat": 9, "satFat": 0.8, "polyFat": 6.5, "monoFat": 1.5
+    },
+    "macros": {
+      "calories": 290, "protein": 10, "carbs": 20, "sugar": 3, "fiber": 16, "fat": 18, "satFat": 1.6, "polyFat": 13, "monoFat": 3
+    }
+  },
+  {
+    "title": "Lemon Poppy Seed Muffins",
+    "category": "Desserts",
+    "designations": ["Heart", "Keto"],
+    "portions": 6,
+    "ingredients": [
+      "150g almond flour",
+      "2 large egg whites",
+      "20ml rapeseed oil",
+      "30g erythritol",
+      "10g poppy seeds (mak)",
+      "1 lemon (zest and juice)",
+      "5g baking powder"
+    ],
+    "instructions": [
+      "Preheat oven to 180°C and line a muffin tin with 6 liners.",
+      "In a bowl, combine 150g of almond flour, 30g of erythritol, 10g of poppy seeds, lemon zest, and 5g of baking powder.",
+      "Add 2 egg whites, 20ml of rapeseed oil, and the juice of half the lemon.",
+      "Mix until a uniform batter forms, then divide into the 6 muffin liners.",
+      "Bake for 18–22 minutes until a toothpick comes out clean.",
+      "Cool completely before serving."
+    ],
+    "macrosPerPortion": {
+      "calories": 190, "protein": 7, "carbs": 5, "sugar": 1, "fiber": 3, "fat": 17, "satFat": 1.3, "polyFat": 4.5, "monoFat": 10.5
+    },
+    "macros": {
+      "calories": 1140, "protein": 42, "carbs": 30, "sugar": 6, "fiber": 18, "fat": 102, "satFat": 7.8, "polyFat": 27, "monoFat": 63
+    }
+  },
+  {
+    "title": "Almond & Berry Crumble",
+    "category": "Desserts",
+    "designations": ["Heart", "Keto"],
+    "portions": 2,
+    "ingredients": [
+      "120g mixed frozen berries",
+      "40g almond flour",
+      "15g walnuts (finely chopped)",
+      "10ml rapeseed oil",
+      "10g erythritol",
+      "1g cinnamon"
+    ],
+    "instructions": [
+      "Preheat oven to 190°C.",
+      "Place 120g of frozen berries in a small oven-proof dish.",
+      "In a small bowl, mix 40g of almond flour, 15g of chopped walnuts, 10g of erythritol, 1g of cinnamon, and 10ml of rapeseed oil until it looks like coarse sand.",
+      "Sprinkle the crumble mixture evenly over the berries.",
+      "Bake for 15–20 minutes until the berries are bubbling and the topping is golden brown.",
+      "Serve warm."
+    ],
+    "macrosPerPortion": {
+      "calories": 215, "protein": 6, "carbs": 9, "sugar": 3.5, "fiber": 5, "fat": 18, "satFat": 1.5, "polyFat": 7, "monoFat": 9
+    },
+    "macros": {
+      "calories": 430, "protein": 12, "carbs": 18, "sugar": 7, "fiber": 10, "fat": 36, "satFat": 3, "polyFat": 14, "monoFat": 18
+    }
+  },
+  {
+    "title": "Cocoa-Walnut Truffles",
+    "category": "Desserts",
+    "designations": ["Heart", "Keto"],
+    "portions": 2,
+    "ingredients": [
+      "60g walnuts",
+      "10g unsweetened cocoa powder",
+      "15g erythritol (powdered)",
+      "5ml water",
+      "1g vanilla extract"
+    ],
+    "instructions": [
+      "Place 60g of walnuts in a food processor and pulse until they are finely ground (but not turned into butter).",
+      "Add 10g of cocoa powder, 15g of powdered erythritol, and 1g of vanilla extract.",
+      "Pulse again while adding 5ml of water until the mixture clumps together.",
+      "Roll the mixture into 6 small balls using your hands.",
+      "Optional: Roll the balls in a little extra cocoa powder.",
+      "Chill in the fridge for 20 minutes to firm up. One portion is 3 truffles."
+    ],
+    "macrosPerPortion": {
+      "calories": 210, "protein": 5, "carbs": 5, "sugar": 0.8, "fiber": 3, "fat": 20, "satFat": 1.9, "polyFat": 14, "monoFat": 3.5
+    },
+    "macros": {
+      "calories": 420, "protein": 10, "carbs": 10, "sugar": 1.6, "fiber": 6, "fat": 40, "satFat": 3.8, "polyFat": 28, "monoFat": 7
+    }
+  },
+  {
+    "title": "Golden Flax & Sunflower Bread",
+    "category": "Bakery",
+    "designations": ["Heart", "Keto"],
+    "portions": 10,
+    "ingredients": [
+      "200g ground flaxseeds (siemię lniane)",
+      "50g sunflower seeds (ziarno słonecznika)",
+      "5 large egg whites",
+      "100ml warm water",
+      "15ml rapeseed oil",
+      "10g baking powder",
+      "3g salt"
+    ],
+    "instructions": [
+      "Preheat your oven to 180°C and line a small loaf tin with parchment paper.",
+      "In a large bowl, whisk 5 egg whites until frothy but not stiff.",
+      "Stir in 200g of ground flaxseeds, 50g of sunflower seeds, 10g of baking powder, and 3g of salt.",
+      "Add 15ml of rapeseed oil and 100ml of warm water, mixing until a thick dough forms.",
+      "Transfer the dough to the tin and smooth the top with a wet spatula.",
+      "Bake for 45–50 minutes until the loaf sounds hollow when tapped on the bottom.",
+      "Allow to cool completely before slicing into 10 even pieces."
+    ],
+    "macrosPerPortion": {
+      "calories": 165, "protein": 7, "carbs": 2, "sugar": 0.5, "fiber": 6, "fat": 13, "satFat": 1.2, "polyFat": 8, "monoFat": 3.5
+    },
+    "macros": {
+      "calories": 1650, "protein": 70, "carbs": 20, "sugar": 5, "fiber": 60, "fat": 130, "satFat": 12, "polyFat": 80, "monoFat": 35
+    }
+  },
+  {
+    "title": "Rosemary Olive Oil Focaccia",
+    "category": "Bakery",
+    "designations": ["Heart", "Keto"],
+    "portions": 6,
+    "ingredients": [
+      "200g almond flour",
+      "2 large egg whites",
+      "30ml extra virgin olive oil",
+      "5g dried rosemary",
+      "5g baking powder",
+      "2g sea salt"
+    ],
+    "instructions": [
+      "Preheat oven to 190°C and line a small square baking dish with parchment.",
+      "Combine 200g of almond flour and 5g of baking powder in a bowl.",
+      "Fold in 2 egg whites and 15ml of the olive oil until a dough forms.",
+      "Press the dough into the dish until it is about 1.5cm thick.",
+      "Use your fingers to poke dimples into the surface, then drizzle the remaining 15ml of olive oil over the top.",
+      "Sprinkle with 5g of rosemary and 2g of sea salt.",
+      "Bake for 15–18 minutes until the edges are golden brown. Slice into 6 squares."
+    ],
+    "macrosPerPortion": {
+      "calories": 240, "protein": 8, "carbs": 6, "sugar": 1, "fiber": 4, "fat": 21, "satFat": 1.8, "polyFat": 5, "monoFat": 14
+    },
+    "macros": {
+      "calories": 1440, "protein": 48, "carbs": 36, "sugar": 6, "fiber": 24, "fat": 126, "satFat": 10.8, "polyFat": 30, "monoFat": 84
+    }
+  },
+  {
+    "title": "Savory Walnut Zucchini Loaf",
+    "category": "Bakery",
+    "designations": ["Heart", "Keto"],
+    "portions": 8,
+    "ingredients": [
+      "250g grated zucchini (squeezed dry)",
+      "150g almond flour",
+      "50g walnuts (chopped)",
+      "3 large egg whites",
+      "20ml rapeseed oil",
+      "10g baking powder",
+      "5g dried oregano"
+    ],
+    "instructions": [
+      "Preheat oven to 180°C and line a loaf tin.",
+      "Ensure the 250g of grated zucchini is squeezed very dry using a cloth.",
+      "In a bowl, mix the zucchini with 150g almond flour, 50g chopped walnuts, baking powder, and oregano.",
+      "Add 3 egg whites and 20ml of rapeseed oil, stirring until well combined.",
+      "Pour into the loaf tin and bake for 40 minutes or until a skewer comes out clean.",
+      "Let cool in the tin for 10 minutes, then transfer to a wire rack. Slice into 8 portions."
+    ],
+    "macrosPerPortion": {
+      "calories": 195, "protein": 7, "carbs": 5, "sugar": 1.5, "fiber": 3.5, "fat": 17, "satFat": 1.4, "polyFat": 6, "monoFat": 9
+    },
+    "macros": {
+      "calories": 1560, "protein": 56, "carbs": 40, "sugar": 12, "fiber": 28, "fat": 136, "satFat": 11.2, "polyFat": 48, "monoFat": 72
+    }
+  },
+  {
+    "title": "3-Ingredient Seeded Crackers",
+    "category": "Bakery",
+    "designations": ["Heart", "Keto"],
+    "portions": 4,
+    "ingredients": [
+      "50g sunflower seeds",
+      "50g pumpkin seeds (pestki dyni)",
+      "20g chia seeds",
+      "100ml water",
+      "2g salt"
+    ],
+    "instructions": [
+      "In a bowl, mix 50g sunflower seeds, 50g pumpkin seeds, 20g chia seeds, and 2g salt.",
+      "Add 100ml of water and stir. Let sit for 15 minutes until the chia seeds absorb the water and form a gel.",
+      "Preheat oven to 150°C.",
+      "Spread the mixture very thinly onto a baking sheet lined with parchment paper.",
+      "Bake for 45 minutes, then remove and flip the whole sheet over. Peel off the paper.",
+      "Bake for another 15 minutes until completely crisp. Break into 4 large portions once cooled."
+    ],
+    "macrosPerPortion": {
+      "calories": 160, "protein": 7, "carbs": 4, "sugar": 0.5, "fiber": 5, "fat": 13, "satFat": 1.8, "polyFat": 7, "monoFat": 4
+    },
+    "macros": {
+      "calories": 640, "protein": 28, "carbs": 16, "sugar": 2, "fiber": 20, "fat": 52, "satFat": 7.2, "polyFat": 28, "monoFat": 16
+    }
+  },
+  {
+    "title": "Spinach & Almond Muffins",
+    "category": "Bakery",
+    "designations": ["Heart", "Keto"],
+    "portions": 6,
+    "ingredients": [
+      "150g almond flour",
+      "100g fresh spinach (finely chopped)",
+      "2 large egg whites",
+      "20ml rapeseed oil",
+      "5g baking powder",
+      "1g garlic powder"
+    ],
+    "instructions": [
+      "Preheat oven to 180°C and grease a 6-slot muffin tin.",
+      "Mix 150g almond flour, 100g chopped spinach, 5g baking powder, and garlic powder in a bowl.",
+      "Add 2 egg whites and 20ml of rapeseed oil.",
+      "Divide the batter evenly into the 6 muffin slots.",
+      "Bake for 20–22 minutes until firm to the touch.",
+      "These can be eaten warm or cold."
+    ],
+    "macrosPerPortion": {
+      "calories": 185, "protein": 7, "carbs": 4, "sugar": 1, "fiber": 3, "fat": 16, "satFat": 1.3, "polyFat": 4.5, "monoFat": 10
+    },
+    "macros": {
+      "calories": 1110, "protein": 42, "carbs": 24, "sugar": 6, "fiber": 18, "fat": 96, "satFat": 7.8, "polyFat": 27, "monoFat": 60
+    }
+  },
+  {
+    "title": "Almond Soft Tortilla Wraps",
+    "category": "Bakery",
+    "designations": ["Heart", "Keto"],
+    "portions": 4,
+    "ingredients": [
+      "120g almond flour",
+      "15g psyllium husk (babka jajowata)",
+      "5ml rapeseed oil",
+      "120ml boiling water",
+      "2g salt"
+    ],
+    "instructions": [
+      "Mix 120g almond flour, 15g psyllium husk, and 2g salt in a bowl.",
+      "Add 5ml of rapeseed oil and 120ml of boiling water. Stir immediately until a dough forms.",
+      "Let the dough rest for 5 minutes to firm up.",
+      "Divide the dough into 4 balls. Roll each ball out between two sheets of parchment paper until very thin.",
+      "Cook in a dry, non-stick pan over medium-high heat for 1 minute per side.",
+      "Keep covered with a towel to stay soft until serving."
+    ],
+    "macrosPerPortion": {
+      "calories": 205, "protein": 7, "carbs": 6, "sugar": 1, "fiber": 8, "fat": 17, "satFat": 1.4, "polyFat": 4.5, "monoFat": 11
+    },
+    "macros": {
+      "calories": 820, "protein": 28, "carbs": 24, "sugar": 4, "fiber": 32, "fat": 68, "satFat": 5.6, "polyFat": 18, "monoFat": 44
+    }
+  },
+  {
+    "title": "Pumpkin Seed Flatbread",
+    "category": "Bakery",
+    "designations": ["Heart", "Keto"],
+    "portions": 2,
+    "ingredients": [
+      "80g ground pumpkin seeds (pestki dyni)",
+      "1 large egg white",
+      "10ml olive oil",
+      "1g garlic powder",
+      "30ml water"
+    ],
+    "instructions": [
+      "In a small bowl, mix 80g ground pumpkin seeds, 1 egg white, garlic powder, and 30ml water.",
+      "Heat 10ml of olive oil in a small non-stick pan over medium heat.",
+      "Pour in the mixture and spread it out into a circle.",
+      "Cook for 3–4 minutes until the bottom is set and golden, then flip carefully.",
+      "Cook for another 2 minutes. Slice into halves and serve."
+    ],
+    "macrosPerPortion": {
+      "calories": 260, "protein": 12, "carbs": 3, "sugar": 0.5, "fiber": 2, "fat": 22, "satFat": 2.9, "polyFat": 8, "monoFat": 11
+    },
+    "macros": {
+      "calories": 520, "protein": 24, "carbs": 6, "sugar": 1, "fiber": 4, "fat": 44, "satFat": 5.8, "polyFat": 16, "monoFat": 22
+    }
+  },
+  {
+    "title": "Herb-Crusted Baked Cod",
+    "category": "Meals",
+    "designations": ["Heart", "Keto"],
+    "portions": 2,
+    "ingredients": [
+      "300g cod fillets (dorsz)",
+      "40g almond flour",
+      "15ml olive oil",
+      "5g dried parsley",
+      "1 lemon (zest and juice)",
+      "200g steamed green beans"
+    ],
+    "instructions": [
+      "Preheat the oven to 200°C and line a tray with baking paper.",
+      "In a small bowl, mix 40g of almond flour, 5g of parsley, lemon zest, and 5ml of olive oil to create a crumbly paste.",
+      "Place the 300g of cod fillets on the tray and brush with the remaining 10ml of olive oil and lemon juice.",
+      "Press the almond mixture firmly onto the top of each fillet.",
+      "Bake for 12–15 minutes until the fish is opaque and the crust is golden.",
+      "Serve alongside 200g of steamed green beans."
+    ],
+    "macrosPerPortion": {
+      "calories": 310, "protein": 32, "carbs": 8, "sugar": 2, "fiber": 5, "fat": 18, "satFat": 2.2, "polyFat": 4, "monoFat": 11
+    },
+    "macros": {
+      "calories": 620, "protein": 64, "carbs": 16, "sugar": 4, "fiber": 10, "fat": 36, "satFat": 4.4, "polyFat": 8, "monoFat": 22
+    }
+  },
+  {
+    "title": "Turkey & Zucchini Stir-fry",
+    "category": "Meals",
+    "designations": ["Heart", "Keto"],
+    "portions": 2,
+    "ingredients": [
+      "300g lean ground turkey breast",
+      "400g zucchini (spiralized or sliced)",
+      "15ml rapeseed oil",
+      "20g fresh ginger (minced)",
+      "10g garlic (minced)",
+      "20ml soy sauce"
+    ],
+    "instructions": [
+      "Heat 15ml of rapeseed oil in a large wok or pan over high heat.",
+      "Add 300g of ground turkey and cook until browned, breaking it up with a spatula.",
+      "Stir in 20g of ginger and 10g of garlic, cooking for 1 minute until fragrant.",
+      "Add 400g of zucchini and 20ml of soy sauce.",
+      "Stir-fry for 3–4 minutes until the zucchini is tender but still has a bite.",
+      "Divide into two bowls and serve immediately."
+    ],
+    "macrosPerPortion": {
+      "calories": 285, "protein": 34, "carbs": 7, "sugar": 3, "fiber": 2, "fat": 14, "satFat": 1.8, "polyFat": 4, "monoFat": 8
+    },
+    "macros": {
+      "calories": 570, "protein": 68, "carbs": 14, "sugar": 6, "fiber": 4, "fat": 28, "satFat": 3.6, "polyFat": 8, "monoFat": 16
+    }
+  },
+  {
+    "title": "Walnut-Crusted Tofu Steaks",
+    "category": "Meals",
+    "designations": ["Heart", "Keto"],
+    "portions": 2,
+    "ingredients": [
+      "360g firm tofu (sliced into steaks)",
+      "40g walnuts (finely crushed)",
+      "300g cauliflower florets",
+      "20ml olive oil",
+      "5g smoked paprika",
+      "2g salt"
+    ],
+    "instructions": [
+      "Preheat the oven to 200°C.",
+      "Toss 300g of cauliflower florets with 10ml of olive oil, salt, and paprika on a baking sheet.",
+      "Press 40g of crushed walnuts onto the sides of the tofu steaks.",
+      "Place tofu on the sheet with the cauliflower and drizzle the remaining 10ml of olive oil over the tofu.",
+      "Bake for 20 minutes, flipping the cauliflower halfway through.",
+      "Serve the crispy tofu steaks with the roasted cauliflower."
+    ],
+    "macrosPerPortion": {
+      "calories": 395, "protein": 22, "carbs": 11, "sugar": 3, "fiber": 5, "fat": 30, "satFat": 2.9, "polyFat": 16, "monoFat": 10
+    },
+    "macros": {
+      "calories": 790, "protein": 44, "carbs": 22, "sugar": 6, "fiber": 10, "fat": 60, "satFat": 5.8, "polyFat": 32, "monoFat": 20
+    }
+  },
+  {
+    "title": "Mediterranean Chicken Salad",
+    "category": "Meals",
+    "designations": ["Heart", "Keto"],
+    "portions": 2,
+    "ingredients": [
+      "250g chicken breast",
+      "100g avocado",
+      "150g cucumber (sliced)",
+      "50g mixed salad greens",
+      "20ml extra virgin olive oil",
+      "10ml lemon juice"
+    ],
+    "instructions": [
+      "Season 250g of chicken breast with salt and pepper, then grill or pan-fry until fully cooked.",
+      "Slice the cooked chicken into strips.",
+      "In a large bowl, combine 50g of greens, 150g of cucumber, and 100g of sliced avocado.",
+      "Whisk 20ml of olive oil with 10ml of lemon juice to create the dressing.",
+      "Add the chicken to the bowl, pour over the dressing, and toss gently to combine.",
+      "Divide between two plates."
+    ],
+    "macrosPerPortion": {
+      "calories": 360, "protein": 30, "carbs": 6, "sugar": 2, "fiber": 4, "fat": 24, "satFat": 2.8, "polyFat": 3, "monoFat": 17
+    },
+    "macros": {
+      "calories": 720, "protein": 60, "carbs": 12, "sugar": 4, "fiber": 8, "fat": 48, "satFat": 5.6, "polyFat": 6, "monoFat": 34
+    }
+  },
+  {
+    "title": "Mushroom Cauliflower Risotto",
+    "category": "Meals",
+    "designations": ["Heart", "Keto"],
+    "portions": 2,
+    "ingredients": [
+      "500g cauliflower (riced)",
+      "200g brown mushrooms (sliced)",
+      "15ml olive oil",
+      "50g onion (finely diced)",
+      "5g fresh thyme",
+      "100ml vegetable broth"
+    ],
+    "instructions": [
+      "Heat 15ml of olive oil in a deep pan over medium heat.",
+      "Sauté 50g of onion and 200g of mushrooms for 8 minutes until the moisture has evaporated and they are browned.",
+      "Add 500g of riced cauliflower and 5g of thyme, stirring for 2 minutes.",
+      "Pour in 100ml of broth and simmer uncovered for 5–7 minutes until the liquid is absorbed and the cauliflower is tender.",
+      "Season with salt and pepper and serve warm."
+    ],
+    "macrosPerPortion": {
+      "calories": 165, "protein": 8, "carbs": 12, "sugar": 5, "fiber": 6, "fat": 11, "satFat": 1.6, "polyFat": 1.5, "monoFat": 7.5
+    },
+    "macros": {
+      "calories": 330, "protein": 16, "carbs": 24, "sugar": 10, "fiber": 12, "fat": 22, "satFat": 3.2, "polyFat": 3, "monoFat": 15
+    }
+  },
+  {
+    "title": "Lemon Garlic Baked Herring",
+    "category": "Meals",
+    "designations": ["Heart", "Keto"],
+    "portions": 2,
+    "ingredients": [
+      "250g fresh herring fillets (śledź świeży)",
+      "10ml rapeseed oil",
+      "2 cloves garlic (sliced)",
+      "1 lemon (sliced into rounds)",
+      "300g steamed broccoli"
+    ],
+    "instructions": [
+      "Preheat the oven to 180°C.",
+      "Place 250g of fresh herring fillets in a baking dish.",
+      "Drizzle with 10ml of rapeseed oil and scatter garlic slices and lemon rounds over the fish.",
+      "Bake for 12–15 minutes until the fish flakes easily with a fork.",
+      "Serve each portion with 150g of steamed broccoli."
+    ],
+    "macrosPerPortion": {
+      "calories": 295, "protein": 24, "carbs": 7, "sugar": 2, "fiber": 5, "fat": 19, "satFat": 2.5, "polyFat": 5, "monoFat": 11
+    },
+    "macros": {
+      "calories": 590, "protein": 48, "carbs": 14, "sugar": 4, "fiber": 10, "fat": 38, "satFat": 5, "polyFat": 10, "monoFat": 22
+    }
+  },
+  {
+    "title": "Lean Beef & Broccoli Stir-fry",
+    "category": "Meals",
+    "designations": ["Heart", "Keto"],
+    "portions": 2,
+    "ingredients": [
+      "250g lean beef steak (e.g., sirloin, fat trimmed)",
+      "300g broccoli florets",
+      "10ml rapeseed oil",
+      "15ml soy sauce",
+      "5g sesame seeds",
+      "10g fresh ginger (grated)"
+    ],
+    "instructions": [
+      "Thinly slice 250g of lean beef across the grain.",
+      "Heat 10ml of rapeseed oil in a pan over high heat.",
+      "Flash-fry the beef for 2–3 minutes until just browned, then remove from the pan.",
+      "Add 300g of broccoli and a splash of water, covering the pan for 2 minutes to steam-fry.",
+      "Return the beef to the pan, add 15ml of soy sauce and 10g of ginger.",
+      "Toss for 1 minute, garnish with 5g of sesame seeds, and serve."
+    ],
+    "macrosPerPortion": {
+      "calories": 310, "protein": 32, "carbs": 9, "sugar": 2, "fiber": 4, "fat": 16, "satFat": 2.8, "polyFat": 3, "monoFat": 10
+    },
+    "macros": {
+      "calories": 620, "protein": 64, "carbs": 18, "sugar": 4, "fiber": 8, "fat": 32, "satFat": 5.6, "polyFat": 6, "monoFat": 20
+    }
+  },
+  {
+    "title": "Smoked Mackerel & Avocado Mash",
+    "category": "Breakfasts",
+    "designations": ["Heart", "Keto"],
+    "portions": 2,
+    "ingredients": [
+      "120g smoked mackerel (deboned)",
+      "100g avocado (1 small avocado)",
+      "10ml lemon juice",
+      "200g cucumber (cut into thick slices)",
+      "2g black pepper"
+    ],
+    "instructions": [
+      "Flake the 120g of smoked mackerel into a bowl, ensuring all small bones are removed.",
+      "Add the 100g of avocado and 10ml of lemon juice to the bowl.",
+      "Mash the mixture together with a fork until it reaches a chunky paste consistency.",
+      "Season with plenty of black pepper (salt is usually unnecessary due to the smoked fish).",
+      "Arrange the 200g of thick cucumber slices on a plate.",
+      "Top each cucumber slice with a generous spoonful of the mackerel mash and serve."
+    ],
+    "macrosPerPortion": {
+      "calories": 245, "protein": 14, "carbs": 6, "sugar": 2, "fiber": 5, "fat": 19, "satFat": 2.8, "polyFat": 6, "monoFat": 10
+    },
+    "macros": {
+      "calories": 490, "protein": 28, "carbs": 12, "sugar": 4, "fiber": 10, "fat": 38, "satFat": 5.6, "polyFat": 12, "monoFat": 20
+    }
+  },
+  {
+    "title": "Flaxseed & Walnut N'oats",
+    "category": "Breakfasts",
+    "designations": ["Heart", "Keto"],
+    "portions": 1,
+    "ingredients": [
+      "40g ground flaxseeds (siemię lniane)",
+      "200ml unsweetened almond milk",
+      "20g walnuts (crushed)",
+      "2g cinnamon",
+      "30g frozen raspberries"
+    ],
+    "instructions": [
+      "Pour 200ml of unsweetened almond milk into a small saucepan over medium heat.",
+      "Whisk in 40g of ground flaxseeds and 2g of cinnamon.",
+      "Stir constantly for 3–5 minutes until the mixture thickens to a porridge-like consistency.",
+      "Pour the mixture into a bowl and top with 20g of crushed walnuts.",
+      "Add 30g of frozen raspberries on top and allow them to thaw slightly from the heat of the oats before eating."
+    ],
+    "macrosPerPortion": {
+      "calories": 310, "protein": 11, "carbs": 12, "sugar": 1.5, "fiber": 10, "fat": 24, "satFat": 2.1, "polyFat": 16, "monoFat": 5
+    },
+    "macros": {
+      "calories": 310, "protein": 11, "carbs": 12, "sugar": 1.5, "fiber": 10, "fat": 24, "satFat": 2.1, "polyFat": 16, "monoFat": 5
+    }
+  },
+  {
+    "title": "Tofu Scramble with Spinach",
+    "category": "Breakfasts",
+    "designations": ["Heart", "Keto"],
+    "portions": 2,
+    "ingredients": [
+      "360g firm tofu (2 blocks)",
+      "100g fresh spinach",
+      "15ml olive oil",
+      "5g turmeric powder",
+      "10ml soy sauce (low sodium)",
+      "50g cherry tomatoes"
+    ],
+    "instructions": [
+      "Heat 15ml of olive oil in a large non-stick frying pan over medium heat.",
+      "Crumble the 360g of tofu directly into the pan using your hands or a fork.",
+      "Add 5g of turmeric and 10ml of soy sauce, stirring well to ensure the tofu is evenly colored yellow.",
+      "Cook for 5 minutes, then add 100g of fresh spinach and 50g of halved cherry tomatoes.",
+      "Sauté for another 2–3 minutes until the spinach has wilted and the tomatoes are soft.",
+      "Divide into two portions and serve immediately."
+    ],
+    "macrosPerPortion": {
+      "calories": 240, "protein": 18, "carbs": 5, "sugar": 2, "fiber": 3, "fat": 16, "satFat": 2.2, "polyFat": 4.5, "monoFat": 8.5
+    },
+    "macros": {
+      "calories": 480, "protein": 36, "carbs": 10, "sugar": 4, "fiber": 6, "fat": 32, "satFat": 4.4, "polyFat": 9, "monoFat": 17
+    }
+  },
+  {
+    "title": "Chia & Berry Skyr Bowl",
+    "category": "Breakfasts",
+    "designations": ["Heart", "Keto"],
+    "portions": 1,
+    "ingredients": [
+      "150g Skyr natural yogurt",
+      "20g chia seeds",
+      "50ml water",
+      "40g frozen blueberries",
+      "5g pumpkin seeds"
+    ],
+    "instructions": [
+      "In a small bowl, mix 20g of chia seeds with 50ml of water and let sit for 5 minutes to bloom.",
+      "Add 150g of Skyr natural yogurt to the chia mixture and stir thoroughly.",
+      "Top the bowl with 40g of frozen blueberries.",
+      "Sprinkle 5g of pumpkin seeds over the top for added texture and healthy fats.",
+      "Serve immediately or refrigerate for 30 minutes for a thicker consistency."
+    ],
+    "macrosPerPortion": {
+      "calories": 215, "protein": 20, "carbs": 12, "sugar": 6, "fiber": 8, "fat": 8, "satFat": 0.9, "polyFat": 5, "monoFat": 2
+    },
+    "macros": {
+      "calories": 215, "protein": 20, "carbs": 12, "sugar": 6, "fiber": 8, "fat": 8, "satFat": 0.9, "polyFat": 5, "monoFat": 2
+    }
+  },
+  {
+    "title": "Almond Savory Pancakes",
+    "category": "Breakfasts",
+    "designations": ["Heart", "Keto"],
+    "portions": 2,
+    "ingredients": [
+      "100g almond flour (mąka migdałowa)",
+      "3 large egg whites",
+      "50ml water",
+      "10ml rapeseed oil (olej rzepakowy)",
+      "2g salt",
+      "5g fresh chives (chopped)"
+    ],
+    "instructions": [
+      "In a mixing bowl, whisk together 100g of almond flour, 3 egg whites, 50ml of water, and 2g of salt until a smooth batter forms.",
+      "Stir in 5g of finely chopped fresh chives.",
+      "Heat 10ml of rapeseed oil in a non-stick skillet over medium heat.",
+      "Pour the batter into the pan to form 4 small pancakes.",
+      "Cook for 3–4 minutes on the first side until bubbles form on the surface, then flip carefully.",
+      "Cook for another 2 minutes until golden brown and serve warm."
+    ],
+    "macrosPerPortion": {
+      "calories": 340, "protein": 15, "carbs": 9, "sugar": 2, "fiber": 6, "fat": 28, "satFat": 2.1, "polyFat": 7, "monoFat": 18
+    },
+    "macros": {
+      "calories": 680, "protein": 30, "carbs": 18, "sugar": 4, "fiber": 12, "fat": 56, "satFat": 4.2, "polyFat": 14, "monoFat": 36
+    }
+  },
+  {
+    "title": "Zucchini Walnut Muffins",
+    "category": "Breakfasts",
+    "designations": ["Heart", "Keto"],
+    "portions": 4,
+    "ingredients": [
+      "200g zucchini (grated and squeezed dry)",
+      "150g almond flour",
+      "40g walnuts (chopped)",
+      "2 large egg whites",
+      "15ml rapeseed oil",
+      "5g baking powder"
+    ],
+    "instructions": [
+      "Preheat your oven to 180°C and line a muffin tin with 4 liners.",
+      "Grate 200g of zucchini and use a clean kitchen towel to squeeze out as much water as possible.",
+      "In a large bowl, combine the dry zucchini, 150g almond flour, 40g walnuts, and 5g baking powder.",
+      "Add 2 egg whites and 15ml of rapeseed oil, mixing until a thick batter forms.",
+      "Divide the batter evenly among the 4 muffin liners.",
+      "Bake for 20–25 minutes until a toothpick inserted into the center comes out clean.",
+      "Allow to cool before serving; one portion is one large muffin."
+    ],
+    "macrosPerPortion": {
+      "calories": 310, "protein": 11, "carbs": 8, "sugar": 2, "fiber": 5, "fat": 27, "satFat": 2.3, "polyFat": 9, "monoFat": 15
+    },
+    "macros": {
+      "calories": 1240, "protein": 44, "carbs": 32, "sugar": 8, "fiber": 20, "fat": 108, "satFat": 9.2, "polyFat": 36, "monoFat": 60
+    }
+  },
+  {
+    "title": "Smoked Salmon Roll-ups",
+    "category": "Breakfasts",
+    "designations": ["Heart", "Keto"],
+    "portions": 2,
+    "ingredients": [
+      "150g smoked salmon slices",
+      "200g green asparagus spears",
+      "10ml olive oil",
+      "5g sesame seeds",
+      "5ml lemon juice"
+    ],
+    "instructions": [
+      "Trim the woody ends off 200g of green asparagus spears.",
+      "Bring a small pot of water to a boil and blanch the asparagus for 3 minutes until tender-crisp, then plunge into cold water.",
+      "Dry the asparagus thoroughly and drizzle with 10ml of olive oil and 5ml of lemon juice.",
+      "Lay out 150g of smoked salmon slices and wrap them tightly around bundles of 3–4 asparagus spears.",
+      "Arrange the roll-ups on a plate and sprinkle with 5g of sesame seeds.",
+      "Serve chilled as a light, high-protein breakfast."
+    ],
+    "macrosPerPortion": {
+      "calories": 195, "protein": 18, "carbs": 4, "sugar": 1, "fiber": 3, "fat": 12, "satFat": 1.9, "polyFat": 3.5, "monoFat": 6
+    },
+    "macros": {
+      "calories": 390, "protein": 36, "carbs": 8, "sugar": 2, "fiber": 6, "fat": 24, "satFat": 3.8, "polyFat": 7, "monoFat": 12
+    }
+  },
     {
     "title": "Tuna Potato Bowl",
     "category": "Meals",
