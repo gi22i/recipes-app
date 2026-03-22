@@ -1,4 +1,69 @@
 [
+    {
+    "title": "Tuna Potato Bowl",
+    "category": "Meals",
+    "designations": ["Heart"],
+    "portions": 2,
+    "ingredients": [
+      "400g potatoes (peeled and diced)",
+      "120g canned tuna in water (drained)",
+      "150g plain yogurt",
+      "10g mustard (1 tbsp)",
+      "5ml lemon juice (1 tsp)",
+      "5g salt",
+      "2g black pepper",
+      "5g fresh parsley (optional)"
+    ],
+    "instructions": [
+      "Place 400g of diced potatoes in a pot of salted water and bring to a boil over high heat.",
+      "Reduce the heat and simmer the potatoes for 12–15 minutes until fork-tender, then drain thoroughly.",
+      "In a bowl, combine 150g of yogurt, 10g of mustard, and 5ml of lemon juice to form the dressing.",
+      "Add the drained 120g of tuna into the bowl and mix gently to combine.",
+      "Season the mixture with salt and black pepper to taste.",
+      "Divide the cooked potatoes evenly into two bowls and top with the tuna mixture.",
+      "Sprinkle with fresh parsley if using and serve warm or at room temperature."
+    ],
+    "macrosPerPortion": {
+      "calories": 310, "protein": 20, "carbs": 35, "sugar": 6, "fiber": 4, "fat": 10, "satFat": 2, "polyFat": 2, "monoFat": 4
+    },
+    "macros": {
+      "calories": 620, "protein": 40, "carbs": 70, "sugar": 12, "fiber": 8, "fat": 20, "satFat": 4, "polyFat": 4, "monoFat": 8
+    }
+  },
+  {
+    "title": "Spiced Bean Bowl",
+    "category": "Meals",
+    "designations": ["Heart"],
+    "portions": 2,
+    "ingredients": [
+      "240g canned beans (drained and rinsed)",
+      "150g cooked rice (dry weight equivalent ~60g uncooked)",
+      "100g onion (chopped)",
+      "10g garlic (2 cloves, minced)",
+      "15ml olive oil (1 tbsp)",
+      "5g paprika",
+      "3g cumin",
+      "5g salt",
+      "2g black pepper",
+      "5ml vinegar or lemon juice"
+    ],
+    "instructions": [
+      "Heat 15ml of olive oil in a pan over medium heat.",
+      "Add 100g of chopped onion and sauté for 5–7 minutes until soft and lightly golden.",
+      "Add 10g of minced garlic, paprika, and cumin, and cook for 1 minute until fragrant.",
+      "Stir in 240g of drained and rinsed beans and cook for 5–7 minutes until heated through.",
+      "Season the mixture with salt, black pepper, and a small amount of vinegar or lemon juice to brighten the flavor.",
+      "Prepare rice separately by cooking 60g of uncooked rice according to package instructions until tender.",
+      "Divide the cooked rice evenly into two bowls and top with the spiced bean mixture.",
+      "Mix lightly before serving."
+    ],
+    "macrosPerPortion": {
+      "calories": 380, "protein": 14, "carbs": 55, "sugar": 5, "fiber": 10, "fat": 12, "satFat": 2, "polyFat": 3, "monoFat": 6
+    },
+    "macros": {
+      "calories": 760, "protein": 28, "carbs": 110, "sugar": 10, "fiber": 20, "fat": 24, "satFat": 4, "polyFat": 6, "monoFat": 12
+    }
+  },
   {
     "title": "Oats Yogurt Fruit Bowl",
     "category": "Breakfasts",
