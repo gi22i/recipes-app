@@ -32,68 +32,77 @@
 
   body { margin: 0; font-family: 'Inter', sans-serif; background: var(--bg-color); color: var(--text-primary); -webkit-font-smoothing: antialiased; }
 
-  /* --- NEW FULL-WIDTH HEADER LOGIC --- */
-  .header { 
-    position: relative; /* Allows icons to anchor to the corners */
+  /* --- HEADER AREA --- */
+  .header-wrapper {
+    position: relative;
+    width: 100%;
     display: flex;
     flex-direction: column;
     align-items: center;
-    justify-content: center;
-    padding: 60px 20px 20px; 
-    text-align: center;
-    min-height: 120px;
+    padding-top: 40px;
+    overflow: hidden; /* Keeps icons from causing scrollbars */
   }
 
-  .header-title {
-    font-family: 'Playfair Display', serif;
-    font-size: 56px; 
-    font-weight: 800; 
-    letter-spacing: -1px;
-    margin: 0;
-    z-index: 2;
-  }
-
-  /* Large Icons positioned in the corners */
-  .header::before,
-  .header::after {
+  /* Large Background Icons */
+  .header-wrapper::before,
+  .header-wrapper::after {
     content: "";
     position: absolute;
-    top: 50px; /* Adjust vertical position */
-    width: 80px;  /* Larger size based on your drawing */
-    height: 80px; 
+    top: 20px; /* Slight buffer from the very top */
+    bottom: 20px; /* Ends just above the search bar area */
+    width: 25%; /* Occupies a large portion of the side space */
+    max-width: 120px; /* Prevents them from getting too massive on tablets */
     background-size: contain;
     background-repeat: no-repeat;
     background-position: center;
     z-index: 1;
+    pointer-events: none; /* Allows clicking through icons to buttons if they overlap */
   }
 
-  /* Left Icon - Cookbook */
-  .header::before {
-    left: 20px; /* Padding from left edge */
+  /* Left Side (Cookbook) */
+  .header-wrapper::before {
+    left: 15px; /* Slight buffer from the left edge */
     background-image: url('left_icon.png');
   }
 
-  /* Right Icon - Whisk */
-  .header::after {
-    right: 20px; /* Padding from right edge */
+  /* Right Side (Whisk) */
+  .header-wrapper::after {
+    right: 15px; /* Slight buffer from the right edge */
     background-image: url('right_icon.png');
   }
 
   @media (prefers-color-scheme: dark) {
-    .header::before,
-    .header::after {
+    .header-wrapper::before,
+    .header-wrapper::after {
       filter: invert(1);
     }
   }
 
-  /* Filter Buttons below the Title */
+  /* Central Content (Title & Filters) */
+  .header-content {
+    position: relative;
+    z-index: 2;
+    text-align: center;
+    max-width: 180px; /* Forces the text/icons to stay centered and narrow */
+  }
+
+  .header-title {
+    font-family: 'Playfair Display', serif;
+    font-size: 52px; 
+    font-weight: 800; 
+    letter-spacing: -1px;
+    margin: 0 0 15px 0;
+    line-height: 1;
+  }
+
   .filter-container { 
     display: flex; 
     justify-content: center; 
-    gap: 25px; 
-    padding: 0 16px 30px; 
+    gap: 20px; 
+    padding-bottom: 30px; 
   }
   
+  /* --- BUTTONS & SEARCH --- */
   .filter-btn { cursor: pointer; transition: transform 0.2s, opacity 0.2s; border: none; background: none; padding: 0; }
   .filter-btn:active { transform: scale(0.95); }
   .filter-btn.inactive { opacity: 0.3; }
@@ -106,9 +115,10 @@
     font-weight: 800; font-family: 'Inter', sans-serif; font-size: 18px;
   }
 
-  .search-container { padding: 0 16px 20px; }
+  .search-container { padding: 0 16px 20px; position: relative; z-index: 3; }
   .search-bar { width: 100%; padding: 16px; border-radius: 14px; border: none; background: var(--search-bg); color: var(--text-primary); font-family: 'Inter', sans-serif; font-size: 18px; box-sizing: border-box; outline: none; }
 
+  /* --- GRID & CARDS --- */
   .section-title { padding: 40px 16px 15px; font-family: 'Playfair Display', serif; font-size: 32px; font-weight: 700; text-align: center; }
   .grid { display: flex; flex-wrap: wrap; gap: 12px; padding: 0 16px 50px; }
   
@@ -124,6 +134,7 @@
   .badge-right { position: absolute; top: 8px; right: 8px; display: flex; gap: 4px; align-items: center; }
   .card-badge { background: var(--keto-bg); color: var(--keto-text); width: 22px; height: 22px; border-radius: 50%; display: flex; align-items: center; justify-content: center; font-size: 11px; font-weight: 800; }
 
+  /* --- POPUP --- */
   .popup-inner { padding: 60px 24px; max-width: 600px; margin: 0 auto; }
   .close-btn { position: fixed; top: 25px; right: 25px; font-size: 14px; font-weight: 800; cursor: pointer; background: var(--search-bg); padding: 10px 20px; border-radius: 25px; z-index: 1001; }
   .macro-container { display: flex; gap: 12px; margin-bottom: 25px; justify-content: center; flex-wrap: wrap; }
@@ -137,17 +148,18 @@
 </head>
 <body>
 
-<div class="header">
-  <h1 class="header-title">Recipes</h1>
-</div>
-
-<div class="filter-container">
-  <button class="filter-btn" id="heartFilter" onclick="toggleFilter('Heart')">
-    <div class="badge-circle">❤️</div>
-  </button>
-  <button class="filter-btn" id="ketoFilter" onclick="toggleFilter('Keto')">
-    <div class="badge-circle">K</div>
-  </button>
+<div class="header-wrapper">
+  <div class="header-content">
+    <h1 class="header-title">Recipes</h1>
+    <div class="filter-container">
+      <button class="filter-btn" id="heartFilter" onclick="toggleFilter('Heart')">
+        <div class="badge-circle">❤️</div>
+      </button>
+      <button class="filter-btn" id="ketoFilter" onclick="toggleFilter('Keto')">
+        <div class="badge-circle">K</div>
+      </button>
+    </div>
+  </div>
 </div>
 
 <div class="search-container">
