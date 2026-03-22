@@ -39,11 +39,12 @@
     display: flex;
     flex-direction: column;
     align-items: center;
-    padding-top: 25px; /* Recipes moved up */
+    padding-top: 25px;
     padding-bottom: 50px; 
     overflow: hidden;
   }
 
+  /* Large Background Icons with increased transparency */
   .header-wrapper::before,
   .header-wrapper::after {
     content: "";
@@ -56,6 +57,7 @@
     background-repeat: no-repeat;
     background-position: center;
     z-index: 1;
+    opacity: 0.15; /* Subtler background effect */
     pointer-events: none;
   }
 
@@ -74,7 +76,7 @@
   }
 
   .header-title {
-    font-family: 'Italiana', serif; /* More elegant font */
+    font-family: 'Italiana', serif; 
     font-size: 64px; 
     font-weight: 400; 
     margin: 0;
@@ -120,12 +122,12 @@
 
   /* --- GRID & TITLES --- */
   .section-title { 
-    padding: 50px 16px 25px; /* Increased space between titles and recipes */
+    padding: 60px 16px 30px; /* Increased breathing room */
     font-family: 'Playfair Display', serif; 
     font-size: 34px; 
     font-weight: 700; 
     text-align: center; 
-    text-decoration: underline; /* Underlined category titles */
+    text-decoration: underline; 
     text-underline-offset: 8px;
     text-decoration-thickness: 1px;
   }
@@ -135,7 +137,7 @@
     flex-wrap: wrap; 
     gap: 12px; 
     padding: 0 16px 40px; 
-    margin-top: -10px; /* Raised the recipe cards up slightly */
+    margin-top: -15px; /* Raised recipe cards higher */
   }
   
   .card {
