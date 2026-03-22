@@ -1121,9 +1121,9 @@
     "macros": { "calories": 900, "protein": 90, "carbs": 100, "sugar": 10, "fiber": 14, "fat": 20, "satFat": 8, "polyFat": 4, "monoFat": 8 }
   },
   {
-    "title": "Fluffy Keto Buns",
+    "title": "Fluffy Buns",
     "category": "Bakery",
-    "designations": ["Keto"],
+    "designations": ["Keto", "Heart"],
     "portions": 6,
     "ingredients": ["150g Almond flour", "40g Psyllium husk", "3 Egg whites", "1 cup Boiling water"],
     "instructions": [
@@ -1136,9 +1136,9 @@
     "macros": { "calories": 900, "protein": 45, "carbs": 18, "sugar": 3, "fiber": 36, "fat": 72, "satFat": 7.2, "polyFat": 34.8, "monoFat": 30 }
   },
   {
-    "title": "Keto Bread Rolls",
+    "title": "Bread Rolls",
     "category": "Bakery",
-    "designations": ["Keto"],
+    "designations": ["Keto", "Heart"],
     "portions": 4,
     "ingredients": ["100g Almond flour", "2 Eggs", "100g Greek yogurt", "1 tsp Baking powder"],
     "instructions": [
