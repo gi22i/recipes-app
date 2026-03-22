@@ -32,43 +32,53 @@
 
   body { margin: 0; font-family: 'Inter', sans-serif; background: var(--bg-color); color: var(--text-primary); -webkit-font-smoothing: antialiased; }
 
-  /* --- UPDATED HEADER WITH ICONS --- */
+  /* --- NEW FULL-WIDTH HEADER LOGIC --- */
   .header { 
+    position: relative; /* Allows icons to anchor to the corners */
     display: flex;
+    flex-direction: column;
     align-items: center;
     justify-content: center;
-    gap: 20px; 
-    padding: 60px 20px 10px; 
+    padding: 60px 20px 20px; 
+    text-align: center;
+    min-height: 120px;
+  }
+
+  .header-title {
     font-family: 'Playfair Display', serif;
     font-size: 56px; 
     font-weight: 800; 
     letter-spacing: -1px;
-    text-align: center;
+    margin: 0;
+    z-index: 2;
   }
 
-  /* Icons are attached to the header container */
+  /* Large Icons positioned in the corners */
   .header::before,
   .header::after {
     content: "";
-    display: inline-block;
-    width: 60px;  
-    height: 60px; 
+    position: absolute;
+    top: 50px; /* Adjust vertical position */
+    width: 80px;  /* Larger size based on your drawing */
+    height: 80px; 
     background-size: contain;
     background-repeat: no-repeat;
     background-position: center;
+    z-index: 1;
   }
 
   /* Left Icon - Cookbook */
   .header::before {
+    left: 20px; /* Padding from left edge */
     background-image: url('left_icon.png');
   }
 
   /* Right Icon - Whisk */
   .header::after {
+    right: 20px; /* Padding from right edge */
     background-image: url('right_icon.png');
   }
 
-  /* Dark Mode Inversion */
   @media (prefers-color-scheme: dark) {
     .header::before,
     .header::after {
@@ -76,7 +86,14 @@
     }
   }
 
-  .filter-container { display: flex; justify-content: center; gap: 25px; padding: 10px 16px 30px; }
+  /* Filter Buttons below the Title */
+  .filter-container { 
+    display: flex; 
+    justify-content: center; 
+    gap: 25px; 
+    padding: 0 16px 30px; 
+  }
+  
   .filter-btn { cursor: pointer; transition: transform 0.2s, opacity 0.2s; border: none; background: none; padding: 0; }
   .filter-btn:active { transform: scale(0.95); }
   .filter-btn.inactive { opacity: 0.3; }
@@ -120,7 +137,9 @@
 </head>
 <body>
 
-<div class="header">Recipes</div>
+<div class="header">
+  <h1 class="header-title">Recipes</h1>
+</div>
 
 <div class="filter-container">
   <button class="filter-btn" id="heartFilter" onclick="toggleFilter('Heart')">
