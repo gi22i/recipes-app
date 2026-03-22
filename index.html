@@ -49,15 +49,17 @@
   
   .card {
     background: var(--card-bg); border-radius: 18px; width: calc(50% - 6px); 
-    height: 135px; position: relative; box-sizing: border-box; padding: 15px;
+    min-height: 140px; position: relative; box-sizing: border-box; 
+    padding: 8px; /* Reduced padding */
     display: flex; flex-direction: column; justify-content: center; align-items: center; text-align: center;
     cursor: pointer;
   }
 
-  .card-title { font-size: 16px; font-weight: 700; margin-bottom: 8px; text-decoration: underline; text-underline-offset: 3px; line-height: 1.2; }
-  .card-macros { font-size: 11px; font-weight: 700; color: var(--text-secondary); text-transform: uppercase; line-height: 1.5; }
+  /* Increased font sizes for the cards */
+  .card-title { font-size: 20px; font-weight: 700; margin-bottom: 8px; text-decoration: underline; text-underline-offset: 3px; line-height: 1.2; }
+  .card-macros { font-size: 14px; font-weight: 700; color: var(--text-secondary); text-transform: uppercase; line-height: 1.5; }
 
-  .badge-right { position: absolute; top: 12px; right: 12px; }
+  .badge-right { position: absolute; top: 8px; right: 8px; }
   .keto-badge {
     background: var(--keto-bg); color: var(--keto-text); width: 22px; height: 22px; 
     border-radius: 50%; display: flex; align-items: center; justify-content: center; font-size: 12px; font-weight: 800;
@@ -137,7 +139,9 @@ function runFilters() {
 function render(data) {
   const container = document.getElementById('recipe-list');
   container.innerHTML = '';
-  const order = ["Meals", "Bakery", "Desserts"];
+  
+  // Added "Breakfasts" to the rendering order
+  const order = ["Breakfasts", "Meals", "Bakery", "Desserts"];
 
   order.forEach(cat => {
     const filtered = data.filter(r => r.category === cat);
