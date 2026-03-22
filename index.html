@@ -40,17 +40,18 @@
     flex-direction: column;
     align-items: center;
     padding-top: 40px;
+    padding-bottom: 20px;
     overflow: hidden;
   }
 
-  /* Large Background Icons - Adjusted for Center Alignment */
+  /* Large Background Icons */
   .header-wrapper::before,
   .header-wrapper::after {
     content: "";
     position: absolute;
     top: 15px; 
     bottom: 15px; 
-    width: 30%; /* Increased width for larger scale */
+    width: 30%;
     max-width: 150px; 
     background-size: contain;
     background-repeat: no-repeat;
@@ -59,15 +60,13 @@
     pointer-events: none;
   }
 
-  /* Left Side (Cookbook) - Moved further from edge */
   .header-wrapper::before {
-    left: 10%; /* Percentage-based positioning moves it toward center */
+    left: 10%;
     background-image: url('left_icon.png');
   }
 
-  /* Right Side (Whisk) - Moved further from edge */
   .header-wrapper::after {
-    right: 10%; /* Percentage-based positioning moves it toward center */
+    right: 10%;
     background-image: url('right_icon.png');
   }
 
@@ -78,12 +77,11 @@
     }
   }
 
-  /* Central Content */
   .header-content {
     position: relative;
     z-index: 2;
     text-align: center;
-    max-width: 220px; /* Slightly wider to balance larger icons */
+    max-width: 220px;
   }
 
   .header-title {
@@ -91,18 +89,41 @@
     font-size: 52px; 
     font-weight: 800; 
     letter-spacing: -1px;
-    margin: 0 0 15px 0;
+    margin: 0;
     line-height: 1;
   }
 
+  /* --- SEARCH & FILTERS SECTION --- */
+  .search-container { 
+    padding: 0 16px 20px; 
+    position: relative; 
+    z-index: 3; 
+    display: flex;
+    flex-direction: column;
+    gap: 12px;
+  }
+
+  .search-bar { 
+    width: 100%; 
+    padding: 16px; 
+    border-radius: 14px; 
+    border: none; 
+    background: var(--search-bg); 
+    color: var(--text-primary); 
+    font-family: 'Inter', sans-serif; 
+    font-size: 18px; 
+    box-sizing: border-box; 
+    outline: none; 
+  }
+
+  /* Filters moved underneath search on the left */
   .filter-container { 
     display: flex; 
-    justify-content: center; 
-    gap: 20px; 
-    padding-bottom: 30px; 
+    justify-content: flex-start; 
+    gap: 12px; 
+    padding-left: 4px;
   }
   
-  /* --- BUTTONS & SEARCH --- */
   .filter-btn { cursor: pointer; transition: transform 0.2s, opacity 0.2s; border: none; background: none; padding: 0; }
   .filter-btn:active { transform: scale(0.95); }
   .filter-btn.inactive { opacity: 0.3; }
@@ -110,13 +131,10 @@
   .badge-circle {
     background: var(--keto-bg); 
     color: var(--keto-text); 
-    width: 40px; height: 40px; border-radius: 50%; 
+    width: 36px; height: 36px; border-radius: 50%; 
     display: flex; align-items: center; justify-content: center; 
-    font-weight: 800; font-family: 'Inter', sans-serif; font-size: 18px;
+    font-weight: 800; font-family: 'Inter', sans-serif; font-size: 16px;
   }
-
-  .search-container { padding: 0 16px 20px; position: relative; z-index: 3; }
-  .search-bar { width: 100%; padding: 16px; border-radius: 14px; border: none; background: var(--search-bg); color: var(--text-primary); font-family: 'Inter', sans-serif; font-size: 18px; box-sizing: border-box; outline: none; }
 
   /* --- GRID & CARDS --- */
   .section-title { padding: 40px 16px 15px; font-family: 'Playfair Display', serif; font-size: 32px; font-weight: 700; text-align: center; }
@@ -151,19 +169,19 @@
 <div class="header-wrapper">
   <div class="header-content">
     <h1 class="header-title">Recipes</h1>
-    <div class="filter-container">
-      <button class="filter-btn" id="heartFilter" onclick="toggleFilter('Heart')">
-        <div class="badge-circle">❤️</div>
-      </button>
-      <button class="filter-btn" id="ketoFilter" onclick="toggleFilter('Keto')">
-        <div class="badge-circle">K</div>
-      </button>
-    </div>
   </div>
 </div>
 
 <div class="search-container">
   <input type="search" id="searchInput" class="search-bar" placeholder="Search ingredients or titles..." onkeyup="runFilters()">
+  <div class="filter-container">
+    <button class="filter-btn" id="heartFilter" onclick="toggleFilter('Heart')">
+      <div class="badge-circle">❤️</div>
+    </button>
+    <button class="filter-btn" id="ketoFilter" onclick="toggleFilter('Keto')">
+      <div class="badge-circle">K</div>
+    </button>
+  </div>
 </div>
 
 <div id="recipe-list"></div>
