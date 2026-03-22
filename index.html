@@ -205,16 +205,15 @@ function openPopup(r) {
   const formatBox = (m, label) => `
     <div class="macro-box">
       <strong style="text-decoration: underline;">${label}</strong><br>
-      ${m.calories} kcal<br>
+      Calories: ${m.calories}kcal<br>
       Protein: ${m.protein}g<br>
       Carbs: ${m.carbs}g<br>
-      <span style="font-size: 11px; color: var(--text-secondary);">
-        (Sugar: ${m.sugar}g, Fiber: ${m.fiber}g)
-      </span><br>
-      Fat: ${m.fat}g (Sat: ${m.satFat}g)<br>
-      <span style="font-size: 11px; color: var(--text-secondary);">
-        Poly: ${m.polyFat}g | Mono: ${m.monoFat}g
-      </span>
+      Sugar: ${m.sugar}g<br>
+      Fiber: ${m.fiber}g<br>
+      Fat: ${m.fat}g<br>
+      Sat: ${m.satFat}g<br>
+      Poly: ${m.polyFat}g<br>
+      Mono: ${m.monoFat}g<br>
     </div>`;
 
   document.getElementById('popup-content').innerHTML = `
