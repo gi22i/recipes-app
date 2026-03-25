@@ -1,52 +1,33 @@
 [
   {
-  "title": "Chocolate Brownies (Erythritol & Cocoa)",
-  "category": "Desserts",
-  "designations": ["Lower Sugar"],
-  "portions": 9,
-  "ingredients": [
-    "100g dark chocolate",
-    "120g vegetable spread",
-    "170g erythritol",
-    "3 large eggs",
-    "5g vanilla extract",
-    "110g plain flour",
-    "50g cocoa powder",
-    "2g salt"
-  ],
-  "instructions": [
-    "Preheat the oven to 170°C (fan) or 180°C conventional and line a 20x20 cm baking tin with baking paper.",
-    "Break the 100g of dark chocolate into pieces and combine it with the 120g of vegetable spread in a heatproof bowl, then melt gently in the microwave in short bursts or over a bain-marie, stirring until smooth.",
-    "Add the 170g of erythritol to the warm chocolate mixture and stir thoroughly until well combined.",
-    "Add the 3 eggs one at a time, mixing well after each addition until the mixture becomes thick and glossy.",
-    "Stir in the 5g of vanilla extract until fully incorporated.",
-    "In a separate bowl, mix together the 110g of plain flour, 50g of cocoa powder, and 2g of salt.",
-    "Fold the dry ingredients into the wet mixture gently until just combined, being careful not to overmix.",
-    "Pour the batter into the prepared baking tin and spread evenly.",
-    "Bake for 20–25 minutes, until the edges are set and the center still has a slight wobble.",
-    "Allow the brownies to cool completely in the tin before slicing into 9 portions."
-  ],
-  "macrosPerPortion": {
-    "calories": 190,
-    "protein": 3,
-    "carbs": 10,
-    "sugar": 2,
-    "fiber": 2,
-    "fat": 15,
-    "satFat": 5,
-    "polyFat": 3,
-    "monoFat": 6
-  },
-  "macros": {
-    "calories": 1710,
-    "protein": 27,
-    "carbs": 90,
-    "sugar": 18,
-    "fiber": 18,
-    "fat": 135,
-    "satFat": 45,
-    "polyFat": 27,
-    "monoFat": 54
+    "title": "Chocolate Brownies (Erythritol & Cocoa)",
+    "category": "Desserts",
+    "designations": ["Low Sugar"],
+    "portions": 9,
+    "ingredients": [
+      "100g dark chocolate",
+      "120g vegetable spread",
+      "170g erythritol",
+      "3 large eggs",
+      "5g vanilla extract",
+      "110g plain flour",
+      "50g cocoa powder",
+      "2g salt"
+    ],
+    "instructions": [
+      "Preheat the oven to 170°C (fan) or 180°C conventional and line a 20x20 cm baking tin with baking paper.",
+      "Break the 100g of dark chocolate into pieces and combine it with the 120g of vegetable spread in a heatproof bowl, then melt gently in the microwave in short bursts or over a bain-marie, stirring until smooth.",
+      "Add the 170g of erythritol to the warm chocolate mixture and stir thoroughly until well combined.",
+      "Add the 3 eggs one at a time, mixing well after each addition until the mixture becomes thick and glossy.",
+      "Stir in the 5g of vanilla extract until fully incorporated.",
+      "In a separate bowl, mix together the 110g of plain flour, 50g of cocoa powder, and 2g of salt.",
+      "Fold the dry ingredients into the wet mixture gently until just combined, being careful not to overmix.",
+      "Pour the batter into the prepared baking tin and spread evenly.",
+      "Bake for 20–25 minutes, until the edges are set and the center still has a slight wobble.",
+      "Allow the brownies to cool completely in the tin before slicing into 9 portions."
+    ],
+    "macrosPerPortion": { "calories": 190, "protein": 3, "carbs": 10, "sugar": 2, "fiber": 2, "fat": 15, "satFat": 5, "polyFat": 3, "monoFat": 6 },
+    "macros": { "calories": 1710, "protein": 27, "carbs": 90, "sugar": 18, "fiber": 18, "fat": 135, "satFat": 45, "polyFat": 27, "monoFat": 54 }
   },
   {
     "title": "Avocado Chocolate Mousse",
