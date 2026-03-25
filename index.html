@@ -126,7 +126,7 @@
     font-family: 'Playfair Display', serif; 
     font-size: 34px; 
     font-weight: 700; 
-    text-align: center; /* Centered as requested */
+    text-align: center; 
     text-decoration: underline; 
     text-underline-offset: 8px;
     text-decoration-thickness: 1px;
@@ -222,6 +222,9 @@
     <button class="filter-btn" id="ketoFilter" onclick="toggleFilter('Keto')">
       <div class="badge-circle">K</div>
     </button>
+    <button class="filter-btn" id="sugarFilter" onclick="toggleFilter('Low Sugar')">
+      <div class="badge-circle">S</div>
+    </button>
   </div>
 </div>
 
@@ -246,10 +249,12 @@ function toggleFilter(type) {
     activeFilter = null;
     document.getElementById('heartFilter').classList.remove('inactive');
     document.getElementById('ketoFilter').classList.remove('inactive');
+    document.getElementById('sugarFilter').classList.remove('inactive');
   } else {
     activeFilter = type;
     document.getElementById('heartFilter').classList.toggle('inactive', type !== 'Heart');
     document.getElementById('ketoFilter').classList.toggle('inactive', type !== 'Keto');
+    document.getElementById('sugarFilter').classList.toggle('inactive', type !== 'Low Sugar');
   }
   runFilters();
 }
@@ -289,8 +294,20 @@ function render(data) {
       card.onclick = () => openPopup(r);
       
       let badges = '';
-      if (r.designations?.includes("Heart")) badges += '<div style="background:var(--keto-bg); color:var(--keto-text); width:24px; height:24px; border-radius:50%; display:flex; align-items:center; justify-content:center; font-size:10px; position:absolute; top:8px; right:8px;">❤️</div>';
-      if (r.designations?.includes("Keto")) badges += '<div style="background:var(--keto-bg); color:var(--keto-text); width:24px; height:24px; border-radius:50%; display:flex; align-items:center; justify-content:center; font-size:12px; font-weight:800; position:absolute; top:8px; right:36px;">K</div>';
+      let badgeOffset = 8;
+      
+      if (r.designations?.includes("Heart")) { 
+        badges += `<div style="background:var(--keto-bg); color:var(--keto-text); width:24px; height:24px; border-radius:50%; display:flex; align-items:center; justify-content:center; font-size:10px; position:absolute; top:8px; right:${badgeOffset}px;">❤️</div>`; 
+        badgeOffset += 28; 
+      }
+      if (r.designations?.includes("Keto")) { 
+        badges += `<div style="background:var(--keto-bg); color:var(--keto-text); width:24px; height:24px; border-radius:50%; display:flex; align-items:center; justify-content:center; font-size:12px; font-weight:800; position:absolute; top:8px; right:${badgeOffset}px;">K</div>`; 
+        badgeOffset += 28; 
+      }
+      if (r.designations?.includes("Low Sugar")) { 
+        badges += `<div style="background:var(--keto-bg); color:var(--keto-text); width:24px; height:24px; border-radius:50%; display:flex; align-items:center; justify-content:center; font-size:12px; font-weight:800; position:absolute; top:8px; right:${badgeOffset}px;">S</div>`; 
+        badgeOffset += 28; 
+      }
 
       card.innerHTML = `
         ${badges}
