@@ -1,174 +1,63 @@
 {
-  "version": "2.1",
+  "version": "3.0",
   "config": {
     "units": "grams",
-    "low_sugar_threshold": 5.0,
-    "ui_logic": {
-      "restricted_icons_categories": ["Desserts", "Bakery"],
-      "restricted_filter_categories": ["Desserts", "Bakery"]
-    }
+    "low_sugar_threshold": 5.0
   },
   "recipes": [
-    {
-      "title": "Chocolate Brownies (Erythritol & Cocoa)",
-      "category": "Desserts",
-      "designations": ["Low Sugar"],
-      "portions": 9,
-      "ingredients": ["100g dark chocolate", "120g vegetable spread", "170g erythritol", "3 large eggs", "5g vanilla extract", "110g plain flour", "50g cocoa powder", "2g salt"],
-      "macrosPerPortion": { "calories": 190, "protein": 3, "carbs": 10, "sugar": 2, "fiber": 2, "fat": 15 },
-      "display_features": { "show_low_sugar_badge": true, "icon": "leaf" }
-    },
-    {
-      "title": "Avocado Chocolate Mousse",
-      "category": "Desserts",
-      "designations": ["Heart", "Keto"],
-      "portions": 2,
-      "ingredients": ["150g ripe avocado", "20g unsweetened cocoa powder", "30g erythritol", "30ml unsweetened almond milk", "2g vanilla extract"],
-      "macrosPerPortion": { "calories": 160, "protein": 3, "carbs": 2, "sugar": 1, "fiber": 7, "fat": 14 },
-      "display_features": { "show_low_sugar_badge": true, "icon": "leaf" }
-    },
-    {
-      "title": "Raspberry Almond Mug Cake",
-      "category": "Desserts",
-      "designations": ["Heart", "Keto"],
-      "portions": 1,
-      "ingredients": ["35g almond flour", "1 large egg white", "10ml rapeseed oil", "15g erythritol", "20g frozen raspberries", "2g baking powder"],
-      "macrosPerPortion": { "calories": 280, "protein": 10, "carbs": 4, "sugar": 1.5, "fiber": 4, "fat": 24 },
-      "display_features": { "show_low_sugar_badge": true, "icon": "leaf" }
-    },
-    {
-      "title": "Dark Chocolate Walnut Clusters",
-      "category": "Desserts",
-      "designations": ["Heart", "Keto"],
-      "portions": 4,
-      "ingredients": ["100g walnut halves", "25g dark chocolate (min 85% cocoa)", "1g sea salt"],
-      "macrosPerPortion": { "calories": 195, "protein": 4, "carbs": 2, "sugar": 0.8, "fiber": 2, "fat": 19 },
-      "display_features": { "show_low_sugar_badge": true, "icon": "leaf" }
-    },
-    {
-      "title": "Vanilla Berry Chia Pudding",
-      "category": "Desserts",
-      "designations": ["Heart", "Keto"],
-      "portions": 2,
-      "ingredients": ["40g chia seeds", "250ml unsweetened almond milk", "20g erythritol", "2g vanilla extract", "40g mixed berries"],
-      "macrosPerPortion": { "calories": 145, "protein": 5, "carbs": 2, "sugar": 1.5, "fiber": 8, "fat": 9 },
-      "display_features": { "show_low_sugar_badge": true, "icon": "leaf" }
-    },
-    {
-      "title": "Lemon Poppy Seed Muffins",
-      "category": "Desserts",
-      "designations": ["Heart", "Keto"],
-      "portions": 6,
-      "ingredients": ["150g almond flour", "2 large egg whites", "20ml rapeseed oil", "30g erythritol", "10g poppy seeds", "1 lemon", "5g baking powder"],
-      "macrosPerPortion": { "calories": 190, "protein": 7, "carbs": 2, "sugar": 1, "fiber": 3, "fat": 17 },
-      "display_features": { "show_low_sugar_badge": true, "icon": "leaf" }
-    },
-    {
-      "title": "Almond & Berry Crumble",
-      "category": "Desserts",
-      "designations": ["Heart", "Keto"],
-      "portions": 2,
-      "ingredients": ["120g mixed frozen berries", "40g almond flour", "15g walnuts", "10ml rapeseed oil", "10g erythritol", "1g cinnamon"],
-      "macrosPerPortion": { "calories": 215, "protein": 6, "carbs": 4, "sugar": 3.5, "fiber": 5, "fat": 18 },
-      "display_features": { "show_low_sugar_badge": true, "icon": "leaf" }
-    },
-    {
-      "title": "Cocoa-Walnut Truffles",
-      "category": "Desserts",
-      "designations": ["Heart", "Keto"],
-      "portions": 2,
-      "ingredients": ["60g walnuts", "10g unsweetened cocoa powder", "15g erythritol", "5ml water", "1g vanilla extract"],
-      "macrosPerPortion": { "calories": 210, "protein": 5, "carbs": 2, "sugar": 0.8, "fiber": 3, "fat": 20 },
-      "display_features": { "show_low_sugar_badge": true, "icon": "leaf" }
-    },
-    {
-      "title": "Golden Flax & Sunflower Bread",
-      "category": "Bakery",
-      "designations": ["Heart", "Keto"],
-      "portions": 10,
-      "ingredients": ["200g ground flaxseeds", "50g sunflower seeds", "5 large egg whites", "100ml warm water", "15ml rapeseed oil", "10g baking powder"],
-      "macrosPerPortion": { "calories": 165, "protein": 7, "carbs": 1, "sugar": 0.5, "fiber": 6, "fat": 13 },
-      "display_features": { "show_low_sugar_badge": true, "icon": "leaf" }
-    },
-    {
-      "title": "Rosemary Olive Oil Focaccia",
-      "category": "Bakery",
-      "designations": ["Heart", "Keto"],
-      "portions": 6,
-      "ingredients": ["200g almond flour", "2 large egg whites", "30ml extra virgin olive oil", "5g dried rosemary", "5g baking powder"],
-      "macrosPerPortion": { "calories": 240, "protein": 8, "carbs": 2, "sugar": 1, "fiber": 4, "fat": 21 },
-      "display_features": { "show_low_sugar_badge": true, "icon": "leaf" }
-    },
-    {
-      "title": "Savory Walnut Zucchini Loaf",
-      "category": "Bakery",
-      "designations": ["Heart", "Keto"],
-      "portions": 8,
-      "ingredients": ["250g grated zucchini", "150g almond flour", "50g walnuts", "3 large egg whites", "20ml rapeseed oil", "10g baking powder"],
-      "macrosPerPortion": { "calories": 195, "protein": 7, "carbs": 1.5, "sugar": 1.5, "fiber": 3.5, "fat": 17 },
-      "display_features": { "show_low_sugar_badge": true, "icon": "leaf" }
-    },
-    {
-      "title": "3-Ingredient Seeded Crackers",
-      "category": "Bakery",
-      "designations": ["Heart", "Keto"],
-      "portions": 4,
-      "ingredients": ["50g sunflower seeds", "50g pumpkin seeds", "20g chia seeds", "100ml water", "2g salt"],
-      "macrosPerPortion": { "calories": 160, "protein": 7, "carbs": 1, "sugar": 0.5, "fiber": 5, "fat": 13 },
-      "display_features": { "show_low_sugar_badge": true, "icon": "leaf" }
-    },
-    {
-      "title": "Herb-Crusted Baked Cod",
-      "category": "Meals",
-      "designations": ["Heart", "Keto"],
-      "portions": 2,
-      "ingredients": ["300g cod fillets", "40g almond flour", "15ml olive oil", "5g dried parsley", "1 lemon", "200g steamed green beans"],
-      "macrosPerPortion": { "calories": 310, "protein": 32, "carbs": 3, "sugar": 2, "fiber": 5, "fat": 18 },
-      "display_features": { "show_low_sugar_badge": false, "icon": null }
-    },
-    {
-      "title": "Smoked Mackerel & Avocado Mash",
-      "category": "Breakfasts",
-      "designations": ["Heart", "Keto"],
-      "portions": 2,
-      "ingredients": ["120g smoked mackerel", "100g avocado", "10ml lemon juice", "200g cucumber", "2g black pepper"],
-      "macrosPerPortion": { "calories": 245, "protein": 14, "carbs": 1, "sugar": 2, "fiber": 5, "fat": 19 },
-      "display_features": { "show_low_sugar_badge": false, "icon": null }
-    },
-    {
-      "title": "Fluffy Buns",
-      "category": "Bakery",
-      "designations": ["Keto", "Heart"],
-      "portions": 6,
-      "ingredients": ["150g Almond flour", "40g Psyllium husk", "3 Egg whites", "1 cup Boiling water"],
-      "macrosPerPortion": { "calories": 150, "protein": 7.5, "carbs": 1, "sugar": 0.5, "fiber": 6, "fat": 12 },
-      "display_features": { "show_low_sugar_badge": true, "icon": "leaf" }
-    },
-    {
-      "title": "Protein Brownies",
-      "category": "Desserts",
-      "portions": 12,
-      "ingredients": ["2 scoops Protein powder", "1 Avocado", "2 Eggs", "30g Cocoa powder"],
-      "macrosPerPortion": { "calories": 150, "protein": 12, "carbs": 2.3, "sugar": 0.5, "fiber": 1.7, "fat": 10 },
-      "display_features": { "show_low_sugar_badge": true, "icon": "leaf" }
-    },
-    {
-      "title": "Yogurt Cheesecake",
-      "category": "Desserts",
-      "designations": ["Heart"],
-      "portions": 6,
-      "ingredients": ["500g 0% Greek Yogurt", "2 Eggs", "2 tbsp Cornstarch", "Stevia or honey"],
-      "macrosPerPortion": { "calories": 140, "protein": 15, "carbs": 10, "sugar": 5.0, "fiber": 0, "fat": 3 },
-      "display_features": { "show_low_sugar_badge": false, "icon": null }
-    },
-    {
-      "title": "Chocolate Bean Cake",
-      "category": "Desserts",
-      "designations": ["Heart"],
-      "portions": 10,
-      "ingredients": ["400g Black beans", "3 Eggs", "50g Cocoa powder", "Honey or Stevia"],
-      "macrosPerPortion": { "calories": 160, "protein": 8, "carbs": 10, "sugar": 1.5, "fiber": 6, "fat": 5 },
-      "display_features": { "show_low_sugar_badge": true, "icon": "leaf" }
-    }
+    { "title": "Chocolate Brownies (Erythritol & Cocoa)", "category": "Desserts", "designations": ["Keto", "Low Sugar"], "portions": 9, "macrosPerPortion": { "calories": 190, "protein": 3.0, "fat": 15.0, "fat_sat": 8.5, "fat_mono": 5.0, "fat_poly": 1.5, "carbs_net": 2.0, "sugar": 2.0, "sugar_alcohols": 12.0, "fiber": 2.0 } },
+    { "title": "Avocado Chocolate Mousse", "category": "Desserts", "designations": ["Heart", "Keto", "Low Sugar"], "portions": 2, "macrosPerPortion": { "calories": 160, "protein": 3.0, "fat": 14.0, "fat_sat": 2.1, "fat_mono": 9.8, "fat_poly": 1.2, "carbs_net": 1.0, "sugar": 1.0, "sugar_alcohols": 0, "fiber": 7.0 } },
+    { "title": "Raspberry Almond Mug Cake", "category": "Desserts", "designations": ["Heart", "Keto", "Low Sugar"], "portions": 1, "macrosPerPortion": { "calories": 280, "protein": 10.0, "fat": 24.0, "fat_sat": 2.2, "fat_mono": 15.5, "fat_poly": 5.2, "carbs_net": 4.0, "sugar": 1.5, "sugar_alcohols": 10.0, "fiber": 4.0 } },
+    { "title": "Dark Chocolate Walnut Clusters", "category": "Desserts", "designations": ["Heart", "Keto", "Low Sugar"], "portions": 4, "macrosPerPortion": { "calories": 195, "protein": 4.0, "fat": 19.0, "fat_sat": 3.0, "fat_mono": 6.0, "fat_poly": 10.0, "carbs_net": 2.0, "sugar": 0.8, "sugar_alcohols": 0, "fiber": 2.0 } },
+    { "title": "Vanilla Berry Chia Pudding", "category": "Desserts", "designations": ["Heart", "Keto", "Low Sugar"], "portions": 2, "macrosPerPortion": { "calories": 145, "protein": 5.0, "fat": 9.0, "fat_sat": 1.0, "fat_mono": 1.5, "fat_poly": 6.5, "carbs_net": 2.0, "sugar": 1.5, "sugar_alcohols": 0, "fiber": 8.0 } },
+    { "title": "Lemon Poppy Seed Muffins", "category": "Desserts", "designations": ["Heart", "Keto", "Low Sugar"], "portions": 6, "macrosPerPortion": { "calories": 190, "protein": 7.0, "fat": 17.0, "fat_sat": 1.5, "fat_mono": 11.0, "fat_poly": 4.5, "carbs_net": 2.0, "sugar": 1.0, "sugar_alcohols": 0, "fiber": 3.0 } },
+    { "title": "Almond & Berry Crumble", "category": "Desserts", "designations": ["Heart", "Keto", "Low Sugar"], "portions": 2, "macrosPerPortion": { "calories": 215, "protein": 6.0, "fat": 18.0, "fat_sat": 1.5, "fat_mono": 12.0, "fat_poly": 4.5, "carbs_net": 4.0, "sugar": 3.5, "sugar_alcohols": 0, "fiber": 5.0 } },
+    { "title": "Cocoa-Walnut Truffles", "category": "Desserts", "designations": ["Heart", "Keto", "Low Sugar"], "portions": 2, "macrosPerPortion": { "calories": 210, "protein": 5.0, "fat": 20.0, "fat_sat": 2.0, "fat_mono": 6.0, "fat_poly": 12.0, "carbs_net": 2.0, "sugar": 0.8, "sugar_alcohols": 0, "fiber": 3.0 } },
+    { "title": "Golden Flax & Sunflower Bread", "category": "Bakery", "designations": ["Heart", "Keto", "Low Sugar"], "portions": 10, "macrosPerPortion": { "calories": 165, "protein": 7.0, "fat": 13.0, "fat_sat": 1.5, "fat_mono": 4.2, "fat_poly": 6.8, "carbs_net": 1.0, "sugar": 0.5, "sugar_alcohols": 0, "fiber": 6.0 } },
+    { "title": "Rosemary Olive Oil Focaccia", "category": "Bakery", "designations": ["Heart", "Keto", "Low Sugar"], "portions": 6, "macrosPerPortion": { "calories": 240, "protein": 8.0, "fat": 21.0, "fat_sat": 3.0, "fat_mono": 15.0, "fat_poly": 3.0, "carbs_net": 2.0, "sugar": 1.0, "sugar_alcohols": 0, "fiber": 4.0 } },
+    { "title": "Savory Walnut Zucchini Loaf", "category": "Bakery", "designations": ["Heart", "Keto", "Low Sugar"], "portions": 8, "macrosPerPortion": { "calories": 195, "protein": 7.0, "fat": 17.0, "fat_sat": 1.8, "fat_mono": 5.2, "fat_poly": 10.0, "carbs_net": 1.5, "sugar": 1.5, "sugar_alcohols": 0, "fiber": 3.5 } },
+    { "title": "3-Ingredient Seeded Crackers", "category": "Bakery", "designations": ["Heart", "Keto", "Low Sugar"], "portions": 4, "macrosPerPortion": { "calories": 160, "protein": 7.0, "fat": 13.0, "fat_sat": 1.5, "fat_mono": 3.5, "fat_poly": 8.0, "carbs_net": 1.0, "sugar": 0.5, "sugar_alcohols": 0, "fiber": 5.0 } },
+    { "title": "Spinach & Almond Muffins", "category": "Bakery", "designations": ["Keto", "Low Sugar"], "portions": 6, "macrosPerPortion": { "calories": 185, "protein": 7.0, "fat": 16.0, "fat_sat": 2.0, "fat_mono": 10.0, "fat_poly": 4.0, "carbs_net": 1.0, "sugar": 1.0, "sugar_alcohols": 0, "fiber": 3.0 } },
+    { "title": "Almond Soft Tortilla Wraps", "category": "Bakery", "designations": ["Keto", "Low Sugar"], "portions": 4, "macrosPerPortion": { "calories": 205, "protein": 7.0, "fat": 17.0, "fat_sat": 1.5, "fat_mono": 11.5, "fat_poly": 4.0, "carbs_net": 1.0, "sugar": 1.0, "sugar_alcohols": 0, "fiber": 4.0 } },
+    { "title": "Pumpkin Seed Flatbread", "category": "Bakery", "designations": ["Keto", "Low Sugar"], "portions": 2, "macrosPerPortion": { "calories": 260, "protein": 12.0, "fat": 22.0, "fat_sat": 3.5, "fat_mono": 6.5, "fat_poly": 12.0, "carbs_net": 0.5, "sugar": 0.5, "sugar_alcohols": 0, "fiber": 5.0 } },
+    { "title": "Herb-Crusted Baked Cod", "category": "Meals", "designations": ["Heart", "Keto"], "portions": 2, "macrosPerPortion": { "calories": 310, "protein": 32.0, "fat": 18.0, "fat_sat": 2.5, "fat_mono": 12.0, "fat_poly": 3.5, "carbs_net": 2.0, "sugar": 2.0, "sugar_alcohols": 0, "fiber": 5.0 } },
+    { "title": "Turkey & Zucchini Stir-fry", "category": "Meals", "portions": 2, "macrosPerPortion": { "calories": 285, "protein": 34.0, "fat": 14.0, "fat_sat": 3.5, "fat_mono": 7.0, "fat_poly": 3.5, "carbs_net": 3.0, "sugar": 3.0, "sugar_alcohols": 0, "fiber": 4.0 } },
+    { "title": "Walnut-Crusted Tofu Steaks", "category": "Meals", "portions": 2, "macrosPerPortion": { "calories": 395, "protein": 22.0, "fat": 30.0, "fat_sat": 3.5, "fat_mono": 8.5, "fat_poly": 18.0, "carbs_net": 3.0, "sugar": 3.0, "sugar_alcohols": 0, "fiber": 6.0 } },
+    { "title": "Mediterranean Chicken Salad", "category": "Meals", "designations": ["Heart"], "portions": 2, "macrosPerPortion": { "calories": 360, "protein": 30.0, "fat": 24.0, "fat_sat": 4.5, "fat_mono": 14.5, "fat_poly": 5.0, "carbs_net": 2.0, "sugar": 2.0, "sugar_alcohols": 0, "fiber": 5.0 } },
+    { "title": "Mushroom Cauliflower Risotto", "category": "Meals", "portions": 2, "macrosPerPortion": { "calories": 165, "protein": 8.0, "fat": 11.0, "fat_sat": 4.5, "fat_mono": 5.0, "fat_poly": 1.5, "carbs_net": 5.0, "sugar": 5.0, "sugar_alcohols": 0, "fiber": 6.0 } },
+    { "title": "Lemon Garlic Baked Herring", "category": "Meals", "designations": ["Heart"], "portions": 2, "macrosPerPortion": { "calories": 295, "protein": 24.0, "fat": 19.0, "fat_sat": 4.0, "fat_mono": 8.0, "fat_poly": 7.0, "carbs_net": 2.0, "sugar": 2.0, "sugar_alcohols": 0, "fiber": 0 } },
+    { "title": "Lean Beef & Broccoli Stir-fry", "category": "Meals", "portions": 2, "macrosPerPortion": { "calories": 310, "protein": 32.0, "fat": 16.0, "fat_sat": 5.0, "fat_mono": 8.5, "fat_poly": 2.5, "carbs_net": 2.0, "sugar": 2.0, "sugar_alcohols": 0, "fiber": 4.0 } },
+    { "title": "Smoked Mackerel & Avocado Mash", "category": "Breakfasts", "designations": ["Heart", "Keto"], "portions": 2, "macrosPerPortion": { "calories": 245, "protein": 14.0, "fat": 19.0, "fat_sat": 3.5, "fat_mono": 10.5, "fat_poly": 5.0, "carbs_net": 2.0, "sugar": 2.0, "sugar_alcohols": 0, "fiber": 5.0 } },
+    { "title": "Flaxseed & Walnut N'oats", "category": "Breakfasts", "designations": ["Heart", "Keto"], "portions": 1, "macrosPerPortion": { "calories": 310, "protein": 11.0, "fat": 24.0, "fat_sat": 2.5, "fat_mono": 6.5, "fat_poly": 15.0, "carbs_net": 1.5, "sugar": 1.5, "sugar_alcohols": 0, "fiber": 12.0 } },
+    { "title": "Tofu Scramble with Spinach", "category": "Breakfasts", "portions": 2, "macrosPerPortion": { "calories": 240, "protein": 18.0, "fat": 16.0, "fat_sat": 2.5, "fat_mono": 4.5, "fat_poly": 9.0, "carbs_net": 2.0, "sugar": 2.0, "sugar_alcohols": 0, "fiber": 4.0 } },
+    { "title": "Chia & Berry Skyr Bowl", "category": "Breakfasts", "portions": 1, "macrosPerPortion": { "calories": 215, "protein": 20.0, "fat": 8.0, "fat_sat": 1.0, "fat_mono": 1.5, "fat_poly": 5.5, "carbs_net": 6.0, "sugar": 6.0, "sugar_alcohols": 0, "fiber": 8.0 } },
+    { "title": "Almond Savory Pancakes", "category": "Breakfasts", "designations": ["Keto"], "portions": 2, "macrosPerPortion": { "calories": 340, "protein": 15.0, "fat": 28.0, "fat_sat": 4.5, "fat_mono": 16.5, "fat_poly": 7.0, "carbs_net": 2.0, "sugar": 2.0, "sugar_alcohols": 0, "fiber": 6.0 } },
+    { "title": "Zucchini Walnut Muffins", "category": "Breakfasts", "designations": ["Keto"], "portions": 4, "macrosPerPortion": { "calories": 310, "protein": 11.0, "fat": 27.0, "fat_sat": 3.5, "fat_mono": 8.5, "fat_poly": 15.0, "carbs_net": 2.0, "sugar": 2.0, "sugar_alcohols": 0, "fiber": 4.0 } },
+    { "title": "Smoked Salmon Roll-ups", "category": "Breakfasts", "designations": ["Heart"], "portions": 2, "macrosPerPortion": { "calories": 195, "protein": 18.0, "fat": 12.0, "fat_sat": 4.0, "fat_mono": 5.0, "fat_poly": 3.0, "carbs_net": 1.0, "sugar": 1.0, "sugar_alcohols": 0, "fiber": 0 } },
+    { "title": "Tuna Potato Bowl", "category": "Meals", "portions": 2, "macrosPerPortion": { "calories": 310, "protein": 20.0, "fat": 10.0, "fat_sat": 2.0, "fat_mono": 5.0, "fat_poly": 3.0, "carbs_net": 6.0, "sugar": 6.0, "sugar_alcohols": 0, "fiber": 4.0 } },
+    { "title": "Spiced Bean Bowl", "category": "Meals", "portions": 2, "macrosPerPortion": { "calories": 380, "protein": 14.0, "fat": 12.0, "fat_sat": 1.5, "fat_mono": 4.0, "fat_poly": 6.5, "carbs_net": 5.0, "sugar": 5.0, "sugar_alcohols": 0, "fiber": 12.0 } },
+    { "title": "Oats Yogurt Fruit Bowl", "category": "Breakfasts", "portions": 2, "macrosPerPortion": { "calories": 290, "protein": 16.0, "fat": 5.0, "fat_sat": 1.0, "fat_mono": 2.0, "fat_poly": 2.0, "carbs_net": 12.0, "sugar": 12.0, "sugar_alcohols": 0, "fiber": 6.0 } },
+    { "title": "Scrambled Eggs with Toast", "category": "Breakfasts", "portions": 2, "macrosPerPortion": { "calories": 260, "protein": 16.0, "fat": 15.0, "fat_sat": 5.0, "fat_mono": 6.5, "fat_poly": 3.5, "carbs_net": 1.5, "sugar": 1.5, "sugar_alcohols": 0, "fiber": 2.0 } },
+    { "title": "Yogurt Oats Bowl", "category": "Breakfasts", "portions": 2, "macrosPerPortion": { "calories": 325, "protein": 19.0, "fat": 10.0, "fat_sat": 4.5, "fat_mono": 3.5, "fat_poly": 2.0, "carbs_net": 10.0, "sugar": 10.0, "sugar_alcohols": 0, "fiber": 4.0 } },
+    { "title": "Smoky Tofu & Lentil Bolognese", "category": "Meals", "portions": 4, "macrosPerPortion": { "calories": 480, "protein": 26.0, "fat": 11.0, "fat_sat": 1.8, "fat_mono": 4.2, "fat_poly": 5.0, "carbs_net": 5.2, "sugar": 5.2, "sugar_alcohols": 0, "fiber": 14.0 } },
+    { "title": "Turkey Burgers", "category": "Meals", "portions": 4, "macrosPerPortion": { "calories": 310, "protein": 30.0, "fat": 12.0, "fat_sat": 3.5, "fat_mono": 5.5, "fat_poly": 3.0, "carbs_net": 1.2, "sugar": 1.2, "sugar_alcohols": 0, "fiber": 1.0 } },
+    { "title": "Med. Chicken Bake", "category": "Meals", "designations": ["Heart"], "portions": 2, "macrosPerPortion": { "calories": 371, "protein": 50.5, "fat": 10.5, "fat_sat": 2.5, "fat_mono": 6.0, "fat_poly": 2.0, "carbs_net": 4.5, "sugar": 4.5, "sugar_alcohols": 0, "fiber": 3.0 } },
+    { "title": "Veggie Burger", "category": "Meals", "portions": 4, "macrosPerPortion": { "calories": 145, "protein": 6.0, "fat": 4.0, "fat_sat": 0.8, "fat_mono": 1.2, "fat_poly": 2.0, "carbs_net": 2.0, "sugar": 2.0, "sugar_alcohols": 0, "fiber": 5.0 } },
+    { "title": "Turkey Burger Wrap", "category": "Meals", "portions": 1, "macrosPerPortion": { "calories": 270, "protein": 30.0, "fat": 12.0, "fat_sat": 3.5, "fat_mono": 5.5, "fat_poly": 3.0, "carbs_net": 2.5, "sugar": 2.5, "sugar_alcohols": 0, "fiber": 1.0 } },
+    { "title": "Veggie Burger Wrap", "category": "Meals", "portions": 1, "macrosPerPortion": { "calories": 115, "protein": 6.0, "fat": 4.0, "fat_sat": 0.8, "fat_mono": 1.2, "fat_poly": 2.0, "carbs_net": 1.8, "sugar": 1.8, "sugar_alcohols": 0, "fiber": 5.0 } },
+    { "title": "Mushroom & Spinach Pasta", "category": "Meals", "portions": 2, "macrosPerPortion": { "calories": 240, "protein": 13.0, "fat": 6.0, "fat_sat": 1.5, "fat_mono": 3.0, "fat_poly": 1.5, "carbs_net": 4.0, "sugar": 4.0, "sugar_alcohols": 0, "fiber": 6.0 } },
+    { "title": "Fillet Steak & Potatoes", "category": "Meals", "portions": 1, "macrosPerPortion": { "calories": 450, "protein": 40.0, "fat": 12.5, "fat_sat": 5.0, "fat_mono": 6.0, "fat_poly": 1.5, "carbs_net": 2.0, "sugar": 2.0, "sugar_alcohols": 0, "fiber": 4.0 } },
+    { "title": "Fillet Steak & Mushrooms", "category": "Meals", "portions": 1, "macrosPerPortion": { "calories": 410, "protein": 42.5, "fat": 20.0, "fat_sat": 8.0, "fat_mono": 10.0, "fat_poly": 2.0, "carbs_net": 2.5, "sugar": 2.5, "sugar_alcohols": 0, "fiber": 3.0 } },
+    { "title": "Chicken & Broccoli Pasta", "category": "Meals", "portions": 2, "macrosPerPortion": { "calories": 450, "protein": 45.0, "fat": 10.0, "fat_sat": 2.5, "fat_mono": 5.5, "fat_poly": 2.0, "carbs_net": 5.0, "sugar": 5.0, "sugar_alcohols": 0, "fiber": 4.0 } },
+    { "title": "Fluffy Buns", "category": "Bakery", "designations": ["Heart", "Keto", "Low Sugar"], "portions": 6, "macrosPerPortion": { "calories": 150, "protein": 7.5, "fat": 12.0, "fat_sat": 1.2, "fat_mono": 7.5, "fat_poly": 2.8, "carbs_net": 1.0, "sugar": 0.5, "sugar_alcohols": 0, "fiber": 6.0 } },
+    { "title": "Bread Rolls", "category": "Bakery", "portions": 4, "macrosPerPortion": { "calories": 133, "protein": 6.6, "fat": 10.0, "fat_sat": 1.2, "fat_mono": 6.0, "fat_poly": 2.8, "carbs_net": 1.2, "sugar": 1.2, "sugar_alcohols": 0, "fiber": 5.0 } },
+    { "title": "Sandwich Bread", "category": "Bakery", "portions": 10, "macrosPerPortion": { "calories": 100, "protein": 3.3, "fat": 0.8, "fat_sat": 0.1, "fat_mono": 0.3, "fat_poly": 0.4, "carbs_net": 0.5, "sugar": 0.5, "sugar_alcohols": 0, "fiber": 4.0 } },
+    { "title": "Protein Brownies", "category": "Desserts", "designations": ["Keto", "Low Sugar"], "portions": 12, "macrosPerPortion": { "calories": 150, "protein": 12.0, "fat": 10.0, "fat_sat": 5.0, "fat_mono": 3.5, "fat_poly": 1.5, "carbs_net": 0.5, "sugar": 0.5, "sugar_alcohols": 0, "fiber": 1.7 } },
+    { "title": "Bread & Butter Pudding", "category": "Desserts", "portions": 6, "macrosPerPortion": { "calories": 200, "protein": 6.0, "fat": 7.5, "fat_sat": 4.0, "fat_mono": 2.5, "fat_poly": 1.0, "carbs_net": 12.0, "sugar": 12.0, "sugar_alcohols": 0, "fiber": 2.0 } },
+    { "title": "Yogurt Cheesecake", "category": "Desserts", "designations": ["Heart"], "portions": 6, "macrosPerPortion": { "calories": 140, "protein": 15.0, "fat": 3.0, "fat_sat": 1.5, "fat_mono": 1.0, "fat_poly": 0.5, "carbs_net": 5.0, "sugar": 5.0, "sugar_alcohols": 0, "fiber": 0 } },
+    { "title": "Banana Choc Oat Cake", "category": "Desserts", "portions": 8, "macrosPerPortion": { "calories": 175, "protein": 6.0, "fat": 4.0, "fat_sat": 1.5, "fat_mono": 1.5, "fat_poly": 1.0, "carbs_net": 12.0, "sugar": 12.0, "sugar_alcohols": 0, "fiber": 4.0 } },
+    { "title": "Banana Cocoa Cake", "category": "Desserts", "portions": 8, "macrosPerPortion": { "calories": 150, "protein": 5.0, "fat": 4.0, "fat_sat": 1.5, "fat_mono": 1.5, "fat_poly": 1.0, "carbs_net": 10.0, "sugar": 10.0, "sugar_alcohols": 0, "fiber": 3.5 } },
+    { "title": "Chocolate Bean Cake", "category": "Desserts", "designations": ["Heart", "Low Sugar"], "portions": 10, "macrosPerPortion": { "calories": 160, "protein": 8.0, "fat": 5.0, "fat_sat": 1.0, "fat_mono": 2.0, "fat_poly": 2.0, "carbs_net": 1.5, "sugar": 1.5, "sugar_alcohols": 0, "fiber": 6.0 } },
+    { "title": "Apple Cinnamon Cake", "category": "Desserts", "portions": 8, "macrosPerPortion": { "calories": 135, "protein": 5.0, "fat": 3.0, "fat_sat": 1.0, "fat_mono": 1.0, "fat_poly": 1.0, "carbs_net": 8.0, "sugar": 8.0, "sugar_alcohols": 0, "fiber": 3.0 } }
   ]
 }
