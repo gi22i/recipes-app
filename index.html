@@ -4,7 +4,6 @@
     <meta charset="UTF-8">
     <meta name="apple-mobile-web-app-capable" content="yes">
     <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
-    <meta name="apple-mobile-web-app-title" content="RecipeHub">
     <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no, viewport-fit=cover">
     
     <title>Recipe Hub</title>
@@ -17,9 +16,10 @@
             --text-secondary: #8e8e93;
             --accent: #007aff;
             --border: #e5e5ea;
-            --box-keto-bg: rgba(0, 122, 255, 0.1);
-            --box-heart-bg: rgba(255, 59, 48, 0.1);
-            --box-heart-text: #ff3b30;
+            
+            /* Badge: White on Black */
+            --badge-bg: #000000;
+            --badge-text: #ffffff;
         }
 
         @media (prefers-color-scheme: dark) {
@@ -30,19 +30,20 @@
                 --text-secondary: #8e8e93;
                 --accent: #0a84ff;
                 --border: #38383a;
-                --box-keto-bg: rgba(10, 132, 255, 0.2);
-                --box-heart-bg: rgba(255, 69, 58, 0.2);
-                --box-heart-text: #ff453a;
+                
+                /* Badge: Black on White */
+                --badge-bg: #ffffff;
+                --badge-text: #000000;
             }
         }
 
         body {
-            font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
+            font-family: -apple-system, system-ui, sans-serif;
             background-color: var(--bg);
             color: var(--text-primary);
             margin: 0;
             padding: env(safe-area-inset-top) 0 40px 0;
-            transition: background 0.3s ease;
+            transition: 0.3s;
         }
 
         header {
@@ -57,7 +58,6 @@
             height: 100%;
             max-width: 60px;
             object-fit: contain;
-            padding: 5px;
         }
 
         header h1 {
@@ -66,12 +66,9 @@
             font-size: 22px;
             font-weight: 800;
             margin: 0;
-            letter-spacing: -0.5px;
         }
 
-        .controls {
-            padding: 0 15px 20px 15px;
-        }
+        .controls { padding: 0 15px 20px 15px; }
 
         #searchBar {
             width: 100%;
@@ -83,7 +80,6 @@
             font-size: 17px;
             margin-bottom: 15px;
             box-sizing: border-box;
-            box-shadow: 0 2px 8px rgba(0,0,0,0.05);
         }
 
         .filter-row {
@@ -91,10 +87,9 @@
             gap: 10px;
             overflow-x: auto;
             padding-bottom: 5px;
-            -webkit-overflow-scrolling: touch;
         }
 
-        .filter-btn {
+        .pill {
             background: var(--card);
             color: var(--text-secondary);
             border: 1px solid var(--border);
@@ -105,117 +100,104 @@
             white-space: nowrap;
         }
 
-        .filter-btn.active {
+        .pill.active {
             background: var(--accent);
             color: white;
             border-color: var(--accent);
         }
 
-        .grid {
-            padding: 0 15px;
+        /* 2 RECIPES PER ROW GRID */
+        .recipe-grid {
+            padding: 0 10px;
             display: grid;
-            grid-template-columns: 1fr;
-            gap: 20px;
+            grid-template-columns: repeat(2, 1fr);
+            gap: 10px;
         }
 
         .card {
             background: var(--card);
-            border-radius: 20px;
-            padding: 20px;
-            box-shadow: 0 4px 15px rgba(0,0,0,0.1);
+            border-radius: 18px;
+            padding: 15px;
             border: 1px solid var(--border);
+            text-align: center; /* All text centered */
+            cursor: pointer;
+            position: relative;
+            overflow: hidden;
         }
 
         .card-title {
-            font-size: 20px;
+            font-size: 15px;
             font-weight: 700;
-            margin: 0 0 12px 0;
-            text-align: left;
+            margin: 0 0 10px 0;
+            line-height: 1.2;
+            min-height: 2.4em;
         }
 
-        .indicator-row {
+        /* BADGE LOGIC */
+        .badge-row {
             display: flex;
-            gap: 10px;
-            margin-bottom: 20px;
-        }
-
-        .indicator-box {
-            flex: 1;
-            padding: 8px;
-            border-radius: 10px;
-            text-align: center;
-            font-size: 11px;
-            font-weight: 800;
-            text-transform: uppercase;
-            letter-spacing: 0.5px;
-            border: 1px solid var(--border);
-        }
-
-        .ind-keto { background: var(--box-keto-bg); color: var(--accent); border: none; }
-        .ind-heart { background: var(--box-heart-bg); color: var(--box-heart-text); border: none; }
-        .ind-none { color: var(--text-secondary); opacity: 0.4; }
-
-        .macro-section {
-            border-top: 1px solid var(--border);
-            padding-top: 15px;
-        }
-
-        .kcal-display {
-            display: block;
-            text-align: center;
-            font-size: 18px;
-            font-weight: 800;
-            color: var(--accent);
+            justify-content: center;
+            gap: 6px;
             margin-bottom: 12px;
         }
 
-        .macro-grid {
-            display: grid;
-            grid-template-columns: 1fr 1fr;
-            gap: 15px;
+        .circle-badge {
+            width: 24px;
+            height: 24px;
+            background-color: var(--badge-bg);
+            color: var(--badge-text);
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 13px;
+            font-weight: 900;
         }
 
-        .macro-group {
+        .kcal-main {
+            display: block;
+            font-size: 18px;
+            font-weight: 800;
+            color: var(--accent);
             margin-bottom: 10px;
         }
 
-        .macro-label {
-            font-size: 11px;
-            color: var(--text-secondary);
-            font-weight: 700;
-            text-transform: uppercase;
-            display: block;
-            margin-bottom: 2px;
+        /* FLAT MACRO GRID */
+        .card-details {
+            max-height: 0;
+            opacity: 0;
+            transition: 0.4s ease;
+            border-top: 0 solid var(--border);
+            margin-top: 0;
         }
 
-        .macro-value {
-            font-size: 16px;
-            font-weight: 700;
+        .card.is-open .card-details {
+            max-height: 800px;
+            opacity: 1;
+            margin-top: 15px;
+            padding-top: 15px;
+            border-top-width: 1px;
         }
 
-        .breakdown-box {
-            margin-top: 5px;
-            padding-left: 8px;
-            border-left: 2px solid var(--border);
+        .macro-list {
+            display: flex;
+            flex-direction: column;
+            gap: 6px;
         }
 
-        .breakdown-item {
+        .macro-row {
             display: flex;
             justify-content: space-between;
             font-size: 12px;
-            color: var(--text-secondary);
-            margin-bottom: 2px;
+            padding: 4px 0;
+            border-bottom: 1px solid var(--border);
         }
 
-        .fat-breakdown-grid {
-            grid-column: span 2;
-            display: grid;
-            grid-template-columns: repeat(3, 1fr);
-            gap: 10px;
-            margin-top: 5px;
-            border-top: 1px solid var(--border);
-            padding-top: 8px;
-        }
+        .macro-row:last-child { border: none; }
+
+        .macro-label { color: var(--text-secondary); font-weight: 600; text-transform: uppercase; font-size: 10px; }
+        .macro-val { font-weight: 700; }
+
     </style>
 </head>
 <body>
@@ -227,101 +209,81 @@
     </header>
 
     <div class="controls">
-        <input type="text" id="searchBar" placeholder="Search recipe name..." onkeyup="filterData()">
-        
+        <input type="search" id="searchBar" placeholder="Search..." oninput="filterRecipes()">
         <div class="filter-row">
-            <button class="filter-btn active" onclick="setTag('all', this)">All</button>
-            <button class="filter-btn" onclick="setTag('Keto', this)">Keto</button>
-            <button class="filter-btn" onclick="setTag('Heart', this)">Heart</button>
-            <button class="filter-btn" onclick="setTag('Low Sugar', this)">Low Sugar</button>
+            <button class="pill active" onclick="setFilter('all', this)">All</button>
+            <button class="pill" onclick="setFilter('Keto', this)">Keto</button>
+            <button class="pill" onclick="setFilter('Heart', this)">Heart Healthy</button>
+            <button class="pill" onclick="setFilter('Low Sugar', this)">Low Sugar</button>
         </div>
     </div>
 
-    <div id="recipeGrid" class="grid"></div>
+    <div id="recipeGrid" class="recipe-grid"></div>
 
     <script>
-        let recipeData = [];
+        let recipes = [];
         let activeFilter = 'all';
 
-        async function fetchRecipes() {
+        async function load() {
             try {
-                const response = await fetch('recipes.json');
-                const json = await response.json();
-                recipeData = json.recipes;
-                render(recipeData);
-            } catch (err) {
-                console.error("Error: Ensure recipes.json is in the same folder.");
-            }
+                const res = await fetch('recipes.json');
+                const data = await res.json();
+                recipes = data.recipes;
+                render();
+            } catch (e) { console.error("Missing recipes.json"); }
         }
 
-        function setTag(tag, el) {
-            document.querySelectorAll('.filter-btn').forEach(b => b.classList.remove('active'));
-            el.classList.add('active');
+        function setFilter(tag, btn) {
+            document.querySelectorAll('.pill').forEach(p => p.classList.remove('active'));
+            btn.classList.add('active');
             activeFilter = tag;
-            filterData();
+            render();
         }
 
-        function filterData() {
-            const query = document.getElementById('searchBar').value.toLowerCase();
-            const filtered = recipeData.filter(r => {
-                const nameMatch = r.title.toLowerCase().includes(query);
-                const tagMatch = (activeFilter === 'all' || (r.designations && r.designations.includes(activeFilter)));
-                return nameMatch && tagMatch;
-            });
-            render(filtered);
-        }
+        function filterRecipes() { render(); }
 
-        function render(list) {
+        function render() {
             const grid = document.getElementById('recipeGrid');
+            const query = document.getElementById('searchBar').value.toLowerCase();
             grid.innerHTML = '';
 
-            list.forEach(r => {
-                const m = r.macrosPerPortion;
-                const designations = r.designations || [];
-                const isKeto = designations.includes('Keto');
-                const isHeart = designations.includes('Heart');
+            const filtered = recipes.filter(r => {
+                const nameMatch = r.title.toLowerCase().includes(query);
+                const tagMatch = activeFilter === 'all' || (r.designations && r.designations.includes(activeFilter));
+                return nameMatch && tagMatch;
+            });
 
+            filtered.forEach(r => {
+                const m = r.macros;
+                const ds = r.designations || [];
+                
                 const card = document.createElement('div');
                 card.className = 'card';
-                card.innerHTML = `
-                    <span class="kcal-display">${m.calories} KCAL</span>
-                    <h2 class="card-title">${r.title}</h2>
-                    
-                    <div class="indicator-row">
-                        <div class="indicator-box ${isKeto ? 'ind-keto' : 'ind-none'}">${isKeto ? 'Keto Friendly' : 'Standard'}</div>
-                        <div class="indicator-box ${isHeart ? 'ind-heart' : 'ind-none'}">${isHeart ? '♥ Heart Healthy' : 'General'}</div>
-                    </div>
+                card.onclick = () => card.classList.toggle('is-open');
 
-                    <div class="macro-section">
-                        <div class="macro-grid">
-                            <div class="macro-group">
-                                <span class="macro-label">Protein</span>
-                                <span class="macro-value">${m.protein}g</span>
-                            </div>
-                            <div class="macro-group">
-                                <span class="macro-label">Carbs (Net)</span>
-                                <span class="macro-value">${m.carbs_net}g</span>
-                                <div class="breakdown-box">
-                                    <div class="breakdown-item"><span>Fiber</span> <span>${m.fiber}g</span></div>
-                                    <div class="breakdown-item"><span>Sugars</span> <span>${m.sugar}g</span></div>
-                                    <div class="breakdown-item"><span>Polyols</span> <span>${m.sugar_alcohols}g</span></div>
-                                </div>
-                            </div>
-                            <div class="macro-group" style="grid-column: span 2;">
-                                <span class="macro-label">Total Fat</span>
-                                <span class="macro-value">${m.fat}g</span>
-                                <div class="fat-breakdown-grid">
-                                    <div class="breakdown-item" style="flex-direction:column; align-items:flex-start;">
-                                        <span style="font-size:9px">Saturated</span><strong>${m.fat_sat}g</strong>
-                                    </div>
-                                    <div class="breakdown-item" style="flex-direction:column; align-items:flex-start;">
-                                        <span style="font-size:9px">Monosat.</span><strong>${m.fat_mono}g</strong>
-                                    </div>
-                                    <div class="breakdown-item" style="flex-direction:column; align-items:flex-start;">
-                                        <span style="font-size:9px">Polysat.</span><strong>${m.fat_poly}g</strong>
-                                    </div>
-                                </div>
-                            </div>
+                card.innerHTML = `
+                    <h2 class="card-title">${r.title}</h2>
+                    <div class="badge-row">
+                        ${ds.includes('Keto') ? '<div class="circle-badge">K</div>' : ''}
+                        ${ds.includes('Heart') ? '<div class="circle-badge">♥</div>' : ''}
+                        ${ds.includes('Low Sugar') ? '<div class="circle-badge">S</div>' : ''}
+                    </div>
+                    <span class="kcal-main">${m.kcal} kcal</span>
+                    <div style="font-size:11px; color:var(--text-secondary);">Tap for Macros</div>
+
+                    <div class="card-details">
+                        <div class="macro-list">
+                            <div class="macro-row"><span class="macro-label">Calories</span><span class="macro-val">${m.kcal}</span></div>
+                            <div class="macro-row"><span class="macro-label">Fat</span><span class="macro-val">${m.fat}g</span></div>
+                            <div class="macro-row"><span class="macro-label">Sat Fat</span><span class="macro-val">${m.fat_sat}g</span></div>
+                            <div class="macro-row"><span class="macro-label">Poly Fat</span><span class="macro-val">${m.fat_poly}g</span></div>
+                            <div class="macro-row"><span class="macro-label">Mono Fat</span><span class="macro-val">${m.fat_mono}g</span></div>
+                            <div class="macro-row"><span class="macro-label">Total Carbs</span><span class="macro-val">${m.carbs}g</span></div>
+                            <div class="macro-row"><span class="macro-label">Sugars</span><span class="macro-val">${m.sugar}g</span></div>
+                            <div class="macro-row"><span class="macro-label">Polyols</span><span class="macro-val">${m.polyols}g</span></div>
+                            <div class="macro-row"><span class="macro-label">Protein</span><span class="macro-val">${m.protein}g</span></div>
+                            <div class="macro-row"><span class="macro-label">Fibre</span><span class="macro-val">${m.fiber}g</span></div>
+                            <div class="macro-row"><span class="macro-label">Salt</span><span class="macro-val">${m.salt}g</span></div>
                         </div>
                     </div>
                 `;
@@ -329,7 +291,7 @@
             });
         }
 
-        window.onload = fetchRecipes;
+        window.onload = load;
     </script>
 </body>
 </html>
