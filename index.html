@@ -3,11 +3,8 @@
 <head>
     <meta charset="UTF-8">
     <meta name="apple-mobile-web-app-capable" content="yes">
-    <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
     <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no, viewport-fit=cover">
-    
     <title>Recipe Hub</title>
-
     <style>
         :root {
             --bg: #f2f2f7;
@@ -16,8 +13,6 @@
             --text-secondary: #8e8e93;
             --accent: #007aff;
             --border: #e5e5ea;
-            
-            /* Badge: White on Black */
             --badge-bg: #000000;
             --badge-text: #ffffff;
         }
@@ -30,8 +25,6 @@
                 --text-secondary: #8e8e93;
                 --accent: #0a84ff;
                 --border: #38383a;
-                
-                /* Badge: Black on White */
                 --badge-bg: #ffffff;
                 --badge-text: #000000;
             }
@@ -43,255 +36,161 @@
             color: var(--text-primary);
             margin: 0;
             padding: env(safe-area-inset-top) 0 40px 0;
-            transition: 0.3s;
-        }
-
-        header {
-            display: flex;
-            align-items: center;
-            justify-content: space-between;
-            padding: 10px 15px;
-            height: 60px;
-        }
-
-        .header-icon {
-            height: 100%;
-            max-width: 60px;
-            object-fit: contain;
-        }
-
-        header h1 {
-            flex-grow: 1;
             text-align: center;
-            font-size: 22px;
-            font-weight: 800;
-            margin: 0;
         }
 
+        /* HEADER & SEARCH */
+        header h1 { font-size: 24px; font-weight: 800; margin: 20px 0; }
         .controls { padding: 0 15px 20px 15px; }
-
         #searchBar {
-            width: 100%;
-            padding: 14px;
-            border-radius: 12px;
-            border: none;
-            background: var(--card);
-            color: var(--text-primary);
-            font-size: 17px;
-            margin-bottom: 15px;
-            box-sizing: border-box;
+            width: 100%; padding: 14px; border-radius: 12px; border: none;
+            background: var(--card); color: var(--text-primary); font-size: 17px;
+            box-sizing: border-box; box-shadow: 0 2px 5px rgba(0,0,0,0.05);
         }
 
-        .filter-row {
-            display: flex;
-            gap: 10px;
-            overflow-x: auto;
-            padding-bottom: 5px;
+        /* CATEGORY TITLES */
+        .category-title {
+            font-size: 20px; font-weight: 800; color: var(--accent);
+            margin: 30px 0 15px 0; text-transform: uppercase; letter-spacing: 1px;
         }
 
-        .pill {
-            background: var(--card);
-            color: var(--text-secondary);
-            border: 1px solid var(--border);
-            padding: 8px 16px;
-            border-radius: 20px;
-            font-size: 14px;
-            font-weight: 600;
-            white-space: nowrap;
-        }
-
-        .pill.active {
-            background: var(--accent);
-            color: white;
-            border-color: var(--accent);
-        }
-
-        /* 2 RECIPES PER ROW GRID */
+        /* GRID SYSTEM: 2 PER ROW */
         .recipe-grid {
-            padding: 0 10px;
-            display: grid;
-            grid-template-columns: repeat(2, 1fr);
-            gap: 10px;
+            display: grid; grid-template-columns: 1fr 1fr;
+            gap: 12px; padding: 0 12px; margin-bottom: 20px;
         }
 
+        /* RECIPE CARDS */
         .card {
-            background: var(--card);
-            border-radius: 18px;
-            padding: 15px;
-            border: 1px solid var(--border);
-            text-align: center; /* All text centered */
-            cursor: pointer;
-            position: relative;
-            overflow: hidden;
+            background: var(--card); border-radius: 16px; padding: 15px;
+            border: 1px solid var(--border); position: relative;
+            transition: transform 0.2s ease; cursor: pointer;
         }
 
         .card-title {
-            font-size: 15px;
-            font-weight: 700;
-            margin: 0 0 10px 0;
-            line-height: 1.2;
-            min-height: 2.4em;
+            font-size: 14px; font-weight: 700; margin: 0 0 10px 0;
+            min-height: 2.8em; display: flex; align-items: center; justify-content: center;
         }
 
-        /* BADGE LOGIC */
-        .badge-row {
-            display: flex;
-            justify-content: center;
-            gap: 6px;
-            margin-bottom: 12px;
-        }
-
+        /* BADGES (K in Circle) */
+        .badge-row { display: flex; justify-content: center; gap: 5px; margin-bottom: 10px; }
         .circle-badge {
-            width: 24px;
-            height: 24px;
-            background-color: var(--badge-bg);
-            color: var(--badge-text);
-            border-radius: 50%;
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            font-size: 13px;
-            font-weight: 900;
+            width: 22px; height: 22px; border-radius: 50%;
+            background: var(--badge-bg); color: var(--badge-text);
+            font-size: 12px; font-weight: 900;
+            display: flex; align-items: center; justify-content: center;
         }
 
-        .kcal-main {
-            display: block;
-            font-size: 18px;
-            font-weight: 800;
-            color: var(--accent);
-            margin-bottom: 10px;
+        .kcal-tag { font-size: 18px; font-weight: 800; color: var(--accent); margin-bottom: 5px; display: block; }
+
+        /* TAP TO OPEN DETAILS */
+        .details {
+            max-height: 0; opacity: 0; overflow: hidden;
+            transition: all 0.4s ease; border-top: 0 solid var(--border);
+        }
+        .card.is-open .details {
+            max-height: 600px; opacity: 1; margin-top: 15px; padding-top: 15px; border-top-width: 1px;
         }
 
-        /* FLAT MACRO GRID */
-        .card-details {
-            max-height: 0;
-            opacity: 0;
-            transition: 0.4s ease;
-            border-top: 0 solid var(--border);
-            margin-top: 0;
-        }
-
-        .card.is-open .card-details {
-            max-height: 800px;
-            opacity: 1;
-            margin-top: 15px;
-            padding-top: 15px;
-            border-top-width: 1px;
-        }
-
-        .macro-list {
-            display: flex;
-            flex-direction: column;
-            gap: 6px;
-        }
-
+        /* FLAT MACRO LIST (EUROPEAN) */
         .macro-row {
-            display: flex;
-            justify-content: space-between;
-            font-size: 12px;
-            padding: 4px 0;
-            border-bottom: 1px solid var(--border);
+            display: flex; justify-content: space-between;
+            font-size: 11px; padding: 5px 0; border-bottom: 1px solid var(--border);
         }
-
         .macro-row:last-child { border: none; }
-
-        .macro-label { color: var(--text-secondary); font-weight: 600; text-transform: uppercase; font-size: 10px; }
-        .macro-val { font-weight: 700; }
+        .label { color: var(--text-secondary); font-weight: 600; text-transform: uppercase; }
+        .val { font-weight: 700; }
 
     </style>
 </head>
 <body>
 
-    <header>
-        <img src="left_icon.png" class="header-icon" alt="">
-        <h1>Recipes</h1>
-        <img src="right_icon.png" class="header-icon" alt="">
-    </header>
+    <header><h1>Recipe Hub</h1></header>
 
     <div class="controls">
-        <input type="search" id="searchBar" placeholder="Search..." oninput="filterRecipes()">
-        <div class="filter-row">
-            <button class="pill active" onclick="setFilter('all', this)">All</button>
-            <button class="pill" onclick="setFilter('Keto', this)">Keto</button>
-            <button class="pill" onclick="setFilter('Heart', this)">Heart Healthy</button>
-            <button class="pill" onclick="setFilter('Low Sugar', this)">Low Sugar</button>
-        </div>
+        <input type="search" id="searchBar" placeholder="Search recipes..." oninput="render()">
     </div>
 
-    <div id="recipeGrid" class="recipe-grid"></div>
+    <div id="main-container">
+        </div>
 
     <script>
-        let recipes = [];
-        let activeFilter = 'all';
+        let allRecipes = [];
 
-        async function load() {
+        async function init() {
             try {
-                const res = await fetch('recipes.json');
-                const data = await res.json();
-                recipes = data.recipes;
+                const response = await fetch('recipes.json');
+                const data = await response.json();
+                allRecipes = data.recipes;
                 render();
-            } catch (e) { console.error("Missing recipes.json"); }
+            } catch (e) {
+                document.getElementById('main-container').innerHTML = "Error loading recipes. Check recipes.json";
+            }
         }
-
-        function setFilter(tag, btn) {
-            document.querySelectorAll('.pill').forEach(p => p.classList.remove('active'));
-            btn.classList.add('active');
-            activeFilter = tag;
-            render();
-        }
-
-        function filterRecipes() { render(); }
 
         function render() {
-            const grid = document.getElementById('recipeGrid');
-            const query = document.getElementById('searchBar').value.toLowerCase();
-            grid.innerHTML = '';
+            const container = document.getElementById('main-container');
+            const search = document.getElementById('searchBar').value.toLowerCase();
+            container.innerHTML = '';
 
-            const filtered = recipes.filter(r => {
-                const nameMatch = r.title.toLowerCase().includes(query);
-                const tagMatch = activeFilter === 'all' || (r.designations && r.designations.includes(activeFilter));
-                return nameMatch && tagMatch;
-            });
+            const categories = ["Breakfasts", "Meals", "Bakery", "Desserts"];
 
-            filtered.forEach(r => {
-                const m = r.macros;
-                const ds = r.designations || [];
-                
-                const card = document.createElement('div');
-                card.className = 'card';
-                card.onclick = () => card.classList.toggle('is-open');
+            categories.forEach(cat => {
+                const filtered = allRecipes.filter(r => 
+                    r.category === cat && r.title.toLowerCase().includes(search)
+                );
 
-                card.innerHTML = `
-                    <h2 class="card-title">${r.title}</h2>
-                    <div class="badge-row">
-                        ${ds.includes('Keto') ? '<div class="circle-badge">K</div>' : ''}
-                        ${ds.includes('Heart') ? '<div class="circle-badge">♥</div>' : ''}
-                        ${ds.includes('Low Sugar') ? '<div class="circle-badge">S</div>' : ''}
-                    </div>
-                    <span class="kcal-main">${m.kcal} kcal</span>
-                    <div style="font-size:11px; color:var(--text-secondary);">Tap for Macros</div>
+                if (filtered.length > 0) {
+                    // Add Title
+                    const title = document.createElement('div');
+                    title.className = 'category-title';
+                    title.innerText = cat;
+                    container.appendChild(title);
 
-                    <div class="card-details">
-                        <div class="macro-list">
-                            <div class="macro-row"><span class="macro-label">Calories</span><span class="macro-val">${m.kcal}</span></div>
-                            <div class="macro-row"><span class="macro-label">Fat</span><span class="macro-val">${m.fat}g</span></div>
-                            <div class="macro-row"><span class="macro-label">Sat Fat</span><span class="macro-val">${m.fat_sat}g</span></div>
-                            <div class="macro-row"><span class="macro-label">Poly Fat</span><span class="macro-val">${m.fat_poly}g</span></div>
-                            <div class="macro-row"><span class="macro-label">Mono Fat</span><span class="macro-val">${m.fat_mono}g</span></div>
-                            <div class="macro-row"><span class="macro-label">Total Carbs</span><span class="macro-val">${m.carbs}g</span></div>
-                            <div class="macro-row"><span class="macro-label">Sugars</span><span class="macro-val">${m.sugar}g</span></div>
-                            <div class="macro-row"><span class="macro-label">Polyols</span><span class="macro-val">${m.polyols}g</span></div>
-                            <div class="macro-row"><span class="macro-label">Protein</span><span class="macro-val">${m.protein}g</span></div>
-                            <div class="macro-row"><span class="macro-label">Fibre</span><span class="macro-val">${m.fiber}g</span></div>
-                            <div class="macro-row"><span class="macro-label">Salt</span><span class="macro-val">${m.salt}g</span></div>
-                        </div>
-                    </div>
-                `;
-                grid.appendChild(card);
+                    // Add Grid
+                    const grid = document.createElement('div');
+                    grid.className = 'recipe-grid';
+
+                    filtered.forEach(r => {
+                        const card = document.createElement('div');
+                        card.className = 'card';
+                        card.onclick = () => card.classList.toggle('is-open');
+
+                        const ds = r.designations || [];
+                        const m = r.macros;
+
+                        card.innerHTML = `
+                            <h2 class="card-title">${r.title}</h2>
+                            <div class="badge-row">
+                                ${ds.includes('Keto') ? '<div class="circle-badge">K</div>' : ''}
+                                ${ds.includes('Low Sugar') ? '<div class="circle-badge">S</div>' : ''}
+                                ${ds.includes('Heart') ? '<div class="circle-badge">♥</div>' : ''}
+                            </div>
+                            <span class="kcal-tag">${m.kcal} kcal</span>
+                            <div style="font-size:10px; color:var(--text-secondary);">TAP FOR MACROS</div>
+
+                            <div class="details">
+                                <div class="macro-row"><span class="label">Calories</span><span class="val">${m.kcal}</span></div>
+                                <div class="macro-row"><span class="label">Fat</span><span class="val">${m.fat}g</span></div>
+                                <div class="macro-row"><span class="label">Sat Fat</span><span class="val">${m.fat_sat}g</span></div>
+                                <div class="macro-row"><span class="label">Poly Fat</span><span class="val">${m.fat_poly}g</span></div>
+                                <div class="macro-row"><span class="label">Mono Fat</span><span class="val">${m.fat_mono}g</span></div>
+                                <div class="macro-row"><span class="label">Total Carbs</span><span class="val">${m.carbs}g</span></div>
+                                <div class="macro-row"><span class="label">Sugars</span><span class="val">${m.sugar}g</span></div>
+                                <div class="macro-row"><span class="label">Sugar Alcohols</span><span class="val">${m.polyols}g</span></div>
+                                <div class="macro-row"><span class="label">Protein</span><span class="val">${m.protein}g</span></div>
+                                <div class="macro-row"><span class="label">Fibre</span><span class="val">${m.fiber}g</span></div>
+                                <div class="macro-row"><span class="label">Salt</span><span class="val">${m.salt}g</span></div>
+                            </div>
+                        `;
+                        grid.appendChild(card);
+                    });
+                    container.appendChild(grid);
+                }
             });
         }
 
-        window.onload = load;
+        window.onload = init;
     </script>
 </body>
 </html>
