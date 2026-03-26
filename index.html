@@ -4,7 +4,7 @@
     <meta charset="UTF-8">
     <meta name="apple-mobile-web-app-capable" content="yes">
     <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no, viewport-fit=cover">
-    <title>Recipe Hub</title>
+    <title>Recipe Hub Pro</title>
     <style>
         :root {
             --bg: #f2f2f7;
@@ -39,8 +39,8 @@
             text-align: center;
         }
 
-        /* HEADER & SEARCH */
         header h1 { font-size: 24px; font-weight: 800; margin: 20px 0; }
+        
         .controls { padding: 0 15px 20px 15px; }
         #searchBar {
             width: 100%; padding: 14px; border-radius: 12px; border: none;
@@ -51,7 +51,7 @@
         /* CATEGORY TITLES */
         .category-title {
             font-size: 20px; font-weight: 800; color: var(--accent);
-            margin: 30px 0 15px 0; text-transform: uppercase; letter-spacing: 1px;
+            margin: 35px 0 15px 0; text-transform: uppercase; letter-spacing: 1px;
         }
 
         /* GRID SYSTEM: 2 PER ROW */
@@ -65,6 +65,7 @@
             background: var(--card); border-radius: 16px; padding: 15px;
             border: 1px solid var(--border); position: relative;
             transition: transform 0.2s ease; cursor: pointer;
+            display: flex; flex-direction: column; align-items: center;
         }
 
         .card-title {
@@ -72,7 +73,6 @@
             min-height: 2.8em; display: flex; align-items: center; justify-content: center;
         }
 
-        /* BADGES (K in Circle) */
         .badge-row { display: flex; justify-content: center; gap: 5px; margin-bottom: 10px; }
         .circle-badge {
             width: 22px; height: 22px; border-radius: 50%;
@@ -81,25 +81,31 @@
             display: flex; align-items: center; justify-content: center;
         }
 
-        .kcal-tag { font-size: 18px; font-weight: 800; color: var(--accent); margin-bottom: 5px; display: block; }
+        .kcal-tag { font-size: 18px; font-weight: 800; color: var(--accent); margin-bottom: 5px; }
+        .portion-label { font-size: 10px; color: var(--text-secondary); margin-bottom: 10px; font-weight: 600; }
 
-        /* TAP TO OPEN DETAILS */
+        /* EXPANDABLE SECTION */
         .details {
             max-height: 0; opacity: 0; overflow: hidden;
-            transition: all 0.4s ease; border-top: 0 solid var(--border);
+            transition: all 0.4s cubic-bezier(0.4, 0, 0.2, 1);
+            width: 100%; text-align: left;
         }
         .card.is-open .details {
-            max-height: 600px; opacity: 1; margin-top: 15px; padding-top: 15px; border-top-width: 1px;
+            max-height: 2500px; opacity: 1; margin-top: 15px; padding-top: 15px; border-top: 1px solid var(--border);
         }
 
-        /* FLAT MACRO LIST (EUROPEAN) */
+        h3 { font-size: 11px; text-transform: uppercase; color: var(--accent); margin: 15px 0 8px 0; letter-spacing: 0.5px; }
+        .text-block { font-size: 12px; line-height: 1.5; color: var(--text-primary); margin-bottom: 15px; white-space: pre-line; }
+
         .macro-row {
             display: flex; justify-content: space-between;
             font-size: 11px; padding: 5px 0; border-bottom: 1px solid var(--border);
         }
         .macro-row:last-child { border: none; }
-        .label { color: var(--text-secondary); font-weight: 600; text-transform: uppercase; }
+        .label { color: var(--text-secondary); font-weight: 600; text-transform: uppercase; font-size: 9px; }
         .val { font-weight: 700; }
+
+        .tap-prompt { font-size: 9px; color: var(--text-secondary); font-weight: 700; margin-top: 5px; }
 
     </style>
 </head>
@@ -108,11 +114,10 @@
     <header><h1>Recipe Hub</h1></header>
 
     <div class="controls">
-        <input type="search" id="searchBar" placeholder="Search recipes..." oninput="render()">
+        <input type="search" id="searchBar" placeholder="Search for a recipe..." oninput="render()">
     </div>
 
-    <div id="main-container">
-        </div>
+    <div id="main-container"></div>
 
     <script>
         let allRecipes = [];
@@ -124,7 +129,7 @@
                 allRecipes = data.recipes;
                 render();
             } catch (e) {
-                document.getElementById('main-container').innerHTML = "Error loading recipes. Check recipes.json";
+                document.getElementById('main-container').innerHTML = "<p style='padding:20px;'>Make sure 'recipes.json' is in the same folder as this HTML file.</p>";
             }
         }
 
@@ -141,23 +146,25 @@
                 );
 
                 if (filtered.length > 0) {
-                    // Add Title
-                    const title = document.createElement('div');
-                    title.className = 'category-title';
-                    title.innerText = cat;
-                    container.appendChild(title);
+                    const titleDiv = document.createElement('div');
+                    titleDiv.className = 'category-title';
+                    titleDiv.innerText = cat;
+                    container.appendChild(titleDiv);
 
-                    // Add Grid
                     const grid = document.createElement('div');
                     grid.className = 'recipe-grid';
 
                     filtered.forEach(r => {
                         const card = document.createElement('div');
                         card.className = 'card';
-                        card.onclick = () => card.classList.toggle('is-open');
+                        card.onclick = (e) => {
+                            card.classList.toggle('is-open');
+                            e.stopPropagation();
+                        };
 
                         const ds = r.designations || [];
                         const m = r.macros;
+                        const p = r.portions || 1;
 
                         card.innerHTML = `
                             <h2 class="card-title">${r.title}</h2>
@@ -167,20 +174,21 @@
                                 ${ds.includes('Heart') ? '<div class="circle-badge">♥</div>' : ''}
                             </div>
                             <span class="kcal-tag">${m.kcal} kcal</span>
-                            <div style="font-size:10px; color:var(--text-secondary);">TAP FOR MACROS</div>
+                            <div class="portion-label">Per Portion (${r.portion_size || '1 serving'})</div>
+                            <div class="tap-prompt">TAP FOR DETAILS</div>
 
                             <div class="details">
-                                <div class="macro-row"><span class="label">Calories</span><span class="val">${m.kcal}</span></div>
-                                <div class="macro-row"><span class="label">Fat</span><span class="val">${m.fat}g</span></div>
-                                <div class="macro-row"><span class="label">Sat Fat</span><span class="val">${m.fat_sat}g</span></div>
-                                <div class="macro-row"><span class="label">Poly Fat</span><span class="val">${m.fat_poly}g</span></div>
-                                <div class="macro-row"><span class="label">Mono Fat</span><span class="val">${m.fat_mono}g</span></div>
-                                <div class="macro-row"><span class="label">Total Carbs</span><span class="val">${m.carbs}g</span></div>
-                                <div class="macro-row"><span class="label">Sugars</span><span class="val">${m.sugar}g</span></div>
-                                <div class="macro-row"><span class="label">Sugar Alcohols</span><span class="val">${m.polyols}g</span></div>
-                                <div class="macro-row"><span class="label">Protein</span><span class="val">${m.protein}g</span></div>
-                                <div class="macro-row"><span class="label">Fibre</span><span class="val">${m.fiber}g</span></div>
-                                <div class="macro-row"><span class="label">Salt</span><span class="val">${m.salt}g</span></div>
+                                <h3>Ingredients</h3>
+                                <div class="text-block">${r.ingredients || 'Details coming soon.'}</div>
+                                
+                                <h3>Instructions</h3>
+                                <div class="text-block">${r.instructions || 'Details coming soon.'}</div>
+
+                                <h3>Nutrition (Per Portion)</h3>
+                                ${generateMacroList(m)}
+
+                                <h3>Total Recipe Nutrition (${p} portions)</h3>
+                                ${generateMacroList(m, p)}
                             </div>
                         `;
                         grid.appendChild(card);
@@ -188,6 +196,32 @@
                     container.appendChild(grid);
                 }
             });
+        }
+
+        function generateMacroList(macros, multiplier = 1) {
+            const fields = [
+                ['Calories', 'kcal', ''],
+                ['Fat', 'fat', 'g'],
+                ['Sat Fat', 'fat_sat', 'g'],
+                ['Poly Fat', 'fat_poly', 'g'],
+                ['Mono Fat', 'fat_mono', 'g'],
+                ['Total Carbs', 'carbs', 'g'],
+                ['Sugars', 'sugar', 'g'],
+                ['Sugar Alcohols', 'polyols', 'g'],
+                ['Protein', 'protein', 'g'],
+                ['Fibre', 'fiber', 'g'],
+                ['Salt', 'salt', 'g']
+            ];
+
+            return fields.map(f => {
+                const value = (macros[f[1]] * multiplier).toFixed(1);
+                return `
+                    <div class="macro-row">
+                        <span class="label">${f[0]}</span>
+                        <span class="val">${value}${f[2]}</span>
+                    </div>
+                `;
+            }).join('');
         }
 
         window.onload = init;
