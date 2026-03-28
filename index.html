@@ -3,22 +3,26 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover">
-    <title>Recipe Manager</title>
+    <title>Recipes</title>
     <style>
+        @import url('https://fonts.googleapis.com/css2?family=Great+Vibes&display=swap');
+
         :root { 
             --bg: #f5f5f7; 
             --card: #ffffff; 
             --text: #1d1d1f; 
-            --accent: #0071e3; 
+            --accent: #d4af37; /* Classic Gold */
             --border: #d2d2d7; 
-            --secondary: #86868b; 
+            --secondary: #86868b;
+            --cursive: 'Great Vibes', cursive;
         }
+        
         @media (prefers-color-scheme: dark) { 
             :root { 
                 --bg: #000000; 
                 --card: #1c1c1e; 
                 --text: #f5f5f7; 
-                --accent: #0a84ff; 
+                --accent: #ffdf00; /* Bright Gold for Dark Mode */
                 --border: #38383a; 
             } 
         }
@@ -40,15 +44,16 @@
             margin-bottom: 20px; 
         }
         .header img { 
-            width: 35px; 
-            height: 35px; 
+            width: 45px; 
+            height: 45px; 
             object-fit: contain;
         }
         .header h1 { 
-            font-size: 28px; 
-            font-weight: 700; 
+            font-family: var(--cursive);
+            font-size: 42px; 
+            color: var(--accent);
             margin: 0; 
-            letter-spacing: -0.5px;
+            font-weight: normal;
         }
 
         .nav-sticky { 
@@ -77,7 +82,6 @@
             gap: 8px; 
             overflow-x: auto; 
             padding-bottom: 5px; 
-            -webkit-overflow-scrolling: touch;
         }
         .filters::-webkit-scrollbar { display: none; }
         
@@ -91,11 +95,10 @@
             font-weight: 600; 
             cursor: pointer; 
             white-space: nowrap; 
-            transition: all 0.2s ease;
         }
         .f-btn.active { 
             background: var(--accent); 
-            color: white; 
+            color: #000; 
             border-color: var(--accent); 
         }
 
@@ -110,23 +113,20 @@
             background: var(--card); 
             padding: 15px; 
             border-radius: 15px; 
-            border: 1px solid var(--border); 
+            border: 1px solid var(--accent); 
             cursor: pointer; 
             display: flex; 
             flex-direction: column; 
-            transition: transform 0.1s ease;
+            text-align: center;
         }
-        .card:active { transform: scale(0.98); }
         
         .card h3 { 
-            font-size: 14px; 
+            font-family: var(--cursive);
+            font-size: 22px; 
+            color: var(--accent);
             margin: 8px 0; 
-            line-height: 1.3; 
-            height: 36px; 
-            display: -webkit-box;
-            -webkit-line-clamp: 2;
-            -webkit-box-orient: vertical;
-            overflow: hidden; 
+            line-height: 1.1; 
+            min-height: 50px;
         }
         
         .card-stats { 
@@ -136,35 +136,9 @@
         }
         .kcal { 
             font-weight: 700; 
-            font-size: 15px; 
-            color: var(--accent); 
+            font-size: 16px; 
+            color: var(--text); 
         }
-        .vitals { 
-            display: flex; 
-            gap: 5px; 
-            font-size: 10px; 
-            color: var(--secondary); 
-            font-weight: 700; 
-        }
-
-        .badges { 
-            display: flex; 
-            gap: 4px; 
-            margin-bottom: 5px; 
-        }
-        .dot { 
-            width: 18px; 
-            height: 18px; 
-            border-radius: 50%; 
-            background: #333; 
-            color: white; 
-            font-size: 10px; 
-            font-weight: 800; 
-            display: flex; 
-            align-items: center; 
-            justify-content: center; 
-        }
-        @media (prefers-color-scheme: dark) { .dot { background: white; color: black; } }
 
         #modal { 
             position: fixed; 
@@ -185,9 +159,14 @@
             align-items: center; 
             margin-bottom: 20px; 
         }
+        .modal-top h2 {
+            font-family: var(--cursive);
+            font-size: 36px;
+            color: var(--accent);
+        }
         .close { 
-            background: #ff3b30; 
-            color: white; 
+            background: var(--accent); 
+            color: #000; 
             border: none; 
             padding: 8px 20px; 
             border-radius: 20px; 
@@ -206,15 +185,30 @@
             background: var(--card); 
             padding: 15px; 
             border-radius: 12px; 
-            border: 1px solid var(--border); 
+            border: 1px solid var(--accent); 
             margin-bottom: 15px; 
         }
         .section h4 { 
             margin: 0 0 10px; 
             color: var(--accent); 
             text-transform: uppercase; 
-            font-size: 11px; 
-            letter-spacing: 0.5px;
+            font-size: 12px; 
+            font-weight: 800;
+        }
+        
+        /* Larger Text for Recipe Content */
+        #mIng, #mInst {
+            font-size: 18px; 
+            line-height: 1.6;
+        }
+
+        .category-title {
+            font-family: var(--cursive);
+            font-size: 32px;
+            color: var(--accent);
+            margin: 30px 0 10px;
+            border-bottom: 2px solid var(--accent);
+            display: inline-block;
         }
     </style>
 </head>
@@ -222,15 +216,15 @@
 
     <div class="nav-sticky">
         <div class="header">
-            <img src="icon-left.png" alt="">
-            <h1>Recipes</h1>
-            <img src="icon-right.png" alt="">
+            <img src="image.png" alt="Icon">
+            <h1>My Cook Book</h1>
+            <img src="image.png" alt="Icon">
         </div>
-        <input type="text" id="search" placeholder="Search recipes..." oninput="render()">
+        <input type="text" id="search" placeholder="Search for something delicious..." oninput="render()">
         <div class="filters">
             <button class="f-btn active" onclick="setFilter('All', this)">ALL</button>
             <button class="f-btn" onclick="setFilter('Keto', this)">KETO</button>
-            <button class="f-btn" onclick="setFilter('Heart', this)">HEART</button>
+            <button class="f-btn" onclick="setFilter('Heart', this)">HEART HEALTH</button>
             <button class="f-btn" onclick="setFilter('Sugar', this)">LOW SUGAR</button>
         </div>
     </div>
@@ -239,8 +233,8 @@
 
     <div id="modal">
         <div class="modal-top">
-            <h2 id="mTitle" style="margin:0; font-size: 22px;"></h2>
-            <button class="close" onclick="closeM()">DONE</button>
+            <h2 id="mTitle"></h2>
+            <button class="close" onclick="closeM()">CLOSE</button>
         </div>
         
         <div style="display:grid; grid-template-columns: 1fr 1fr; gap:10px; margin-bottom:20px;">
@@ -250,12 +244,12 @@
         
         <div class="section">
             <h4>Ingredients</h4>
-            <div id="mIng" style="white-space:pre-line; font-size: 14px;"></div>
+            <div id="mIng" style="white-space:pre-line;"></div>
         </div>
         
         <div class="section">
             <h4>Instructions</h4>
-            <div id="mInst" style="white-space:pre-line; font-size: 14px;"></div>
+            <div id="mInst" style="white-space:pre-line;"></div>
         </div>
     </div>
 
@@ -270,7 +264,7 @@
                 recipes = data.recipes;
                 render();
             } catch (e) {
-                console.error("Failed to load recipes. Check recipes.json location.", e);
+                console.error("Data error", e);
             }
         }
 
@@ -292,17 +286,15 @@
                 const filteredList = recipes.filter(r => {
                     if (r.category !== cat) return false;
                     if (query && !r.title.toLowerCase().includes(query)) return false;
-                    
                     if (currentFilter === 'Keto' && r.macros.carbs > 10) return false;
                     if (currentFilter === 'Heart' && r.macros.fat_sat > 3) return false;
                     if (currentFilter === 'Sugar' && r.macros.sugar > 5) return false;
-                    
                     return true;
                 });
 
                 if (filteredList.length > 0) {
-                    const sectionTitle = document.createElement('h2');
-                    sectionTitle.style.cssText = "margin:25px 0 10px; font-size:20px; color:var(--accent);";
+                    const sectionTitle = document.createElement('div');
+                    sectionTitle.className = 'category-title';
                     sectionTitle.innerText = cat;
                     container.appendChild(sectionTitle);
 
@@ -314,15 +306,10 @@
                         card.className = 'card';
                         card.onclick = () => openM(r);
                         card.innerHTML = `
-                            <div class="badges">
-                                ${r.macros.carbs <= 10 ? '<div class="dot" title="Keto Friendly">K</div>' : ''}
-                                ${r.macros.fat_sat <= 3 ? '<div class="dot" title="Heart Healthy">♥</div>' : ''}
-                                ${r.macros.sugar <= 5 ? '<div class="dot" title="Low Sugar">S</div>' : ''}
-                            </div>
                             <h3>${r.title}</h3>
                             <div class="card-stats">
                                 <div class="kcal">${Math.round(r.macros.kcal)} kcal</div>
-                                <div class="vitals">P: ${r.macros.protein}g | C: ${r.macros.carbs}g | F: ${r.macros.fat}g</div>
+                                <div style="font-size:11px; color:var(--secondary);">P: ${r.macros.protein}g | C: ${r.macros.carbs}g</div>
                             </div>`;
                         grid.appendChild(card);
                     });
@@ -335,29 +322,21 @@
             document.getElementById('mTitle').innerText = r.title;
             document.getElementById('mIng').innerText = r.ingredients;
             document.getElementById('mInst').innerText = r.instructions;
-            
             document.getElementById('mPortion').innerHTML = buildMacroTable(r.macros, 1);
             document.getElementById('mTotal').innerHTML = buildMacroTable(r.macros, r.portions);
-            
             document.getElementById('modal').style.display = 'block';
-            document.body.style.overflow = 'hidden';
+            window.scrollTo(0,0);
         }
 
         function closeM() {
             document.getElementById('modal').style.display = 'none';
-            document.body.style.overflow = 'auto';
         }
 
         function buildMacroTable(m, multiplier) {
-            const keys = [
-                'kcal', 'fat', 'fat_sat', 'fat_poly', 'fat_mono', 
-                'carbs', 'sugar', 'polyols', 'protein', 'fiber', 'salt'
-            ];
-            
+            const keys = ['kcal', 'fat', 'carbs', 'protein', 'sugar', 'fiber'];
             return keys.map(k => {
                 const val = (m[k] * multiplier).toFixed(1);
-                const label = k.replace('_', ' ').toUpperCase();
-                return `<div class="macro-row"><span>${label}</span><span>${val}</span></div>`;
+                return `<div class="macro-row"><span>${k.toUpperCase()}</span><span>${val}</span></div>`;
             }).join('');
         }
 
