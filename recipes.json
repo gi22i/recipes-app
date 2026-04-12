@@ -1,4 +1,94 @@
 {
+    "recipe_name": "Quick No-Yeast Naan (Natural Yogurt Edition)",
+    "servings": 6,
+    "total_time_minutes": 25,
+    "macros_per_serving": {
+        "calories": 188,
+        "fat_g": 3.4,
+        "carbohydrates_g": 33.2,
+        "protein_g": 5.2
+    },
+    "ingredients": [
+        {
+            "item": "All-purpose flour",
+            "amount": "2 cups",
+            "notes": "Approx 250g; keep extra nearby for dusting"
+        },
+        {
+            "item": "Natural yogurt",
+            "amount": "3/4 cup",
+            "notes": "Full fat or low fat works well"
+        },
+        {
+            "item": "Baking powder",
+            "amount": "1.5 tsp",
+            "notes": "Leavening agent"
+        },
+        {
+            "item": "Baking soda",
+            "amount": "1/2 tsp",
+            "notes": "Helps with browning and fluffiness"
+        },
+        {
+            "item": "Salt",
+            "amount": "1/2 tsp",
+            "notes": "Fine sea salt preferred"
+        },
+        {
+            "item": "Olive oil or melted butter",
+            "amount": "1 tbsp",
+            "notes": "Used in the dough for softness"
+        },
+        {
+            "item": "Warm water",
+            "amount": "1-2 tbsp",
+            "notes": "Use only if dough is too dry; natural yogurt is usually wet enough"
+        }
+    ],
+    "instructions": [
+        {
+            "step": 1,
+            "title": "Mix Dry Ingredients",
+            "action": "In a large mixing bowl, whisk together the flour, baking powder, baking soda, and salt until evenly distributed."
+        },
+        {
+            "step": 2,
+            "title": "Add Wet Ingredients",
+            "action": "Make a well in the center of the flour. Add the natural yogurt and the oil. Stir with a spoon until a shaggy dough begins to form."
+        },
+        {
+            "step": 3,
+            "title": "Knead",
+            "action": "Turn the dough onto a lightly floured surface. Knead for 2-3 minutes until the dough is smooth and elastic. If the dough is too sticky due to the natural yogurt, add flour 1 tablespoon at a time."
+        },
+        {
+            "step": 4,
+            "title": "Rest",
+            "action": "Cover the dough with the bowl and let it rest for 10 minutes. This allows the gluten to relax, making it easier to roll thin without it snapping back."
+        },
+        {
+            "step": 5,
+            "title": "Shape",
+            "action": "Divide the dough into 6 equal portions. Roll each piece into an oval or circle about 1/4 inch thick."
+        },
+        {
+            "step": 6,
+            "title": "Cook",
+            "action": "Heat a heavy skillet (cast iron is best) over medium-high heat. Place one dough circle in the dry pan. Cook for 1 minute until bubbles form, flip, and cook for another 30-45 seconds until charred spots appear."
+        }
+    ],
+    "variations": [
+        {
+            "type": "Protein Boost",
+            "adjustment": "Replace 30g of flour with 30g of unflavored or vanilla protein powder to increase protein content by approximately 23g per batch."
+        },
+        {
+            "type": "Garlic Naan",
+            "adjustment": "Brush with a mixture of melted butter, minced garlic, and fresh cilantro immediately after removing from the pan."
+        }
+    ]
+},
+{
 "recipes": [
 {
 "title": "Smoked Mackerel Avocado Mash",
