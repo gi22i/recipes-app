@@ -1,442 +1,1882 @@
 [
-{
-  "title": "Quick No-Yeast Naan",
-  "category": "Breads",
-  "portions": 6,
-  "ingredients": "• 250g All-purpose flour\n• 180g Natural yogurt\n• 1.5 tsp Baking powder\n• 0.5 tsp Baking soda\n• 0.5 tsp Salt\n• 1 tbsp Olive oil\n• 1-2 tbsp Warm water (if needed)",
-  "instructions": "1. In a large mixing bowl, whisk together the flour, baking powder, baking soda, and salt until evenly distributed.\n2. Make a well in the center of the flour. Add the natural yogurt and olive oil. Stir until a shaggy dough forms.\n3. Turn the dough onto a lightly floured surface. Knead for 2-3 minutes until smooth. Add extra flour 1 tbsp at a time if the dough is too sticky.\n4. Cover the dough with the bowl and let it rest for 10 minutes to relax the gluten.\n5. Divide the dough into 6 equal portions. Roll each piece into an oval or circle about 1/4 inch thick.\n6. Heat a heavy, dry skillet over medium-high heat. Cook one piece of dough for 1 minute until bubbles form, then flip and cook for another 30-45 seconds until charred spots appear.",
-  "macros": { "kcal": 191.0, "fat": 3.8, "fat_sat": 1.0, "fat_poly": 0.4, "fat_mono": 1.8, "carbs": 33.2, "sugar": 1.6, "polyols": 0, "protein": 5.2, "fiber": 1.1, "salt": 0.5 }
-},
-{
-"title": "Smoked Mackerel Avocado Mash",
-"category": "Breakfasts",
-"portions": 2,
-"ingredients": "• 160g Smoked Mackerel\n• 1 Ripe Avocado\n• 1 tbsp Lemon juice\n• Fresh Dill\n• Black pepper",
-"instructions": "1. Gently flake the mackerel fillets into a medium mixing bowl, ensuring all skin and small bones are removed.\n2. Halve the avocado, remove the pit, and scoop the flesh into the bowl with the fish.\n3. Add the lemon juice and finely chopped dill to the mixture.\n4. Use a heavy fork to mash the ingredients together until well combined but still slightly textured.\n5. Season with cracked black pepper and serve immediately on keto-friendly toast or lettuce wraps.",
-"macros": { "kcal": 245.0, "fat": 19.0, "fat_sat": 3.5, "fat_poly": 5.0, "fat_mono": 10.5, "carbs": 4.0, "sugar": 2.0, "polyols": 0, "protein": 14.0, "fiber": 5.0, "salt": 0.8 }
-},
-{
-"title": "Flaxseed & Walnut N'Oats",
-"category": "Breakfasts",
-"portions": 1,
-"ingredients": "• 30g Ground Flaxseed\n• 20g Walnuts\n• 120ml Almond Milk\n• 10g Chia Seeds\n• Cinnamon",
-"instructions": "1. In a small non-stick saucepan, whisk together the ground flaxseed, chia seeds, and almond milk.\n2. Place over a low-medium heat and cook for 3-5 minutes, stirring constantly to prevent sticking.\n3. Once the mixture has reached a thick, porridge-like consistency, remove from the heat.\n4. Stir in the cinnamon and transfer the mixture to a serving bowl.\n5. Top with roughly chopped walnuts and an extra sprinkle of cinnamon before serving.",
-"macros": { "kcal": 310.0, "fat": 24.0, "fat_sat": 2.5, "fat_poly": 15.0, "fat_mono": 6.5, "carbs": 13.5, "sugar": 1.5, "polyols": 0, "protein": 11.0, "fiber": 12.0, "salt": 0.1 }
-},
-{
-"title": "Tofu & Spinach Scramble",
-"category": "Breakfasts",
-"portions": 2,
-"ingredients": "• 200g Firm Tofu\n• 100g Spinach\n• 1/2 tsp Turmeric\n• 1 tbsp Nutritional Yeast\n• Olive oil",
-"instructions": "1. Drain the tofu and wrap it in a clean tea towel, pressing firmly to remove as much moisture as possible.\n2. Crumble the tofu into small, bite-sized pieces using your hands or a fork.\n3. Heat olive oil in a skillet over medium heat and add the crumbled tofu, turmeric, and nutritional yeast.\n4. Sauté for approximately 5 minutes until the tofu is heated through and slightly golden.\n5. Add the fresh spinach and cook for a further 2 minutes until just wilted, then serve immediately.",
-"macros": { "kcal": 240.0, "fat": 16.0, "fat_sat": 2.5, "fat_poly": 9.0, "fat_mono": 4.5, "carbs": 6.0, "sugar": 2.0, "polyols": 0, "protein": 18.0, "fiber": 4.0, "salt": 0.3 }
-},
-{
-"title": "Chia & Berry Skyr Bowl",
-"category": "Breakfasts",
-"portions": 1,
-"ingredients": "• 150g Skyr\n• 15g Chia Seeds\n• 50g Raspberries\n• Vanilla extract",
-"instructions": "1. In a medium bowl, combine the Skyr yogurt with the chia seeds and a drop of vanilla extract.\n2. Stir the mixture thoroughly to ensure the chia seeds are evenly distributed.\n3. Cover and refrigerate for at least 20 minutes (or overnight) to allow the seeds to swell and thicken the base.\n4. Gently fold in half of the raspberries, crushing a few to release their juice.\n5. Top with the remaining whole berries and serve cold.",
-"macros": { "kcal": 215.0, "fat": 8.0, "fat_sat": 1.0, "fat_poly": 5.5, "fat_mono": 1.5, "carbs": 14.0, "sugar": 6.0, "polyols": 0, "protein": 20.0, "fiber": 8.0, "salt": 0.1 }
-},
-{
-"title": "Almond Savory Pancakes",
-"category": "Breakfasts",
-"portions": 2,
-"ingredients": "• 100g Almond Flour\n• 2 Eggs\n• 50ml Almond Milk\n• 1/2 tsp Baking Powder\n• Oregano",
-"instructions": "1. In a large mixing bowl, whisk the eggs and almond milk together until well combined.\n2. Sift in the almond flour, baking powder, and a pinch of dried oregano.\n3. Whisk until a thick, smooth batter forms; let it rest for 2 minutes.\n4. Heat a lightly greased non-stick skillet over medium-low heat and pour in small rounds of batter.\n5. Cook for 2-3 minutes per side until bubbles appear on the surface and the pancakes are golden brown.",
-"macros": { "kcal": 340.0, "fat": 28.0, "fat_sat": 4.5, "fat_poly": 7.0, "fat_mono": 16.5, "carbs": 8.0, "sugar": 2.0, "polyols": 0, "protein": 15.0, "fiber": 6.0, "salt": 0.2 }
-},
-{
-"title": "Smoked Salmon Roll-ups",
-"category": "Breakfasts",
-"portions": 2,
-"ingredients": "• 100g Smoked Salmon\n• 50g Cream Cheese\n• 1/2 Cucumber\n• Fresh Chives",
-"instructions": "1. Slice the cucumber into very thin, long matchsticks.\n2. Lay the smoked salmon slices flat on a clean board or plate.\n3. Spread a thin, even layer of cream cheese over the entire surface of each salmon slice.\n4. Place a few cucumber sticks and chives at one edge of the salmon.\n5. Carefully roll the salmon tightly around the filling and slice each roll into three pieces before serving.",
-"macros": { "kcal": 195.0, "fat": 12.0, "fat_sat": 4.0, "fat_poly": 3.0, "fat_mono": 5.0, "carbs": 1.0, "sugar": 1.0, "polyols": 0, "protein": 18.0, "fiber": 0, "salt": 1.1 }
-},
-{
-"title": "Protein Power Oats",
-"category": "Breakfasts",
-"portions": 1,
-"ingredients": "• 30g Protein Powder\n• 30g Rolled Oats\n• 150ml Water\n• 10g Pumpkin Seeds",
-"instructions": "1. Mix the oats and water in a microwave-safe bowl and heat for 2 minutes on high.\n2. Remove from the microwave and let the oats stand for 1 minute to finish thickening.\n3. Whisk the protein powder into the oats quickly to avoid clumping; add a splash of extra water if too dry.\n4. Stir in half of the pumpkin seeds for texture.\n5. Sprinkle the remaining seeds on top and serve immediately.",
-"macros": { "kcal": 265.0, "fat": 8.5, "fat_sat": 1.8, "fat_poly": 3.5, "fat_mono": 3.2, "carbs": 21.0, "sugar": 1.5, "polyols": 0, "protein": 28.5, "fiber": 4.0, "salt": 0.2 }
-},
-{
-"title": "Chive & Mushroom Omelette",
-"category": "Breakfasts",
-"portions": 1,
-"ingredients": "• 2 Eggs\n• 50g Sliced Mushrooms\n• 1 tbsp Fresh Chives\n• 5g Butter",
-"instructions": "1. Whisk the eggs in a small bowl with the chopped chives and a pinch of salt.\n2. Melt the butter in a non-stick frying pan over medium heat.\n3. Add the mushrooms and sauté for 3-4 minutes until they have released their moisture and turned golden.\n4. Pour the egg mixture over the mushrooms, tilting the pan to cover the entire base.\n5. Cook for 2 minutes until the edges are set, then fold in half and slide onto a plate.",
-"macros": { "kcal": 210.0, "fat": 16.0, "fat_sat": 7.0, "fat_poly": 2.5, "fat_mono": 6.5, "carbs": 2.5, "sugar": 1.0, "polyols": 0, "protein": 14.0, "fiber": 1.0, "salt": 0.4 }
-},
-{
-"title": "Greek Yogurt Nut Medley",
-"category": "Breakfasts",
-"portions": 1,
-"ingredients": "• 150g Greek Yogurt (0%)\n• 15g Walnuts\n• 10g Almonds\n• 1/2 tsp Cinnamon",
-"instructions": "1. Scoop the Greek yogurt into a small serving bowl.\n2. Roughly chop the walnuts and almonds using a chef's knife.\n3. Sprinkle the cinnamon over the yogurt and stir lightly to create a marble effect.\n4. Scatter the chopped nuts over the top.\n5. Serve chilled as a high-protein, low-carb breakfast start.",
-"macros": { "kcal": 240.0, "fat": 16.0, "fat_sat": 1.5, "fat_poly": 10.0, "fat_mono": 4.5, "carbs": 7.0, "sugar": 5.0, "polyols": 0, "protein": 17.0, "fiber": 2.5, "salt": 0.1 }
-},
-{
-"title": "Cottage Cheese & Sunflower Seeds",
-"category": "Breakfasts",
-"portions": 1,
-"ingredients": "• 200g Cottage Cheese (Low fat)\n• 15g Sunflower seeds\n• Black pepper\n• 1/4 Cucumber",
-"instructions": "1. Place the cottage cheese into a bowl and season generously with cracked black pepper.\n2. Dice the cucumber into small cubes and stir half into the cheese.\n3. Heat the sunflower seeds in a dry pan for 1-2 minutes until they smell toasted.\n4. Scatter the toasted seeds and remaining cucumber over the cottage cheese.\n5. Serve immediately with a spoon.",
-"macros": { "kcal": 245.0, "fat": 10.0, "fat_sat": 2.0, "fat_poly": 5.5, "fat_mono": 2.5, "carbs": 8.0, "sugar": 5.5, "polyols": 0, "protein": 28.0, "fiber": 1.5, "salt": 0.9 }
-},
-{
-"title": "Keto Lettuce Breakfast Tacos",
-"category": "Breakfasts",
-"portions": 2,
-"ingredients": "• 4 Large Romaine leaves\n• 3 Eggs\n• 50g Avocado\n• 10g Pumpkin seeds",
-"instructions": "1. Wash and thoroughly dry the Romaine leaves to act as taco shells.\n2. In a small pan, scramble the eggs over low heat until soft and creamy.\n3. Slice the avocado into thin wedges.\n4. Divide the scrambled eggs equally between the four lettuce leaves.\n5. Top with avocado slices and pumpkin seeds for a crunch.",
-"macros": { "kcal": 290.0, "fat": 22.0, "fat_sat": 5.0, "fat_poly": 5.5, "fat_mono": 11.5, "carbs": 6.0, "sugar": 2.0, "polyols": 0, "protein": 18.0, "fiber": 4.0, "salt": 0.4 }
-},
-{
-"title": "Baked Eggs in Avocado",
-"category": "Breakfasts",
-"portions": 1,
-"ingredients": "• 1 Large Avocado\n• 2 Small Eggs\n• Chili flakes\n• Salt",
-"instructions": "1. Preheat your oven to 200°C (390°F).\n2. Cut the avocado in half and remove the pit; scoop out 1 tbsp of flesh from each center to make room for the egg.\n3. Place the avocado halves in a baking dish, stabilized by crumpled foil if needed.\n4. Crack one egg into each hole, being careful not to break the yolk.\n5. Bake for 15-18 minutes until the whites are set, then season with chili and salt.",
-"macros": { "kcal": 320.0, "fat": 26.0, "fat_sat": 5.5, "fat_poly": 4.5, "fat_mono": 16.0, "carbs": 8.5, "sugar": 1.0, "polyols": 0, "protein": 14.0, "fiber": 7.0, "salt": 0.3 }
-},
-{
-"title": "Turkey Bacon & Spinach Sauté",
-"category": "Breakfasts",
-"portions": 1,
-"ingredients": "• 3 slices Turkey Bacon\n• 100g Spinach\n• 1 tsp Olive oil",
-"instructions": "1. Slice the turkey bacon into 1-inch strips.\n2. Heat the olive oil in a skillet over medium-high heat.\n3. Fry the bacon strips until they are crisp and browned on the edges.\n4. Add the spinach to the pan and toss with the bacon for 1 minute until wilted.\n5. Serve hot as a quick, savory breakfast.",
-"macros": { "kcal": 180.0, "fat": 11.0, "fat_sat": 2.5, "fat_poly": 2.5, "fat_mono": 6.0, "carbs": 3.0, "sugar": 1.0, "polyols": 0, "protein": 17.0, "fiber": 2.5, "salt": 1.2 }
-},
-{
-"title": "Herb-Crusted Baked Cod",
-"category": "Meals",
-"portions": 2,
-"ingredients": "• 300g Cod fillets\n• 40g Almond Flour\n• 1 tbsp Olive Oil\n• Dried Parsley\n• Lemon zest",
-"instructions": "1. Preheat your oven to 200°C (390°F) and line a baking tray with parchment paper.\n2. Combine the almond flour, dried parsley, and lemon zest in a shallow bowl.\n3. Pat the cod fillets dry with paper towels and brush both sides lightly with olive oil.\n4. Press the top of each fillet firmly into the almond flour mixture to create a thick crust.\n5. Place the fillets on the baking tray and bake for 12-15 minutes until the fish is flaky and the crust is golden.",
-"macros": { "kcal": 310.0, "fat": 18.0, "fat_sat": 2.5, "fat_poly": 3.5, "fat_mono": 12.0, "carbs": 4.0, "sugar": 2.0, "polyols": 0, "protein": 32.0, "fiber": 5.0, "salt": 0.6 }
-},
-{
-"title": "Turkey & Zucchini Stir-fry",
-"category": "Meals",
-"portions": 2,
-"ingredients": "• 300g Turkey breast\n• 1 medium Zucchini\n• 2 tbsp Soy Sauce\n• 1 tsp Ginger\n• Sesame oil",
-"instructions": "1. Slice the turkey breast into thin strips and the zucchini into half-moon shapes.\n2. Heat the sesame oil in a wok or large frying pan over high heat.\n3. Add the turkey strips and stir-fry for 4-5 minutes until thoroughly cooked through.\n4. Toss in the zucchini and grated ginger, cooking for a further 3 minutes until tender-crisp.\n5. Pour in the soy sauce, toss everything to coat, and serve hot.",
-"macros": { "kcal": 285.0, "fat": 14.0, "fat_sat": 3.5, "fat_poly": 3.5, "fat_mono": 7.0, "carbs": 6.0, "sugar": 3.0, "polyols": 0, "protein": 34.0, "fiber": 4.0, "salt": 0.5 }
-},
-{
-"title": "Mediterranean Chicken Salad",
-"category": "Meals",
-"portions": 2,
-"ingredients": "• 200g Cooked Chicken\n• 50g Feta Cheese\n• 10 Kalamata Olives\n• Cucumber\n• Olive Oil",
-"instructions": "1. Cut the cooked chicken and cucumber into bite-sized chunks.\n2. In a large salad bowl, combine the chicken, cucumber, whole olives, and crumbled feta cheese.\n3. Drizzle the olive oil over the salad and add a squeeze of fresh lemon juice if available.\n4. Toss gently to ensure everything is coated in the oil.\n5. Serve immediately or keep chilled for up to 4 hours.",
-"macros": { "kcal": 360.0, "fat": 24.0, "fat_sat": 4.5, "fat_poly": 5.0, "fat_mono": 14.5, "carbs": 4.0, "sugar": 2.0, "polyols": 0, "protein": 30.0, "fiber": 5.0, "salt": 0.5 }
-},
-{
-"title": "Beef & Broccoli Stir-fry",
-"category": "Meals",
-"portions": 2,
-"ingredients": "• 250g Beef Steak\n• 200g Broccoli florets\n• 2 tbsp Soy Sauce\n• 1 clove Garlic\n• Sesame oil",
-"instructions": "1. Slice the beef into very thin strips, cutting against the grain for maximum tenderness.\n2. Heat the sesame oil in a wok over high heat and add the minced garlic.\n3. Add the beef strips and sear quickly for 2 minutes until browned.\n4. Throw in the broccoli florets and a tablespoon of water; cover with a lid for 2 minutes to steam.\n5. Remove the lid, add soy sauce, and stir-fry for one final minute before serving.",
-"macros": { "kcal": 310.0, "fat": 16.0, "fat_sat": 5.0, "fat_poly": 2.5, "fat_mono": 8.5, "carbs": 6.0, "sugar": 2.0, "polyols": 0, "protein": 32.0, "fiber": 4.0, "salt": 0.5 }
-},
-{
-"title": "Lemon Garlic Salmon",
-"category": "Meals",
-"portions": 2,
-"ingredients": "• 250g Salmon fillets\n• 1 tbsp Olive oil\n• 2 cloves Garlic\n• 1/2 Lemon",
-"instructions": "1. Season the salmon fillets with salt and pepper.\n2. Heat olive oil in a pan over medium heat and place salmon skin-side down.\n3. Cook for 5 minutes without moving it to achieve crispy skin.\n4. Flip the salmon and add minced garlic and lemon slices to the pan.\n5. Cook for another 3 minutes, spooning the garlic oil over the fish, then serve.",
-"macros": { "kcal": 380.0, "fat": 22.0, "fat_sat": 3.5, "fat_poly": 6.0, "fat_mono": 12.5, "carbs": 2.0, "sugar": 1.0, "polyols": 0, "protein": 38.0, "fiber": 0.5, "salt": 0.4 }
-},
-{
-"title": "Chicken & Asparagus Sauté",
-"category": "Meals",
-"portions": 2,
-"ingredients": "• 300g Chicken thighs\n• 150g Asparagus\n• 1 tbsp Avocado oil\n• Thyme",
-"instructions": "1. Trim the woody ends off the asparagus and cut the chicken into bite-sized pieces.\n2. Heat the avocado oil in a large skillet over medium-high heat.\n3. Add the chicken and dried thyme, sautéing until the chicken is browned and cooked through (about 8 mins).\n4. Add the asparagus to the pan and cook for a further 4 minutes until bright green and tender.\n5. Season with salt and serve hot.",
-"macros": { "kcal": 340.0, "fat": 18.0, "fat_sat": 4.0, "fat_poly": 3.5, "fat_mono": 10.5, "carbs": 5.0, "sugar": 2.0, "polyols": 0, "protein": 36.0, "fiber": 3.0, "salt": 0.3 }
-},
-{
-"title": "Prawn & Garlic Cauli-Rice",
-"category": "Meals",
-"portions": 2,
-"ingredients": "• 200g King Prawns\n• 300g Cauliflower rice\n• 2 cloves Garlic\n• 10g Butter",
-"instructions": "1. Melt the butter in a large pan and sauté the minced garlic for 1 minute.\n2. Add the prawns and cook for 2-3 minutes until they turn pink and opaque.\n3. Remove the prawns from the pan and set aside.\n4. Add the cauliflower rice to the same pan and sauté for 5 minutes until tender.\n5. Return the prawns to the pan, toss to combine, and serve with fresh parsley.",
-"macros": { "kcal": 210.0, "fat": 9.0, "fat_sat": 4.5, "fat_poly": 1.5, "fat_mono": 3.0, "carbs": 9.0, "sugar": 4.0, "polyols": 0, "protein": 24.0, "fiber": 4.0, "salt": 0.8 }
-},
-{
-"title": "Bunless Turkey Burgers",
-"category": "Meals",
-"portions": 2,
-"ingredients": "• 300g Turkey mince\n• 4 Large Lettuce leaves\n• 1/2 Red onion\n• 1 tsp Cumin",
-"instructions": "1. Mix the turkey mince with the cumin and finely diced red onion in a bowl.\n2. Form the mixture into four small, flat burger patties.\n3. Grill or pan-fry the patties for 5-6 minutes per side until fully cooked through.\n4. Wrap each patty in a large, sturdy lettuce leaf.\n5. Serve with a dollop of mustard or sugar-free mayo if desired.",
-"macros": { "kcal": 260.0, "fat": 12.0, "fat_sat": 3.5, "fat_poly": 3.0, "fat_mono": 5.5, "carbs": 4.5, "sugar": 2.0, "polyols": 0, "protein": 34.0, "fiber": 1.5, "salt": 0.5 }
-},
-{
-"title": "Steak & Green Bean Medley",
-"category": "Meals",
-"portions": 1,
-"ingredients": "• 150g Sirloin steak\n• 100g Green beans\n• 5g Butter\n• Garlic powder",
-"instructions": "1. Season the steak with salt and garlic powder.\n2. Pan-sear the steak in a hot pan for 3 minutes per side for medium-rare.\n3. Remove the steak to rest and add the green beans to the same pan with a splash of water.\n4. Cover and steam the beans for 3 minutes until tender.\n5. Add the butter to the beans, toss, and serve alongside the sliced steak.",
-"macros": { "kcal": 345.0, "fat": 19.0, "fat_sat": 9.0, "fat_poly": 1.5, "fat_mono": 8.5, "carbs": 6.0, "sugar": 2.5, "polyols": 0, "protein": 36.0, "fiber": 3.5, "salt": 0.3 }
-},
-{
-"title": "Baked Sea Bass with Herbs",
-"category": "Meals",
-"portions": 2,
-"ingredients": "• 2 Sea bass fillets\n• 1 tbsp Olive oil\n• Fresh Rosemary\n• 1/2 Lemon",
-"instructions": "1. Preheat the oven to 180°C (350°F).\n2. Place the sea bass fillets on a piece of foil, skin-side down.\n3. Drizzle with olive oil and top with fresh rosemary sprigs and lemon slices.\n4. Fold the foil to create a sealed parcel and place on a baking sheet.\n5. Bake for 15-18 minutes until the fish is opaque and tender.",
-"macros": { "kcal": 280.0, "fat": 14.0, "fat_sat": 2.5, "fat_poly": 3.5, "fat_mono": 8.0, "carbs": 1.5, "sugar": 0.5, "polyols": 0, "protein": 34.0, "fiber": 0, "salt": 0.4 }
-},
-{
-"title": "Coconut Chicken Curry",
-"category": "Meals",
-"portions": 3,
-"ingredients": "• 450g Chicken breast\n• 200ml Coconut milk (full fat)\n• 1 tbsp Curry powder\n• 100g Spinach",
-"instructions": "1. Cut the chicken into 2cm cubes and brown in a deep pan with a little oil.\n2. Stir in the curry powder and cook for 1 minute until fragrant.\n3. Pour in the coconut milk and simmer gently for 10 minutes until the sauce thickens.\n4. Stir in the fresh spinach until it has wilted into the sauce.\n5. Serve as is or over cauliflower rice.",
-"macros": { "kcal": 395.0, "fat": 24.0, "fat_sat": 18.0, "fat_poly": 1.5, "fat_mono": 4.5, "carbs": 8.0, "sugar": 3.0, "polyols": 0, "protein": 38.0, "fiber": 2.5, "salt": 0.5 }
-},
-{
-"title": "Grilled Tofu with Bok Choy",
-"category": "Meals",
-"portions": 2,
-"ingredients": "• 250g Extra firm tofu\n• 2 heads Bok choy\n• 1 tbsp Soy sauce\n• 1 tsp Sesame oil",
-"instructions": "1. Cut the tofu into thick rectangles and press dry with a towel.\n2. Brush the tofu with sesame oil and soy sauce.\n3. Grill the tofu in a hot griddle pan for 4 minutes per side until charred lines appear.\n4. Halve the bok choy and place cut-side down in the pan for the last 3 minutes.\n5. Serve the tofu on a bed of the grilled bok choy.",
-"macros": { "kcal": 230.0, "fat": 14.0, "fat_sat": 2.0, "fat_poly": 7.5, "fat_mono": 4.5, "carbs": 7.0, "sugar": 2.5, "polyols": 0, "protein": 21.0, "fiber": 3.0, "salt": 0.7 }
-},
-{
-"title": "Lamb Chops with Mint",
-"category": "Meals",
-"portions": 2,
-"ingredients": "• 4 Lamb chops\n• 1 tbsp Fresh mint\n• 1 tbsp Olive oil\n• Garlic powder",
-"instructions": "1. Rub the lamb chops with olive oil, garlic powder, and chopped mint.\n2. Heat a pan over medium-high heat until very hot.\n3. Sear the lamb chops for 3-4 minutes per side for medium.\n4. Stand the chops on their fat edge for 1 minute to render and crisp the fat.\n5. Let the meat rest for 5 minutes before serving.",
-"macros": { "kcal": 380.0, "fat": 28.0, "fat_sat": 11.0, "fat_poly": 3.0, "fat_mono": 14.0, "carbs": 1.0, "sugar": 0.5, "polyols": 0, "protein": 30.0, "fiber": 0, "salt": 0.3 }
-},
-{
-"title": "Roast Chicken & Root Veg",
-"category": "Meals",
-"portions": 2,
-"ingredients": "• 300g Chicken breast\n• 100g Carrots\n• 100g Swede (Rutabaga)\n• Rosemary",
-"instructions": "1. Preheat oven to 200°C (390°F).\n2. Chop the carrots and swede into small, uniform cubes.\n3. Place the chicken and vegetables in a roasting tray and toss with olive oil and rosemary.\n4. Roast for 25-30 minutes until the chicken is cooked through and the vegetables are tender.\n5. Season with salt and pepper before serving.",
-"macros": { "kcal": 290.0, "fat": 10.0, "fat_sat": 2.0, "fat_poly": 2.5, "fat_mono": 5.5, "carbs": 14.0, "sugar": 6.5, "polyols": 0, "protein": 35.0, "fiber": 4.5, "salt": 0.4 }
-},
-{
-"title": "Golden Flaxseed Bread",
-"category": "Bakery",
-"portions": 10,
-"ingredients": "• 200g Ground Flaxseed\n• 5 Eggs\n• 100ml Water\n• 1 tbsp Baking powder\n• Salt",
-"instructions": "1. Preheat your oven to 180°C (350°F) and grease a standard loaf tin.\n2. In a large bowl, whisk the eggs and water together until the mixture is frothy.\n3. Stir in the ground flaxseed, baking powder, and a pinch of salt until a thick dough forms.\n4. Transfer the dough to the loaf tin and smooth the top with a wet spatula.\n5. Bake for 45 minutes until the loaf is firm to the touch, then cool completely before slicing.",
-"macros": { "kcal": 165.0, "fat": 13.0, "fat_sat": 1.5, "fat_poly": 6.8, "fat_mono": 4.7, "carbs": 1.5, "sugar": 0.5, "polyols": 0, "protein": 7.0, "fiber": 6.0, "salt": 0.4 }
-},
-{
-"title": "Almond Flour Rolls",
-"category": "Bakery",
-"portions": 6,
-"ingredients": "• 150g Almond Flour\n• 3 Egg Whites\n• 1 tsp Psyllium husk\n• 1 tsp Baking powder",
-"instructions": "1. Mix the almond flour, psyllium husk, and baking powder in a medium mixing bowl.\n2. Add the egg whites and stir vigorously until the dough becomes sticky and holds together.\n3. Divide the dough into 6 equal portions and roll them into smooth balls.\n4. Place on a baking sheet lined with parchment and bake at 170°C for 25 minutes.\n5. The rolls should sound hollow when tapped on the bottom when fully cooked.",
-"macros": { "kcal": 180.0, "fat": 14.0, "fat_sat": 1.0, "fat_poly": 4.0, "fat_mono": 9.0, "carbs": 4.0, "sugar": 1.0, "polyols": 0, "protein": 8.0, "fiber": 5.0, "salt": 0.3 }
-},
-{
-"title": "Protein Power Muffins",
-"category": "Bakery",
-"portions": 6,
-"ingredients": "• 60g Protein Powder\n• 100g Almond Flour\n• 2 Eggs\n• 50ml Water",
-"instructions": "1. Preheat the oven to 180°C (350°F) and line a muffin tin with 6 paper liners.\n2. Whisk the eggs and water in a bowl, then stir in the protein powder and almond flour.\n3. Mix until just combined; do not overwork the batter.\n4. Spoon the batter into the muffin liners, filling each about three-quarters full.\n5. Bake for 18-20 minutes until a toothpick inserted into the center comes out clean.",
-"macros": { "kcal": 195.0, "fat": 12.5, "fat_sat": 2.0, "fat_poly": 3.5, "fat_mono": 7.0, "carbs": 3.5, "sugar": 1.0, "polyols": 0, "protein": 18.0, "fiber": 2.0, "salt": 0.3 }
-},
-{
-"title": "Savory Zucchini Bread",
-"category": "Bakery",
-"portions": 8,
-"ingredients": "• 200g Grated Zucchini\n• 150g Almond Flour\n• 3 Eggs\n• Garlic powder",
-"instructions": "1. Squeeze the grated zucchini in a tea towel to remove as much liquid as possible.\n2. In a bowl, whisk the eggs and add the zucchini and garlic powder.\n3. Fold in the almond flour until a thick batter is formed.\n4. Pour into a lined small loaf tin.\n5. Bake at 180°C for 40 minutes until the top is golden and firm.",
-"macros": { "kcal": 170.0, "fat": 13.0, "fat_sat": 2.0, "fat_poly": 3.5, "fat_mono": 7.5, "carbs": 5.0, "sugar": 2.0, "polyols": 0, "protein": 9.0, "fiber": 3.0, "salt": 0.2 }
-},
-{
-"title": "Pumpkin Seed Crackers",
-"category": "Bakery",
-"portions": 4,
-"ingredients": "• 100g Pumpkin Seeds\n• 20g Chia Seeds\n• 50ml Water\n• Salt",
-"instructions": "1. Mix the pumpkin seeds, chia seeds, and water in a bowl; let sit for 10 minutes until thick.\n2. Spread the mixture very thinly onto a baking sheet lined with parchment paper.\n3. Sprinkle with salt and bake at 150°C (300°F) for 45 minutes.\n4. Flip the sheet of seeds carefully and bake for another 15 minutes until very crisp.\n5. Allow to cool completely before breaking into irregular cracker shards.",
-"macros": { "kcal": 185.0, "fat": 15.0, "fat_sat": 3.0, "fat_poly": 7.0, "fat_mono": 5.0, "carbs": 4.0, "sugar": 0.5, "polyols": 0, "protein": 10.0, "fiber": 3.5, "salt": 0.5 }
-},
-{
-"title": "Keto Cheese Bagels",
-"category": "Bakery",
-"portions": 4,
-"ingredients": "• 150g Shredded Mozzarella\n• 80g Almond Flour\n• 1 Egg\n• 1 tsp Baking powder",
-"instructions": "1. Melt the mozzarella in a microwave-safe bowl in 30-second increments until soft.\n2. Stir in the egg, almond flour, and baking powder until a dough forms.\n3. Knead the dough for 1 minute until smooth (reheat if it becomes too stiff).\n4. Divide into 4 logs and wrap each into a circle, pinching the ends to form a bagel shape.\n5. Bake at 200°C (390°F) for 12-15 minutes until browned.",
-"macros": { "kcal": 240.0, "fat": 18.0, "fat_sat": 5.5, "fat_poly": 2.5, "fat_mono": 10.0, "carbs": 5.0, "sugar": 1.0, "polyols": 0, "protein": 16.0, "fiber": 2.0, "salt": 0.6 }
-},
-{
-"title": "Walnut & Cinnamon Loaf",
-"category": "Bakery",
-"portions": 10,
-"ingredients": "• 150g Almond Flour\n• 50g Chopped Walnuts\n• 3 Eggs\n• 2 tsp Cinnamon",
-"instructions": "1. Preheat the oven to 180°C (350°F).\n2. Whisk the eggs and cinnamon until frothy.\n3. Stir in the almond flour and walnuts until a consistent batter forms.\n4. Pour into a greased loaf tin and smooth the surface.\n5. Bake for 30-35 minutes until a skewer comes out clean.",
-"macros": { "kcal": 190.0, "fat": 17.0, "fat_sat": 2.0, "fat_poly": 9.0, "fat_mono": 6.0, "carbs": 4.0, "sugar": 1.0, "polyols": 0, "protein": 8.0, "fiber": 3.0, "salt": 0.1 }
-},
-{
-"title": "Almond Flour Pizza Base",
-"category": "Bakery",
-"portions": 2,
-"ingredients": "• 100g Almond Flour\n• 1 Egg\n• 1/2 tsp Salt\n• 1/2 tsp Garlic powder",
-"instructions": "1. Mix all ingredients in a bowl until a ball of dough is formed.\n2. Place the dough between two sheets of parchment paper and roll out into a 10-inch circle.\n3. Remove the top sheet of paper and slide the dough (on the bottom paper) onto a baking stone or tray.\n4. Bake at 200°C for 10 minutes until the edges are firm and slightly golden.\n5. Add toppings and bake for another 5 minutes.",
-"macros": { "kcal": 315.0, "fat": 26.0, "fat_sat": 3.0, "fat_poly": 6.5, "fat_mono": 16.5, "carbs": 8.5, "sugar": 2.0, "polyols": 0, "protein": 14.0, "fiber": 5.0, "salt": 0.6 }
-},
-{
-"title": "Savory Herb Scones",
-"category": "Bakery",
-"portions": 8,
-"ingredients": "• 200g Almond Flour\n• 1 tbsp Dried Rosemary\n• 2 Eggs\n• 30g Butter",
-"instructions": "1. Rub the cold butter into the almond flour until it resembles coarse crumbs.\n2. Stir in the rosemary and whisked eggs until a dough forms.\n3. Pat the dough into a disk about 1 inch thick.\n4. Cut the disk into 8 wedges and place them on a baking tray.\n5. Bake at 180°C for 15-18 minutes until golden.",
-"macros": { "kcal": 210.0, "fat": 19.0, "fat_sat": 5.0, "fat_poly": 4.0, "fat_mono": 10.0, "carbs": 5.5, "sugar": 1.5, "polyols": 0, "protein": 7.5, "fiber": 3.0, "salt": 0.2 }
-},
-{
-"title": "Flaxseed Focaccia",
-"category": "Bakery",
-"portions": 8,
-"ingredients": "• 150g Ground Flaxseed\n• 3 Eggs\n• 50ml Olive oil\n• Sea salt",
-"instructions": "1. Whisk the eggs and olive oil together until emulsified.\n2. Stir in the ground flaxseed until thick.\n3. Spread the mixture into a flat rectangle on a baking tray.\n4. Use your fingers to poke dimples into the surface and sprinkle with sea salt.\n5. Bake at 180°C for 20 minutes until springy to the touch.",
-"macros": { "kcal": 185.0, "fat": 16.0, "fat_sat": 2.5, "fat_poly": 6.5, "fat_mono": 7.0, "carbs": 1.5, "sugar": 0.5, "polyols": 0, "protein": 7.0, "fiber": 5.5, "salt": 0.5 }
-},
-{
-"title": "Coconut Flour Tortillas",
-"category": "Bakery",
-"portions": 4,
-"ingredients": "• 40g Coconut Flour\n• 2 Egg Whites\n• 100ml Water\n• 1/4 tsp Salt",
-"instructions": "1. Whisk all ingredients together until a very smooth, thin batter forms.\n2. Let the batter sit for 5 minutes as the coconut flour absorbs the liquid.\n3. Heat a non-stick pan over medium heat and pour in 1/4 of the batter, swirling to coat the base.\n4. Cook for 2 minutes until the edges lift, then flip and cook for another minute.\n5. Keep warm under a clean towel to keep them pliable.",
-"macros": { "kcal": 65.0, "fat": 2.5, "fat_sat": 2.0, "fat_poly": 0.2, "fat_mono": 0.3, "carbs": 4.5, "sugar": 1.5, "polyols": 0, "protein": 4.5, "fiber": 3.5, "salt": 0.3 }
-},
-{
-"title": "Chia Seed Crackers",
-"category": "Bakery",
-"portions": 4,
-"ingredients": "• 50g Chia Seeds\n• 50g Sunflower seeds\n• 100ml Water\n• Black pepper",
-"instructions": "1. Mix all ingredients in a bowl and let sit for 15 minutes to form a thick gel.\n2. Line a tray with parchment and spread the gel as thin as possible using a spatula.\n3. Bake at 150°C for 50 minutes.\n4. Remove from oven and carefully peel the cracker sheet off the paper.\n5. Break into pieces and serve with cheese.",
-"macros": { "kcal": 140.0, "fat": 11.0, "fat_sat": 1.5, "fat_poly": 7.0, "fat_mono": 2.5, "carbs": 5.0, "sugar": 0.5, "polyols": 0, "protein": 6.0, "fiber": 6.0, "salt": 0.1 }
-},
-{
-"title": "Protein Breakfast Waffles",
-"category": "Bakery",
-"portions": 2,
-"ingredients": "• 30g Protein Powder\n• 50g Almond Flour\n• 1 Egg\n• 30ml Water",
-"instructions": "1. Preheat your waffle iron to a medium-high setting.\n2. In a bowl, whisk the egg and water, then stir in the protein powder and almond flour.\n3. Lightly grease the waffle iron with oil spray.\n4. Pour the batter into the center of the iron and close the lid.\n5. Cook for 3-5 minutes until steaming stops and the waffle is crispy.",
-"macros": { "kcal": 215.0, "fat": 14.0, "fat_sat": 2.0, "fat_poly": 3.5, "fat_mono": 8.5, "carbs": 5.0, "sugar": 1.0, "polyols": 0, "protein": 19.0, "fiber": 2.5, "salt": 0.3 }
-},
-{
-"title": "Fudgy Keto Brownies",
-"category": "Desserts",
-"portions": 9,
-"ingredients": "• 150g Dark Choc (85%)\n• 100g Butter\n• 100g Erythritol\n• 50g Almond Flour\n• 2 Eggs",
-"instructions": "1. Melt the dark chocolate and butter together in a heatproof bowl over a pan of simmering water.\n2. Remove from the heat and whisk in the erythritol and eggs until the batter is thick and glossy.\n3. Gently fold in the almond flour until just incorporated.\n4. Pour the batter into a lined square baking tin and bake at 170°C for 20 minutes.\n5. Allow the brownies to cool completely in the tin before cutting into 9 squares.",
-"macros": { "kcal": 190.0, "fat": 15.0, "fat_sat": 8.5, "fat_poly": 1.5, "fat_mono": 5.0, "carbs": 14.0, "sugar": 2.0, "polyols": 12.0, "protein": 3.0, "fiber": 2.0, "salt": 0.1 }
-},
-{
-"title": "Avocado Chocolate Mousse",
-"category": "Desserts",
-"portions": 2,
-"ingredients": "• 1 Ripe Avocado\n• 3 tbsp Cocoa powder\n• 3 tbsp Erythritol\n• Vanilla extract",
-"instructions": "1. Scoop the avocado flesh into a high-speed blender or food processor.\n2. Add the cocoa powder, erythritol, and a few drops of vanilla extract.\n3. Blend on high until the mixture is completely smooth and looks like thick chocolate pudding.\n4. Scrape down the sides and blend once more to ensure no green lumps remain.\n5. Transfer to individual bowls and refrigerate for 1 hour before serving.",
-"macros": { "kcal": 180.0, "fat": 15.0, "fat_sat": 2.0, "fat_poly": 2.0, "fat_mono": 11.0, "carbs": 12.0, "sugar": 1.0, "polyols": 8.0, "protein": 3.0, "fiber": 7.0, "salt": 0.05 }
-},
-{
-"title": "Coconut Macaroons",
-"category": "Desserts",
-"portions": 8,
-"ingredients": "• 100g Desiccated Coconut\n• 2 Egg Whites\n• 30g Erythritol\n• Vanilla extract",
-"instructions": "1. Preheat the oven to 160°C (320°F) and line a tray with parchment paper.\n2. Whisk the egg whites in a clean bowl until stiff peaks form.\n3. Gently fold in the erythritol, vanilla, and desiccated coconut using a spatula.\n4. Scoop small mounds of the mixture onto the baking tray.\n5. Bake for 15-18 minutes until the edges are golden brown, then let cool completely.",
-"macros": { "kcal": 95.0, "fat": 8.0, "fat_sat": 7.0, "fat_poly": 0.5, "fat_mono": 0.5, "carbs": 5.0, "sugar": 1.5, "polyols": 3.0, "protein": 2.0, "fiber": 3.0, "salt": 0.1 }
-},
-{
-"title": "Almond Flour Cookies",
-"category": "Desserts",
-"portions": 10,
-"ingredients": "• 150g Almond Flour\n• 1 Egg\n• 40g Butter (melted)\n• 30g Erythritol",
-"instructions": "1. In a medium bowl, stir together the almond flour and erythritol.\n2. Add the melted butter and the egg, mixing until a soft dough forms.\n3. Roll the dough into 10 balls and place them on a lined baking tray.\n4. Flatten each ball slightly with the back of a spoon or your palm.\n5. Bake at 170°C for 12 minutes until the edges are just starting to brown.",
-"macros": { "kcal": 135.0, "fat": 12.5, "fat_sat": 3.5, "fat_poly": 2.5, "fat_mono": 6.5, "carbs": 4.5, "sugar": 1.0, "polyols": 3.0, "protein": 4.0, "fiber": 2.0, "salt": 0.1 }
-},
-{
-"title": "Berry Protein Crumble",
-"category": "Desserts",
-"portions": 2,
-"ingredients": "• 100g Frozen Berries\n• 30g Protein Powder\n• 20g Almond Flour\n• 10g Butter",
-"instructions": "1. Place the berries in a small ovenproof dish.\n2. In a separate bowl, rub the cold butter into the almond flour and protein powder until crumbly.\n3. Scatter the crumble mixture evenly over the top of the berries.\n4. Bake at 180°C (350°F) for 15 minutes until the fruit is bubbling and the top is crisp.\n5. Serve warm, optionally with a spoonful of Greek yogurt.",
-"macros": { "kcal": 185.0, "fat": 9.5, "fat_sat": 4.0, "fat_poly": 1.5, "fat_mono": 4.0, "carbs": 12.0, "sugar": 5.0, "polyols": 0, "protein": 15.0, "fiber": 3.5, "salt": 0.2 }
-},
-{
-"title": "Lemon Ricotta Pots",
-"category": "Desserts",
-"portions": 2,
-"ingredients": "• 200g Ricotta Cheese\n• 1 tbsp Lemon juice\n• 1 tsp Lemon zest\n• 20g Erythritol",
-"instructions": "1. Place the ricotta in a bowl and whisk vigorously until smooth and creamy.\n2. Stir in the erythritol, lemon juice, and half of the lemon zest.\n3. Divide the mixture between two small ramekins or dessert glasses.\n4. Top with the remaining lemon zest for decoration.\n5. Chill in the refrigerator for at least 30 minutes before serving.",
-"macros": { "kcal": 160.0, "fat": 11.0, "fat_sat": 7.0, "fat_poly": 0.5, "fat_mono": 3.5, "carbs": 7.0, "sugar": 3.0, "polyols": 5.0, "protein": 10.0, "fiber": 0, "salt": 0.2 }
-},
-{
-"title": "Peanut Butter Fat Bombs",
-"category": "Desserts",
-"portions": 8,
-"ingredients": "• 100g Peanut Butter (smooth)\n• 50g Coconut Oil\n• 20g Erythritol\n• 1/2 tsp Vanilla",
-"instructions": "1. Melt the peanut butter and coconut oil together in the microwave in 20-second bursts.\n2. Stir in the erythritol and vanilla extract until completely dissolved.\n3. Pour the liquid mixture into a silicone mini-muffin or ice cube tray.\n4. Place in the freezer for at least 1 hour to set firm.\n5. Store in the freezer and eat directly from cold.",
-"macros": { "kcal": 130.0, "fat": 12.5, "fat_sat": 6.5, "fat_poly": 2.0, "fat_mono": 4.0, "carbs": 3.5, "sugar": 1.0, "polyols": 2.5, "protein": 3.5, "fiber": 1.0, "salt": 0.1 }
-},
-{
-"title": "Chia Seed Pudding",
-"category": "Desserts",
-"portions": 1,
-"ingredients": "• 30g Chia Seeds\n• 150ml Almond Milk\n• 1/2 tsp Vanilla\n• 1 tsp Erythritol",
-"instructions": "1. Combine all ingredients in a glass jar or bowl.\n2. Stir well, then wait 5 minutes and stir again to prevent the seeds from clumping at the bottom.\n3. Cover and place in the refrigerator for at least 4 hours (ideally overnight).\n4. Give the pudding a final stir before serving.\n5. Top with a few nuts or berries if desired.",
-"macros": { "kcal": 180.0, "fat": 11.0, "fat_sat": 1.0, "fat_poly": 7.5, "fat_mono": 1.5, "carbs": 14.0, "sugar": 0.5, "polyols": 4.0, "protein": 6.0, "fiber": 11.0, "salt": 0.1 }
-},
-{
-"title": "Dark Chocolate Walnut Bark",
-"category": "Desserts",
-"portions": 4,
-"ingredients": "• 100g Dark Choc (90%)\n• 40g Walnuts\n• Sea salt",
-"instructions": "1. Melt the dark chocolate slowly in a double boiler or microwave.\n2. Line a small tray with parchment paper and pour the chocolate over it.\n3. Spread the chocolate into a thin sheet using a spatula.\n4. Scatter the roughly chopped walnuts and a pinch of sea salt over the wet chocolate.\n5. Freeze for 20 minutes, then break into shards.",
-"macros": { "kcal": 210.0, "fat": 19.0, "fat_sat": 9.5, "fat_poly": 4.5, "fat_mono": 5.0, "carbs": 6.0, "sugar": 1.5, "polyols": 0, "protein": 4.5, "fiber": 4.0, "salt": 0.2 }
-},
-{
-"title": "Strawberry Protein Fluff",
-"category": "Desserts",
-"portions": 1,
-"ingredients": "• 30g Protein Powder\n• 100g Frozen Strawberries\n• 50ml Almond Milk",
-"instructions": "1. Place the frozen strawberries and almond milk in a food processor; pulse until the berries are finely chopped.\n2. Add the protein powder to the processor.\n3. Blend on high for 3-5 minutes. The mixture will begin to aerate and double in volume.\n4. Stop once the texture is light, fluffy, and holds its shape.\n5. Transfer to a bowl and eat immediately before it melts.",
-"macros": { "kcal": 165.0, "fat": 2.5, "fat_sat": 0.5, "fat_poly": 1.0, "fat_mono": 1.0, "carbs": 12.5, "sugar": 5.5, "polyols": 0, "protein": 24.5, "fiber": 2.5, "salt": 0.2 }
-},
-{
-"title": "Vanilla Bean Panna Cotta",
-"category": "Desserts",
-"portions": 2,
-"ingredients": "• 200ml Almond Milk\n• 1 tsp Gelatin powder\n• 20g Erythritol\n• Vanilla pod",
-"instructions": "1. Place 2 tbsp of almond milk in a bowl and sprinkle the gelatin over it; let it bloom for 5 mins.\n2. Heat the remaining milk with the erythritol and vanilla seeds until simmering.\n3. Remove from heat and stir in the gelatin until completely dissolved.\n4. Pour the mixture into two small molds.\n5. Refrigerate for at least 4 hours until set firm.",
-"macros": { "kcal": 45.0, "fat": 2.5, "fat_sat": 0.2, "fat_poly": 1.0, "fat_mono": 1.3, "carbs": 3.0, "sugar": 0.5, "polyols": 10.0, "protein": 4.0, "fiber": 0.5, "salt": 0.1 }
-},
-{
-"title": "Quick Raspberry Sorbet",
-"category": "Desserts",
-"portions": 2,
-"ingredients": "• 200g Frozen Raspberries\n• 1 tbsp Lemon juice\n• 30g Erythritol",
-"instructions": "1. Place the frozen raspberries and lemon juice in a blender.\n2. Add the erythritol and pulse until the berries are broken down.\n3. Continue blending until the mixture becomes smooth and takes on a sorbet texture.\n4. If the berries are too hard, add 1 tablespoon of water to help the blades turn.\n5. Serve immediately for the best consistency.",
-"macros": { "kcal": 65.0, "fat": 0.5, "fat_sat": 0, "fat_poly": 0.3, "fat_mono": 0.1, "carbs": 15.0, "sugar": 4.5, "polyols": 15.0, "protein": 1.5, "fiber": 6.5, "salt": 0 }
-},
-{
-"title": "Chocolate Protein Mug Cake",
-"category": "Desserts",
-"portions": 1,
-"ingredients": "• 30g Protein Powder\n• 1 tbsp Cocoa powder\n• 1 Egg\n• 1/2 tsp Baking powder",
-"instructions": "1. In a microwave-safe mug, whisk the egg until smooth.\n2. Stir in the protein powder, cocoa powder, and baking powder.\n3. Mix until a thick, uniform paste forms.\n4. Microwave on high for 45-60 seconds (the cake should rise and look set).\n5. Let cool for 1 minute before eating directly from the mug.",
-"macros": { "kcal": 210.0, "fat": 8.5, "fat_sat": 2.5, "fat_poly": 1.5, "fat_mono": 4.0, "carbs": 4.5, "sugar": 1.0, "polyols": 0, "protein": 30.0, "fiber": 2.0, "salt": 0.3 }
-},
-{
-"title": "Walnut & Coffee Cake",
-"category": "Desserts",
-"portions": 8,
-"ingredients": "• 200g Almond Flour\n• 50g Walnuts\n• 3 Eggs\n• 2 tbsp Cold Espresso",
-"instructions": "1. Preheat the oven to 170°C (340°F) and line a round cake tin.\n2. Whisk the eggs and coffee together until frothy.\n3. Fold in the almond flour and half of the walnuts.\n4. Pour into the tin and top with the remaining walnut halves.\n5. Bake for 25-30 minutes until a toothpick comes out dry.",
-"macros": { "kcal": 220.0, "fat": 19.5, "fat_sat": 2.5, "fat_poly": 7.0, "fat_mono": 10.0, "carbs": 6.0, "sugar": 1.5, "polyols": 0, "protein": 9.5, "fiber": 3.5, "salt": 0.2 }
-}
+  {
+    "id": 1,
+    "title": "Quick No-Yeast Naan",
+    "category": "Breads",
+    "image": "images/naan.jpg",
+    "portions": 6,
+    "tags": ["Quick", "Vegetarian"],
+    "ingredients": [
+      "250g All-purpose flour",
+      "180g Natural yogurt",
+      "1.5 tsp Baking powder",
+      "0.5 tsp Baking soda",
+      "0.5 tsp Salt",
+      "1 tbsp Olive oil",
+      "1-2 tbsp Warm water (if needed)"
+    ],
+    "instructions": [
+      "In a large mixing bowl, whisk together the flour, baking powder, baking soda, and salt until evenly distributed.",
+      "Make a well in the center of the flour. Add the natural yogurt and olive oil. Stir until a shaggy dough forms.",
+      "Turn the dough onto a lightly floured surface. Knead for 2-3 minutes until smooth. Add extra flour 1 tbsp at a time if the dough is too sticky.",
+      "Cover the dough with the bowl and let it rest for 10 minutes to relax the gluten.",
+      "Divide the dough into 6 equal portions. Roll each piece into an oval or circle about 1/4 inch thick.",
+      "Heat a heavy, dry skillet over medium-high heat. Cook one piece of dough for 1 minute until bubbles form, then flip and cook for another 30-45 seconds until charred spots appear."
+    ],
+    "macros": {
+      "kcal": 191.0,
+      "fat": 3.8,
+      "fat_sat": 1.0,
+      "fat_poly": 0.4,
+      "fat_mono": 1.8,
+      "carbs": 33.2,
+      "sugar": 1.6,
+      "polyols": 0,
+      "protein": 5.2,
+      "fiber": 1.1,
+      "salt": 0.5
+    }
+  },
+  {
+    "id": 2,
+    "title": "Smoked Mackerel Avocado Mash",
+    "category": "Breakfasts",
+    "image": "images/mackerel-mash.jpg",
+    "portions": 2,
+    "tags": ["Keto", "High Protein"],
+    "ingredients": [
+      "160g Smoked Mackerel",
+      "1 Ripe Avocado",
+      "1 tbsp Lemon juice",
+      "Fresh Dill",
+      "Black pepper"
+    ],
+    "instructions": [
+      "Gently flake the mackerel fillets into a medium mixing bowl, ensuring all skin and small bones are removed.",
+      "Halve the avocado, remove the pit, and scoop the flesh into the bowl with the fish.",
+      "Add the lemon juice and finely chopped dill to the mixture.",
+      "Use a heavy fork to mash the ingredients together until well combined but still slightly textured.",
+      "Season with cracked black pepper and serve immediately on keto-friendly toast or lettuce wraps."
+    ],
+    "macros": {
+      "kcal": 245.0,
+      "fat": 19.0,
+      "fat_sat": 3.5,
+      "fat_poly": 5.0,
+      "fat_mono": 10.5,
+      "carbs": 4.0,
+      "sugar": 2.0,
+      "polyols": 0,
+      "protein": 14.0,
+      "fiber": 5.0,
+      "salt": 0.8
+    }
+  },
+  {
+    "id": 3,
+    "title": "Flaxseed & Walnut N'Oats",
+    "category": "Breakfasts",
+    "image": "images/noats.jpg",
+    "portions": 1,
+    "tags": ["Vegan", "Low Carb"],
+    "ingredients": [
+      "30g Ground Flaxseed",
+      "20g Walnuts",
+      "120ml Almond Milk",
+      "10g Chia Seeds",
+      "Cinnamon"
+    ],
+    "instructions": [
+      "In a small non-stick saucepan, whisk together the ground flaxseed, chia seeds, and almond milk.",
+      "Place over a low-medium heat and cook for 3-5 minutes, stirring constantly to prevent sticking.",
+      "Once the mixture has reached a thick, porridge-like consistency, remove from the heat.",
+      "Stir in the cinnamon and transfer the mixture to a serving bowl.",
+      "Top with roughly chopped walnuts and an extra sprinkle of cinnamon before serving."
+    ],
+    "macros": {
+      "kcal": 310.0,
+      "fat": 24.0,
+      "fat_sat": 2.5,
+      "fat_poly": 15.0,
+      "fat_mono": 6.5,
+      "carbs": 13.5,
+      "sugar": 1.5,
+      "polyols": 0,
+      "protein": 11.0,
+      "fiber": 12.0,
+      "salt": 0.1
+    }
+  },
+  {
+    "id": 4,
+    "title": "Tofu & Spinach Scramble",
+    "category": "Breakfasts",
+    "image": "images/tofu-scramble.jpg",
+    "portions": 2,
+    "tags": ["Vegan", "Breakfast"],
+    "ingredients": [
+      "200g Firm Tofu",
+      "100g Spinach",
+      "1/2 tsp Turmeric",
+      "1 tbsp Nutritional Yeast",
+      "Olive oil"
+    ],
+    "instructions": [
+      "Drain the tofu and wrap it in a clean tea towel, pressing firmly to remove as much moisture as possible.",
+      "Crumble the tofu into small, bite-sized pieces using your hands or a fork.",
+      "Heat olive oil in a skillet over medium heat and add the crumbled tofu, turmeric, and nutritional yeast.",
+      "Sauté for approximately 5 minutes until the tofu is heated through and slightly golden.",
+      "Add the fresh spinach and cook for a further 2 minutes until just wilted, then serve immediately."
+    ],
+    "macros": {
+      "kcal": 240.0,
+      "fat": 16.0,
+      "fat_sat": 2.5,
+      "fat_poly": 9.0,
+      "fat_mono": 4.5,
+      "carbs": 6.0,
+      "sugar": 2.0,
+      "polyols": 0,
+      "protein": 18.0,
+      "fiber": 4.0,
+      "salt": 0.3
+    }
+  },
+  {
+    "id": 5,
+    "title": "Chia & Berry Skyr Bowl",
+    "category": "Breakfasts",
+    "image": "images/skyr-bowl.jpg",
+    "portions": 1,
+    "tags": ["High Protein", "Quick"],
+    "ingredients": [
+      "150g Skyr",
+      "15g Chia Seeds",
+      "50g Raspberries",
+      "Vanilla extract"
+    ],
+    "instructions": [
+      "In a medium bowl, combine the Skyr yogurt with the chia seeds and a drop of vanilla extract.",
+      "Stir the mixture thoroughly to ensure the chia seeds are evenly distributed.",
+      "Cover and refrigerate for at least 20 minutes (or overnight) to allow the seeds to swell and thicken the base.",
+      "Gently fold in half of the raspberries, crushing a few to release their juice.",
+      "Top with the remaining whole berries and serve cold."
+    ],
+    "macros": {
+      "kcal": 215.0,
+      "fat": 8.0,
+      "fat_sat": 1.0,
+      "fat_poly": 5.5,
+      "fat_mono": 1.5,
+      "carbs": 14.0,
+      "sugar": 6.0,
+      "polyols": 0,
+      "protein": 20.0,
+      "fiber": 8.0,
+      "salt": 0.1
+    }
+  },
+  {
+    "id": 6,
+    "title": "Almond Savory Pancakes",
+    "category": "Breakfasts",
+    "image": "images/almond-pancakes.jpg",
+    "portions": 2,
+    "tags": ["Gluten-Free", "Low Carb"],
+    "ingredients": [
+      "100g Almond Flour",
+      "2 Eggs",
+      "50ml Almond Milk",
+      "1/2 tsp Baking Powder",
+      "Oregano"
+    ],
+    "instructions": [
+      "In a large mixing bowl, whisk the eggs and almond milk together until well combined.",
+      "Sift in the almond flour, baking powder, and a pinch of dried oregano.",
+      "Whisk until a thick, smooth batter forms; let it rest for 2 minutes.",
+      "Heat a lightly greased non-stick skillet over medium-low heat and pour in small rounds of batter.",
+      "Cook for 2-3 minutes per side until bubbles appear on the surface and the pancakes are golden brown."
+    ],
+    "macros": {
+      "kcal": 340.0,
+      "fat": 28.0,
+      "fat_sat": 4.5,
+      "fat_poly": 7.0,
+      "fat_mono": 16.5,
+      "carbs": 8.0,
+      "sugar": 2.0,
+      "polyols": 0,
+      "protein": 15.0,
+      "fiber": 6.0,
+      "salt": 0.2
+    }
+  },
+  {
+    "id": 7,
+    "title": "Smoked Salmon Roll-ups",
+    "category": "Breakfasts",
+    "image": "images/salmon-rolls.jpg",
+    "portions": 2,
+    "tags": ["Keto", "No-Cook"],
+    "ingredients": [
+      "100g Smoked Salmon",
+      "50g Cream Cheese",
+      "1/2 Cucumber",
+      "Fresh Chives"
+    ],
+    "instructions": [
+      "Slice the cucumber into very thin, long matchsticks.",
+      "Lay the smoked salmon slices flat on a clean board or plate.",
+      "Spread a thin, even layer of cream cheese over the entire surface of each salmon slice.",
+      "Place a few cucumber sticks and chives at one edge of the salmon.",
+      "Carefully roll the salmon tightly around the filling and slice each roll into three pieces before serving."
+    ],
+    "macros": {
+      "kcal": 195.0,
+      "fat": 12.0,
+      "fat_sat": 4.0,
+      "fat_poly": 3.0,
+      "fat_mono": 5.0,
+      "carbs": 1.0,
+      "sugar": 1.0,
+      "polyols": 0,
+      "protein": 18.0,
+      "fiber": 0,
+      "salt": 1.1
+    }
+  },
+  {
+    "id": 8,
+    "title": "Protein Power Oats",
+    "category": "Breakfasts",
+    "image": "images/protein-oats.jpg",
+    "portions": 1,
+    "tags": ["High Protein", "Quick"],
+    "ingredients": [
+      "30g Protein Powder",
+      "30g Rolled Oats",
+      "150ml Water",
+      "10g Pumpkin Seeds"
+    ],
+    "instructions": [
+      "Mix the oats and water in a microwave-safe bowl and heat for 2 minutes on high.",
+      "Remove from the microwave and let the oats stand for 1 minute to finish thickening.",
+      "Whisk the protein powder into the oats quickly to avoid clumping; add a splash of extra water if too dry.",
+      "Stir in half of the pumpkin seeds for texture.",
+      "Sprinkle the remaining seeds on top and serve immediately."
+    ],
+    "macros": {
+      "kcal": 265.0,
+      "fat": 8.5,
+      "fat_sat": 1.8,
+      "fat_poly": 3.5,
+      "fat_mono": 3.2,
+      "carbs": 21.0,
+      "sugar": 1.5,
+      "polyols": 0,
+      "protein": 28.5,
+      "fiber": 4.0,
+      "salt": 0.2
+    }
+  },
+  {
+    "id": 9,
+    "title": "Chive & Mushroom Omelette",
+    "category": "Breakfasts",
+    "image": "images/mushroom-omelette.jpg",
+    "portions": 1,
+    "tags": ["Vegetarian", "Quick"],
+    "ingredients": [
+      "2 Eggs",
+      "50g Sliced Mushrooms",
+      "1 tbsp Fresh Chives",
+      "5g Butter"
+    ],
+    "instructions": [
+      "Whisk the eggs in a small bowl with the chopped chives and a pinch of salt.",
+      "Melt the butter in a non-stick frying pan over medium heat.",
+      "Add the mushrooms and sauté for 3-4 minutes until they have released their moisture and turned golden.",
+      "Pour the egg mixture over the mushrooms, tilting the pan to cover the entire base.",
+      "Cook for 2 minutes until the edges are set, then fold in half and slide onto a plate."
+    ],
+    "macros": {
+      "kcal": 210.0,
+      "fat": 16.0,
+      "fat_sat": 7.0,
+      "fat_poly": 2.5,
+      "fat_mono": 6.5,
+      "carbs": 2.5,
+      "sugar": 1.0,
+      "polyols": 0,
+      "protein": 14.0,
+      "fiber": 1.0,
+      "salt": 0.4
+    }
+  },
+  {
+    "id": 10,
+    "title": "Greek Yogurt Nut Medley",
+    "category": "Breakfasts",
+    "image": "images/yogurt-nuts.jpg",
+    "portions": 1,
+    "tags": ["Vegetarian", "No-Cook"],
+    "ingredients": [
+      "150g Greek Yogurt (0%)",
+      "15g Walnuts",
+      "10g Almonds",
+      "1/2 tsp Cinnamon"
+    ],
+    "instructions": [
+      "Scoop the Greek yogurt into a small serving bowl.",
+      "Roughly chop the walnuts and almonds using a chef's knife.",
+      "Sprinkle the cinnamon over the yogurt and stir lightly to create a marble effect.",
+      "Scatter the chopped nuts over the top.",
+      "Serve chilled as a high-protein, low-carb breakfast start."
+    ],
+    "macros": {
+      "kcal": 240.0,
+      "fat": 16.0,
+      "fat_sat": 1.5,
+      "fat_poly": 10.0,
+      "fat_mono": 4.5,
+      "carbs": 7.0,
+      "sugar": 5.0,
+      "polyols": 0,
+      "protein": 17.0,
+      "fiber": 2.5,
+      "salt": 0.1
+    }
+  },
+  {
+    "id": 11,
+    "title": "Cottage Cheese & Sunflower Seeds",
+    "category": "Breakfasts",
+    "image": "images/cottage-cheese.jpg",
+    "portions": 1,
+    "tags": ["Vegetarian", "High Protein"],
+    "ingredients": [
+      "200g Cottage Cheese (Low fat)",
+      "15g Sunflower seeds",
+      "Black pepper",
+      "1/4 Cucumber"
+    ],
+    "instructions": [
+      "Place the cottage cheese into a bowl and season generously with cracked black pepper.",
+      "Dice the cucumber into small cubes and stir half into the cheese.",
+      "Heat the sunflower seeds in a dry pan for 1-2 minutes until they smell toasted.",
+      "Scatter the toasted seeds and remaining cucumber over the cottage cheese.",
+      "Serve immediately with a spoon."
+    ],
+    "macros": {
+      "kcal": 245.0,
+      "fat": 10.0,
+      "fat_sat": 2.0,
+      "fat_poly": 5.5,
+      "fat_mono": 2.5,
+      "carbs": 8.0,
+      "sugar": 5.5,
+      "polyols": 0,
+      "protein": 28.0,
+      "fiber": 1.5,
+      "salt": 0.9
+    }
+  },
+  {
+    "id": 12,
+    "title": "Keto Lettuce Breakfast Tacos",
+    "category": "Breakfasts",
+    "image": "images/lettuce-tacos.jpg",
+    "portions": 2,
+    "tags": ["Keto", "Gluten-Free"],
+    "ingredients": [
+      "4 Large Romaine leaves",
+      "3 Eggs",
+      "50g Avocado",
+      "10g Pumpkin seeds"
+    ],
+    "instructions": [
+      "Wash and thoroughly dry the Romaine leaves to act as taco shells.",
+      "In a small pan, scramble the eggs over low heat until soft and creamy.",
+      "Slice the avocado into thin wedges.",
+      "Divide the scrambled eggs equally between the four lettuce leaves.",
+      "Top with avocado slices and pumpkin seeds for a crunch."
+    ],
+    "macros": {
+      "kcal": 290.0,
+      "fat": 22.0,
+      "fat_sat": 5.0,
+      "fat_poly": 5.5,
+      "fat_mono": 11.5,
+      "carbs": 6.0,
+      "sugar": 2.0,
+      "polyols": 0,
+      "protein": 18.0,
+      "fiber": 4.0,
+      "salt": 0.4
+    }
+  },
+  {
+    "id": 13,
+    "title": "Baked Eggs in Avocado",
+    "category": "Breakfasts",
+    "image": "images/baked-avocado.jpg",
+    "portions": 1,
+    "tags": ["Keto", "High Fiber"],
+    "ingredients": [
+      "1 Large Avocado",
+      "2 Small Eggs",
+      "Chili flakes",
+      "Salt"
+    ],
+    "instructions": [
+      "Preheat your oven to 200°C (390°F).",
+      "Cut the avocado in half and remove the pit; scoop out 1 tbsp of flesh from each center to make room for the egg.",
+      "Place the avocado halves in a baking dish, stabilized by crumpled foil if needed.",
+      "Crack one egg into each hole, being careful not to break the yolk.",
+      "Bake for 15-18 minutes until the whites are set, then season with chili and salt."
+    ],
+    "macros": {
+      "kcal": 320.0,
+      "fat": 26.0,
+      "fat_sat": 5.5,
+      "fat_poly": 4.5,
+      "fat_mono": 16.0,
+      "carbs": 8.5,
+      "sugar": 1.0,
+      "polyols": 0,
+      "protein": 14.0,
+      "fiber": 7.0,
+      "salt": 0.3
+    }
+  },
+  {
+    "id": 14,
+    "title": "Turkey Bacon & Spinach Sauté",
+    "category": "Breakfasts",
+    "image": "images/bacon-spinach.jpg",
+    "portions": 1,
+    "tags": ["Low Carb", "Quick"],
+    "ingredients": [
+      "3 slices Turkey Bacon",
+      "100g Spinach",
+      "1 tsp Olive oil"
+    ],
+    "instructions": [
+      "Slice the turkey bacon into 1-inch strips.",
+      "Heat the olive oil in a skillet over medium-high heat.",
+      "Fry the bacon strips until they are crisp and browned on the edges.",
+      "Add the spinach to the pan and toss with the bacon for 1 minute until wilted.",
+      "Serve hot as a quick, savory breakfast."
+    ],
+    "macros": {
+      "kcal": 180.0,
+      "fat": 11.0,
+      "fat_sat": 2.5,
+      "fat_poly": 2.5,
+      "fat_mono": 6.0,
+      "carbs": 3.0,
+      "sugar": 1.0,
+      "polyols": 0,
+      "protein": 17.0,
+      "fiber": 2.5,
+      "salt": 1.2
+    }
+  },
+  {
+    "id": 15,
+    "title": "Herb-Crusted Baked Cod",
+    "category": "Meals",
+    "image": "images/baked-cod.jpg",
+    "portions": 2,
+    "tags": ["High Protein", "Seafood"],
+    "ingredients": [
+      "300g Cod fillets",
+      "40g Almond Flour",
+      "1 tbsp Olive Oil",
+      "Dried Parsley",
+      "Lemon zest"
+    ],
+    "instructions": [
+      "Preheat your oven to 200°C (390°F) and line a baking tray with parchment paper.",
+      "Combine the almond flour, dried parsley, and lemon zest in a shallow bowl.",
+      "Pat the cod fillets dry with paper towels and brush both sides lightly with olive oil.",
+      "Press the top of each fillet firmly into the almond flour mixture to create a thick crust.",
+      "Place the fillets on the baking tray and bake for 12-15 minutes until the fish is flaky and the crust is golden."
+    ],
+    "macros": {
+      "kcal": 310.0,
+      "fat": 18.0,
+      "fat_sat": 2.5,
+      "fat_poly": 3.5,
+      "fat_mono": 12.0,
+      "carbs": 4.0,
+      "sugar": 2.0,
+      "polyols": 0,
+      "protein": 32.0,
+      "fiber": 5.0,
+      "salt": 0.6
+    }
+  },
+  {
+    "id": 16,
+    "title": "Turkey & Zucchini Stir-fry",
+    "category": "Meals",
+    "image": "images/turkey-stirfry.jpg",
+    "portions": 2,
+    "tags": ["Low Carb", "Dairy-Free"],
+    "ingredients": [
+      "300g Turkey breast",
+      "1 medium Zucchini",
+      "2 tbsp Soy Sauce",
+      "1 tsp Ginger",
+      "Sesame oil"
+    ],
+    "instructions": [
+      "Slice the turkey breast into thin strips and the zucchini into half-moon shapes.",
+      "Heat the sesame oil in a wok or large frying pan over high heat.",
+      "Add the turkey strips and stir-fry for 4-5 minutes until thoroughly cooked through.",
+      "Toss in the zucchini and grated ginger, cooking for a further 3 minutes until tender-crisp.",
+      "Pour in the soy sauce, toss everything to coat, and serve hot."
+    ],
+    "macros": {
+      "kcal": 285.0,
+      "fat": 14.0,
+      "fat_sat": 3.5,
+      "fat_poly": 3.5,
+      "fat_mono": 7.0,
+      "carbs": 6.0,
+      "sugar": 3.0,
+      "polyols": 0,
+      "protein": 34.0,
+      "fiber": 4.0,
+      "salt": 0.5
+    }
+  },
+  {
+    "id": 17,
+    "title": "Mediterranean Chicken Salad",
+    "category": "Meals",
+    "image": "images/chicken-salad.jpg",
+    "portions": 2,
+    "tags": ["Salad", "Mediterranean"],
+    "ingredients": [
+      "200g Cooked Chicken",
+      "50g Feta Cheese",
+      "10 Kalamata Olives",
+      "Cucumber",
+      "Olive Oil"
+    ],
+    "instructions": [
+      "Cut the cooked chicken and cucumber into bite-sized chunks.",
+      "In a large salad bowl, combine the chicken, cucumber, whole olives, and crumbled feta cheese.",
+      "Drizzle the olive oil over the salad and add a squeeze of fresh lemon juice if available.",
+      "Toss gently to ensure everything is coated in the oil.",
+      "Serve immediately or keep chilled for up to 4 hours."
+    ],
+    "macros": {
+      "kcal": 360.0,
+      "fat": 24.0,
+      "fat_sat": 4.5,
+      "fat_poly": 5.0,
+      "fat_mono": 14.5,
+      "carbs": 4.0,
+      "sugar": 2.0,
+      "polyols": 0,
+      "protein": 30.0,
+      "fiber": 5.0,
+      "salt": 0.5
+    }
+  },
+  {
+    "id": 18,
+    "title": "Beef & Broccoli Stir-fry",
+    "category": "Meals",
+    "image": "images/beef-broccoli.jpg",
+    "portions": 2,
+    "tags": ["High Protein", "Paleo"],
+    "ingredients": [
+      "250g Beef Steak",
+      "200g Broccoli florets",
+      "2 tbsp Soy Sauce",
+      "1 clove Garlic",
+      "Sesame oil"
+    ],
+    "instructions": [
+      "Slice the beef into very thin strips, cutting against the grain for maximum tenderness.",
+      "Heat the sesame oil in a wok over high heat and add the minced garlic.",
+      "Add the beef strips and sear quickly for 2 minutes until browned.",
+      "Throw in the broccoli florets and a tablespoon of water; cover with a lid for 2 minutes to steam.",
+      "Remove the lid, add soy sauce, and stir-fry for one final minute before serving."
+    ],
+    "macros": {
+      "kcal": 310.0,
+      "fat": 16.0,
+      "fat_sat": 5.0,
+      "fat_poly": 2.5,
+      "fat_mono": 8.5,
+      "carbs": 6.0,
+      "sugar": 2.0,
+      "polyols": 0,
+      "protein": 32.0,
+      "fiber": 4.0,
+      "salt": 0.5
+    }
+  },
+  {
+    "id": 19,
+    "title": "Lemon Garlic Salmon",
+    "category": "Meals",
+    "image": "images/garlic-salmon.jpg",
+    "portions": 2,
+    "tags": ["Omega-3", "Quick"],
+    "ingredients": [
+      "250g Salmon fillets",
+      "1 tbsp Olive oil",
+      "2 cloves Garlic",
+      "1/2 Lemon"
+    ],
+    "instructions": [
+      "Season the salmon fillets with salt and pepper.",
+      "Heat olive oil in a pan over medium heat and place salmon skin-side down.",
+      "Cook for 5 minutes without moving it to achieve crispy skin.",
+      "Flip the salmon and add minced garlic and lemon slices to the pan.",
+      "Cook for another 3 minutes, spooning the garlic oil over the fish, then serve."
+    ],
+    "macros": {
+      "kcal": 380.0,
+      "fat": 22.0,
+      "fat_sat": 3.5,
+      "fat_poly": 6.0,
+      "fat_mono": 12.5,
+      "carbs": 2.0,
+      "sugar": 1.0,
+      "polyols": 0,
+      "protein": 38.0,
+      "fiber": 0.5,
+      "salt": 0.4
+    }
+  },
+  {
+    "id": 20,
+    "title": "Chicken & Asparagus Sauté",
+    "category": "Meals",
+    "image": "images/chicken-asparagus.jpg",
+    "portions": 2,
+    "tags": ["Paleo", "Healthy"],
+    "ingredients": [
+      "300g Chicken thighs",
+      "150g Asparagus",
+      "1 tbsp Avocado oil",
+      "Thyme"
+    ],
+    "instructions": [
+      "Trim the woody ends off the asparagus and cut the chicken into bite-sized pieces.",
+      "Heat the avocado oil in a large skillet over medium-high heat.",
+      "Add the chicken and dried thyme, sautéing until the chicken is browned and cooked through (about 8 mins).",
+      "Add the asparagus to the pan and cook for a further 4 minutes until bright green and tender.",
+      "Season with salt and serve hot."
+    ],
+    "macros": {
+      "kcal": 340.0,
+      "fat": 18.0,
+      "fat_sat": 4.0,
+      "fat_poly": 3.5,
+      "fat_mono": 10.5,
+      "carbs": 5.0,
+      "sugar": 2.0,
+      "polyols": 0,
+      "protein": 36.0,
+      "fiber": 3.0,
+      "salt": 0.3
+    }
+  },
+  {
+    "id": 21,
+    "title": "Prawn & Garlic Cauli-Rice",
+    "category": "Meals",
+    "image": "images/prawn-caulirice.jpg",
+    "portions": 2,
+    "tags": ["Keto", "Seafood"],
+    "ingredients": [
+      "200g King Prawns",
+      "300g Cauliflower rice",
+      "2 cloves Garlic",
+      "10g Butter"
+    ],
+    "instructions": [
+      "Melt the butter in a large pan and sauté the minced garlic for 1 minute.",
+      "Add the prawns and cook for 2-3 minutes until they turn pink and opaque.",
+      "Remove the prawns from the pan and set aside.",
+      "Add the cauliflower rice to the same pan and sauté for 5 minutes until tender.",
+      "Return the prawns to the pan, toss to combine, and serve with fresh parsley."
+    ],
+    "macros": {
+      "kcal": 210.0,
+      "fat": 9.0,
+      "fat_sat": 4.5,
+      "fat_poly": 1.5,
+      "fat_mono": 3.0,
+      "carbs": 9.0,
+      "sugar": 4.0,
+      "polyols": 0,
+      "protein": 24.0,
+      "fiber": 4.0,
+      "salt": 0.8
+    }
+  },
+  {
+    "id": 22,
+    "title": "Bunless Turkey Burgers",
+    "category": "Meals",
+    "image": "images/turkey-burger.jpg",
+    "portions": 2,
+    "tags": ["Low Carb", "Grill"],
+    "ingredients": [
+      "300g Turkey mince",
+      "4 Large Lettuce leaves",
+      "1/2 Red onion",
+      "1 tsp Cumin"
+    ],
+    "instructions": [
+      "Mix the turkey mince with the cumin and finely diced red onion in a bowl.",
+      "Form the mixture into four small, flat burger patties.",
+      "Grill or pan-fry the patties for 5-6 minutes per side until fully cooked through.",
+      "Wrap each patty in a large, sturdy lettuce leaf.",
+      "Serve with a dollop of mustard or sugar-free mayo if desired."
+    ],
+    "macros": {
+      "kcal": 260.0,
+      "fat": 12.0,
+      "fat_sat": 3.5,
+      "fat_poly": 3.0,
+      "fat_mono": 5.5,
+      "carbs": 4.5,
+      "sugar": 2.0,
+      "polyols": 0,
+      "protein": 34.0,
+      "fiber": 1.5,
+      "salt": 0.5
+    }
+  },
+  {
+    "id": 23,
+    "title": "Steak & Green Bean Medley",
+    "category": "Meals",
+    "image": "images/steak-beans.jpg",
+    "portions": 1,
+    "tags": ["High Protein", "Steak"],
+    "ingredients": [
+      "150g Sirloin steak",
+      "100g Green beans",
+      "5g Butter",
+      "Garlic powder"
+    ],
+    "instructions": [
+      "Season the steak with salt and garlic powder.",
+      "Pan-sear the steak in a hot pan for 3 minutes per side for medium-rare.",
+      "Remove the steak to rest and add the green beans to the same pan with a splash of water.",
+      "Cover and steam the beans for 3 minutes until tender.",
+      "Add the butter to the beans, toss, and serve alongside the sliced steak."
+    ],
+    "macros": {
+      "kcal": 345.0,
+      "fat": 19.0,
+      "fat_sat": 9.0,
+      "fat_poly": 1.5,
+      "fat_mono": 8.5,
+      "carbs": 6.0,
+      "sugar": 2.5,
+      "polyols": 0,
+      "protein": 36.0,
+      "fiber": 3.5,
+      "salt": 0.3
+    }
+  },
+  {
+    "id": 24,
+    "title": "Baked Sea Bass with Herbs",
+    "category": "Meals",
+    "image": "images/sea-bass.jpg",
+    "portions": 2,
+    "tags": ["Seafood", "Healthy"],
+    "ingredients": [
+      "2 Sea bass fillets",
+      "1 tbsp Olive oil",
+      "Fresh Rosemary",
+      "1/2 Lemon"
+    ],
+    "instructions": [
+      "Preheat the oven to 180°C (350°F).",
+      "Place the sea bass fillets on a piece of foil, skin-side down.",
+      "Drizzle with olive oil and top with fresh rosemary sprigs and lemon slices.",
+      "Fold the foil to create a sealed parcel and place on a baking sheet.",
+      "Bake for 15-18 minutes until the fish is opaque and tender."
+    ],
+    "macros": {
+      "kcal": 280.0,
+      "fat": 14.0,
+      "fat_sat": 2.5,
+      "fat_poly": 3.5,
+      "fat_mono": 8.0,
+      "carbs": 1.5,
+      "sugar": 0.5,
+      "polyols": 0,
+      "protein": 34.0,
+      "fiber": 0,
+      "salt": 0.4
+    }
+  },
+  {
+    "id": 25,
+    "title": "Coconut Chicken Curry",
+    "category": "Meals",
+    "image": "images/chicken-curry.jpg",
+    "portions": 3,
+    "tags": ["Curry", "Dairy-Free"],
+    "ingredients": [
+      "450g Chicken breast",
+      "200ml Coconut milk (full fat)",
+      "1 tbsp Curry powder",
+      "100g Spinach"
+    ],
+    "instructions": [
+      "Cut the chicken into 2cm cubes and brown in a deep pan with a little oil.",
+      "Stir in the curry powder and cook for 1 minute until fragrant.",
+      "Pour in the coconut milk and simmer gently for 10 minutes until the sauce thickens.",
+      "Stir in the fresh spinach until it has wilted into the sauce.",
+      "Serve as is or over cauliflower rice."
+    ],
+    "macros": {
+      "kcal": 395.0,
+      "fat": 24.0,
+      "fat_sat": 18.0,
+      "fat_poly": 1.5,
+      "fat_mono": 4.5,
+      "carbs": 8.0,
+      "sugar": 3.0,
+      "polyols": 0,
+      "protein": 38.0,
+      "fiber": 2.5,
+      "salt": 0.5
+    }
+  },
+  {
+    "id": 26,
+    "title": "Grilled Tofu with Bok Choy",
+    "category": "Meals",
+    "image": "images/tofu-bokchoy.jpg",
+    "portions": 2,
+    "tags": ["Vegan", "Asian-Style"],
+    "ingredients": [
+      "250g Extra firm tofu",
+      "2 heads Bok choy",
+      "1 tbsp Soy sauce",
+      "1 tsp Sesame oil"
+    ],
+    "instructions": [
+      "Cut the tofu into thick rectangles and press dry with a towel.",
+      "Brush the tofu with sesame oil and soy sauce.",
+      "Grill the tofu in a hot griddle pan for 4 minutes per side until charred lines appear.",
+      "Halve the bok choy and place cut-side down in the pan for the last 3 minutes.",
+      "Serve the tofu on a bed of the grilled bok choy."
+    ],
+    "macros": {
+      "kcal": 230.0,
+      "fat": 14.0,
+      "fat_sat": 2.0,
+      "fat_poly": 7.5,
+      "fat_mono": 4.5,
+      "carbs": 7.0,
+      "sugar": 2.5,
+      "polyols": 0,
+      "protein": 21.0,
+      "fiber": 3.0,
+      "salt": 0.7
+    }
+  },
+  {
+    "id": 27,
+    "title": "Lamb Chops with Mint",
+    "category": "Meals",
+    "image": "images/lamb-chops.jpg",
+    "portions": 2,
+    "tags": ["Keto", "Grill"],
+    "ingredients": [
+      "4 Lamb chops",
+      "1 tbsp Fresh mint",
+      "1 tbsp Olive oil",
+      "Garlic powder"
+    ],
+    "instructions": [
+      "Rub the lamb chops with olive oil, garlic powder, and chopped mint.",
+      "Heat a pan over medium-high heat until very hot.",
+      "Sear the lamb chops for 3-4 minutes per side for medium.",
+      "Stand the chops on their fat edge for 1 minute to render and crisp the fat.",
+      "Let the meat rest for 5 minutes before serving."
+    ],
+    "macros": {
+      "kcal": 380.0,
+      "fat": 28.0,
+      "fat_sat": 11.0,
+      "fat_poly": 3.0,
+      "fat_mono": 14.0,
+      "carbs": 1.0,
+      "sugar": 0.5,
+      "polyols": 0,
+      "protein": 30.0,
+      "fiber": 0,
+      "salt": 0.3
+    }
+  },
+  {
+    "id": 28,
+    "title": "Roast Chicken & Root Veg",
+    "category": "Meals",
+    "image": "images/roast-chicken.jpg",
+    "portions": 2,
+    "tags": ["Healthy", "Roast"],
+    "ingredients": [
+      "300g Chicken breast",
+      "100g Carrots",
+      "100g Swede (Rutabaga)",
+      "Rosemary"
+    ],
+    "instructions": [
+      "Preheat oven to 200°C (390°F).",
+      "Chop the carrots and swede into small, uniform cubes.",
+      "Place the chicken and vegetables in a roasting tray and toss with olive oil and rosemary.",
+      "Roast for 25-30 minutes until the chicken is cooked through and the vegetables are tender.",
+      "Season with salt and pepper before serving."
+    ],
+    "macros": {
+      "kcal": 290.0,
+      "fat": 10.0,
+      "fat_sat": 2.0,
+      "fat_poly": 2.5,
+      "fat_mono": 5.5,
+      "carbs": 14.0,
+      "sugar": 6.5,
+      "polyols": 0,
+      "protein": 35.0,
+      "fiber": 4.5,
+      "salt": 0.4
+    }
+  },
+  {
+    "id": 29,
+    "title": "Golden Flaxseed Bread",
+    "category": "Bakery",
+    "image": "images/flaxseed-bread.jpg",
+    "portions": 10,
+    "tags": ["Bread", "Keto"],
+    "ingredients": [
+      "200g Ground Flaxseed",
+      "5 Eggs",
+      "100ml Water",
+      "1 tbsp Baking powder",
+      "Salt"
+    ],
+    "instructions": [
+      "Preheat your oven to 180°C (350°F) and grease a standard loaf tin.",
+      "In a large bowl, whisk the eggs and water together until the mixture is frothy.",
+      "Stir in the ground flaxseed, baking powder, and a pinch of salt until a thick dough forms.",
+      "Transfer the dough to the loaf tin and smooth the top with a wet spatula.",
+      "Bake for 45 minutes until the loaf is firm to the touch, then cool completely before slicing."
+    ],
+    "macros": {
+      "kcal": 165.0,
+      "fat": 13.0,
+      "fat_sat": 1.5,
+      "fat_poly": 6.8,
+      "fat_mono": 4.7,
+      "carbs": 1.5,
+      "sugar": 0.5,
+      "polyols": 0,
+      "protein": 7.0,
+      "fiber": 6.0,
+      "salt": 0.4
+    }
+  },
+  {
+    "id": 30,
+    "title": "Almond Flour Rolls",
+    "category": "Bakery",
+    "image": "images/almond-rolls.jpg",
+    "portions": 6,
+    "tags": ["Gluten-Free", "Low Carb"],
+    "ingredients": [
+      "150g Almond Flour",
+      "3 Egg Whites",
+      "1 tsp Psyllium husk",
+      "1 tsp Baking powder"
+    ],
+    "instructions": [
+      "Mix the almond flour, psyllium husk, and baking powder in a medium mixing bowl.",
+      "Add the egg whites and stir vigorously until the dough becomes sticky and holds together.",
+      "Divide the dough into 6 equal portions and roll them into smooth balls.",
+      "Place on a baking sheet lined with parchment and bake at 170°C for 25 minutes.",
+      "The rolls should sound hollow when tapped on the bottom when fully cooked."
+    ],
+    "macros": {
+      "kcal": 180.0,
+      "fat": 14.0,
+      "fat_sat": 1.0,
+      "fat_poly": 4.0,
+      "fat_mono": 9.0,
+      "carbs": 4.0,
+      "sugar": 1.0,
+      "polyols": 0,
+      "protein": 8.0,
+      "fiber": 5.0,
+      "salt": 0.3
+    }
+  },
+  {
+    "id": 31,
+    "title": "Protein Power Muffins",
+    "category": "Bakery",
+    "image": "images/protein-muffins.jpg",
+    "portions": 6,
+    "tags": ["High Protein", "Quick"],
+    "ingredients": [
+      "60g Protein Powder",
+      "100g Almond Flour",
+      "2 Eggs",
+      "50ml Water"
+    ],
+    "instructions": [
+      "Preheat the oven to 180°C (350°F) and line a muffin tin with 6 paper liners.",
+      "Whisk the eggs and water in a bowl, then stir in the protein powder and almond flour.",
+      "Mix until just combined; do not overwork the batter.",
+      "Spoon the batter into the muffin liners, filling each about three-quarters full.",
+      "Bake for 18-20 minutes until a toothpick inserted into the center comes out clean."
+    ],
+    "macros": {
+      "kcal": 195.0,
+      "fat": 12.5,
+      "fat_sat": 2.0,
+      "fat_poly": 3.5,
+      "fat_mono": 7.0,
+      "carbs": 3.5,
+      "sugar": 1.0,
+      "polyols": 0,
+      "protein": 18.0,
+      "fiber": 2.0,
+      "salt": 0.3
+    }
+  },
+  {
+    "id": 32,
+    "title": "Savory Zucchini Bread",
+    "category": "Bakery",
+    "image": "images/zucchini-bread.jpg",
+    "portions": 8,
+    "tags": ["Vegetarian", "Bread"],
+    "ingredients": [
+      "200g Grated Zucchini",
+      "150g Almond Flour",
+      "3 Eggs",
+      "Garlic powder"
+    ],
+    "instructions": [
+      "Squeeze the grated zucchini in a tea towel to remove as much liquid as possible.",
+      "In a bowl, whisk the eggs and add the zucchini and garlic powder.",
+      "Fold in the almond flour until a thick batter is formed.",
+      "Pour into a lined small loaf tin.",
+      "Bake at 180°C for 40 minutes until the top is golden and firm."
+    ],
+    "macros": {
+      "kcal": 170.0,
+      "fat": 13.0,
+      "fat_sat": 2.0,
+      "fat_poly": 3.5,
+      "fat_mono": 7.5,
+      "carbs": 5.0,
+      "sugar": 2.0,
+      "polyols": 0,
+      "protein": 9.0,
+      "fiber": 3.0,
+      "salt": 0.2
+    }
+  },
+  {
+    "id": 33,
+    "title": "Pumpkin Seed Crackers",
+    "category": "Bakery",
+    "image": "images/pumpkin-crackers.jpg",
+    "portions": 4,
+    "tags": ["Vegan", "Snack"],
+    "ingredients": [
+      "100g Pumpkin Seeds",
+      "20g Chia Seeds",
+      "50ml Water",
+      "Salt"
+    ],
+    "instructions": [
+      "Mix the pumpkin seeds, chia seeds, and water in a bowl; let sit for 10 minutes until thick.",
+      "Spread the mixture very thinly onto a baking sheet lined with parchment paper.",
+      "Sprinkle with salt and bake at 150°C (300°F) for 45 minutes.",
+      "Flip the sheet of seeds carefully and bake for another 15 minutes until very crisp.",
+      "Allow to cool completely before breaking into irregular cracker shards."
+    ],
+    "macros": {
+      "kcal": 185.0,
+      "fat": 15.0,
+      "fat_sat": 3.0,
+      "fat_poly": 7.0,
+      "fat_mono": 5.0,
+      "carbs": 4.0,
+      "sugar": 0.5,
+      "polyols": 0,
+      "protein": 10.0,
+      "fiber": 3.5,
+      "salt": 0.5
+    }
+  },
+  {
+    "id": 34,
+    "title": "Keto Cheese Bagels",
+    "category": "Bakery",
+    "image": "images/cheese-bagels.jpg",
+    "portions": 4,
+    "tags": ["Keto", "High Protein"],
+    "ingredients": [
+      "150g Shredded Mozzarella",
+      "80g Almond Flour",
+      "1 Egg",
+      "1 tsp Baking powder"
+    ],
+    "instructions": [
+      "Melt the mozzarella in a microwave-safe bowl in 30-second increments until soft.",
+      "Stir in the egg, almond flour, and baking powder until a dough forms.",
+      "Knead the dough for 1 minute until smooth (reheat if it becomes too stiff).",
+      "Divide into 4 logs and wrap each into a circle, pinching the ends to form a bagel shape.",
+      "Bake at 200°C (390°F) for 12-15 minutes until browned."
+    ],
+    "macros": {
+      "kcal": 240.0,
+      "fat": 18.0,
+      "fat_sat": 5.5,
+      "fat_poly": 2.5,
+      "fat_mono": 10.0,
+      "carbs": 5.0,
+      "sugar": 1.0,
+      "polyols": 0,
+      "protein": 16.0,
+      "fiber": 2.0,
+      "salt": 0.6
+    }
+  },
+  {
+    "id": 35,
+    "title": "Walnut & Cinnamon Loaf",
+    "category": "Bakery",
+    "image": "images/walnut-loaf.jpg",
+    "portions": 10,
+    "tags": ["Vegetarian", "Bread"],
+    "ingredients": [
+      "150g Almond Flour",
+      "50g Chopped Walnuts",
+      "3 Eggs",
+      "2 tsp Cinnamon"
+    ],
+    "instructions": [
+      "Preheat the oven to 180°C (350°F).",
+      "Whisk the eggs and cinnamon until frothy.",
+      "Stir in the almond flour and walnuts until a consistent batter forms.",
+      "Pour into a greased loaf tin and smooth the surface.",
+      "Bake for 30-35 minutes until a skewer comes out clean."
+    ],
+    "macros": {
+      "kcal": 190.0,
+      "fat": 17.0,
+      "fat_sat": 2.0,
+      "fat_poly": 9.0,
+      "fat_mono": 6.0,
+      "carbs": 4.0,
+      "sugar": 1.0,
+      "polyols": 0,
+      "protein": 8.0,
+      "fiber": 3.0,
+      "salt": 0.1
+    }
+  },
+  {
+    "id": 36,
+    "title": "Almond Flour Pizza Base",
+    "category": "Bakery",
+    "image": "images/pizza-base.jpg",
+    "portions": 2,
+    "tags": ["Keto", "Dinner"],
+    "ingredients": [
+      "100g Almond Flour",
+      "1 Egg",
+      "1/2 tsp Salt",
+      "1/2 tsp Garlic powder"
+    ],
+    "instructions": [
+      "Mix all ingredients in a bowl until a ball of dough is formed.",
+      "Place the dough between two sheets of parchment paper and roll out into a 10-inch circle.",
+      "Remove the top sheet of paper and slide the dough (on the bottom paper) onto a baking stone or tray.",
+      "Bake at 200°C for 10 minutes until the edges are firm and slightly golden.",
+      "Add toppings and bake for another 5 minutes."
+    ],
+    "macros": {
+      "kcal": 315.0,
+      "fat": 26.0,
+      "fat_sat": 3.0,
+      "fat_poly": 6.5,
+      "fat_mono": 16.5,
+      "carbs": 8.5,
+      "sugar": 2.0,
+      "polyols": 0,
+      "protein": 14.0,
+      "fiber": 5.0,
+      "salt": 0.6
+    }
+  },
+  {
+    "id": 37,
+    "title": "Savory Herb Scones",
+    "category": "Bakery",
+    "image": "images/herb-scones.jpg",
+    "portions": 8,
+    "tags": ["Vegetarian", "Quick"],
+    "ingredients": [
+      "200g Almond Flour",
+      "1 tbsp Dried Rosemary",
+      "2 Eggs",
+      "30g Butter"
+    ],
+    "instructions": [
+      "Rub the cold butter into the almond flour until it resembles coarse crumbs.",
+      "Stir in the rosemary and whisked eggs until a dough forms.",
+      "Pat the dough into a disk about 1 inch thick.",
+      "Cut the disk into 8 wedges and place them on a baking tray.",
+      "Bake at 180°C for 15-18 minutes until golden."
+    ],
+    "macros": {
+      "kcal": 210.0,
+      "fat": 19.0,
+      "fat_sat": 5.0,
+      "fat_poly": 4.0,
+      "fat_mono": 10.0,
+      "carbs": 5.5,
+      "sugar": 1.5,
+      "polyols": 0,
+      "protein": 7.5,
+      "fiber": 3.0,
+      "salt": 0.2
+    }
+  },
+  {
+    "id": 38,
+    "title": "Flaxseed Focaccia",
+    "category": "Bakery",
+    "image": "images/flax-focaccia.jpg",
+    "portions": 8,
+    "tags": ["Vegan", "Low Carb"],
+    "ingredients": [
+      "150g Ground Flaxseed",
+      "3 Eggs",
+      "50ml Olive oil",
+      "Sea salt"
+    ],
+    "instructions": [
+      "Whisk the eggs and olive oil together until emulsified.",
+      "Stir in the ground flaxseed until thick.",
+      "Spread the mixture into a flat rectangle on a baking tray.",
+      "Use your fingers to poke dimples into the surface and sprinkle with sea salt.",
+      "Bake at 180°C for 20 minutes until springy to the touch."
+    ],
+    "macros": {
+      "kcal": 185.0,
+      "fat": 16.0,
+      "fat_sat": 2.5,
+      "fat_poly": 6.5,
+      "fat_mono": 7.0,
+      "carbs": 1.5,
+      "sugar": 0.5,
+      "polyols": 0,
+      "protein": 7.0,
+      "fiber": 5.5,
+      "salt": 0.5
+    }
+  },
+  {
+    "id": 39,
+    "title": "Coconut Flour Tortillas",
+    "category": "Bakery",
+    "image": "images/coconut-tortillas.jpg",
+    "portions": 4,
+    "tags": ["Low Calorie", "Vegan"],
+    "ingredients": [
+      "40g Coconut Flour",
+      "2 Egg Whites",
+      "100ml Water",
+      "1/4 tsp Salt"
+    ],
+    "instructions": [
+      "Whisk all ingredients together until a very smooth, thin batter forms.",
+      "Let the batter sit for 5 minutes as the coconut flour absorbs the liquid.",
+      "Heat a non-stick pan over medium heat and pour in 1/4 of the batter, swirling to coat the base.",
+      "Cook for 2 minutes until the edges lift, then flip and cook for another minute.",
+      "Keep warm under a clean towel to keep them pliable."
+    ],
+    "macros": {
+      "kcal": 65.0,
+      "fat": 2.5,
+      "fat_sat": 2.0,
+      "fat_poly": 0.2,
+      "fat_mono": 0.3,
+      "carbs": 4.5,
+      "sugar": 1.5,
+      "polyols": 0,
+      "protein": 4.5,
+      "fiber": 3.5,
+      "salt": 0.3
+    }
+  },
+  {
+    "id": 40,
+    "title": "Chia Seed Crackers",
+    "category": "Bakery",
+    "image": "images/chia-crackers.jpg",
+    "portions": 4,
+    "tags": ["Vegan", "Snack"],
+    "ingredients": [
+      "50g Chia Seeds",
+      "50g Sunflower seeds",
+      "100ml Water",
+      "Black pepper"
+    ],
+    "instructions": [
+      "Mix all ingredients in a bowl and let sit for 15 minutes to form a thick gel.",
+      "Line a tray with parchment and spread the gel as thin as possible using a spatula.",
+      "Bake at 150°C for 50 minutes.",
+      "Remove from oven and carefully peel the cracker sheet off the paper.",
+      "Break into pieces and serve with cheese."
+    ],
+    "macros": {
+      "kcal": 140.0,
+      "fat": 11.0,
+      "fat_sat": 1.5,
+      "fat_poly": 7.0,
+      "fat_mono": 2.5,
+      "carbs": 5.0,
+      "sugar": 0.5,
+      "polyols": 0,
+      "protein": 6.0,
+      "fiber": 6.0,
+      "salt": 0.1
+    }
+  },
+  {
+    "id": 41,
+    "title": "Protein Breakfast Waffles",
+    "category": "Bakery",
+    "image": "images/protein-waffles.jpg",
+    "portions": 2,
+    "tags": ["High Protein", "Breakfast"],
+    "ingredients": [
+      "30g Protein Powder",
+      "50g Almond Flour",
+      "1 Egg",
+      "30ml Water"
+    ],
+    "instructions": [
+      "Preheat your waffle iron to a medium-high setting.",
+      "In a bowl, whisk the egg and water, then stir in the protein powder and almond flour.",
+      "Lightly grease the waffle iron with oil spray.",
+      "Pour the batter into the center of the iron and close the lid.",
+      "Cook for 3-5 minutes until steaming stops and the waffle is crispy."
+    ],
+    "macros": {
+      "kcal": 215.0,
+      "fat": 14.0,
+      "fat_sat": 2.0,
+      "fat_poly": 3.5,
+      "fat_mono": 8.5,
+      "carbs": 5.0,
+      "sugar": 1.0,
+      "polyols": 0,
+      "protein": 19.0,
+      "fiber": 2.5,
+      "salt": 0.3
+    }
+  },
+  {
+    "id": 42,
+    "title": "Fudgy Keto Brownies",
+    "category": "Desserts",
+    "image": "images/keto-brownies.jpg",
+    "portions": 9,
+    "tags": ["Chocolate", "Dessert"],
+    "ingredients": [
+      "150g Dark Choc (85%)",
+      "100g Butter",
+      "100g Erythritol",
+      "50g Almond Flour",
+      "2 Eggs"
+    ],
+    "instructions": [
+      "Melt the dark chocolate and butter together in a heatproof bowl over a pan of simmering water.",
+      "Remove from the heat and whisk in the erythritol and eggs until the batter is thick and glossy.",
+      "Gently fold in the almond flour until just incorporated.",
+      "Pour the batter into a lined square baking tin and bake at 170°C for 20 minutes.",
+      "Allow the brownies to cool completely in the tin before cutting into 9 squares."
+    ],
+    "macros": {
+      "kcal": 190.0,
+      "fat": 15.0,
+      "fat_sat": 8.5,
+      "fat_poly": 1.5,
+      "fat_mono": 5.0,
+      "carbs": 14.0,
+      "sugar": 2.0,
+      "polyols": 12.0,
+      "protein": 3.0,
+      "fiber": 2.0,
+      "salt": 0.1
+    }
+  },
+  {
+    "id": 43,
+    "title": "Avocado Chocolate Mousse",
+    "category": "Desserts",
+    "image": "images/avocado-mousse.jpg",
+    "portions": 2,
+    "tags": ["Vegan", "Dessert"],
+    "ingredients": [
+      "1 Ripe Avocado",
+      "3 tbsp Cocoa powder",
+      "3 tbsp Erythritol",
+      "Vanilla extract"
+    ],
+    "instructions": [
+      "Scoop the avocado flesh into a high-speed blender or food processor.",
+      "Add the cocoa powder, erythritol, and a few drops of vanilla extract.",
+      "Blend on high until the mixture is completely smooth and looks like thick chocolate pudding.",
+      "Scrape down the sides and blend once more to ensure no green lumps remain.",
+      "Transfer to individual bowls and refrigerate for 1 hour before serving."
+    ],
+    "macros": {
+      "kcal": 180.0,
+      "fat": 15.0,
+      "fat_sat": 2.0,
+      "fat_poly": 2.0,
+      "fat_mono": 11.0,
+      "carbs": 12.0,
+      "sugar": 1.0,
+      "polyols": 8.0,
+      "protein": 3.0,
+      "fiber": 7.0,
+      "salt": 0.05
+    }
+  },
+  {
+    "id": 44,
+    "title": "Coconut Macaroons",
+    "category": "Desserts",
+    "image": "images/macaroons.jpg",
+    "portions": 8,
+    "tags": ["Gluten-Free", "Low Calorie"],
+    "ingredients": [
+      "100g Desiccated Coconut",
+      "2 Egg Whites",
+      "30g Erythritol",
+      "Vanilla extract"
+    ],
+    "instructions": [
+      "Preheat the oven to 160°C (320°F) and line a tray with parchment paper.",
+      "Whisk the egg whites in a clean bowl until stiff peaks form.",
+      "Gently fold in the erythritol, vanilla, and desiccated coconut using a spatula.",
+      "Scoop small mounds of the mixture onto the baking tray.",
+      "Bake for 15-18 minutes until the edges are golden brown, then let cool completely."
+    ],
+    "macros": {
+      "kcal": 95.0,
+      "fat": 8.0,
+      "fat_sat": 7.0,
+      "fat_poly": 0.5,
+      "fat_mono": 0.5,
+      "carbs": 5.0,
+      "sugar": 1.5,
+      "polyols": 3.0,
+      "protein": 2.0,
+      "fiber": 3.0,
+      "salt": 0.1
+    }
+  },
+  {
+    "id": 45,
+    "title": "Almond Flour Cookies",
+    "category": "Desserts",
+    "image": "images/almond-cookies.jpg",
+    "portions": 10,
+    "tags": ["Vegetarian", "Quick"],
+    "ingredients": [
+      "150g Almond Flour",
+      "1 Egg",
+      "40g Butter (melted)",
+      "30g Erythritol"
+    ],
+    "instructions": [
+      "In a medium bowl, stir together the almond flour and erythritol.",
+      "Add the melted butter and the egg, mixing until a soft dough forms.",
+      "Roll the dough into 10 balls and place them on a lined baking tray.",
+      "Flatten each ball slightly with the back of a spoon or your palm.",
+      "Bake at 170°C for 12 minutes until the edges are just starting to brown."
+    ],
+    "macros": {
+      "kcal": 135.0,
+      "fat": 12.5,
+      "fat_sat": 3.5,
+      "fat_poly": 2.5,
+      "fat_mono": 6.5,
+      "carbs": 4.5,
+      "sugar": 1.0,
+      "polyols": 3.0,
+      "protein": 4.0,
+      "fiber": 2.0,
+      "salt": 0.1
+    }
+  },
+  {
+    "id": 46,
+    "title": "Berry Protein Crumble",
+    "category": "Desserts",
+    "image": "images/berry-crumble.jpg",
+    "portions": 2,
+    "tags": ["High Protein", "Warm"],
+    "ingredients": [
+      "100g Frozen Berries",
+      "30g Protein Powder",
+      "20g Almond Flour",
+      "10g Butter"
+    ],
+    "instructions": [
+      "Place the berries in a small ovenproof dish.",
+      "In a separate bowl, rub the cold butter into the almond flour and protein powder until crumbly.",
+      "Scatter the crumble mixture evenly over the top of the berries.",
+      "Bake at 180°C (350°F) for 15 minutes until the fruit is bubbling and the top is crisp.",
+      "Serve warm, optionally with a spoonful of Greek yogurt."
+    ],
+    "macros": {
+      "kcal": 185.0,
+      "fat": 9.5,
+      "fat_sat": 4.0,
+      "fat_poly": 1.5,
+      "fat_mono": 4.0,
+      "carbs": 12.0,
+      "sugar": 5.0,
+      "polyols": 0,
+      "protein": 15.0,
+      "fiber": 3.5,
+      "salt": 0.2
+    }
+  },
+  {
+    "id": 47,
+    "title": "Lemon Ricotta Pots",
+    "category": "Desserts",
+    "image": "images/ricotta-pots.jpg",
+    "portions": 2,
+    "tags": ["High Protein", "Dessert"],
+    "ingredients": [
+      "200g Ricotta Cheese",
+      "1 tbsp Lemon juice",
+      "1 tsp Lemon zest",
+      "20g Erythritol"
+    ],
+    "instructions": [
+      "Place the ricotta in a bowl and whisk vigorously until smooth and creamy.",
+      "Stir in the erythritol, lemon juice, and half of the lemon zest.",
+      "Divide the mixture between two small ramekins or dessert glasses.",
+      "Top with the remaining lemon zest for decoration.",
+      "Chill in the refrigerator for at least 30 minutes before serving."
+    ],
+    "macros": {
+      "kcal": 160.0,
+      "fat": 11.0,
+      "fat_sat": 7.0,
+      "fat_poly": 0.5,
+      "fat_mono": 3.5,
+      "carbs": 7.0,
+      "sugar": 3.0,
+      "polyols": 5.0,
+      "protein": 10.0,
+      "fiber": 0,
+      "salt": 0.2
+    }
+  },
+  {
+    "id": 48,
+    "title": "Peanut Butter Fat Bombs",
+    "category": "Desserts",
+    "image": "images/fat-bombs.jpg",
+    "portions": 8,
+    "tags": ["Keto", "High Fat"],
+    "ingredients": [
+      "100g Peanut Butter (smooth)",
+      "50g Coconut Oil",
+      "20g Erythritol",
+      "1/2 tsp Vanilla"
+    ],
+    "instructions": [
+      "Melt the peanut butter and coconut oil together in the microwave in 20-second bursts.",
+      "Stir in the erythritol and vanilla extract until completely dissolved.",
+      "Pour the liquid mixture into a silicone mini-muffin or ice cube tray.",
+      "Place in the freezer for at least 1 hour to set firm.",
+      "Store in the freezer and eat directly from cold."
+    ],
+    "macros": {
+      "kcal": 130.0,
+      "fat": 12.5,
+      "fat_sat": 6.5,
+      "fat_poly": 2.0,
+      "fat_mono": 4.0,
+      "carbs": 3.5,
+      "sugar": 1.0,
+      "polyols": 2.5,
+      "protein": 3.5,
+      "fiber": 1.0,
+      "salt": 0.1
+    }
+  },
+  {
+    "id": 49,
+    "title": "Chia Seed Pudding",
+    "category": "Desserts",
+    "image": "images/chia-pudding.jpg",
+    "portions": 1,
+    "tags": ["No-Cook", "Vegan"],
+    "ingredients": [
+      "30g Chia Seeds",
+      "150ml Almond Milk",
+      "1/2 tsp Vanilla",
+      "1 tsp Erythritol"
+    ],
+    "instructions": [
+      "Combine all ingredients in a glass jar or bowl.",
+      "Stir well, then wait 5 minutes and stir again to prevent the seeds from clumping at the bottom.",
+      "Cover and place in the refrigerator for at least 4 hours (ideally overnight).",
+      "Give the pudding a final stir before serving.",
+      "Top with a few nuts or berries if desired."
+    ],
+    "macros": {
+      "kcal": 180.0,
+      "fat": 11.0,
+      "fat_sat": 1.0,
+      "fat_poly": 7.5,
+      "fat_mono": 1.5,
+      "carbs": 14.0,
+      "sugar": 0.5,
+      "polyols": 4.0,
+      "protein": 6.0,
+      "fiber": 11.0,
+      "salt": 0.1
+    }
+  },
+  {
+    "id": 50,
+    "title": "Dark Chocolate Walnut Bark",
+    "category": "Desserts",
+    "image": "images/choc-bark.jpg",
+    "portions": 4,
+    "tags": ["Vegan", "Dessert"],
+    "ingredients": [
+      "100g Dark Choc (90%)",
+      "40g Walnuts",
+      "Sea salt"
+    ],
+    "instructions": [
+      "Melt the dark chocolate slowly in a double boiler or microwave.",
+      "Line a small tray with parchment paper and pour the chocolate over it.",
+      "Spread the chocolate into a thin sheet using a spatula.",
+      "Scatter the roughly chopped walnuts and a pinch of sea salt over the wet chocolate.",
+      "Freeze for 20 minutes, then break into shards."
+    ],
+    "macros": {
+      "kcal": 210.0,
+      "fat": 19.0,
+      "fat_sat": 9.5,
+      "fat_poly": 4.5,
+      "fat_mono": 5.0,
+      "carbs": 6.0,
+      "sugar": 1.5,
+      "polyols": 0,
+      "protein": 4.5,
+      "fiber": 4.0,
+      "salt": 0.2
+    }
+  },
+  {
+    "id": 51,
+    "title": "Strawberry Protein Fluff",
+    "category": "Desserts",
+    "image": "images/protein-fluff.jpg",
+    "portions": 1,
+    "tags": ["High Protein", "Quick"],
+    "ingredients": [
+      "30g Protein Powder",
+      "100g Frozen Strawberries",
+      "50ml Almond Milk"
+    ],
+    "instructions": [
+      "Place the frozen strawberries and almond milk in a food processor; pulse until the berries are finely chopped.",
+      "Add the protein powder to the processor.",
+      "Blend on high for 3-5 minutes. The mixture will begin to aerate and double in volume.",
+      "Stop once the texture is light, fluffy, and holds its shape.",
+      "Transfer to a bowl and eat immediately before it melts."
+    ],
+    "macros": {
+      "kcal": 165.0,
+      "fat": 2.5,
+      "fat_sat": 0.5,
+      "fat_poly": 1.0,
+      "fat_mono": 1.0,
+      "carbs": 12.5,
+      "sugar": 5.5,
+      "polyols": 0,
+      "protein": 24.5,
+      "fiber": 2.5,
+      "salt": 0.2
+    }
+  },
+  {
+    "id": 52,
+    "title": "Vanilla Bean Panna Cotta",
+    "category": "Desserts",
+    "image": "images/panna-cotta.jpg",
+    "portions": 2,
+    "tags": ["Low Calorie", "Dessert"],
+    "ingredients": [
+      "200ml Almond Milk",
+      "1 tsp Gelatin powder",
+      "20g Erythritol",
+      "Vanilla pod"
+    ],
+    "instructions": [
+      "Place 2 tbsp of almond milk in a bowl and sprinkle the gelatin over it; let it bloom for 5 mins.",
+      "Heat the remaining milk with the erythritol and vanilla seeds until simmering.",
+      "Remove from heat and stir in the gelatin until completely dissolved.",
+      "Pour the mixture into two small molds.",
+      "Refrigerate for at least 4 hours until set firm."
+    ],
+    "macros": {
+      "kcal": 45.0,
+      "fat": 2.5,
+      "fat_sat": 0.2,
+      "fat_poly": 1.0,
+      "fat_mono": 1.3,
+      "carbs": 3.0,
+      "sugar": 0.5,
+      "polyols": 10.0,
+      "protein": 4.0,
+      "fiber": 0.5,
+      "salt": 0.1
+    }
+  },
+  {
+    "id": 53,
+    "title": "Quick Raspberry Sorbet",
+    "category": "Desserts",
+    "image": "images/raspberry-sorbet.jpg",
+    "portions": 2,
+    "tags": ["Vegan", "No Sugar Added"],
+    "ingredients": [
+      "200g Frozen Raspberries",
+      "1 tbsp Lemon juice",
+      "30g Erythritol"
+    ],
+    "instructions": [
+      "Place the frozen raspberries and lemon juice in a blender.",
+      "Add the erythritol and pulse until the berries are broken down.",
+      "Continue blending until the mixture becomes smooth and takes on a sorbet texture.",
+      "If the berries are too hard, add 1 tablespoon of water to help the blades turn.",
+      "Serve immediately for the best consistency."
+    ],
+    "macros": {
+      "kcal": 65.0,
+      "fat": 0.5,
+      "fat_sat": 0,
+      "fat_poly": 0.3,
+      "fat_mono": 0.1,
+      "carbs": 15.0,
+      "sugar": 4.5,
+      "polyols": 15.0,
+      "protein": 1.5,
+      "fiber": 6.5,
+      "salt": 0
+    }
+  },
+  {
+    "id": 54,
+    "title": "Chocolate Protein Mug Cake",
+    "category": "Desserts",
+    "image": "images/mug-cake.jpg",
+    "portions": 1,
+    "tags": ["High Protein", "Quick"],
+    "ingredients": [
+      "30g Protein Powder",
+      "1 tbsp Cocoa powder",
+      "1 Egg",
+      "1/2 tsp Baking powder"
+    ],
+    "instructions": [
+      "In a microwave-safe mug, whisk the egg until smooth.",
+      "Stir in the protein powder, cocoa powder, and baking powder.",
+      "Mix until a thick, uniform paste forms.",
+      "Microwave on high for 45-60 seconds (the cake should rise and look set).",
+      "Let cool for 1 minute before eating directly from the mug."
+    ],
+    "macros": {
+      "kcal": 210.0,
+      "fat": 8.5,
+      "fat_sat": 2.5,
+      "fat_poly": 1.5,
+      "fat_mono": 4.0,
+      "carbs": 4.5,
+      "sugar": 1.0,
+      "polyols": 0,
+      "protein": 30.0,
+      "fiber": 2.0,
+      "salt": 0.3
+    }
+  },
+  {
+    "id": 55,
+    "title": "Walnut & Coffee Cake",
+    "category": "Desserts",
+    "image": "images/coffee-cake.jpg",
+    "portions": 8,
+    "tags": ["Vegetarian", "Dessert"],
+    "ingredients": [
+      "200g Almond Flour",
+      "50g Walnuts",
+      "3 Eggs",
+      "2 tbsp Cold Espresso"
+    ],
+    "instructions": [
+      "Preheat the oven to 170°C (340°F) and line a round cake tin.",
+      "Whisk the eggs and coffee together until frothy.",
+      "Fold in the almond flour and half of the walnuts.",
+      "Pour into the tin and top with the remaining walnut halves.",
+      "Bake for 25-30 minutes until a toothpick comes out dry."
+    ],
+    "macros": {
+      "kcal": 220.0,
+      "fat": 19.5,
+      "fat_sat": 2.5,
+      "fat_poly": 7.0,
+      "fat_mono": 10.0,
+      "carbs": 6.0,
+      "sugar": 1.5,
+      "polyols": 0,
+      "protein": 9.5,
+      "fiber": 3.5,
+      "salt": 0.2
+    }
+  }
 ]
