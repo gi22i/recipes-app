@@ -19,20 +19,27 @@ body {
     padding: 40px;
 }
 
+/* Title */
 h1 {
-    font-size: 3.5rem;
+    font-size: 3rem;
     letter-spacing: 2px;
-    margin-bottom: 20px;
+    margin-bottom: 30px;
+}
+
+/* Search + filters */
+.controls {
+    margin-bottom: 30px;
 }
 
 input, select {
-    background: #111;
-    color: #eee;
-    border: 1px solid #333;
     padding: 10px;
-    margin-right: 10px;
+    margin: 5px;
+    background: #111;
+    color: white;
+    border: 1px solid #333;
 }
 
+/* Grid */
 .grid {
     display: grid;
     grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
@@ -50,11 +57,14 @@ input, select {
     border-color: var(--accent);
 }
 
+/* Modal */
 #modal {
     display: none;
     position: fixed;
-    top: 0; left: 0;
-    width: 100%; height: 100%;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
     background: rgba(0,0,0,0.9);
     justify-content: center;
     align-items: center;
@@ -71,11 +81,12 @@ input, select {
 
 .close {
     float: right;
-    font-size: 2rem;
     cursor: pointer;
     color: var(--accent);
+    font-size: 2rem;
 }
 
+/* Table */
 .macro-table {
     width: 100%;
     border-collapse: collapse;
@@ -94,21 +105,24 @@ input, select {
 
 <h1>The Archive</h1>
 
-<input type="text" id="search" placeholder="Search recipes...">
-<select id="categoryFilter">
-    <option value="">All Categories</option>
-    <option value="Breakfasts">Breakfast</option>
-    <option value="Meals">Meals</option>
-    <option value="Desserts">Desserts</option>
-    <option value="Bakery">Baking</option>
-</select>
+<div class="controls">
+    <input type="text" id="search" placeholder="Search recipes...">
+    
+    <select id="category">
+        <option value="">All Categories</option>
+        <option>Breakfasts</option>
+        <option>Meals</option>
+        <option>Desserts</option>
+        <option>Bakery</option>
+    </select>
 
-<select id="tagFilter">
-    <option value="">All Tags</option>
-    <option value="keto">Keto</option>
-    <option value="heart">Heart Healthy</option>
-    <option value="low">Low Sugar</option>
-</select>
+    <select id="label">
+        <option value="">All Labels</option>
+        <option value="keto">Keto</option>
+        <option value="heart">Heart Healthy</option>
+        <option value="low">Low Sugar</option>
+    </select>
+</div>
 
 <div id="app" class="grid"></div>
 
@@ -125,21 +139,31 @@ let recipes = [];
 async function load() {
     const res = await fetch('recipes.json');
     const data = await res.json();
-    recipes = data.recipes;
+    recipes = data.recipes.map(addLabels);
     render();
+}
+
+/* Label logic (no JSON modification needed) */
+function addLabels(r) {
+    let labels = [];
+
+    if (r.macros_per_portion.carbs < 20) labels.push("keto");
+    if (r.macros_per_portion.fat < 10) labels.push("heart");
+    if (r.macros_per_portion.sugar < 5) labels.push("low");
+
+    r.labels = labels;
+    return r;
 }
 
 function render() {
     const search = document.getElementById('search').value.toLowerCase();
-    const category = document.getElementById('categoryFilter').value;
-    const tag = document.getElementById('tagFilter').value;
+    const category = document.getElementById('category').value;
+    const label = document.getElementById('label').value;
 
     const filtered = recipes.filter(r => {
-        return (
-            r.title.toLowerCase().includes(search) &&
-            (!category || r.category === category) &&
-            (!tag || (r.tags && r.tags.includes(tag)))
-        );
+        return (!search || r.title.toLowerCase().includes(search)) &&
+               (!category || r.category === category) &&
+               (!label || r.labels.includes(label));
     });
 
     document.getElementById('app').innerHTML = filtered.map(r => `
@@ -151,29 +175,43 @@ function render() {
 }
 
 function openRecipe(title) {
-    const r = recipes.find(x => x.title === title);
+    const r = recipes.find(rec => rec.title === title);
+    const m = r.macros_per_portion;
+    const t = r.macros_total;
 
     document.getElementById('modal-body').innerHTML = `
         <h2>${r.title}</h2>
         <p><i>${r.portions} Portions</i></p>
 
-        <h4>Ingredients</h4>
-        <p>${r.ingredients.replace(/\\n/g,'<br>')}</p>
+        <p><b>Labels:</b> ${r.labels.join(', ') || 'None'}</p>
+
+        <h4>Nutrition Table</h4>
+        <table class="macro-table">
+            <tr><th>Macro</th><th>Per Portion</th><th>Total</th></tr>
+            <tr><td>Calories</td><td>${m.kcal}</td><td>${t.kcal}</td></tr>
+            <tr><td>Fat</td><td>${m.fat}</td><td>${t.fat}</td></tr>
+            <tr><td>Saturates</td><td>${m.fat_sat}</td><td>${t.fat_sat}</td></tr>
+            <tr><td>Unsaturates</td><td>${m.fat_unsat}</td><td>${t.fat_unsat}</td></tr>
+            <tr><td>Carbs</td><td>${m.carbs}</td><td>${t.carbs}</td></tr>
+            <tr><td>Sugar</td><td>${m.sugar}</td><td>${t.sugar}</td></tr>
+            <tr><td>Fibre</td><td>${m.fiber}</td><td>${t.fiber}</td></tr>
+            <tr><td>Protein</td><td>${m.protein}</td><td>${t.protein}</td></tr>
+        </table>
 
         <h4>Instructions</h4>
-        <p>${r.instructions.replace(/\\n/g,'<br>')}</p>
+        <p>${r.instructions.replace(/\n/g, "<br>")}</p>
     `;
 
     document.getElementById('modal').style.display = 'flex';
 }
 
-function closeModal(){
-    document.getElementById('modal').style.display='none';
+function closeModal() {
+    document.getElementById('modal').style.display = 'none';
 }
 
 document.getElementById('search').addEventListener('input', render);
-document.getElementById('categoryFilter').addEventListener('change', render);
-document.getElementById('tagFilter').addEventListener('change', render);
+document.getElementById('category').addEventListener('change', render);
+document.getElementById('label').addEventListener('change', render);
 
 window.onload = load;
 </script>
