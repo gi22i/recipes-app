@@ -3,16 +3,16 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>The Archive - Recipe Book</title>
-    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@700&family=Lora:ital@0;1&display=swap" rel="stylesheet">
+    <title>The Recipe Archive</title>
+    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@700&family=Lora:ital,wght@0,400;0,700;1,400&display=swap" rel="stylesheet">
     <style>
         :root {
             --bg-color: #0a0a0a;
-            --card-bg: #1a1a1a;
-            --accent: #f5f5dc; /* Off-white/Cream from your image */
+            --card-bg: #141414;
+            --accent: #f5f5dc; /* Cream color from illustration */
             --text-main: #e0e0e0;
-            --text-dim: #b0b0b0;
-            --border-style: 2px solid var(--accent);
+            --text-dim: #999;
+            --border: 1px solid #2a2a2a;
         }
 
         body {
@@ -20,7 +20,7 @@
             color: var(--text-main);
             font-family: 'Lora', serif;
             margin: 0;
-            padding: 20px;
+            padding: 40px 20px;
             display: flex;
             flex-direction: column;
             align-items: center;
@@ -28,81 +28,108 @@
 
         header {
             text-align: center;
-            margin-bottom: 40px;
-            border-bottom: var(--border-style);
-            padding-bottom: 20px;
-            width: 100%;
             max-width: 800px;
+            width: 100%;
+            margin-bottom: 60px;
+            border-bottom: 2px solid var(--accent);
+            padding-bottom: 30px;
         }
 
         h1 {
             font-family: 'Playfair Display', serif;
-            font-size: 3rem;
+            font-size: clamp(2rem, 8vw, 3.5rem);
             color: var(--accent);
             margin: 0;
+            letter-spacing: 5px;
             text-transform: uppercase;
-            letter-spacing: 4px;
+        }
+
+        .subtitle {
+            font-style: italic;
+            color: var(--text-dim);
+            margin-top: 10px;
+            letter-spacing: 2px;
+        }
+
+        #app-container {
+            width: 100%;
+            max-width: 1100px;
         }
 
         .category-section {
-            width: 100%;
-            max-width: 1000px;
-            margin-bottom: 50px;
+            margin-bottom: 60px;
         }
 
         .category-title {
             font-family: 'Playfair Display', serif;
-            color: var(--accent);
             font-size: 2rem;
+            color: var(--accent);
             border-left: 4px solid var(--accent);
-            padding-left: 15px;
-            margin-bottom: 25px;
+            padding-left: 20px;
+            margin-bottom: 30px;
         }
 
         .recipe-grid {
             display: grid;
-            grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
-            gap: 25px;
+            grid-template-columns: repeat(auto-fill, minmax(320px, 1fr));
+            gap: 30px;
         }
 
         .recipe-card {
             background: var(--card-bg);
-            border: 1px solid #333;
-            padding: 20px;
+            border: var(--border);
+            padding: 30px;
             position: relative;
-            transition: transform 0.3s ease;
+            transition: all 0.3s ease;
+            display: flex;
+            flex-direction: column;
         }
 
         .recipe-card:hover {
-            transform: translateY(-5px);
             border-color: var(--accent);
+            transform: translateY(-5px);
         }
 
-        /* Decorative corners similar to your image */
-        .recipe-card::before {
+        /* Decorative Book Corner */
+        .recipe-card::after {
             content: '❧';
             position: absolute;
-            top: 5px;
-            right: 10px;
+            bottom: 15px;
+            right: 20px;
             color: var(--accent);
-            font-size: 1.2rem;
+            opacity: 0.5;
+            font-size: 1.5rem;
         }
 
         h3 {
-            margin-top: 0;
-            color: var(--accent);
             font-family: 'Playfair Display', serif;
+            font-size: 1.4rem;
+            margin: 0 0 15px 0;
+            color: var(--accent);
+            line-height: 1.2;
+        }
+
+        .ingredients {
+            font-size: 0.9rem;
+            color: var(--text-dim);
+            margin-bottom: 15px;
+            line-height: 1.5;
+        }
+
+        .instructions {
+            font-size: 0.95rem;
+            line-height: 1.6;
+            margin-bottom: 20px;
+            flex-grow: 1;
         }
 
         .macros {
-            font-size: 0.85rem;
-            display: flex;
-            flex-wrap: wrap;
+            display: grid;
+            grid-template-columns: repeat(2, 1fr);
             gap: 10px;
-            color: var(--text-dim);
-            border-top: 1px solid #333;
-            padding-top: 10px;
-            margin-top: 15px;
+            padding-top: 20px;
+            border-top: 1px solid #2a2a2a;
+            font-size: 0.85rem;
         }
 
         .macro-item span {
@@ -110,92 +137,74 @@
             font-weight: bold;
         }
 
-        .ingredients {
-            font-style: italic;
-            margin-bottom: 10px;
-            font-size: 0.95rem;
-        }
-
-        .instructions {
-            font-size: 0.9rem;
-            line-height: 1.4;
-        }
-
         footer {
-            margin-top: 50px;
+            margin-top: 80px;
             color: var(--text-dim);
-            font-size: 0.8rem;
-            letter-spacing: 2px;
+            font-size: 0.75rem;
+            text-transform: uppercase;
+            letter-spacing: 3px;
+        }
+
+        @media (max-width: 600px) {
+            body { padding: 20px 15px; }
+            .recipe-grid { grid-template-columns: 1fr; }
         }
     </style>
 </head>
 <body>
 
     <header>
-        <h1>The Recipe Archive</h1>
-        <p>A Curated Collection of Culinary Arts</p>
+        <h1>The Archive</h1>
+        <div class="subtitle">A Digital Grimoire of Recipes</div>
     </header>
 
-    <div id="app-container"></div>
+    <main id="app-container">
+        </main>
 
     <footer>
-        &mdash; EST. 2026 &mdash;
+        &mdash; Organized Digitally 2026 &mdash;
     </footer>
 
     <script>
-        const recipeData = {
-            "recipes": [
-                { "title": "Smoked Mackerel Avocado Mash", "category": "Breakfasts", "portions": 2, "portion_size": "150g", "ingredients": "1 Smoked Mackerel fillet\n1 ripe Avocado\n1 tbsp Lemon juice\nBlack pepper\nFresh Dill", "instructions": "1. Flake mackerel. 2. Mash avocado. 3. Mix with lemon and pepper.", "macros": { "kcal": 245, "fat": 19.0, "protein": 14.0, "carbs": 4.0 } },
-                { "title": "Herb-Crusted Baked Cod", "category": "Meals", "portions": 2, "portion_size": "1 Fillet", "ingredients": "2 Cod Fillets\n30g Almond Flour\nParsley\nLemon", "instructions": "1. Coat fish in flour/herbs. 2. Bake at 200C for 15 mins.", "macros": { "kcal": 310, "fat": 18.0, "protein": 32.0, "carbs": 4.0 } },
-                { "title": "Golden Flax Seed Bread", "category": "Bakery", "portions": 10, "portion_size": "1 Slice", "ingredients": "200g Flaxseed\n5 Eggs\n100ml Water", "instructions": "1. Mix and bake in loaf tin at 180C for 45 mins.", "macros": { "kcal": 165, "fat": 13.0, "protein": 7.0, "carbs": 1.5 } },
-                { "title": "Avocado Chocolate Mousse", "category": "Desserts", "portions": 2, "portion_size": "1 Bowl", "ingredients": "1 Avocado\n20g Cocoa\nSyrup", "instructions": "1. Blend all until smooth. 2. Chill.", "macros": { "kcal": 160, "fat": 14.0, "protein": 3.0, "carbs": 8.0 } }
-                // Additional recipes from your JSON would be mapped here
-            ]
-        };
-
-        // Note: For a live app, you would use: fetch('recipes.json').then(res => res.json()).then(data => render(data));
-        
-        function renderRecipes(data) {
-            const container = document.getElementById('app-container');
-            const categories = [...new Set(data.recipes.map(r => r.category))];
-
-            categories.forEach(cat => {
-                const section = document.createElement('section');
-                section.className = 'category-section';
-                
-                const title = document.createElement('h2');
-                title.className = 'category-title';
-                title.innerText = cat;
-                section.appendChild(title);
-
-                const grid = document.createElement('div');
-                grid.className = 'recipe-grid';
-
-                const catRecipes = data.recipes.filter(r => r.category === cat);
-                catRecipes.forEach(recipe => {
-                    const card = document.createElement('div');
-                    card.className = 'recipe-card';
-                    card.innerHTML = `
-                        <h3>${recipe.title}</h3>
-                        <div class="ingredients">${recipe.ingredients.replace(/\n/g, ', ')}</div>
-                        <div class="instructions">${recipe.instructions}</div>
-                        <div class="macros">
-                            <div class="macro-item">P: <span>${recipe.macros.protein}g</span></div>
-                            <div class="macro-item">F: <span>${recipe.macros.fat}g</span></div>
-                            <div class="macro-item">C: <span>${recipe.macros.carbs}g</span></div>
-                            <div class="macro-item"><span>${recipe.macros.kcal} kcal</span></div>
-                        </div>
-                    `;
-                    grid.appendChild(card);
-                });
-
-                section.appendChild(grid);
-                container.appendChild(section);
-            });
+        async function loadRecipes() {
+            try {
+                const response = await fetch('recipes.json');
+                if (!response.ok) throw new Error('Failed to load JSON');
+                const data = await response.json();
+                render(data.recipes);
+            } catch (err) {
+                document.getElementById('app-container').innerHTML = 
+                    `<p style="color: var(--accent); text-align: center;">Error opening the archive: ${err.message}</p>`;
+            }
         }
 
-        // Initialize with the data provided in the prompt
-        renderRecipes(recipeData);
+        function render(recipes) {
+            const container = document.getElementById('app-container');
+            const categories = [...new Set(recipes.map(r => r.category))];
+
+            container.innerHTML = categories.map(cat => `
+                <section class="category-section">
+                    <h2 class="category-title">${cat}</h2>
+                    <div class="recipe-grid">
+                        ${recipes.filter(r => r.category === cat).map(recipe => `
+                            <article class="recipe-card">
+                                <h3>${recipe.title}</h3>
+                                <p class="ingredients"><strong>Requires:</strong> ${recipe.ingredients.replace(/\n/g, ', ')}</p>
+                                <div class="instructions">${recipe.instructions.replace(/\n/g, '<br>')}</div>
+                                <div class="macros">
+                                    <div class="macro-item">P: <span>${recipe.macros.protein}g</span></div>
+                                    <div class="macro-item">F: <span>${recipe.macros.fat}g</span></div>
+                                    <div class="macro-item">C: <span>${recipe.macros.carbs}g</span></div>
+                                    <div class="macro-item"><span>${recipe.macros.kcal} kcal</span></div>
+                                </div>
+                            </article>
+                        `).join('')}
+                    </div>
+                </section>
+            `).join('');
+        }
+
+        window.addEventListener('DOMContentLoaded', loadRecipes);
     </script>
 </body>
 </html>
