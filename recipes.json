@@ -1,59 +1,214 @@
 {
   "recipes": [
     {
-      "title": "Spicy Red Lentil & Spinach Dahl",
-      "category": "Big Batch",
-      "portions": 10,
-      "portion_size": "Large Ladle over Rice",
-      "ingredients": "500g red lentils\n400g dry brown rice\n3 large onions\n1 head of garlic\n1 bag fresh spinach\n2 cans diced tomatoes\n2 tbsp rapeseed oil\nCurry powder, turmeric, cumin, chili flakes",
-      "instructions": "1. Cook the brown rice and set aside.\n2. Sauté diced onions and minced garlic in oil until soft.\n3. Stir in 3 tbsp curry powder, 1 tsp turmeric, and chili flakes.\n4. Add rinsed lentils, tomatoes, and 1.5L water.\n5. Simmer 25-30 mins until thickened.\n6. Stir in spinach at the end. Serve over rice.",
-      "macros": { "kcal": 380, "fat": 5.0, "protein": 18.0, "carbs": 62.0 }
+      "title": "Smoked Mackerel Avocado Mash",
+      "category": "Breakfasts",
+      "portions": 2,
+      "portion_size": "150g",
+      "ingredients": "1 Smoked Mackerel fillet\n1 ripe Avocado\n1 tbsp Lemon juice\nBlack pepper\nFresh Dill",
+      "instructions": "1. Flake mackerel.\n2. Mash avocado.\n3. Mix with lemon and pepper.\n4. Serve on keto bread.",
+      "macros_per_portion": {
+        "kcal": 245,
+        "fat": 19.0,
+        "fat_saturates": 3.5,
+        "fat_unsaturates": 15.5,
+        "carbs": 4.0,
+        "sugar": 2.0,
+        "fiber": 5.0,
+        "protein": 14.0,
+        "salt": 0.8
+      },
+      "macros_total": {
+        "kcal": 490,
+        "fat": 38.0,
+        "fat_saturates": 7.0,
+        "fat_unsaturates": 31.0,
+        "carbs": 8.0,
+        "sugar": 4.0,
+        "fiber": 10.0,
+        "protein": 28.0,
+        "salt": 1.6
+      }
     },
     {
-      "title": "Lazy Gołąbki Casserole",
-      "category": "Big Batch",
-      "portions": 10,
-      "portion_size": "Large Bowl",
-      "ingredients": "400g roasted buckwheat\n3 cans white beans\n1 head white cabbage\n3 onions\n500g mushrooms\n3 cartons tomato passata\n2 tbsp rapeseed oil\nMarjoram, garlic powder",
-      "instructions": "1. Cook buckwheat until tender. Drain beans.\n2. Chop cabbage, mushrooms, and onions.\n3. Sauté onions and mushrooms in oil.\n4. Add cabbage; sauté 15 mins until soft.\n5. Mix in buckwheat, beans, and passata.\n6. Season with marjoram and simmer for 20 mins.",
-      "macros": { "kcal": 315, "fat": 4.5, "protein": 14.0, "carbs": 54.0 }
+      "title": "Flaxseed & Walnut N'oats",
+      "category": "Breakfasts",
+      "portions": 1,
+      "portion_size": "1 Bowl",
+      "ingredients": "30g Ground Flaxseed\n20g Walnuts\n100ml Almond Milk\nCinnamon",
+      "instructions": "1. Mix flax and milk.\n2. Heat until thick.\n3. Top with walnuts.",
+      "macros_per_portion": {
+        "kcal": 310,
+        "fat": 24.0,
+        "fat_saturates": 2.5,
+        "fat_unsaturates": 21.5,
+        "carbs": 13.5,
+        "sugar": 1.5,
+        "fiber": 12.0,
+        "protein": 11.0,
+        "salt": 0.05
+      },
+      "macros_total": {
+        "kcal": 310,
+        "fat": 24.0,
+        "fat_saturates": 2.5,
+        "fat_unsaturates": 21.5,
+        "carbs": 13.5,
+        "sugar": 1.5,
+        "fiber": 12.0,
+        "protein": 11.0,
+        "salt": 0.05
+      }
     },
     {
-      "title": "Mediterranean Pearl Barley Stew",
-      "category": "Big Batch",
-      "portions": 10,
-      "portion_size": "Large Bowl",
-      "ingredients": "400g pearl barley\n3 cans chickpeas\n2 bell peppers\n2 zucchinis\n2 red onions\n1 head garlic\n2 cans diced tomatoes\nOregano, basil, smoked paprika",
-      "instructions": "1. Boil pearl barley until tender. Drain.\n2. Sauté onions and peppers for 10 mins. Add zucchini and garlic for 5 mins.\n3. Add tomatoes, chickpeas, and cooked barley.\n4. Season and simmer for 15 mins.",
-      "macros": { "kcal": 290, "fat": 4.8, "protein": 12.5, "carbs": 48.0 }
+      "title": "Tofu Scramble with Spinach",
+      "category": "Breakfasts",
+      "portions": 2,
+      "portion_size": "200g",
+      "ingredients": "200g Firm Tofu\n100g Spinach\nTurmeric\nNutritional Yeast",
+      "instructions": "1. Crumble tofu in pan.\n2. Sauté with spices.\n3. Wilt in spinach.",
+      "macros_per_portion": {
+        "kcal": 240,
+        "fat": 16.0,
+        "fat_saturates": 2.5,
+        "fat_unsaturates": 13.5,
+        "carbs": 6.0,
+        "sugar": 2.0,
+        "fiber": 4.0,
+        "protein": 18.0,
+        "salt": 0.3
+      },
+      "macros_total": {
+        "kcal": 480,
+        "fat": 32.0,
+        "fat_saturates": 5.0,
+        "fat_unsaturates": 27.0,
+        "carbs": 12.0,
+        "sugar": 4.0,
+        "fiber": 8.0,
+        "protein": 36.0,
+        "salt": 0.6
+      }
     },
     {
-      "title": "Hearty Root Veg & Split Pea Soup",
-      "category": "Big Batch",
-      "portions": 12,
-      "portion_size": "Large Bowl",
-      "ingredients": "500g yellow split peas\n1.5kg potatoes\n1kg carrots\n1 celery root\n3 onions\nSmoked paprika, bay leaves, allspice, marjoram",
-      "instructions": "1. Soak peas for a few hours. Drain.\n2. Dice root vegetables.\n3. Sauté onions.\n4. Add veg, peas, spices, and 2.5L water.\n5. Simmer 45-60 mins until peas break down.\n6. Stir in paprika and marjoram.",
-      "macros": { "kcal": 275, "fat": 3.0, "protein": 14.0, "carbs": 49.0 }
+      "title": "Herb-Crusted Baked Cod",
+      "category": "Meals",
+      "portions": 2,
+      "portion_size": "1 Fillet",
+      "ingredients": "2 Cod Fillets\n30g Almond Flour\nParsley\nLemon",
+      "instructions": "1. Coat fish in flour/herbs.\n2. Bake at 200C for 15 mins.",
+      "macros_per_portion": {
+        "kcal": 310,
+        "fat": 18.0,
+        "fat_saturates": 2.5,
+        "fat_unsaturates": 15.5,
+        "carbs": 4.0,
+        "sugar": 2.0,
+        "fiber": 5.0,
+        "protein": 32.0,
+        "salt": 0.6
+      },
+      "macros_total": {
+        "kcal": 620,
+        "fat": 36.0,
+        "fat_saturates": 5.0,
+        "fat_unsaturates": 31.0,
+        "carbs": 8.0,
+        "sugar": 4.0,
+        "fiber": 10.0,
+        "protein": 64.0,
+        "salt": 1.2
+      }
     },
     {
-      "title": "Lean Chicken, Kidney Bean & Corn Chili",
-      "category": "Big Batch",
-      "portions": 10,
-      "portion_size": "Large Ladle over Rice",
-      "ingredients": "500g chicken breast\n3 cans red kidney beans\n400g brown rice\n2 red peppers\n2 onions\n2 cans sweet corn\n3 cans diced tomatoes\nChili powder, cumin, garlic powder",
-      "instructions": "1. Cook brown rice.\n2. Dice chicken small. Brown with onions and peppers.\n3. Add cumin and chili powder.\n4. Add tomatoes, beans, and corn.\n5. Simmer 20-25 mins until thick. Serve over rice.",
-      "macros": { "kcal": 410, "fat": 5.5, "protein": 27.0, "carbs": 64.0 }
+      "title": "Tofu Lentil Bolognese",
+      "category": "Meals",
+      "portions": 4,
+      "portion_size": "300g",
+      "ingredients": "200g Lentils\n200g Tofu\n400g Tomatoes\nCarrot/Celery",
+      "instructions": "1. Sauté veg.\n2. Add crumbled tofu.\n3. Add lentils and tomatoes.\n4. Simmer.",
+      "macros_per_portion": {
+        "kcal": 480,
+        "fat": 11.0,
+        "fat_saturates": 1.8,
+        "fat_unsaturates": 9.2,
+        "carbs": 19.2,
+        "sugar": 5.2,
+        "fiber": 14.0,
+        "protein": 26.0,
+        "salt": 0.6
+      },
+      "macros_total": {
+        "kcal": 1920,
+        "fat": 44.0,
+        "fat_saturates": 7.2,
+        "fat_unsaturates": 36.8,
+        "carbs": 76.8,
+        "sugar": 20.8,
+        "fiber": 56.0,
+        "protein": 104.0,
+        "salt": 2.4
+      }
     },
-    { "title": "Smoked Mackerel Avocado Mash", "category": "Breakfasts", "portions": 2, "portion_size": "150g", "ingredients": "1 Smoked Mackerel fillet\n1 ripe Avocado\n1 tbsp Lemon juice\nBlack pepper\nFresh Dill", "instructions": "1. Flake mackerel.\n2. Mash avocado.\n3. Mix with lemon and pepper.\n4. Serve on keto bread.", "macros": { "kcal": 245, "fat": 19.0, "protein": 14.0, "carbs": 4.0 } },
-    { "title": "Flaxseed & Walnut N'oats", "category": "Breakfasts", "portions": 1, "portion_size": "1 Bowl", "ingredients": "30g Ground Flaxseed\n20g Walnuts\n100ml Almond Milk\nCinnamon", "instructions": "1. Mix flax and milk.\n2. Heat until thick.\n3. Top with walnuts.", "macros": { "kcal": 310, "fat": 24.0, "protein": 11.0, "carbs": 13.5 } },
-    { "title": "Tofu Scramble with Spinach", "category": "Breakfasts", "portions": 2, "portion_size": "200g", "ingredients": "200g Firm Tofu\n100g Spinach\nTurmeric\nNutritional Yeast", "instructions": "1. Crumble tofu.\n2. Sauté with spices.\n3. Wilt in spinach.", "macros": { "kcal": 240, "fat": 16.0, "protein": 18.0, "carbs": 6.0 } },
-    { "title": "Herb-Crusted Baked Cod", "category": "Meals", "portions": 2, "portion_size": "1 Fillet", "ingredients": "2 Cod Fillets\n30g Almond Flour\nParsley", "instructions": "1. Coat fish.\n2. Bake at 200C for 15 mins.", "macros": { "kcal": 310, "fat": 18.0, "protein": 32.0, "carbs": 4.0 } },
-    { "title": "Turkey & Zucchini Stir-fry", "category": "Meals", "portions": 2, "portion_size": "250g", "ingredients": "300g Turkey\n1 Zucchini\n1 Pepper\nSoy Sauce", "instructions": "1. Fry turkey.\n2. Add veg and soy sauce.\n3. Toss until tender.", "macros": { "kcal": 285, "fat": 14.0, "protein": 34.0, "carbs": 6.0 } },
-    { "title": "Tofu Lentil Bolognese", "category": "Meals", "portions": 4, "portion_size": "300g", "ingredients": "200g Lentils\n200g Tofu\n400g Tomatoes\nCarrot/Celery", "instructions": "1. Sauté veg.\n2. Add tofu.\n3. Add lentils/tomatoes.\n4. Simmer.", "macros": { "kcal": 480, "fat": 11.0, "protein": 26.0, "carbs": 19.2 } },
-    { "title": "Golden Flax Seed Bread", "category": "Bakery", "portions": 10, "portion_size": "1 Slice", "ingredients": "200g Flaxseed\n5 Eggs\n100ml Water", "instructions": "1. Mix and bake at 180C for 45 mins.", "macros": { "kcal": 165, "fat": 13.0, "protein": 7.0, "carbs": 1.5 } },
-    { "title": "Sandwich Bread", "category": "Bakery", "portions": 10, "portion_size": "1 Slice", "ingredients": "500g Whole Wheat Flour\nYeast\nWater", "instructions": "1. Knead and rise.\n2. Bake for 35 mins.", "macros": { "kcal": 100, "fat": 0.8, "protein": 3.3, "carbs": 4.5 } },
-    { "title": "Protein Brownies", "category": "Desserts", "portions": 12, "portion_size": "1 Square", "ingredients": "100g Protein Powder\n20g Cocoa\n1 Egg", "instructions": "1. Mix with milk.\n2. Bake for 12 mins.", "macros": { "kcal": 150, "fat": 10.0, "protein": 12.0, "carbs": 2.2 } },
-    { "title": "Chocolate Bean Cake", "category": "Desserts", "portions": 10, "portion_size": "1 Slice", "ingredients": "1 Can Black Beans\n3 Eggs\n30g Cocoa", "instructions": "1. Blend and bake for 30 mins.", "macros": { "kcal": 160, "fat": 5.0, "protein": 8.0, "carbs": 7.5 } }
+    {
+      "title": "Golden Flax Seed Bread",
+      "category": "Bakery",
+      "portions": 10,
+      "portion_size": "1 Slice",
+      "ingredients": "200g Flaxseed\n5 Eggs\n100ml Water\nBaking powder",
+      "instructions": "1. Mix and bake in loaf tin at 180C for 45 mins.",
+      "macros_per_portion": {
+        "kcal": 165,
+        "fat": 13.0,
+        "fat_saturates": 1.5,
+        "fat_unsaturates": 11.5,
+        "carbs": 1.5,
+        "sugar": 0.5,
+        "fiber": 6.0,
+        "protein": 7.0,
+        "salt": 0.4
+      },
+      "macros_total": {
+        "kcal": 1650,
+        "fat": 130.0,
+        "fat_saturates": 15.0,
+        "fat_unsaturates": 115.0,
+        "carbs": 15.0,
+        "sugar": 5.0,
+        "fiber": 60.0,
+        "protein": 70.0,
+        "salt": 4.0
+      }
+    },
+    {
+      "title": "Chocolate Brownies",
+      "category": "Desserts",
+      "portions": 9,
+      "portion_size": "1 Square",
+      "ingredients": "150g Dark Choc\n100g Butter\n100g Erythritol\n50g Almond Flour",
+      "instructions": "1. Melt choc/butter.\n2. Stir in rest.\n3. Bake for 20 mins.",
+      "macros_per_portion": {
+        "kcal": 190,
+        "fat": 15.0,
+        "fat_saturates": 8.5,
+        "fat_unsaturates": 6.5,
+        "carbs": 14.0,
+        "sugar": 2.0,
+        "fiber": 2.0,
+        "protein": 3.0,
+        "salt": 0.1
+      },
+      "macros_total": {
+        "kcal": 1710,
+        "fat": 135.0,
+        "fat_saturates": 76.5,
+        "fat_unsaturates": 58.5,
+        "carbs": 126.0,
+        "sugar": 18.0,
+        "fiber": 18.0,
+        "protein": 27.0,
+        "salt": 0.9
+      }
+    }
   ]
 }
