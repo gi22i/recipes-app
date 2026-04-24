@@ -218,8 +218,8 @@
                 <section class="category-section">
                     <h2 class="category-title">${cat}</h2>
                     <div class="recipe-grid">
-                        ${allRecipes.filter(r => r.category === cat).map((recipe, index) => `
-                            <div class="recipe-card" onclick="openRecipe('${recipe.title}')">
+                        ${allRecipes.filter(r => r.category === cat).map(recipe => `
+                            <div class="recipe-card" onclick="openRecipe('${recipe.title.replace(/'/g, "\\'")}')">
                                 <div class="card-meta">${recipe.portions} Portions</div>
                                 <h3>${recipe.title}</h3>
                                 <div class="card-meta">View Details ❧</div>
@@ -267,7 +267,6 @@
             document.body.style.overflow = 'auto';
         }
 
-        // Close on background click
         window.onclick = function(event) {
             const modal = document.getElementById('recipe-modal');
             if (event.target == modal) closeModal();
