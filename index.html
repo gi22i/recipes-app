@@ -3,21 +3,21 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>The Archive</title>
+    <title>The Recipe Archive</title>
     <style>
-        :root { --bg: #0a0a0a; --accent: #f5f5dc; --card: #141414; }
-        body { background: var(--bg); color: #e0e0e0; font-family: 'Times New Roman', serif; padding: 40px; margin: 0; }
-        .grid { display: grid; grid-template-columns: repeat(auto-fill, minmax(280px, 1fr)); gap: 25px; max-width: 1200px; margin: auto; }
-        .card { background: var(--card); padding: 25px; border: 1px solid #2a2a2a; transition: 0.3s; cursor: pointer; }
-        .card:hover { border-color: var(--accent); transform: translateY(-5px); }
-        h1 { text-align: center; font-weight: normal; letter-spacing: 2px; margin-bottom: 50px; }
+        :root { --bg: #0a0a0a; --accent: #f5f5dc; --card: #141414; --border: #2a2a2a; }
+        body { background: var(--bg); color: #e0e0e0; font-family: 'Georgia', serif; padding: 40px; margin: 0; }
+        .grid { display: grid; grid-template-columns: repeat(auto-fill, minmax(280px, 1fr)); gap: 20px; max-width: 1200px; margin: auto; }
+        .card { background: var(--card); padding: 25px; border: 1px solid var(--border); cursor: pointer; transition: 0.3s; }
+        .card:hover { border-color: var(--accent); transform: translateY(-3px); }
+        h1 { text-align: center; letter-spacing: 4px; font-weight: normal; margin-bottom: 60px; }
         #modal { display: none; position: fixed; top: 0; left: 0; width: 100%; height: 100%; background: rgba(0,0,0,0.95); justify-content: center; align-items: center; z-index: 1000; }
-        .modal-content { background: #0f0f0f; border: 1px solid var(--accent); padding: 40px; width: 90%; max-width: 700px; max-height: 85vh; overflow-y: auto; }
-        .macro-table { width: 100%; border-collapse: collapse; margin: 20px 0; font-size: 0.85rem; }
-        .macro-table th, .macro-table td { border: 1px solid #333; padding: 12px; text-align: left; }
+        .modal-content { background: #0f0f0f; border: 1px solid var(--accent); padding: 40px; width: 90%; max-width: 800px; max-height: 85vh; overflow-y: auto; }
+        .close { float: right; cursor: pointer; font-size: 0.8rem; border: 1px solid var(--accent); padding: 5px 10px; }
+        .macro-table { width: 100%; border-collapse: collapse; margin: 25px 0; }
+        .macro-table th, .macro-table td { border: 1px solid #333; padding: 12px; text-align: left; font-size: 0.85rem; }
         .macro-table th { background: #1a1a1a; color: var(--accent); }
-        .close { float: right; cursor: pointer; font-size: 1.5rem; color: var(--accent); }
-        .ingredients { white-space: pre-line; margin-bottom: 20px; color: #bbb; }
+        .ingredients { white-space: pre-line; line-height: 1.6; color: #aaa; margin-bottom: 25px; }
     </style>
 </head>
 <body>
@@ -25,9 +25,9 @@
     <h1>THE ARCHIVE</h1>
     <div id="app" class="grid"></div>
 
-    <div id="modal">
-        <div class="modal-content">
-            <span class="close" onclick="closeModal()">BACK</span>
+    <div id="modal" onclick="closeModal()">
+        <div class="modal-content" onclick="event.stopPropagation()">
+            <span class="close" onclick="closeModal()">CLOSE</span>
             <div id="modal-body"></div>
         </div>
     </div>
@@ -36,19 +36,17 @@
         let recipes = [];
 
         async function load() {
-            try {
-                const res = await fetch('recipes.json');
-                const data = await res.json();
-                recipes = data.recipes;
-                render();
-            } catch (e) { console.error("Error loading recipes", e); }
+            const res = await fetch('recipes.json');
+            const data = await res.json();
+            recipes = data.recipes;
+            render();
         }
 
         function render() {
             document.getElementById('app').innerHTML = recipes.map(r => `
                 <div class="card" onclick="openRecipe('${r.title.replace(/'/g, "\\'")}')">
-                    <h3>${r.title}</h3>
-                    <p style="color: #666; font-size: 0.8rem;">${r.category.toUpperCase()} | ${r.portions} PORTIONS</p>
+                    <h3 style="margin: 0 0 10px 0;">${r.title}</h3>
+                    <small style="color: #666;">${r.category} | ${r.portions} Portions</small>
                 </div>
             `).join('');
         }
@@ -59,8 +57,8 @@
             const t = r.macros_total;
             
             document.getElementById('modal-body').innerHTML = `
-                <h2 style="color: var(--accent);">${r.title.toUpperCase()}</h2>
-                <p><b>Portion Size:</b> ${r.portion_size} (${r.portions} per batch)</p>
+                <h2 style="color: var(--accent); margin-bottom: 5px;">${r.title}</h2>
+                <p style="margin-bottom: 20px;">Portion Size: ${r.portion_size}</p>
                 
                 <table class="macro-table">
                     <thead>
@@ -71,27 +69,26 @@
                         </tr>
                     </thead>
                     <tbody>
-                        <tr><td>Calories (Kcal)</td><td>${m.kcal}</td><td>${t.kcal}</td></tr>
-                        <tr><td>Fat (g)</td><td>${m.fat}</td><td>${t.fat}</td></tr>
-                        <tr><td>&nbsp;&nbsp;<i>- of which saturates</i></td><td>${m.fat_sat}</td><td>${t.fat_sat}</td></tr>
-                        <tr><td>&nbsp;&nbsp;<i>- of which unsaturates</i></td><td>${m.fat_unsat}</td><td>${t.fat_unsat}</td></tr>
-                        <tr><td>Carbohydrates (g)</td><td>${m.carbs}</td><td>${t.carbs}</td></tr>
-                        <tr><td>&nbsp;&nbsp;<i>- of which sugars</i></td><td>${m.sugar}</td><td>${t.sugar}</td></tr>
-                        <tr><td>Fibre (g)</td><td>${m.fiber}</td><td>${t.fiber}</td></tr>
-                        <tr><td>Protein (g)</td><td>${m.protein}</td><td>${t.protein}</td></tr>
+                        <tr><td>Calories</td><td>${m.kcal} kcal</td><td>${t.kcal} kcal</td></tr>
+                        <tr><td>Fat (Total)</td><td>${m.fat}g</td><td>${t.fat}g</td></tr>
+                        <tr><td>&nbsp;&nbsp;<i>- Saturated</i></td><td>${m.fat_saturates}g</td><td>${t.fat_saturates}g</td></tr>
+                        <tr><td>&nbsp;&nbsp;<i>- Unsaturated</i></td><td>${m.fat_unsaturates}g</td><td>${t.fat_unsaturates}g</td></tr>
+                        <tr><td>Carbohydrates</td><td>${m.carbs}g</td><td>${t.carbs}g</td></tr>
+                        <tr><td>&nbsp;&nbsp;<i>- Sugars</i></td><td>${m.sugar}g</td><td>${t.sugar}g</td></tr>
+                        <tr><td>Fibre</td><td>${m.fiber}g</td><td>${t.fiber}g</td></tr>
+                        <tr><td>Protein</td><td>${m.protein}g</td><td>${t.protein}g</td></tr>
                     </tbody>
                 </table>
 
-                <h3>Ingredients</h3>
+                <h4 style="color: var(--accent);">Ingredients</h4>
                 <div class="ingredients">${r.ingredients}</div>
-                <h3>Instructions</h3>
-                <p style="line-height: 1.6;">${r.instructions.replace(/\n/g, '<br>')}</p>
+                <h4 style="color: var(--accent);">Instructions</h4>
+                <p style="line-height: 1.6; color: #ccc;">${r.instructions.replace(/\n/g, '<br>')}</p>
             `;
             document.getElementById('modal').style.display = 'flex';
         }
 
         function closeModal() { document.getElementById('modal').style.display = 'none'; }
-        window.onclick = (event) => { if (event.target == document.getElementById('modal')) closeModal(); }
         window.onload = load;
     </script>
 </body>
